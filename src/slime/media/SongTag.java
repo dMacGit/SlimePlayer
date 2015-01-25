@@ -2,7 +2,6 @@ package slime.media;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.IllegalFormatException;
 import java.util.Map;
 
 import javax.sound.sampled.AudioFileFormat;
@@ -13,17 +12,33 @@ import org.farng.mp3.MP3File;
 import org.farng.mp3.TagException;
 import org.tritonus.share.sampled.file.TAudioFileFormat;
 
+/*
+ * The SongTag class maintains access to the Tag information off the
+ * piece of music as well as error checking and null checking upon
+ * Tag creation.
+ */
+
 public class SongTag 
 {
-	private TagVersion tagVersion = null;
-	private String SongTitle, Artist, RecordingTitle  = null;
+	private TagVersion tagVersion = null;						//Important if expanded or replaced in future 
+	private String SongTitle, Artist, RecordingTitle  = null;	//Critical to set to null
 	private int Year, Durration = -1;
 	
-	private File audioFile = null;
+	private File audioFile = null;								//Audiofile variable only used in generation of song length
 	
-	private boolean ERROR_FLAG = false;
-	
-	
+	/*
+	 * Main constructor of the class.
+	 * 
+	 * Once the Inputed .mp3 file has been validated, calls the extractMetaTagInfo method.
+	 * Extract method does Tag version checks, then correctly extracts and individually
+	 * checks the tag data by using the appropriate VadidateData(String) OR ValidateData(Int)
+	 * methods. 
+	 * 
+	 * [WrongFileTypeInfo] Error Thrown if not of .mp3 file type.
+	 * [IOException] Error Thrown if general Error when reading the file.
+	 * [TagException] Error Thrown if error when reading the getName tag field.
+	 * 
+	 */
 	public SongTag(File songFile)throws WrongFileTypeException, IOException, TagException
 	{
 		audioFile = songFile;
@@ -116,6 +131,12 @@ public class SongTag
 			
 		}
 	}
+	
+	/*
+	 * Validate method for String literals
+	 * 
+	 * Checks for Null data value, and returns "Unknown" String if Null.
+	 */
 	private String ValidateData(String data)
 	{
 		//System.out.println(data);
@@ -127,6 +148,13 @@ public class SongTag
 			return new String("Unknown");
 		}
 	}
+	
+	/*
+	 * Validate method for Integer Primitives
+	 * 
+	 * Checks data within valid range of values.
+	 * [NumberFormatException] Error Thrown if data not within valid range.
+	 */
 	private int ValidateNumberData(int data) throws NumberFormatException
 	{
 		//System.out.println(data);
