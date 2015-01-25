@@ -28,7 +28,7 @@ public class PlaySongsFromFolder
     private JLabel scrollingTitle;
     private int labelXpos, labelWidth;
     private long HOLDINGS_FILE_LAST_MODIFIED;
-    private final String HOLDINGS_FILE_NAME = "HoldingsFile.txt", SONG_PATHS_FILE_NAME = "SongPaths.txt";
+    private final String HOLDINGS_FILE_NAME = "Lib_MP3player.txt", SONG_PATHS_FILE_NAME = "SongPaths.txt";
     private String HOLDINGS_FILE_PATH, SONG_PATHS_FILE_PATH, holdingInfoForCurrentSong,
             ID, Title, Artist, Album, Durration, Year, songTime, theCurrentSongTitle = null,
             FOLDER, FILE_DIR/* = "C:/Users/Phantom/Documents/D Programing/Software Engineering A/Assignments/RadioStation/RadioStation"*/;

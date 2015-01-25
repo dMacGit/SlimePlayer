@@ -21,21 +21,17 @@ public class SongTag
 	
 	private File audioFile = null;
 	
+	private boolean ERROR_FLAG = false;
 	
-	public SongTag(File songFile)throws WrongFileTypeException
+	
+	public SongTag(File songFile)throws WrongFileTypeException, IOException, TagException
 	{
 		audioFile = songFile;
 		if(songFile.getName().contains(".mp3"))
 		{
-			try 
-			{
 				this.extractMetaTagInfo(new MP3File(songFile));
-			}
-			catch (IOException e)	{	e.printStackTrace();	}
-			catch (TagException e)	{	e.printStackTrace();	}
 		}
 		else throw new WrongFileTypeException();
-		
 	}
 	
 	private void extractMetaTagInfo(MP3File songFile)
@@ -57,12 +53,11 @@ public class SongTag
             this.RecordingTitle = ValidateData(songFile.getID3v1Tag().getAlbum());
             try
             {
-            	System.out.println("{"+songFile.getID3v1Tag().getYear()+"}");
             	this.Year = ValidateNumberData(Integer.parseInt(songFile.getID3v1Tag().getYear()));
             }
             catch(NumberFormatException e)
             {
-            	e.printStackTrace();
+            	this.Year = 0000;
             }
             int val = 0;
             AudioFileFormat baseFileFormat = null;
@@ -91,7 +86,14 @@ public class SongTag
 			this.SongTitle = ValidateData(songFile.getID3v2Tag().getSongTitle());
             this.Artist = ValidateData(songFile.getID3v2Tag().getAuthorComposer());
             this.RecordingTitle = ValidateData(songFile.getID3v2Tag().getAlbumTitle());
-            this.Year = ValidateNumberData(Integer.parseInt(songFile.getID3v2Tag().getYearReleased()));
+            try
+            {
+	            this.Year = ValidateNumberData(Integer.parseInt(songFile.getID3v2Tag().getYearReleased()));
+            }
+            catch(NumberFormatException e)
+            {
+            	this.Year = 0000;
+            }
             int val = 0;
             AudioFileFormat baseFileFormat = null;
             try
@@ -116,18 +118,18 @@ public class SongTag
 	}
 	private String ValidateData(String data)
 	{
-		System.out.println(data);
+		//System.out.println(data);
 		if(data != null && !data.isEmpty()){
 			return data;
 		}
 		else
 		{
-			return new String("NONE");
+			return new String("Unknown");
 		}
 	}
 	private int ValidateNumberData(int data) throws NumberFormatException
 	{
-		System.out.println(data);
+		//System.out.println(data);
 		if(data != 0 && data > 1000){
 			return data;
 		}

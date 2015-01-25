@@ -1,12 +1,1259 @@
-1 E:\Users\Phantom\Music\Audioslave\Revelations\01 Revelations.mp3
-2 E:\Users\Phantom\Music\Audioslave\Revelations\02 One and the Same.mp3
-3 E:\Users\Phantom\Music\Audioslave\Revelations\03 Sound of a Gun.mp3
-4 E:\Users\Phantom\Music\Audioslave\Revelations\04 Until We Fall.mp3
-5 E:\Users\Phantom\Music\Audioslave\Revelations\05 Original Fire.mp3
-6 E:\Users\Phantom\Music\Audioslave\Revelations\06 Broken City.mp3
-7 E:\Users\Phantom\Music\Audioslave\Revelations\07 Somedays.mp3
-8 E:\Users\Phantom\Music\Audioslave\Revelations\08 Shape of Things to Come.mp3
-9 E:\Users\Phantom\Music\Audioslave\Revelations\09 Jewel of the Summertime.mp3
-10 E:\Users\Phantom\Music\Audioslave\Revelations\10 Wide Awake.mp3
-11 E:\Users\Phantom\Music\Audioslave\Revelations\11 Nothing Left to Say But Goodbye.mp3
-12 E:\Users\Phantom\Music\Audioslave\Revelations\12 Moth.mp3
+1 D:\Users\Phantom\Music\Alice in Chains\Alice in chains\Heaven Beside You.mp3
+2 D:\Users\Phantom\Music\Alice in Chains\Dirt\01 Them Bones.mp3
+3 D:\Users\Phantom\Music\Alice in Chains\Dirt\02 Dam That River.mp3
+4 D:\Users\Phantom\Music\Alice in Chains\Dirt\03 Rain When I Die.mp3
+5 D:\Users\Phantom\Music\Alice in Chains\Dirt\04 Down in a Hole.mp3
+6 D:\Users\Phantom\Music\Alice in Chains\Dirt\05 Sickman.mp3
+7 D:\Users\Phantom\Music\Alice in Chains\Dirt\06 Rooster.mp3
+8 D:\Users\Phantom\Music\Alice in Chains\Dirt\07 Junkhead.mp3
+9 D:\Users\Phantom\Music\Alice in Chains\Dirt\08 Dirt.mp3
+10 D:\Users\Phantom\Music\Alice in Chains\Dirt\09 God Smack.mp3
+11 D:\Users\Phantom\Music\Alice in Chains\Dirt\10 Iron Gland.mp3
+12 D:\Users\Phantom\Music\Alice in Chains\Dirt\11 Hate to Feel.mp3
+13 D:\Users\Phantom\Music\Alice in Chains\Dirt\12 Angry Chair.mp3
+14 D:\Users\Phantom\Music\Alice in Chains\Dirt\13 Would-.mp3
+15 D:\Users\Phantom\Music\Alice in Chains\Facelift\Alice In Chains - Man In The Box.mp3
+16 D:\Users\Phantom\Music\Alice in Chains\Facelift\Alice In Chains - Sea Of Sorrow.mp3
+17 D:\Users\Phantom\Music\Alice in Chains\Jar of Flies\Alice In Chains - Nutshell.mp3
+18 D:\Users\Phantom\Music\Alice in Chains\Last Action Hero Soundtrack\A Little Bitter.mp3
+19 D:\Users\Phantom\Music\All the Right Reasons\Animals.mp3
+20 D:\Users\Phantom\Music\All the Right Reasons\Far away.mp3
+21 D:\Users\Phantom\Music\All the Right Reasons\Fight for all the wrong reasons.mp3
+22 D:\Users\Phantom\Music\All the Right Reasons\Follow you home.mp3
+23 D:\Users\Phantom\Music\All the Right Reasons\If everyone cared.mp3
+24 D:\Users\Phantom\Music\All the Right Reasons\Next contestant.mp3
+25 D:\Users\Phantom\Music\All the Right Reasons\Photograph.mp3
+26 D:\Users\Phantom\Music\All the Right Reasons\Rockstar.mp3
+27 D:\Users\Phantom\Music\All the Right Reasons\Savin' me.mp3
+28 D:\Users\Phantom\Music\All the Right Reasons\Side of a bullet.mp3
+29 D:\Users\Phantom\Music\All the Right Reasons\Some day (Live-acoustic).mp3
+30 D:\Users\Phantom\Music\All the Right Reasons\Someone that you're with.mp3
+31 D:\Users\Phantom\Music\Audioslave\Revelations\01 Revelations.mp3
+32 D:\Users\Phantom\Music\Audioslave\Revelations\02 One and the Same.mp3
+33 D:\Users\Phantom\Music\Audioslave\Revelations\03 Sound of a Gun.mp3
+34 D:\Users\Phantom\Music\Audioslave\Revelations\04 Until We Fall.mp3
+35 D:\Users\Phantom\Music\Audioslave\Revelations\05 Original Fire.mp3
+36 D:\Users\Phantom\Music\Audioslave\Revelations\06 Broken City.mp3
+37 D:\Users\Phantom\Music\Audioslave\Revelations\07 Somedays.mp3
+38 D:\Users\Phantom\Music\Audioslave\Revelations\08 Shape of Things to Come.mp3
+39 D:\Users\Phantom\Music\Audioslave\Revelations\09 Jewel of the Summertime.mp3
+40 D:\Users\Phantom\Music\Audioslave\Revelations\10 Wide Awake.mp3
+41 D:\Users\Phantom\Music\Audioslave\Revelations\11 Nothing Left to Say But Goodbye.mp3
+42 D:\Users\Phantom\Music\Audioslave\Revelations\12 Moth.mp3
+43 D:\Users\Phantom\Music\Billy Idol\Billy Idol - White Wedding.mp3
+44 D:\Users\Phantom\Music\Black Label Society\Shot to Hell\Concrete Jungle.mp3
+45 D:\Users\Phantom\Music\Boris\Amplifier Worship\01 Huge.mp3
+46 D:\Users\Phantom\Music\Boris\Amplifier Worship\02 Ganbou-Ki.mp3
+47 D:\Users\Phantom\Music\Boris\Amplifier Worship\03 Hama.mp3
+48 D:\Users\Phantom\Music\Boris\Amplifier Worship\04 Kuruimizu.mp3
+49 D:\Users\Phantom\Music\Boris\Amplifier Worship\05 Vomitself.mp3
+50 D:\Users\Phantom\Music\Boris\Pink\01 Farewell.mp3
+51 D:\Users\Phantom\Music\Boris\Pink\02 Pink.mp3
+52 D:\Users\Phantom\Music\Boris\Pink\03 Woman on the Screen.mp3
+53 D:\Users\Phantom\Music\Boris\Pink\04 Nothing Special.mp3
+54 D:\Users\Phantom\Music\Boris\Pink\05 Blackout.mp3
+55 D:\Users\Phantom\Music\Boris\Pink\06 Electric.mp3
+56 D:\Users\Phantom\Music\Boris\Pink\07 Pseudo-Bread.mp3
+57 D:\Users\Phantom\Music\Boris\Pink\08 Afterburner.mp3
+58 D:\Users\Phantom\Music\Boris\Pink\09 Six, Three Times.mp3
+59 D:\Users\Phantom\Music\Boris\Pink\10 My Machine.mp3
+60 D:\Users\Phantom\Music\Boris\Pink\11 Just Abandoned My-Self.mp3
+61 D:\Users\Phantom\Music\Bread\Anthology\Bread-01-Make It With You.mp3
+62 D:\Users\Phantom\Music\Bread\Anthology\Bread-02-Dismal Day.mp3
+63 D:\Users\Phantom\Music\Bread\Anthology\Bread-03-London Bridge.mp3
+64 D:\Users\Phantom\Music\Bread\Anthology\Bread-04-Anyway You Want Me.mp3
+65 D:\Users\Phantom\Music\Bread\Anthology\Bread-05-Look What You've Done.mp3
+66 D:\Users\Phantom\Music\Bread\Anthology\Bread-06-It Don't Matter to Me.mp3
+67 D:\Users\Phantom\Music\Bread\Anthology\Bread-07-The Last Time.mp3
+68 D:\Users\Phantom\Music\Bread\Anthology\Bread-08-Let Your Love Go.mp3
+69 D:\Users\Phantom\Music\Bread\Anthology\Bread-09-Truckin'.mp3
+70 D:\Users\Phantom\Music\Bread\Anthology\Bread-10-If.mp3
+71 D:\Users\Phantom\Music\Bread\Anthology\Bread-11-Baby I'm-A Want You.mp3
+72 D:\Users\Phantom\Music\Bread\Anthology\Bread-12-Everything I Own.mp3
+73 D:\Users\Phantom\Music\Bread\Anthology\Bread-13-Down on My Knees.mp3
+74 D:\Users\Phantom\Music\Bread\Anthology\Bread-14-Aubrey.mp3
+75 D:\Users\Phantom\Music\Bread\Anthology\Bread-15-Diary.mp3
+76 D:\Users\Phantom\Music\Bread\Anthology\Bread-16-Sweet Surrender.mp3
+77 D:\Users\Phantom\Music\Bread\Anthology\Bread-17-The Guitar Man.mp3
+78 D:\Users\Phantom\Music\Bread\Anthology\Bread-18-Fancy Dancer.mp3
+79 D:\Users\Phantom\Music\Bread\Anthology\Bread-19-She's the Only One.mp3
+80 D:\Users\Phantom\Music\Bread\Anthology\Bread-20-Lost Without Your Love.mp3
+81 D:\Users\Phantom\Music\Breaking Benjamin\Phobia\Diary of Jane.mp3
+82 D:\Users\Phantom\Music\Breaking Benjamin\We Are Not Alone\So Cold.mp3
+83 D:\Users\Phantom\Music\Bronski Beat\Truthdare Doubledare\01 Hit That Perfect Beat.mp3
+84 D:\Users\Phantom\Music\Bronski Beat\Truthdare Doubledare\02 Truthdare Doubledare.mp3
+85 D:\Users\Phantom\Music\Bronski Beat\Truthdare Doubledare\03 C'mon! C'mon!.mp3
+86 D:\Users\Phantom\Music\Bronski Beat\Truthdare Doubledare\04 Punishment for Love.mp3
+87 D:\Users\Phantom\Music\Bronski Beat\Truthdare Doubledare\05 We Know How It Feels.mp3
+88 D:\Users\Phantom\Music\Bronski Beat\Truthdare Doubledare\06 This Heart.mp3
+89 D:\Users\Phantom\Music\Bronski Beat\Truthdare Doubledare\07 Do It.mp3
+90 D:\Users\Phantom\Music\Bronski Beat\Truthdare Doubledare\08 Dr. John.mp3
+91 D:\Users\Phantom\Music\Bronski Beat\Truthdare Doubledare\09 In My Dreams.mp3
+92 D:\Users\Phantom\Music\Bronski Beat\Truthdare Doubledare\10 What Are Your Going to Do About It.mp3
+93 D:\Users\Phantom\Music\Bronski Beat\Truthdare Doubledare\11 C'mon! C'mon!.mp3
+94 D:\Users\Phantom\Music\Bronski Beat\Truthdare Doubledare\12 Hit That Perfect Beat [12' Version][-].mp3
+95 D:\Users\Phantom\Music\Bronski Beat\Truthdare Doubledare\13 I Gave You Everything [-].mp3
+96 D:\Users\Phantom\Music\Bronski Beat\Truthdare Doubledare\14 Track 14.mp3
+97 D:\Users\Phantom\Music\Bronski Beat\Truthdare Doubledare\15 Track 15.mp3
+98 D:\Users\Phantom\Music\Bryan Adams\So Far So Good\Bryan Adams-01-Summer Of '69.mp3
+99 D:\Users\Phantom\Music\Bryan Adams\So Far So Good\Bryan Adams-02-Straight From The Heart.mp3
+100 D:\Users\Phantom\Music\Bryan Adams\So Far So Good\Bryan Adams-03-It's Only Love.mp3
+101 D:\Users\Phantom\Music\Bryan Adams\So Far So Good\Bryan Adams-04-Can't Stop This Thing We Started.mp3
+102 D:\Users\Phantom\Music\Bryan Adams\So Far So Good\Bryan Adams-05-Do I Have to Say the Words-.mp3
+103 D:\Users\Phantom\Music\Bryan Adams\So Far So Good\Bryan Adams-06-This Time.mp3
+104 D:\Users\Phantom\Music\Bryan Adams\So Far So Good\Bryan Adams-07-Run To You.mp3
+105 D:\Users\Phantom\Music\Bryan Adams\So Far So Good\Bryan Adams-08-Heaven.mp3
+106 D:\Users\Phantom\Music\Bryan Adams\So Far So Good\Bryan Adams-09-Cuts Like a Knife.mp3
+107 D:\Users\Phantom\Music\Bryan Adams\So Far So Good\Bryan Adams-10-(Everything I Do) I Do It For You.mp3
+108 D:\Users\Phantom\Music\Bryan Adams\So Far So Good\Bryan Adams-11-Somebody.mp3
+109 D:\Users\Phantom\Music\Bryan Adams\So Far So Good\Bryan Adams-12-Kids Wanna Rock.mp3
+110 D:\Users\Phantom\Music\Bryan Adams\So Far So Good\Bryan Adams-13-Heat Of The Night.mp3
+111 D:\Users\Phantom\Music\Bryan Adams\So Far So Good\Bryan Adams-14-Please Forgive Me.mp3
+112 D:\Users\Phantom\Music\C&C OST Collection\Command & Conquer\Command & Conquer - 01 - Act on Instinct.mp3
+113 D:\Users\Phantom\Music\C&C OST Collection\Command & Conquer\Command & Conquer - 02 - No Mercy.mp3
+114 D:\Users\Phantom\Music\C&C OST Collection\Command & Conquer\Command & Conquer - 03 - Industrial One.mp3
+115 D:\Users\Phantom\Music\C&C OST Collection\Command & Conquer\Command & Conquer - 04 - Iron Fist.mp3
+116 D:\Users\Phantom\Music\C&C OST Collection\Command & Conquer\Command & Conquer - 05 - We Will Stop Them.mp3
+117 D:\Users\Phantom\Music\C&C OST Collection\Command & Conquer\Command & Conquer - 06 - Radio.mp3
+118 D:\Users\Phantom\Music\C&C OST Collection\Command & Conquer\Command & Conquer - 07 - On the Prowl.mp3
+119 D:\Users\Phantom\Music\C&C OST Collection\Command & Conquer\Command & Conquer - 08 - Re-con.mp3
+120 D:\Users\Phantom\Music\C&C OST Collection\Command & Conquer\Command & Conquer - 09 - Drone.mp3
+121 D:\Users\Phantom\Music\C&C OST Collection\Command & Conquer\Command & Conquer - 10 - In the Line of Fire.mp3
+122 D:\Users\Phantom\Music\C&C OST Collection\Command & Conquer\Command & Conquer - 11 - Prepare for Battle.mp3
+123 D:\Users\Phantom\Music\C&C OST Collection\Command & Conquer\Command & Conquer - 12 - Depth Charge.mp3
+124 D:\Users\Phantom\Music\C&C OST Collection\Command & Conquer\Command & Conquer - 13 - Rain in the Night.mp3
+125 D:\Users\Phantom\Music\C&C OST Collection\Command & Conquer\Command & Conquer - 14 - Creeping Upon.mp3
+126 D:\Users\Phantom\Music\C&C OST Collection\Command & Conquer\Command & Conquer - 15 - Target.mp3
+127 D:\Users\Phantom\Music\C&C OST Collection\Command & Conquer\Command & Conquer - 16 - Just Do It Up.mp3
+128 D:\Users\Phantom\Music\C&C OST Collection\Command & Conquer\Command & Conquer - 17 - C&C Thang.mp3
+129 D:\Users\Phantom\Music\C&C OST Collection\Command & Conquer\Command & Conquer - 18 - To Be Feared.mp3
+130 D:\Users\Phantom\Music\C&C OST Collection\Command & Conquer\Command & Conquer - 19 - Drill.mp3
+131 D:\Users\Phantom\Music\C&C OST Collection\Command & Conquer\Command & Conquer - 20 - Full Stop.mp3
+132 D:\Users\Phantom\Music\C&C OST Collection\Command & Conquer\Command & Conquer - 21 - In Trouble.mp3
+133 D:\Users\Phantom\Music\C&C OST Collection\Command & Conquer\Command & Conquer - 22 - Air Strike.mp3
+134 D:\Users\Phantom\Music\C&C OST Collection\Red Alert\Command & Conquer Red Alert - 01 - Hell March.mp3
+135 D:\Users\Phantom\Music\C&C OST Collection\Red Alert\Command & Conquer Red Alert - 02 - Radio.mp3
+136 D:\Users\Phantom\Music\C&C OST Collection\Red Alert\Command & Conquer Red Alert - 03 - Crush.mp3
+137 D:\Users\Phantom\Music\C&C OST Collection\Red Alert\Command & Conquer Red Alert - 04 - Roll Out.mp3
+138 D:\Users\Phantom\Music\C&C OST Collection\Red Alert\Command & Conquer Red Alert - 05 - Mud.mp3
+139 D:\Users\Phantom\Music\C&C OST Collection\Red Alert\Command & Conquer Red Alert - 06 - Twin Cannon.mp3
+140 D:\Users\Phantom\Music\C&C OST Collection\Red Alert\Command & Conquer Red Alert - 07 - Face the Enemy.mp3
+141 D:\Users\Phantom\Music\C&C OST Collection\Red Alert\Command & Conquer Red Alert - 08 - Run.mp3
+142 D:\Users\Phantom\Music\C&C OST Collection\Red Alert\Command & Conquer Red Alert - 09 - Terminate.mp3
+143 D:\Users\Phantom\Music\C&C OST Collection\Red Alert\Command & Conquer Red Alert - 10 - Big Foot.mp3
+144 D:\Users\Phantom\Music\C&C OST Collection\Red Alert\Command & Conquer Red Alert - 11 - Workmen.mp3
+145 D:\Users\Phantom\Music\C&C OST Collection\Red Alert\Command & Conquer Red Alert - 12 - Militant Force.mp3
+146 D:\Users\Phantom\Music\C&C OST Collection\Red Alert\Command & Conquer Red Alert - 13 - Dense.mp3
+147 D:\Users\Phantom\Music\C&C OST Collection\Red Alert\Command & Conquer Red Alert - 14 - Vector.mp3
+148 D:\Users\Phantom\Music\C&C OST Collection\Red Alert\Command & Conquer Red Alert - 15 - Smash.mp3
+149 D:\Users\Phantom\Music\C&C OST Collection\Red Alert 2\Command & Conquer Red Alert 2 - 01 - Hell March 2.mp3
+150 D:\Users\Phantom\Music\C&C OST Collection\Red Alert 2\Command & Conquer Red Alert 2 - 02 - Industrofunk.mp3
+151 D:\Users\Phantom\Music\C&C OST Collection\Red Alert 2\Command & Conquer Red Alert 2 - 03 - Ready The Army.mp3
+152 D:\Users\Phantom\Music\C&C OST Collection\Red Alert 2\Command & Conquer Red Alert 2 - 04 - Grinder.mp3
+153 D:\Users\Phantom\Music\C&C OST Collection\Red Alert 2\Command & Conquer Red Alert 2 - 05 - In Deep.mp3
+154 D:\Users\Phantom\Music\C&C OST Collection\Red Alert 2\Command & Conquer Red Alert 2 - 06 - Motorized.mp3
+155 D:\Users\Phantom\Music\C&C OST Collection\Red Alert 2\Command & Conquer Red Alert 2 - 07 - Power.mp3
+156 D:\Users\Phantom\Music\C&C OST Collection\Red Alert 2\Command & Conquer Red Alert 2 - 08 - 200 Meters.mp3
+157 D:\Users\Phantom\Music\C&C OST Collection\Red Alert 2\Command & Conquer Red Alert 2 - 09 - Destroy.mp3
+158 D:\Users\Phantom\Music\C&C OST Collection\Red Alert 2\Command & Conquer Red Alert 2 - 10 - Burn.mp3
+159 D:\Users\Phantom\Music\C&C OST Collection\Red Alert 2\Command & Conquer Red Alert 2 - 11 - Probing.mp3
+160 D:\Users\Phantom\Music\C&C OST Collection\Red Alert 2\Command & Conquer Red Alert 2 - 12 - Blow It Up.mp3
+161 D:\Users\Phantom\Music\C&C OST Collection\Red Alert 2\Command & Conquer Red Alert 2 - 13 - Eagle Hunter.mp3
+162 D:\Users\Phantom\Music\C&C OST Collection\Red Alert 2\Command & Conquer Red Alert 2 - 14 - Fortification.mp3
+163 D:\Users\Phantom\Music\C&C OST Collection\Red Alert 2\Command & Conquer Red Alert 2 - 15 - Jank.mp3
+164 D:\Users\Phantom\Music\C&C OST Collection\Red Alert 2\Command & Conquer Red Alert 2 - 16 - C&C In The House.mp3
+165 D:\Users\Phantom\Music\C&C OST Collection\Tiberian Sun\Command & Conquer Tiberian Sun - 01 - Timebomb.mp3
+166 D:\Users\Phantom\Music\C&C OST Collection\Tiberian Sun\Command & Conquer Tiberian Sun - 02 - Pharotek.mp3
+167 D:\Users\Phantom\Music\C&C OST Collection\Tiberian Sun\Command & Conquer Tiberian Sun - 03 - Lone Trooper.mp3
+168 D:\Users\Phantom\Music\C&C OST Collection\Tiberian Sun\Command & Conquer Tiberian Sun - 04 - Scouting.mp3
+169 D:\Users\Phantom\Music\C&C OST Collection\Tiberian Sun\Command & Conquer Tiberian Sun - 05 - Infrared.mp3
+170 D:\Users\Phantom\Music\C&C OST Collection\Tiberian Sun\Command & Conquer Tiberian Sun - 06 - Flurry.mp3
+171 D:\Users\Phantom\Music\C&C OST Collection\Tiberian Sun\Command & Conquer Tiberian Sun - 07 - Mutants.mp3
+172 D:\Users\Phantom\Music\C&C OST Collection\Tiberian Sun\Command & Conquer Tiberian Sun - 08 - Gloom.mp3
+173 D:\Users\Phantom\Music\C&C OST Collection\Tiberian Sun\Command & Conquer Tiberian Sun - 09 - Heroism.mp3
+174 D:\Users\Phantom\Music\C&C OST Collection\Tiberian Sun\Command & Conquer Tiberian Sun - 10 - Approach.mp3
+175 D:\Users\Phantom\Music\C&C OST Collection\Tiberian Sun\Command & Conquer Tiberian Sun - 11 - Dusk Hour.mp3
+176 D:\Users\Phantom\Music\C&C OST Collection\Tiberian Sun\Command & Conquer Tiberian Sun - 12 - The Defense.mp3
+177 D:\Users\Phantom\Music\C&C OST Collection\Tiberian Sun\Command & Conquer Tiberian Sun - 13 - Mad Rap.mp3
+178 D:\Users\Phantom\Music\C&C OST Collection\Tiberian Sun\Command & Conquer Tiberian Sun - 14 - Valves.mp3
+179 D:\Users\Phantom\Music\C&C OST Collection\Tiberian Sun\Command & Conquer Tiberian Sun - 15 - What Lurks.mp3
+180 D:\Users\Phantom\Music\C&C OST Collection\Tiberian Sun\Command & Conquer Tiberian Sun - 16 - Score.mp3
+181 D:\Users\Phantom\Music\Coldplay\X&Y\01 Square One.mp3
+182 D:\Users\Phantom\Music\Coldplay\X&Y\02 What If.mp3
+183 D:\Users\Phantom\Music\Coldplay\X&Y\03 White Shadows.mp3
+184 D:\Users\Phantom\Music\Coldplay\X&Y\04 Fix You.mp3
+185 D:\Users\Phantom\Music\Coldplay\X&Y\05 Talk.mp3
+186 D:\Users\Phantom\Music\Coldplay\X&Y\06 X&Y.mp3
+187 D:\Users\Phantom\Music\Coldplay\X&Y\07 Speed of Sound.mp3
+188 D:\Users\Phantom\Music\Coldplay\X&Y\08 A Message.mp3
+189 D:\Users\Phantom\Music\Coldplay\X&Y\09 Low.mp3
+190 D:\Users\Phantom\Music\Coldplay\X&Y\10 The Hardest Part.mp3
+191 D:\Users\Phantom\Music\Coldplay\X&Y\11 Swallowed in the Sea.mp3
+192 D:\Users\Phantom\Music\Coldplay\X&Y\12 Twisted Logic.mp3
+193 D:\Users\Phantom\Music\Coldplay\X&Y\13 Til Kingdom Come [Hidden Track].mp3
+194 D:\Users\Phantom\Music\Collected\Angel.mp3
+195 D:\Users\Phantom\Music\Collected\Butterfly Caught.mp3
+196 D:\Users\Phantom\Music\Collected\Five Man Army.mp3
+197 D:\Users\Phantom\Music\Collected\Future Proof.mp3
+198 D:\Users\Phantom\Music\Collected\Inertia Creeps.mp3
+199 D:\Users\Phantom\Music\Collected\Karmacoma.mp3
+200 D:\Users\Phantom\Music\Collected\Live With Me.mp3
+201 D:\Users\Phantom\Music\Collected\Protection.mp3
+202 D:\Users\Phantom\Music\Collected\Risingson.mp3
+203 D:\Users\Phantom\Music\Collected\Safe From Harm.mp3
+204 D:\Users\Phantom\Music\Collected\Sly.mp3
+205 D:\Users\Phantom\Music\Collected\Teardrop.mp3
+206 D:\Users\Phantom\Music\Collected\Unfinished Sympathy.mp3
+207 D:\Users\Phantom\Music\Collected\What Your Soul Sings.mp3
+208 D:\Users\Phantom\Music\ConvertedItunesPlaylist\Music\01 Revelations.mp3
+209 D:\Users\Phantom\Music\ConvertedItunesPlaylist\Music\01 Them Bones.mp3
+210 D:\Users\Phantom\Music\ConvertedItunesPlaylist\Music\02 Dam That River.mp3
+211 D:\Users\Phantom\Music\ConvertedItunesPlaylist\Music\02 One and the Same.mp3
+212 D:\Users\Phantom\Music\ConvertedItunesPlaylist\Music\03 Rain When I Die.mp3
+213 D:\Users\Phantom\Music\ConvertedItunesPlaylist\Music\03 Sound of a Gun.mp3
+214 D:\Users\Phantom\Music\ConvertedItunesPlaylist\Music\03 Take On Me.mp3
+215 D:\Users\Phantom\Music\ConvertedItunesPlaylist\Music\04 Down in a Hole.mp3
+216 D:\Users\Phantom\Music\ConvertedItunesPlaylist\Music\04 Until We Fall.mp3
+217 D:\Users\Phantom\Music\ConvertedItunesPlaylist\Music\05 Original Fire.mp3
+218 D:\Users\Phantom\Music\ConvertedItunesPlaylist\Music\05 Sickman.mp3
+219 D:\Users\Phantom\Music\ConvertedItunesPlaylist\Music\06 Broken City.mp3
+220 D:\Users\Phantom\Music\ConvertedItunesPlaylist\Music\06 Rooster.mp3
+221 D:\Users\Phantom\Music\ConvertedItunesPlaylist\Music\07 Junkhead.mp3
+222 D:\Users\Phantom\Music\ConvertedItunesPlaylist\Music\07 Love Resurrection.mp3
+223 D:\Users\Phantom\Music\ConvertedItunesPlaylist\Music\07 Somedays.mp3
+224 D:\Users\Phantom\Music\ConvertedItunesPlaylist\Music\08 Dirt.mp3
+225 D:\Users\Phantom\Music\ConvertedItunesPlaylist\Music\08 Shape of Things to Come.mp3
+226 D:\Users\Phantom\Music\ConvertedItunesPlaylist\Music\09 God Smack.mp3
+227 D:\Users\Phantom\Music\ConvertedItunesPlaylist\Music\09 Jewel of the Summertime.mp3
+228 D:\Users\Phantom\Music\ConvertedItunesPlaylist\Music\10 Iron Gland.mp3
+229 D:\Users\Phantom\Music\ConvertedItunesPlaylist\Music\10 Wide Awake.mp3
+230 D:\Users\Phantom\Music\ConvertedItunesPlaylist\Music\11 Hate to Feel.mp3
+231 D:\Users\Phantom\Music\ConvertedItunesPlaylist\Music\11 Nothing Left to Say But Goodbye.mp3
+232 D:\Users\Phantom\Music\ConvertedItunesPlaylist\Music\12 Angry Chair.mp3
+233 D:\Users\Phantom\Music\ConvertedItunesPlaylist\Music\12 Long Way to Go.mp3
+234 D:\Users\Phantom\Music\ConvertedItunesPlaylist\Music\12 Moth.mp3
+235 D:\Users\Phantom\Music\ConvertedItunesPlaylist\Music\13 Would-.mp3
+236 D:\Users\Phantom\Music\ConvertedItunesPlaylist\Music\A Little Bitter.mp3
+237 D:\Users\Phantom\Music\ConvertedItunesPlaylist\Music\AC DC - Its A Long Way To The Top.mp3
+238 D:\Users\Phantom\Music\ConvertedItunesPlaylist\Music\Alice In Chains - Man In The Box.mp3
+239 D:\Users\Phantom\Music\ConvertedItunesPlaylist\Music\Alice In Chains - Nutshell.mp3
+240 D:\Users\Phantom\Music\ConvertedItunesPlaylist\Music\Alice In Chains - Sea Of Sorrow.mp3
+241 D:\Users\Phantom\Music\ConvertedItunesPlaylist\Music\Avenged Sevenfold - Bat Country.mp3
+242 D:\Users\Phantom\Music\ConvertedItunesPlaylist\Music\Avenged Sevenfold - Beast And The Harlot.mp3
+243 D:\Users\Phantom\Music\ConvertedItunesPlaylist\Music\Billy Idol - White Wedding.mp3
+244 D:\Users\Phantom\Music\ConvertedItunesPlaylist\Music\Blue Oyster Cult - Dont Fear The Reaper.mp3
+245 D:\Users\Phantom\Music\ConvertedItunesPlaylist\Music\Bonnie Raitt-13-Love Letters.mp3
+246 D:\Users\Phantom\Music\ConvertedItunesPlaylist\Music\Concrete Jungle.mp3
+247 D:\Users\Phantom\Music\ConvertedItunesPlaylist\Music\Heaven Beside You.mp3
+248 D:\Users\Phantom\Music\ConvertedItunesPlaylist\Music\The Animals - Don't Let Me Be Misunderstood.mp3
+249 D:\Users\Phantom\Music\Craig David\The Story Goes\01 All the Way.mp3
+250 D:\Users\Phantom\Music\Craig David\The Story Goes\02 Don't Love You No More (I'm Sorry).mp3
+251 D:\Users\Phantom\Music\Craig David\The Story Goes\03 Hypnotic.mp3
+252 D:\Users\Phantom\Music\Craig David\The Story Goes\04 Separate Ways.mp3
+253 D:\Users\Phantom\Music\Craig David\The Story Goes\05 Johnny.mp3
+254 D:\Users\Phantom\Music\Craig David\The Story Goes\06 Do You Believe in Love.mp3
+255 D:\Users\Phantom\Music\Craig David\The Story Goes\07 One Last Dance.mp3
+256 D:\Users\Phantom\Music\Craig David\The Story Goes\08 Unbelievable.mp3
+257 D:\Users\Phantom\Music\Craig David\The Story Goes\09 Just Chillin'.mp3
+258 D:\Users\Phantom\Music\Craig David\The Story Goes\10 Theif in the Night.mp3
+259 D:\Users\Phantom\Music\Craig David\The Story Goes\11 Take 'Em Off.mp3
+260 D:\Users\Phantom\Music\Craig David\The Story Goes\12 My Love Don't Stop.mp3
+261 D:\Users\Phantom\Music\Craig David\The Story Goes\13 Let Her Go.mp3
+262 D:\Users\Phantom\Music\Dido\Life for Rent\01 White Flag.mp3
+263 D:\Users\Phantom\Music\Dido\Life for Rent\02 Stoned.mp3
+264 D:\Users\Phantom\Music\Dido\Life for Rent\03 Life for Rent.mp3
+265 D:\Users\Phantom\Music\Dido\Life for Rent\04 Mary's in India.mp3
+266 D:\Users\Phantom\Music\Dido\Life for Rent\05 See You When You're 40.mp3
+267 D:\Users\Phantom\Music\Dido\Life for Rent\06 Don't Leave Home.mp3
+268 D:\Users\Phantom\Music\Dido\Life for Rent\07 Who Makes You Feel.mp3
+269 D:\Users\Phantom\Music\Dido\Life for Rent\08 Sand in My Shoes.mp3
+270 D:\Users\Phantom\Music\Dido\Life for Rent\09 Do You Have a Little Time.mp3
+271 D:\Users\Phantom\Music\Dido\Life for Rent\10 This Land Is Mine.mp3
+272 D:\Users\Phantom\Music\Dido\Life for Rent\11 See the Sun.mp3
+273 D:\Users\Phantom\Music\Dire Straits\Sultans of Swing- The Very Best of Dire Straits\01 Sultans of Swing.mp3
+274 D:\Users\Phantom\Music\Dire Straits\Sultans of Swing- The Very Best of Dire Straits\02 Lady Writer.mp3
+275 D:\Users\Phantom\Music\Dire Straits\Sultans of Swing- The Very Best of Dire Straits\03 Romeo and Juliet.mp3
+276 D:\Users\Phantom\Music\Dire Straits\Sultans of Swing- The Very Best of Dire Straits\04 Tunnel of Love.mp3
+277 D:\Users\Phantom\Music\Dire Straits\Sultans of Swing- The Very Best of Dire Straits\05 Private Investigations.mp3
+278 D:\Users\Phantom\Music\Dire Straits\Sultans of Swing- The Very Best of Dire Straits\06 Twisting by the Pool.mp3
+279 D:\Users\Phantom\Music\Dire Straits\Sultans of Swing- The Very Best of Dire Straits\07 Love Over Gold [Live].mp3
+280 D:\Users\Phantom\Music\Dire Straits\Sultans of Swing- The Very Best of Dire Straits\08 So Far Away.mp3
+281 D:\Users\Phantom\Music\Dire Straits\Sultans of Swing- The Very Best of Dire Straits\09 Money for Nothing.mp3
+282 D:\Users\Phantom\Music\Dire Straits\Sultans of Swing- The Very Best of Dire Straits\10 Brothers in Arms.mp3
+283 D:\Users\Phantom\Music\Dire Straits\Sultans of Swing- The Very Best of Dire Straits\11 Walk of Life.mp3
+284 D:\Users\Phantom\Music\Dire Straits\Sultans of Swing- The Very Best of Dire Straits\12 Calling Elvis.mp3
+285 D:\Users\Phantom\Music\Dire Straits\Sultans of Swing- The Very Best of Dire Straits\13 Heavy Fuel.mp3
+286 D:\Users\Phantom\Music\Dire Straits\Sultans of Swing- The Very Best of Dire Straits\14 On Every Street.mp3
+287 D:\Users\Phantom\Music\Dire Straits\Sultans of Swing- The Very Best of Dire Straits\15 Your Latest Trick [Live].mp3
+288 D:\Users\Phantom\Music\Dire Straits\Sultans of Swing- The Very Best of Dire Straits\16 Local Hero-Wild Theme [Live].mp3
+289 D:\Users\Phantom\Music\Disturbed\Believe\01 Prayer.mp3
+290 D:\Users\Phantom\Music\Disturbed\Believe\02 Liberate.mp3
+291 D:\Users\Phantom\Music\Disturbed\Believe\03 Awaken.mp3
+292 D:\Users\Phantom\Music\Disturbed\Believe\04 Believe.mp3
+293 D:\Users\Phantom\Music\Disturbed\Believe\05 Remember.mp3
+294 D:\Users\Phantom\Music\Disturbed\Believe\06 Intoxication.mp3
+295 D:\Users\Phantom\Music\Disturbed\Believe\07 Rise.mp3
+296 D:\Users\Phantom\Music\Disturbed\Believe\08 Mistress.mp3
+297 D:\Users\Phantom\Music\Disturbed\Believe\09 Breathe.mp3
+298 D:\Users\Phantom\Music\Disturbed\Believe\10 Bound.mp3
+299 D:\Users\Phantom\Music\Disturbed\Believe\11 Devour.mp3
+300 D:\Users\Phantom\Music\Disturbed\Believe\12 Darkness.mp3
+301 D:\Users\Phantom\Music\Disturbed\Disturbed - Stricken.mp3
+302 D:\Users\Phantom\Music\Disturbed\The Sickness [Bonus Tracks]\01 Voices.mp3
+303 D:\Users\Phantom\Music\Disturbed\The Sickness [Bonus Tracks]\04 Down With the Sickness.mp3
+304 D:\Users\Phantom\Music\Disturbed\The Sickness [Bonus Tracks]\05 Violence Fetish.mp3
+305 D:\Users\Phantom\Music\Disturbed\The Sickness [Bonus Tracks]\06 Fear.mp3
+306 D:\Users\Phantom\Music\Disturbed\The Sickness [Bonus Tracks]\07 Numb.mp3
+307 D:\Users\Phantom\Music\Disturbed\The Sickness [Bonus Tracks]\08 Want.mp3
+308 D:\Users\Phantom\Music\Disturbed\The Sickness [Bonus Tracks]\09 Conflict.mp3
+309 D:\Users\Phantom\Music\Disturbed\The Sickness [Bonus Tracks]\10 Shout 2000.mp3
+310 D:\Users\Phantom\Music\Disturbed\The Sickness [Bonus Tracks]\11 Droppin' Plates.mp3
+311 D:\Users\Phantom\Music\Disturbed\The Sickness [Bonus Tracks]\12 Meaning of Life.mp3
+312 D:\Users\Phantom\Music\Disturbed\The Sickness [Bonus Tracks]\13 God of the Mind [-].mp3
+313 D:\Users\Phantom\Music\Disturbed\The Sickness [Bonus Tracks]\14 Stupify [Live][-].mp3
+314 D:\Users\Phantom\Music\Disturbed\The Sickness [Bonus Tracks]\15 The Game [Live][-].mp3
+315 D:\Users\Phantom\Music\Disturbed\The Sickness [Bonus Tracks]\16 Voices [Live][-].mp3
+316 D:\Users\Phantom\Music\Disturbed\The Sickness [Bonus Tracks]\17 Down With the Sicknesss [Live][-].mp3
+317 D:\Users\Phantom\Music\Dr. Hook\Completely Hooked (The Best Of Dr. Hook) [UK]\Dr. Hook-01-Sylvia's Mother.mp3
+318 D:\Users\Phantom\Music\Dr. Hook\Completely Hooked (The Best Of Dr. Hook) [UK]\Dr. Hook-02-Cover Of The Rolling Stone.mp3
+319 D:\Users\Phantom\Music\Dr. Hook\Completely Hooked (The Best Of Dr. Hook) [UK]\Dr. Hook-03-Everybody's Makin' It Big But Me.mp3
+320 D:\Users\Phantom\Music\Dr. Hook\Completely Hooked (The Best Of Dr. Hook) [UK]\Dr. Hook-04-You Make My Pants Want To Get Up And Dance.mp3
+321 D:\Users\Phantom\Music\Dr. Hook\Completely Hooked (The Best Of Dr. Hook) [UK]\Dr. Hook-05-Sleepin' Late.mp3
+322 D:\Users\Phantom\Music\Dr. Hook\Completely Hooked (The Best Of Dr. Hook) [UK]\Dr. Hook-06-Only Sixteen.mp3
+323 D:\Users\Phantom\Music\Dr. Hook\Completely Hooked (The Best Of Dr. Hook) [UK]\Dr. Hook-07-Walk Right In.mp3
+324 D:\Users\Phantom\Music\Dr. Hook\Completely Hooked (The Best Of Dr. Hook) [UK]\Dr. Hook-08-Millionaire.mp3
+325 D:\Users\Phantom\Music\Dr. Hook\Completely Hooked (The Best Of Dr. Hook) [UK]\Dr. Hook-09-More Like The Movies.mp3
+326 D:\Users\Phantom\Music\Dr. Hook\Completely Hooked (The Best Of Dr. Hook) [UK]\Dr. Hook-10-When You're In Love With A Beautiful Woman.mp3
+327 D:\Users\Phantom\Music\Dr. Hook\Completely Hooked (The Best Of Dr. Hook) [UK]\Dr. Hook-11-Sexy Eyes.mp3
+328 D:\Users\Phantom\Music\Dr. Hook\Completely Hooked (The Best Of Dr. Hook) [UK]\Dr. Hook-12-If Not You.mp3
+329 D:\Users\Phantom\Music\Dr. Hook\Completely Hooked (The Best Of Dr. Hook) [UK]\Dr. Hook-13-Little Bit More.mp3
+330 D:\Users\Phantom\Music\Dr. Hook\Completely Hooked (The Best Of Dr. Hook) [UK]\Dr. Hook-14-Sharing The Night Together.mp3
+331 D:\Users\Phantom\Music\Dr. Hook\Completely Hooked (The Best Of Dr. Hook) [UK]\Dr. Hook-15-I Don't Want To Be Alone Tonight.mp3
+332 D:\Users\Phantom\Music\Dr. Hook\Completely Hooked (The Best Of Dr. Hook) [UK]\Dr. Hook-16-Better Love Next Time.mp3
+333 D:\Users\Phantom\Music\Dr. Hook\Completely Hooked (The Best Of Dr. Hook) [UK]\Dr. Hook-17-In Over My Head.mp3
+334 D:\Users\Phantom\Music\Dr. Hook\Completely Hooked (The Best Of Dr. Hook) [UK]\Dr. Hook-18-Years From Now.mp3
+335 D:\Users\Phantom\Music\Dr. Hook\Completely Hooked (The Best Of Dr. Hook) [UK]\Dr. Hook-19-Sweetest Of All.mp3
+336 D:\Users\Phantom\Music\Dr. Hook\Completely Hooked (The Best Of Dr. Hook) [UK]\Dr. Hook-20-Couple More Years.mp3
+337 D:\Users\Phantom\Music\DVD compilation (DAN)\01 Purple Haze.mp3
+338 D:\Users\Phantom\Music\DVD compilation (DAN)\01 Stinkfist.mp3
+339 D:\Users\Phantom\Music\DVD compilation (DAN)\01 You Again.mp3
+340 D:\Users\Phantom\Music\DVD compilation (DAN)\02 Bodies.mp3
+341 D:\Users\Phantom\Music\DVD compilation (DAN)\02 Praise.mp3
+342 D:\Users\Phantom\Music\DVD compilation (DAN)\04 The Unforgiven II.mp3
+343 D:\Users\Phantom\Music\DVD compilation (DAN)\05 All Along the Watchtower.mp3
+344 D:\Users\Phantom\Music\DVD compilation (DAN)\05 Reminded.mp3
+345 D:\Users\Phantom\Music\DVD compilation (DAN)\05 Schism.mp3
+346 D:\Users\Phantom\Music\DVD compilation (DAN)\08 Bad Seed.mp3
+347 D:\Users\Phantom\Music\DVD compilation (DAN)\08 The Call of Ktulu.mp3
+348 D:\Users\Phantom\Music\DVD compilation (DAN)\09 Little Wing.mp3
+349 D:\Users\Phantom\Music\DVD compilation (DAN)\09 Whiskey in the Jar.mp3
+350 D:\Users\Phantom\Music\DVD compilation (DAN)\11 Foxey Lady.mp3
+351 D:\Users\Phantom\Music\DVD compilation (DAN)\13 Ænema.mp3
+352 D:\Users\Phantom\Music\DVD compilation (DAN)\14 Track 14.mp3
+353 D:\Users\Phantom\Music\DVD compilation (DAN)\15 Voodoo Child (Slight Return).mp3
+354 D:\Users\Phantom\Music\DVD compilation (DAN)\7.  Ram Jam - Black Betty.mp3
+355 D:\Users\Phantom\Music\DVD compilation (DAN)\Bush - The People That We Love (1).mp3
+356 D:\Users\Phantom\Music\DVD compilation (DAN)\Dragonballz Theme Song.mp3
+357 D:\Users\Phantom\Music\DVD compilation (DAN)\Mastodon - Emerald.mp3
+358 D:\Users\Phantom\Music\DVD compilation (DAN)\Pain - Just hate me.mp3
+359 D:\Users\Phantom\Music\DVD compilation (DAN)\Stupify The Sickness [Bonus Tracks].mp3
+360 D:\Users\Phantom\Music\DVD compilation (DAN)\The Game The Sickness [Bonus Tracks].mp3
+361 D:\Users\Phantom\Music\DVD compilation (DAN)\White Lion - Transformers Theme Song.mp3
+362 D:\Users\Phantom\Music\Eddie Money\Eddie Money - Two Tickets To Paradise.mp3
+363 D:\Users\Phantom\Music\Elton John\Duets\Bonnie Raitt-13-Love Letters.mp3
+364 D:\Users\Phantom\Music\Elton John\Duets\Chris Rea-06-If You Were Me.mp3
+365 D:\Users\Phantom\Music\Elton John\Duets\Don Henley-04-Shakey Ground.mp3
+366 D:\Users\Phantom\Music\Elton John\Duets\Elton John-01-Teardrops.mp3
+367 D:\Users\Phantom\Music\Elton John\Duets\Elton John-02-When I Think About Love (I Think About You).mp3
+368 D:\Users\Phantom\Music\Elton John\Duets\Elton John-03-The Power.mp3
+369 D:\Users\Phantom\Music\Elton John\Duets\Elton John-05-True Love.mp3
+370 D:\Users\Phantom\Music\Elton John\Duets\Elton John-07-A Woman's Needs.mp3
+371 D:\Users\Phantom\Music\Elton John\Duets\Elton John-08-Old Friend.mp3
+372 D:\Users\Phantom\Music\Elton John\Duets\Elton John-09-Go on and On.mp3
+373 D:\Users\Phantom\Music\Elton John\Duets\Elton John-10-Don't Go Breaking My Heart.mp3
+374 D:\Users\Phantom\Music\Elton John\Duets\Elton John-11-Ain't Nothing Like the Real Thing.mp3
+375 D:\Users\Phantom\Music\Elton John\Duets\Elton John-12-I'm Your Puppet.mp3
+376 D:\Users\Phantom\Music\Elton John\Duets\Elton John-14-Born to Lose.mp3
+377 D:\Users\Phantom\Music\Elton John\Duets\Elton John-15-Don't Let the Sun Go Down on Me.mp3
+378 D:\Users\Phantom\Music\Elton John\Duets\Elton John-16-Duets for One.mp3
+379 D:\Users\Phantom\Music\Elton John\The Collection\Elton John-01-Funeral For A Friend-Love Lies Bleeding.mp3
+380 D:\Users\Phantom\Music\Elton John\The Collection\Elton John-02-Sweet painted lady.mp3
+381 D:\Users\Phantom\Music\Elton John\The Collection\Elton John-03-Track 3.mp3
+382 D:\Users\Phantom\Music\Elton John\The Collection\Elton John-04-Track 4.mp3
+383 D:\Users\Phantom\Music\Elton John\The Collection\Elton John-05-Track 5.mp3
+384 D:\Users\Phantom\Music\Elton John\The Collection\Elton John-06-Track 6.mp3
+385 D:\Users\Phantom\Music\Elton John\The Collection\Elton John-07-Track 7.mp3
+386 D:\Users\Phantom\Music\Elton John\The Collection\Elton John-08-Track 8.mp3
+387 D:\Users\Phantom\Music\Elton John\The Collection\Elton John-09-Track 9.mp3
+388 D:\Users\Phantom\Music\Elton John\The Collection\Elton John-10-Track 10.mp3
+389 D:\Users\Phantom\Music\Elton John\The Collection\Elton John-11-Track 11.mp3
+390 D:\Users\Phantom\Music\Elton John\The Collection\Elton John-12-Track 12.mp3
+391 D:\Users\Phantom\Music\Elton John\The Collection\Elton John-13-Track 13.mp3
+392 D:\Users\Phantom\Music\Elton John\The Collection\Elton John-14-Track 14.mp3
+393 D:\Users\Phantom\Music\Eric Clapton\Time Pieces- Best of Eric Clapton\01 I Shot the Sheriff.mp3
+394 D:\Users\Phantom\Music\Eric Clapton\Time Pieces- Best of Eric Clapton\02 After Midnight.mp3
+395 D:\Users\Phantom\Music\Eric Clapton\Time Pieces- Best of Eric Clapton\03 Knockin' on Heaven's Door.mp3
+396 D:\Users\Phantom\Music\Eric Clapton\Time Pieces- Best of Eric Clapton\04 Wonderful Tonight.mp3
+397 D:\Users\Phantom\Music\Eric Clapton\Time Pieces- Best of Eric Clapton\05 Layla.mp3
+398 D:\Users\Phantom\Music\Eric Clapton\Time Pieces- Best of Eric Clapton\06 Cocaine.mp3
+399 D:\Users\Phantom\Music\Eric Clapton\Time Pieces- Best of Eric Clapton\07 Lay Down Sally.mp3
+400 D:\Users\Phantom\Music\Eric Clapton\Time Pieces- Best of Eric Clapton\08 Willie and the Hand Jive.mp3
+401 D:\Users\Phantom\Music\Eric Clapton\Time Pieces- Best of Eric Clapton\09 Promises.mp3
+402 D:\Users\Phantom\Music\Eric Clapton\Time Pieces- Best of Eric Clapton\10 Swing Low, Sweet Chariot.mp3
+403 D:\Users\Phantom\Music\Eric Clapton\Time Pieces- Best of Eric Clapton\11 Let It Grow.mp3
+404 D:\Users\Phantom\Music\Faith No More\King for a Day, Fool for a Lifetime\01 Get Out.mp3
+405 D:\Users\Phantom\Music\Faith No More\King for a Day, Fool for a Lifetime\02 Ricochet.mp3
+406 D:\Users\Phantom\Music\Faith No More\King for a Day, Fool for a Lifetime\03 Evidence.mp3
+407 D:\Users\Phantom\Music\Faith No More\King for a Day, Fool for a Lifetime\04 The Gentle Art of Making Enemies.mp3
+408 D:\Users\Phantom\Music\Faith No More\King for a Day, Fool for a Lifetime\05 Star A.D.mp3
+409 D:\Users\Phantom\Music\Faith No More\King for a Day, Fool for a Lifetime\06 Cuckoo for Caca.mp3
+410 D:\Users\Phantom\Music\Faith No More\King for a Day, Fool for a Lifetime\07 Caralho Voador.mp3
+411 D:\Users\Phantom\Music\Faith No More\King for a Day, Fool for a Lifetime\08 Ugly in the Morning.mp3
+412 D:\Users\Phantom\Music\Faith No More\King for a Day, Fool for a Lifetime\09 Digging the Grave.mp3
+413 D:\Users\Phantom\Music\Faith No More\King for a Day, Fool for a Lifetime\10 Take This Bottle.mp3
+414 D:\Users\Phantom\Music\Faith No More\King for a Day, Fool for a Lifetime\11 King for a Day.mp3
+415 D:\Users\Phantom\Music\Faith No More\King for a Day, Fool for a Lifetime\12 What a Day.mp3
+416 D:\Users\Phantom\Music\Faith No More\King for a Day, Fool for a Lifetime\13 The Last to Know.mp3
+417 D:\Users\Phantom\Music\Faith No More\King for a Day, Fool for a Lifetime\14 Just a Man.mp3
+418 D:\Users\Phantom\Music\Fall Out Boy\Infinity on High\01 Thriller.mp3
+419 D:\Users\Phantom\Music\Fall Out Boy\Infinity on High\02 The Take Over, The Breaks Over.mp3
+420 D:\Users\Phantom\Music\Fall Out Boy\Infinity on High\03 This Ain't a Scene, It's an Arms Race.mp3
+421 D:\Users\Phantom\Music\Fall Out Boy\Infinity on High\05 Hum Hallelujah.mp3
+422 D:\Users\Phantom\Music\Fall Out Boy\Infinity on High\06 Golden.mp3
+423 D:\Users\Phantom\Music\Fall Out Boy\Infinity on High\07 Thnks fr th Mmrs.mp3
+424 D:\Users\Phantom\Music\Fall Out Boy\Infinity on High\08 Don't You Know Who I Think I Am-.mp3
+425 D:\Users\Phantom\Music\Fall Out Boy\Infinity on High\09 The (After) Life of the Party.mp3
+426 D:\Users\Phantom\Music\Fall Out Boy\Infinity on High\10 The Carpal Tunnel of Love.mp3
+427 D:\Users\Phantom\Music\Fall Out Boy\Infinity on High\11 Bang the Doldrums.mp3
+428 D:\Users\Phantom\Music\Fall Out Boy\Infinity on High\13 You're Crashing, But You're No Wave.mp3
+429 D:\Users\Phantom\Music\Fall Out Boy\Infinity on High\14 I've Got All This Ringing in My Ears and None on My Fingers.mp3
+430 D:\Users\Phantom\Music\Fall Out Boy\Infinity on High\15 G.I.N.A.S.F.S.mp3
+431 D:\Users\Phantom\Music\Fiend Without a Face\Fiend Without a Face\Fiend Without A Face_Fiend Without A Face_01_Calypso.mp3
+432 D:\Users\Phantom\Music\Fiend Without a Face\Fiend Without a Face\Fiend Without A Face_Fiend Without A Face_02_Black Grass.mp3
+433 D:\Users\Phantom\Music\Fiend Without a Face\Fiend Without a Face\Fiend Without A Face_Fiend Without A Face_03_Green Slime.mp3
+434 D:\Users\Phantom\Music\Fiend Without a Face\Fiend Without a Face\Fiend Without A Face_Fiend Without A Face_04_Cha-Cha.mp3
+435 D:\Users\Phantom\Music\Fiend Without a Face\Fiend Without a Face\Fiend Without A Face_Fiend Without A Face_05_Bank Robbin' Bandits.mp3
+436 D:\Users\Phantom\Music\Fiend Without a Face\Fiend Without a Face\Fiend Without A Face_Fiend Without A Face_06_Tsunami.mp3
+437 D:\Users\Phantom\Music\Fiend Without a Face\Fiend Without a Face\Fiend Without A Face_Fiend Without A Face_07_Hot Rod.mp3
+438 D:\Users\Phantom\Music\Fiend Without a Face\Fiend Without a Face\Fiend Without A Face_Fiend Without A Face_08_New York.mp3
+439 D:\Users\Phantom\Music\Fiend Without a Face\Fiend Without a Face\Fiend Without A Face_Fiend Without A Face_09_Don't Like.mp3
+440 D:\Users\Phantom\Music\Fiend Without a Face\Fiend Without a Face\Fiend Without A Face_Fiend Without A Face_10_Cosmonaut.mp3
+441 D:\Users\Phantom\Music\Fiend Without a Face\Fiend Without a Face\Fiend Without A Face_Fiend Without A Face_11_Stupido.mp3
+442 D:\Users\Phantom\Music\Fiend Without a Face\Fiend Without a Face\Fiend Without A Face_Fiend Without A Face_12_Get Straight.mp3
+443 D:\Users\Phantom\Music\Fiend Without a Face\Fiend Without a Face\Fiend Without A Face_Fiend Without A Face_13_Volcano.mp3
+444 D:\Users\Phantom\Music\Foo Fighters\06 Have a Cigar.mp3
+445 D:\Users\Phantom\Music\Foo Fighters\Echoes, Silence, Patience & Grace\01 The Pretender.mp3
+446 D:\Users\Phantom\Music\Foo Fighters\Echoes, Silence, Patience & Grace\02 Let It Die.mp3
+447 D:\Users\Phantom\Music\Foo Fighters\Echoes, Silence, Patience & Grace\03 Erase-Replace.mp3
+448 D:\Users\Phantom\Music\Foo Fighters\Echoes, Silence, Patience & Grace\04 Long Road to Ruin.mp3
+449 D:\Users\Phantom\Music\Foo Fighters\Echoes, Silence, Patience & Grace\05 Come Alive.mp3
+450 D:\Users\Phantom\Music\Foo Fighters\Echoes, Silence, Patience & Grace\06 Stranger Things Have Happened.mp3
+451 D:\Users\Phantom\Music\Foo Fighters\Echoes, Silence, Patience & Grace\07 Cheer Up, Boys (Your Make Up Is Running).mp3
+452 D:\Users\Phantom\Music\Foo Fighters\Echoes, Silence, Patience & Grace\08 Summer's End.mp3
+453 D:\Users\Phantom\Music\Foo Fighters\Echoes, Silence, Patience & Grace\09 Ballad of the Beaconsfield Miners.mp3
+454 D:\Users\Phantom\Music\Foo Fighters\Echoes, Silence, Patience & Grace\10 Statues.mp3
+455 D:\Users\Phantom\Music\Foo Fighters\Echoes, Silence, Patience & Grace\11 But, Honestly.mp3
+456 D:\Users\Phantom\Music\Foo Fighters\Echoes, Silence, Patience & Grace\12 Home.mp3
+457 D:\Users\Phantom\Music\Foo Fighters\In Your Honor Disc 1\01 In Your Honor.mp3
+458 D:\Users\Phantom\Music\Foo Fighters\In Your Honor Disc 1\02 No Way Back.mp3
+459 D:\Users\Phantom\Music\Foo Fighters\In Your Honor Disc 1\03 Best of You.mp3
+460 D:\Users\Phantom\Music\Foo Fighters\In Your Honor Disc 1\04 DOA.mp3
+461 D:\Users\Phantom\Music\Foo Fighters\In Your Honor Disc 1\05 Hell.mp3
+462 D:\Users\Phantom\Music\Foo Fighters\In Your Honor Disc 1\06 The Last Song.mp3
+463 D:\Users\Phantom\Music\Foo Fighters\In Your Honor Disc 1\07 Free Me.mp3
+464 D:\Users\Phantom\Music\Foo Fighters\In Your Honor Disc 1\08 Resolve.mp3
+465 D:\Users\Phantom\Music\Foo Fighters\In Your Honor Disc 1\09 The Deepest Blues Are Black.mp3
+466 D:\Users\Phantom\Music\Foo Fighters\In Your Honor Disc 1\10 End Over End.mp3
+467 D:\Users\Phantom\Music\Foo Fighters\In Your Honor Disc 2\01 Still.mp3
+468 D:\Users\Phantom\Music\Foo Fighters\In Your Honor Disc 2\02 What If I Do-.mp3
+469 D:\Users\Phantom\Music\Foo Fighters\In Your Honor Disc 2\03 Miracle.mp3
+470 D:\Users\Phantom\Music\Foo Fighters\In Your Honor Disc 2\04 Another Round.mp3
+471 D:\Users\Phantom\Music\Foo Fighters\In Your Honor Disc 2\05 Friend of a Friend.mp3
+472 D:\Users\Phantom\Music\Foo Fighters\In Your Honor Disc 2\06 Over and Out.mp3
+473 D:\Users\Phantom\Music\Foo Fighters\In Your Honor Disc 2\07 On the Mend.mp3
+474 D:\Users\Phantom\Music\Foo Fighters\In Your Honor Disc 2\08 Virginia Moon.mp3
+475 D:\Users\Phantom\Music\Foo Fighters\In Your Honor Disc 2\09 Cold Day in the Sun.mp3
+476 D:\Users\Phantom\Music\Foo Fighters\In Your Honor Disc 2\10 Razor.mp3
+477 D:\Users\Phantom\Music\Foo Fighters\One by One\Foo Fighters - All My Life.mp3
+478 D:\Users\Phantom\Music\Foo Fighters\The Colour And The Shape\Baker Street.mp3
+479 D:\Users\Phantom\Music\Foo Fighters\The Colour And The Shape\Monkey Wrench.mp3
+480 D:\Users\Phantom\Music\Foo Fighters\The Colour And The Shape\My Hero.mp3
+481 D:\Users\Phantom\Music\Foo Fighters\There Is Nothing Left to Lose\Learn To Fly.mp3
+482 D:\Users\Phantom\Music\Foo Fighters\There Is Nothing Left to Lose\Stacked Actors.mp3
+483 D:\Users\Phantom\Music\Goldenhorse\Riverhead\01 Northern Lights.mp3
+484 D:\Users\Phantom\Music\Goldenhorse\Riverhead\02 Spice Islands.mp3
+485 D:\Users\Phantom\Music\Goldenhorse\Riverhead\03 Golden Dawn.mp3
+486 D:\Users\Phantom\Music\Goldenhorse\Riverhead\04 Maybe Tomorrow.mp3
+487 D:\Users\Phantom\Music\Goldenhorse\Riverhead\05 Riverhead.mp3
+488 D:\Users\Phantom\Music\Goldenhorse\Riverhead\06 Wake Up Brother.mp3
+489 D:\Users\Phantom\Music\Goldenhorse\Riverhead\07 Shrinking Her Legs.mp3
+490 D:\Users\Phantom\Music\Goldenhorse\Riverhead\08 Out Tonight.mp3
+491 D:\Users\Phantom\Music\Goldenhorse\Riverhead\09 Baby's Been Bad.mp3
+492 D:\Users\Phantom\Music\Goldenhorse\Riverhead\10 American Wife.mp3
+493 D:\Users\Phantom\Music\Goldenhorse\Riverhead\11 Dark Forest.mp3
+494 D:\Users\Phantom\Music\Goldenhorse\Riverhead\12 Track 12.mp3
+495 D:\Users\Phantom\Music\Good Charlotte\Good Charlotte\Good Charlotte-01-Little Things.mp3
+496 D:\Users\Phantom\Music\Good Charlotte\Good Charlotte\Good Charlotte-03-Motivation Proclamation.mp3
+497 D:\Users\Phantom\Music\GooGoo Dolls\Iris\GooGoo Dolls - Iris.mp3
+498 D:\Users\Phantom\Music\Grand Funk Railroad\Grand Funk Railroad - Some Kind Of Wonderful.mp3
+499 D:\Users\Phantom\Music\Greatest Hits\01-Welcome To The Jungle.mp3
+500 D:\Users\Phantom\Music\Greatest Hits\04-Paradise City.mp3
+501 D:\Users\Phantom\Music\Greatest Hits\05-Knockin' On Heaven's Door.mp3
+502 D:\Users\Phantom\Music\Greatest Hits\06-Civil War.mp3
+503 D:\Users\Phantom\Music\Greatest Hits\11-Yesterdays.mp3
+504 D:\Users\Phantom\Music\Greatest Hits\12-Ain't It Fun.mp3
+505 D:\Users\Phantom\Music\Greatest Hits\14-Sympathy For The Devil.mp3
+506 D:\Users\Phantom\Music\Green Day\American Idiot\Green Day-01-American Idiot.mp3
+507 D:\Users\Phantom\Music\Green Day\American Idiot\Green Day-02-Jesus of Suburbia- Jesus of Suburbia-City of the Damned-I Don't Care-De.mp3
+508 D:\Users\Phantom\Music\Green Day\American Idiot\Green Day-03-Holiday.mp3
+509 D:\Users\Phantom\Music\Green Day\American Idiot\Green Day-04-Boulevard of Broken Dreams.mp3
+510 D:\Users\Phantom\Music\Green Day\American Idiot\Green Day-05-Are We the Waiting.mp3
+511 D:\Users\Phantom\Music\Green Day\American Idiot\Green Day-06-St. Jimmy.mp3
+512 D:\Users\Phantom\Music\Green Day\American Idiot\Green Day-07-Give Me Novacaine.mp3
+513 D:\Users\Phantom\Music\Green Day\American Idiot\Green Day-08-She's a Rebel.mp3
+514 D:\Users\Phantom\Music\Green Day\American Idiot\Green Day-09-Extraordinary Girl.mp3
+515 D:\Users\Phantom\Music\Green Day\American Idiot\Green Day-10-Letterbomb.mp3
+516 D:\Users\Phantom\Music\Green Day\American Idiot\Green Day-11-Wake Me Up When September Ends.mp3
+517 D:\Users\Phantom\Music\Green Day\American Idiot\Green Day-12-Homecoming- The Death of St. Jimmy-East 12th St.-Nobody Likes You-Rock.mp3
+518 D:\Users\Phantom\Music\Green Day\American Idiot\Green Day-13-Whatsername.mp3
+519 D:\Users\Phantom\Music\Gwen Stefani\Love.Angel.Music.Baby [Bonus Tracks]\01 What You Waiting For-.mp3
+520 D:\Users\Phantom\Music\Gwen Stefani\Love.Angel.Music.Baby [Bonus Tracks]\02 Rich Girl.mp3
+521 D:\Users\Phantom\Music\Gwen Stefani\Love.Angel.Music.Baby [Bonus Tracks]\03 Hollaback Girl.mp3
+522 D:\Users\Phantom\Music\Gwen Stefani\Love.Angel.Music.Baby [Bonus Tracks]\04 Cool.mp3
+523 D:\Users\Phantom\Music\Gwen Stefani\Love.Angel.Music.Baby [Bonus Tracks]\05 Bubble Pop Electric.mp3
+524 D:\Users\Phantom\Music\Gwen Stefani\Love.Angel.Music.Baby [Bonus Tracks]\06 Luxurious.mp3
+525 D:\Users\Phantom\Music\Gwen Stefani\Love.Angel.Music.Baby [Bonus Tracks]\07 Harajuku Girls.mp3
+526 D:\Users\Phantom\Music\Gwen Stefani\Love.Angel.Music.Baby [Bonus Tracks]\08 Crash.mp3
+527 D:\Users\Phantom\Music\Gwen Stefani\Love.Angel.Music.Baby [Bonus Tracks]\09 The Real Thing.mp3
+528 D:\Users\Phantom\Music\Gwen Stefani\Love.Angel.Music.Baby [Bonus Tracks]\10 Serious.mp3
+529 D:\Users\Phantom\Music\Gwen Stefani\Love.Angel.Music.Baby [Bonus Tracks]\11 Danger Zone.mp3
+530 D:\Users\Phantom\Music\Gwen Stefani\Love.Angel.Music.Baby [Bonus Tracks]\12 Long Way to Go.mp3
+531 D:\Users\Phantom\Music\Heart\Heart - Barracuda.mp3
+532 D:\Users\Phantom\Music\Hendrix\jimi hendrix - machine gun.mp3
+533 D:\Users\Phantom\Music\Hendrix\Jimi Hendrix - The Wind Cries Mary.mp3
+534 D:\Users\Phantom\Music\John Fogerty\The Long Road Home- The Ultimate John Fogerty-Creedence Collection\01 Born on the Bayou.mp3
+535 D:\Users\Phantom\Music\John Fogerty\The Long Road Home- The Ultimate John Fogerty-Creedence Collection\02 Bad Moon Rising.mp3
+536 D:\Users\Phantom\Music\John Fogerty\The Long Road Home- The Ultimate John Fogerty-Creedence Collection\03 Centerfield.mp3
+537 D:\Users\Phantom\Music\John Fogerty\The Long Road Home- The Ultimate John Fogerty-Creedence Collection\04 Who'll Stop the Rain.mp3
+538 D:\Users\Phantom\Music\John Fogerty\The Long Road Home- The Ultimate John Fogerty-Creedence Collection\05 Rambunctious Boy.mp3
+539 D:\Users\Phantom\Music\John Fogerty\The Long Road Home- The Ultimate John Fogerty-Creedence Collection\06 Fortunate Son.mp3
+540 D:\Users\Phantom\Music\John Fogerty\The Long Road Home- The Ultimate John Fogerty-Creedence Collection\07 Lookin' Out My Back Door.mp3
+541 D:\Users\Phantom\Music\John Fogerty\The Long Road Home- The Ultimate John Fogerty-Creedence Collection\08 Up Around the Bend.mp3
+542 D:\Users\Phantom\Music\John Fogerty\The Long Road Home- The Ultimate John Fogerty-Creedence Collection\09 Almost Saturday Night [Live].mp3
+543 D:\Users\Phantom\Music\John Fogerty\The Long Road Home- The Ultimate John Fogerty-Creedence Collection\10 Down on the Corner.mp3
+544 D:\Users\Phantom\Music\John Fogerty\The Long Road Home- The Ultimate John Fogerty-Creedence Collection\11 Bootleg [Live][#].mp3
+545 D:\Users\Phantom\Music\John Fogerty\The Long Road Home- The Ultimate John Fogerty-Creedence Collection\12 Have You Ever Seen the Rain-.mp3
+546 D:\Users\Phantom\Music\John Fogerty\The Long Road Home- The Ultimate John Fogerty-Creedence Collection\13 Sweet Hitch-Hiker.mp3
+547 D:\Users\Phantom\Music\John Fogerty\The Long Road Home- The Ultimate John Fogerty-Creedence Collection\14 Hey Tonight [Live][#].mp3
+548 D:\Users\Phantom\Music\John Fogerty\The Long Road Home- The Ultimate John Fogerty-Creedence Collection\15 The Old Man Down the Road.mp3
+549 D:\Users\Phantom\Music\John Fogerty\The Long Road Home- The Ultimate John Fogerty-Creedence Collection\16 Rockin' All Over the World [Live].mp3
+550 D:\Users\Phantom\Music\John Fogerty\The Long Road Home- The Ultimate John Fogerty-Creedence Collection\17 Lodi.mp3
+551 D:\Users\Phantom\Music\John Fogerty\The Long Road Home- The Ultimate John Fogerty-Creedence Collection\18 Keep on Chooglin' [Live][#].mp3
+552 D:\Users\Phantom\Music\John Fogerty\The Long Road Home- The Ultimate John Fogerty-Creedence Collection\19 Green River.mp3
+553 D:\Users\Phantom\Music\John Fogerty\The Long Road Home- The Ultimate John Fogerty-Creedence Collection\20 Déjà Vu (All Over Again).mp3
+554 D:\Users\Phantom\Music\John Fogerty\The Long Road Home- The Ultimate John Fogerty-Creedence Collection\21 Run Through the Jungle.mp3
+555 D:\Users\Phantom\Music\John Fogerty\The Long Road Home- The Ultimate John Fogerty-Creedence Collection\22 Hot Rod Heart.mp3
+556 D:\Users\Phantom\Music\John Fogerty\The Long Road Home- The Ultimate John Fogerty-Creedence Collection\23 Travelin' Band.mp3
+557 D:\Users\Phantom\Music\John Fogerty\The Long Road Home- The Ultimate John Fogerty-Creedence Collection\24 Proud Mary.mp3
+558 D:\Users\Phantom\Music\John Fogerty\The Long Road Home- The Ultimate John Fogerty-Creedence Collection\25 Fortunate Son [Live][#].mp3
+559 D:\Users\Phantom\Music\Led Zeppelin\Remasters [UK] Disc 1\Led Zeppelin-01-Communication Breakdown.mp3
+560 D:\Users\Phantom\Music\Led Zeppelin\Remasters [UK] Disc 1\Led Zeppelin-15-Stairway To Heaven.mp3
+561 D:\Users\Phantom\Music\Linkin Park\Minutes to Midnight\01 Wake.mp3
+562 D:\Users\Phantom\Music\Linkin Park\Minutes to Midnight\02 Given Up.mp3
+563 D:\Users\Phantom\Music\Linkin Park\Minutes to Midnight\03 Leave out All the Rest.mp3
+564 D:\Users\Phantom\Music\Linkin Park\Minutes to Midnight\04 Bleed It Out.mp3
+565 D:\Users\Phantom\Music\Linkin Park\Minutes to Midnight\05 Shadow of the Day.mp3
+566 D:\Users\Phantom\Music\Linkin Park\Minutes to Midnight\06 What I've Done.mp3
+567 D:\Users\Phantom\Music\Linkin Park\Minutes to Midnight\07 Hands Held High.mp3
+568 D:\Users\Phantom\Music\Linkin Park\Minutes to Midnight\08 No More Sorrow.mp3
+569 D:\Users\Phantom\Music\Linkin Park\Minutes to Midnight\09 Valentine's Day.mp3
+570 D:\Users\Phantom\Music\Linkin Park\Minutes to Midnight\10 In Between.mp3
+571 D:\Users\Phantom\Music\Linkin Park\Minutes to Midnight\11 In Pieces.mp3
+572 D:\Users\Phantom\Music\Linkin Park\Minutes to Midnight\12 The Little Things Give You Away.mp3
+573 D:\Users\Phantom\Music\Machine Head\The Blackening\01 Clenching the Fists of Dissent.mp3
+574 D:\Users\Phantom\Music\Machine Head\The Blackening\02 Beautiful Mourning.mp3
+575 D:\Users\Phantom\Music\Machine Head\The Blackening\03 Aesthetics of Hate.mp3
+576 D:\Users\Phantom\Music\Machine Head\The Blackening\04 Now I Lay Thee Down.mp3
+577 D:\Users\Phantom\Music\Machine Head\The Blackening\05 Slanderous.mp3
+578 D:\Users\Phantom\Music\Machine Head\The Blackening\06 Halo.mp3
+579 D:\Users\Phantom\Music\Machine Head\The Blackening\07 Wolves.mp3
+580 D:\Users\Phantom\Music\Machine Head\The Blackening\08 A Farewell to Arms.mp3
+581 D:\Users\Phantom\Music\Machine Head\The Blackening\09 Battery (Metallica Cover).mp3
+582 D:\Users\Phantom\Music\Mastodon\Blood Mountain\01 The Wolf Is Loose.mp3
+583 D:\Users\Phantom\Music\Mastodon\Blood Mountain\02 Crystal Skull.mp3
+584 D:\Users\Phantom\Music\Mastodon\Blood Mountain\03 Sleeping Giant.mp3
+585 D:\Users\Phantom\Music\Mastodon\Blood Mountain\04 Capillarian Crest.mp3
+586 D:\Users\Phantom\Music\Mastodon\Blood Mountain\05 Circle of Cysquatch.mp3
+587 D:\Users\Phantom\Music\Mastodon\Blood Mountain\06 Bladecatcher.mp3
+588 D:\Users\Phantom\Music\Mastodon\Blood Mountain\07 Colony of Birchmen.mp3
+589 D:\Users\Phantom\Music\Mastodon\Blood Mountain\08 Hunters of the Sky.mp3
+590 D:\Users\Phantom\Music\Mastodon\Blood Mountain\09 Hand of Stone.mp3
+591 D:\Users\Phantom\Music\Mastodon\Blood Mountain\10 This Mortal Soil.mp3
+592 D:\Users\Phantom\Music\Mastodon\Blood Mountain\11 Siberian Divide.mp3
+593 D:\Users\Phantom\Music\Mastodon\Blood Mountain\12 Pendulous Skin.mp3
+594 D:\Users\Phantom\Music\Mastodon\Leviathan\01 Blood and Thunder.mp3
+595 D:\Users\Phantom\Music\Mastodon\Leviathan\02 I Am Ahab.mp3
+596 D:\Users\Phantom\Music\Mastodon\Leviathan\03 Seabeast.mp3
+597 D:\Users\Phantom\Music\Mastodon\Leviathan\04 Ísland.mp3
+598 D:\Users\Phantom\Music\Mastodon\Leviathan\05 Iron Tusk.mp3
+599 D:\Users\Phantom\Music\Mastodon\Leviathan\06 Megalodon.mp3
+600 D:\Users\Phantom\Music\Mastodon\Leviathan\07 Naked Burn.mp3
+601 D:\Users\Phantom\Music\Mastodon\Leviathan\08 Aqua Dementia.mp3
+602 D:\Users\Phantom\Music\Mastodon\Leviathan\09 Hearts Alive.mp3
+603 D:\Users\Phantom\Music\Mastodon\Leviathan\10 Joseph Merrick.mp3
+604 D:\Users\Phantom\Music\Mastodon\Remission\01 Crusher Destroyer.mp3
+605 D:\Users\Phantom\Music\Mastodon\Remission\02 March of the Fire Ants.mp3
+606 D:\Users\Phantom\Music\Mastodon\Remission\03 Where Strides the Behemoth.mp3
+607 D:\Users\Phantom\Music\Mastodon\Remission\04 Workhorse.mp3
+608 D:\Users\Phantom\Music\Mastodon\Remission\05 Ol'e Nessie.mp3
+609 D:\Users\Phantom\Music\Mastodon\Remission\06 Burning Man.mp3
+610 D:\Users\Phantom\Music\Mastodon\Remission\07 Trainwreck.mp3
+611 D:\Users\Phantom\Music\Mastodon\Remission\08 Trampled Under Hoof.mp3
+612 D:\Users\Phantom\Music\Mastodon\Remission\09 Trilobite.mp3
+613 D:\Users\Phantom\Music\Mastodon\Remission\10 Mother Puncher.mp3
+614 D:\Users\Phantom\Music\Mastodon\Remission\11 Elephant Man.mp3
+615 D:\Users\Phantom\Music\Metallica\And Justice For All\01 Blackened.mp3
+616 D:\Users\Phantom\Music\Metallica\And Justice For All\Metallica - Eye of the Beholder.mp3
+617 D:\Users\Phantom\Music\Metallica\Death Magnetic\01 That Was Just Your Life.mp3
+618 D:\Users\Phantom\Music\Metallica\Death Magnetic\02 The End of the Line.mp3
+619 D:\Users\Phantom\Music\Metallica\Death Magnetic\03 Broken, Beat & Scarred.mp3
+620 D:\Users\Phantom\Music\Metallica\Death Magnetic\04 The Day That Never Comes.mp3
+621 D:\Users\Phantom\Music\Metallica\Death Magnetic\05 All Nightmare Long.mp3
+622 D:\Users\Phantom\Music\Metallica\Death Magnetic\06 Cyanide.mp3
+623 D:\Users\Phantom\Music\Metallica\Death Magnetic\07 The Unforgiven III.mp3
+624 D:\Users\Phantom\Music\Metallica\Death Magnetic\08 The Judas Kiss.mp3
+625 D:\Users\Phantom\Music\Metallica\Death Magnetic\09 Suicide & Redemption.mp3
+626 D:\Users\Phantom\Music\Metallica\Death Magnetic\10 My Apocalypse.mp3
+627 D:\Users\Phantom\Music\Metallica\Garage, Inc. Disc 1\01 Free Speech for the Dumb.mp3
+628 D:\Users\Phantom\Music\Metallica\Garage, Inc. Disc 1\02 It's Electric.mp3
+629 D:\Users\Phantom\Music\Metallica\Garage, Inc. Disc 1\03 Sabbra Cadabra.mp3
+630 D:\Users\Phantom\Music\Metallica\Garage, Inc. Disc 1\04 Turn the Page.mp3
+631 D:\Users\Phantom\Music\Metallica\Garage, Inc. Disc 1\05 Die, Die My Darling.mp3
+632 D:\Users\Phantom\Music\Metallica\Garage, Inc. Disc 1\06 Lover Man.mp3
+633 D:\Users\Phantom\Music\Metallica\Garage, Inc. Disc 1\07 Mercyful Fate.mp3
+634 D:\Users\Phantom\Music\Metallica\Garage, Inc. Disc 1\08 Astronomy.mp3
+635 D:\Users\Phantom\Music\Metallica\Garage, Inc. Disc 1\10 Tuesday's Gone.mp3
+636 D:\Users\Phantom\Music\Metallica\Garage, Inc. Disc 1\11 The More I See.mp3
+637 D:\Users\Phantom\Music\Metallica\Garage, Inc. Disc 2\01 Helpless.mp3
+638 D:\Users\Phantom\Music\Metallica\Garage, Inc. Disc 2\02 The Small Hours.mp3
+639 D:\Users\Phantom\Music\Metallica\Garage, Inc. Disc 2\03 The Wait.mp3
+640 D:\Users\Phantom\Music\Metallica\Garage, Inc. Disc 2\04 Crash Course in Brain Surgery.mp3
+641 D:\Users\Phantom\Music\Metallica\Garage, Inc. Disc 2\05 Last Caress-Green Hell.mp3
+642 D:\Users\Phantom\Music\Metallica\Garage, Inc. Disc 2\06 Am I Evil-.mp3
+643 D:\Users\Phantom\Music\Metallica\Garage, Inc. Disc 2\07 Blitzkrieg.mp3
+644 D:\Users\Phantom\Music\Metallica\Garage, Inc. Disc 2\08 Breadfan.mp3
+645 D:\Users\Phantom\Music\Metallica\Garage, Inc. Disc 2\09 The Prince.mp3
+646 D:\Users\Phantom\Music\Metallica\Garage, Inc. Disc 2\10 Stone Cold Crazy.mp3
+647 D:\Users\Phantom\Music\Metallica\Garage, Inc. Disc 2\11 So What.mp3
+648 D:\Users\Phantom\Music\Metallica\Garage, Inc. Disc 2\12 Killing Time.mp3
+649 D:\Users\Phantom\Music\Metallica\Garage, Inc. Disc 2\13 Overkill.mp3
+650 D:\Users\Phantom\Music\Metallica\Garage, Inc. Disc 2\14 Damage Case.mp3
+651 D:\Users\Phantom\Music\Metallica\Garage, Inc. Disc 2\15 Stone Dead Forever.mp3
+652 D:\Users\Phantom\Music\Metallica\Garage, Inc. Disc 2\16 Too Late Too Late.mp3
+653 D:\Users\Phantom\Music\Metallica\Kill 'Em All\Metallica - Hit the Lights.mp3
+654 D:\Users\Phantom\Music\Metallica\Kill 'Em All\Metallica - Seek & Destroy.mp3
+655 D:\Users\Phantom\Music\Metallica\Kill 'Em All\Metallica - The Four Horsemen.mp3
+656 D:\Users\Phantom\Music\Metallica\Kill 'Em All\Metallica - Whiplash.mp3
+657 D:\Users\Phantom\Music\Metallica\Load\Ain't My Bitch.mp3
+658 D:\Users\Phantom\Music\Metallica\Load\Cure.mp3
+659 D:\Users\Phantom\Music\Metallica\Load\Hero of the Day Load.mp3
+660 D:\Users\Phantom\Music\Metallica\Load\King Nothing.mp3
+661 D:\Users\Phantom\Music\Metallica\Load\Metallica - Thorn Within.mp3
+662 D:\Users\Phantom\Music\Metallica\Load\Until It Sleeps.mp3
+663 D:\Users\Phantom\Music\Metallica\Master of Puppets\Metallica-01-Battery.mp3
+664 D:\Users\Phantom\Music\Metallica\Master of Puppets\Metallica-02-Master of Puppets.mp3
+665 D:\Users\Phantom\Music\Metallica\Master of Puppets\Metallica-03-The Thing That Should Not Be.mp3
+666 D:\Users\Phantom\Music\Metallica\Master of Puppets\Metallica-04-Welcome Home (Sanitarium).mp3
+667 D:\Users\Phantom\Music\Metallica\Master of Puppets\Metallica-05-Disposable Heroes.mp3
+668 D:\Users\Phantom\Music\Metallica\Master of Puppets\Metallica-06-Leper Messiah.mp3
+669 D:\Users\Phantom\Music\Metallica\Master of Puppets\Metallica-07-Orion [Instrumental].mp3
+670 D:\Users\Phantom\Music\Metallica\Master of Puppets\Metallica-08-Damage, Inc.mp3
+671 D:\Users\Phantom\Music\Metallica\Metallica\Metallica-01-Enter Sandman.mp3
+672 D:\Users\Phantom\Music\Metallica\Metallica\Metallica-02-Sad but True.mp3
+673 D:\Users\Phantom\Music\Metallica\Metallica\Metallica-03-Holier Than Thou.mp3
+674 D:\Users\Phantom\Music\Metallica\Metallica\Metallica-04-The Unforgiven.mp3
+675 D:\Users\Phantom\Music\Metallica\Metallica\Metallica-05-Wherever I May Roam.mp3
+676 D:\Users\Phantom\Music\Metallica\Metallica\Metallica-06-Don't Tread on Me.mp3
+677 D:\Users\Phantom\Music\Metallica\Metallica\Metallica-07-Through the Never.mp3
+678 D:\Users\Phantom\Music\Metallica\Metallica\Metallica-08-Nothing Else Matters.mp3
+679 D:\Users\Phantom\Music\Metallica\Metallica\Metallica-09-Of Wolf and Man.mp3
+680 D:\Users\Phantom\Music\Metallica\Metallica\Metallica-10-The God That Failed.mp3
+681 D:\Users\Phantom\Music\Metallica\Metallica\Metallica-11-My Friend of Misery.mp3
+682 D:\Users\Phantom\Music\Metallica\Metallica\Metallica-12-The Struggle Within.mp3
+683 D:\Users\Phantom\Music\Metallica\Mission Impossible 2 [Soundtrack]\02 I Disappear.mp3
+684 D:\Users\Phantom\Music\Metallica\Reload\01 Fuel.mp3
+685 D:\Users\Phantom\Music\Metallica\Reload\03 Devil's Dance.mp3
+686 D:\Users\Phantom\Music\Metallica\Reload\Metalica- The Memory Remains.mp3
+687 D:\Users\Phantom\Music\Metallica\Ride the Lightning\02 Ride the Lightning.mp3
+688 D:\Users\Phantom\Music\Metallica\Ride the Lightning\03 For Whom the Bell Tolls.mp3
+689 D:\Users\Phantom\Music\Metallica\Ride the Lightning\04 Fade to Black.mp3
+690 D:\Users\Phantom\Music\Metallica\Ride the Lightning\Metallica - Fight Fire With Fire.mp3
+691 D:\Users\Phantom\Music\Metallica\S & M Live Disc 2\Metallica - 04 - -Human.mp3
+692 D:\Users\Phantom\Music\Metallica\S&M [Edited] Disc 1\Metallica - No Leaf Clover.mp3
+693 D:\Users\Phantom\Music\Misfits of Science\MOS PRESENTS\Misfits of Science-03-Fools  Love.mp3
+694 D:\Users\Phantom\Music\Motorhead\No Remorse\Motorhead - The Ace of spades.mp3
+695 D:\Users\Phantom\Music\Muse\Absolution\Muse - Apocalypse Please.mp3
+696 D:\Users\Phantom\Music\Muse\Absolution\Muse - Stockholm Syndrome.mp3
+697 D:\Users\Phantom\Music\Muse\Absolution\Muse - Time is Running Out .mp3
+698 D:\Users\Phantom\Music\Muse\Black Holes And Revelations\Muse - Starlight.mp3
+699 D:\Users\Phantom\Music\My Music VX\01 Triracial Isolates.mp3
+700 D:\Users\Phantom\Music\My Music VX\03-mastodon-the_bit.mp3
+701 D:\Users\Phantom\Music\My Music VX\04 In the Fire.mp3
+702 D:\Users\Phantom\Music\My Music VX\10 - Tidal Tantrum.mp3
+703 D:\Users\Phantom\Music\My Music VX\12 Hero.mp3
+704 D:\Users\Phantom\Music\My Music VX\14 Constitution Down.mp3
+705 D:\Users\Phantom\Music\My Music VX\AC DC - Its A Long Way To The Top.mp3
+706 D:\Users\Phantom\Music\My Music VX\Avenged Sevenfold - Bat Country.mp3
+707 D:\Users\Phantom\Music\My Music VX\Avenged Sevenfold - Beast And The Harlot.mp3
+708 D:\Users\Phantom\Music\My Music VX\Blue Oyster Cult - Dont Fear The Reaper.mp3
+709 D:\Users\Phantom\Music\My Music VX\Comedy- Sesame Street On Drugs (Kremit, Big Bird, & Elmo).mp3
+710 D:\Users\Phantom\Music\My Music VX\Crash Test Dummies - Mmm Mmm Mmm Mmm.mp3
+711 D:\Users\Phantom\Music\My Music VX\Cream - Sunshine Of Your Love.mp3
+712 D:\Users\Phantom\Music\My Music VX\Dead Kennedys - Police Truck.mp3
+713 D:\Users\Phantom\Music\My Music VX\Disturbed - This Moment.mp3
+714 D:\Users\Phantom\Music\My Music VX\Dodgem - Living Around You.mp3
+715 D:\Users\Phantom\Music\My Music VX\Dodgem - Shine A Light.mp3
+716 D:\Users\Phantom\Music\My Music VX\EOM18_02_half_mast.mp3
+717 D:\Users\Phantom\Music\My Music VX\Foo Fighters - Baker Street.mp3
+718 D:\Users\Phantom\Music\My Music VX\Fuel - Natural Selection - Quarter.mp3
+719 D:\Users\Phantom\Music\My Music VX\Imperial_Surf.mp3
+720 D:\Users\Phantom\Music\My Music VX\Iron Maiden - 2 Minutes To Midnight.mp3
+721 D:\Users\Phantom\Music\My Music VX\Iron Maiden - Aces High.mp3
+722 D:\Users\Phantom\Music\My Music VX\Joe Satriani - Satch Boogie.mp3
+723 D:\Users\Phantom\Music\My Music VX\Kenny Goes To Hell.mp3
+724 D:\Users\Phantom\Music\My Music VX\Kyuss - Demon Cleaner.mp3
+725 D:\Users\Phantom\Music\My Music VX\Led Zeppelin - Bron-Yr-Aur.mp3
+726 D:\Users\Phantom\Music\My Music VX\Led Zeppelin - Over The Hills And Far Away.mp3
+727 D:\Users\Phantom\Music\My Music VX\Live - Lakini's Juice.mp3
+728 D:\Users\Phantom\Music\My Music VX\Mastodon - Cut You Open With a Linoleum Knife.mp3
+729 D:\Users\Phantom\Music\My Music VX\Mastodon - Where Strides the Behemoth [live].mp3
+730 D:\Users\Phantom\Music\My Music VX\Mastodon_-_Hail to Fire.mp3
+731 D:\Users\Phantom\Music\My Music VX\Mastodon_-_Slickleg.mp3
+732 D:\Users\Phantom\Music\My Music VX\Megadeath - Symphony of Destruction.mp3
+733 D:\Users\Phantom\Music\My Music VX\megadeth - Dave Is Pissed (live).mp3
+734 D:\Users\Phantom\Music\My Music VX\Megadeth - Hangar 18.mp3
+735 D:\Users\Phantom\Music\My Music VX\Melvins - the bit.mp3
+736 D:\Users\Phantom\Music\My Music VX\Metallica - Star Wars Imperial March.mp3
+737 D:\Users\Phantom\Music\My Music VX\Mono - The flames beyond the cold mountain.mp3
+738 D:\Users\Phantom\Music\My Music VX\Neurosis-WaterIsNotEnough.mp3
+739 D:\Users\Phantom\Music\My Music VX\Neurosis_Lost.mp3
+740 D:\Users\Phantom\Music\My Music VX\Neurosis_Under_the_Surface.mp3
+741 D:\Users\Phantom\Music\My Music VX\Orion.mp3
+742 D:\Users\Phantom\Music\My Music VX\Ozzy Osbourne - Crazy Train.mp3
+743 D:\Users\Phantom\Music\My Music VX\Ozzy Osbourne - Down To Earth - 05 - That I Never Had.mp3
+744 D:\Users\Phantom\Music\My Music VX\Ozzy Osbourne - No More Tears.mp3
+745 D:\Users\Phantom\Music\My Music VX\Pain - Nailed To The Ground.mp3
+746 D:\Users\Phantom\Music\My Music VX\Pantera - Dimebag Darrell - Caged In A Rage.mp3
+747 D:\Users\Phantom\Music\My Music VX\PANTERA- Tres Diablos,Dimebag Darrell,Vinny Paul,Rex - Heard It On The X.mp3
+748 D:\Users\Phantom\Music\My Music VX\Puddle Of Mudd - Control.mp3
+749 D:\Users\Phantom\Music\My Music VX\Ruins_RefusalFossil.mp3
+750 D:\Users\Phantom\Music\My Music VX\ruins_warrido.mp3
+751 D:\Users\Phantom\Music\My Music VX\Santana - Black Magic Women.mp3
+752 D:\Users\Phantom\Music\My Music VX\Seals And Crofts - Summer Breeze.mp3
+753 D:\Users\Phantom\Music\My Music VX\Sevendust - Licking Cream.mp3
+754 D:\Users\Phantom\Music\My Music VX\Sevendust- Waffle .mp3
+755 D:\Users\Phantom\Music\My Music VX\Sheryl Crow - All I Wanna Do.mp3
+756 D:\Users\Phantom\Music\My Music VX\Shihad - My Mind's Sedate.mp3
+757 D:\Users\Phantom\Music\My Music VX\Slipknot - The Heretic Anthem.mp3
+758 D:\Users\Phantom\Music\My Music VX\Slipknot - Wait and Bleed.mp3
+759 D:\Users\Phantom\Music\My Music VX\Stealers Wheel - Stuck in the Middle With You.mp3
+760 D:\Users\Phantom\Music\My Music VX\The Animals - Don't Let Me Be Misunderstood.mp3
+761 D:\Users\Phantom\Music\My Music VX\The Doors - Light My Fire.mp3
+762 D:\Users\Phantom\Music\My Music VX\The Doors - People Are Strange.mp3
+763 D:\Users\Phantom\Music\My Music VX\The Living End - West End Riot.mp3
+764 D:\Users\Phantom\Music\My Music VX\The Ventures - Miserlou (Pulp Fiction Theme).mp3
+765 D:\Users\Phantom\Music\My Music VX\The Who - Pinball Wizard - (Classic Rock) 60's-70's .mp3
+766 D:\Users\Phantom\Music\My Music VX\Thin Lizzy - Jail Break.mp3
+767 D:\Users\Phantom\Music\My Music VX\Tom Petty - Running Down A Dream.mp3
+768 D:\Users\Phantom\Music\My Music VX\Tommy Lee - Hold Me Down.mp3
+769 D:\Users\Phantom\Music\My Music VX\Tony Hawks Pro Skater - Even Rude - Vilified.mp3
+770 D:\Users\Phantom\Music\My Music VX\Tool - Flood.mp3
+771 D:\Users\Phantom\Music\My Music VX\Totimoshi - vivazapata.mp3
+772 D:\Users\Phantom\Music\My Music VX\Trivium - Entrance Of The Conflagration(1).mp3
+773 D:\Users\Phantom\Music\My Music VX\Trivium - Master Of Puppets.mp3
+774 D:\Users\Phantom\Music\My Music VX\Trivium-LikeLightToTheFlies.mp3
+775 D:\Users\Phantom\Music\My Music VX\twisted sister - 80s rock - i wanna rock.mp3
+776 D:\Users\Phantom\Music\My Music VX\Unsane - Committed.mp3
+777 D:\Users\Phantom\Music\My Music VX\velvetrevolver_shebuildsquickmachinesFULL.mp3
+778 D:\Users\Phantom\Music\My Music VX\ZZ Top - La Grange.mp3
+779 D:\Users\Phantom\Music\New Chart Music\01 Airplanes.mp3
+780 D:\Users\Phantom\Music\New Chart Music\01 Give Me Everything (feat. Ne-Yo, Afrojack & Nayer).mp3
+781 D:\Users\Phantom\Music\New Chart Music\01 Sweat (David Guetta Remix).mp3
+782 D:\Users\Phantom\Music\New Chart Music\11 - Someone Like You.mp3
+783 D:\Users\Phantom\Music\New Chart Music\14-black_eyed_peas-just_cant_get_enough.mp3
+784 D:\Users\Phantom\Music\New Chart Music\Adele - Rolling In the Deep.mp3
+785 D:\Users\Phantom\Music\New Chart Music\Airplanes.mp3
+786 D:\Users\Phantom\Music\New Chart Music\All the Right Moves.mp3
+787 D:\Users\Phantom\Music\New Chart Music\Avril Lavigne - What The Hell [2010-Single][MJN].mp3
+788 D:\Users\Phantom\Music\New Chart Music\B.o.B. - Nothin On You Feat Bruno Mars-MIXFIEND.mp3
+789 D:\Users\Phantom\Music\New Chart Music\Bad Romance.mp3
+790 D:\Users\Phantom\Music\New Chart Music\beautiful lie.mp3
+791 D:\Users\Phantom\Music\New Chart Music\Brick By Boring Brick.mp3
+792 D:\Users\Phantom\Music\New Chart Music\Britney Spears - Hold It Against Me [2011-Single][MJN].mp3
+793 D:\Users\Phantom\Music\New Chart Music\Bruno Mars - Grenade.mp3
+794 D:\Users\Phantom\Music\New Chart Music\Carry Out.mp3
+795 D:\Users\Phantom\Music\New Chart Music\Chiddy Bang - The Opposite Of Adults (KIDS).mp3
+796 D:\Users\Phantom\Music\New Chart Music\Cobra Starship - You Make Me Feel...(feat. Sabi).mp3
+797 D:\Users\Phantom\Music\New Chart Music\Commander (Radio Edit).mp3
+798 D:\Users\Phantom\Music\New Chart Music\Crawling.mp3
+799 D:\Users\Phantom\Music\New Chart Music\Cruel.mp3
+800 D:\Users\Phantom\Music\New Chart Music\David Guetta - Who's That Chick (feat Rihanna).mp3
+801 D:\Users\Phantom\Music\New Chart Music\Decode.mp3
+802 D:\Users\Phantom\Music\New Chart Music\DJ Got Us Falling In Love Again.mp3
+803 D:\Users\Phantom\Music\New Chart Music\E.T. - Katy Perry.mp3
+804 D:\Users\Phantom\Music\New Chart Music\Eminem Feat. Rihanna - Love The Way You Lie.mp3
+805 D:\Users\Phantom\Music\New Chart Music\Empire State Of Mind.mp3
+806 D:\Users\Phantom\Music\New Chart Music\Evacuate The Dancefloor.mp3
+807 D:\Users\Phantom\Music\New Chart Music\Fever.mp3
+808 D:\Users\Phantom\Music\New Chart Music\Fireflies.mp3
+809 D:\Users\Phantom\Music\New Chart Music\For Your Entertainment.mp3
+810 D:\Users\Phantom\Music\New Chart Music\From Yesterday.mp3
+811 D:\Users\Phantom\Music\New Chart Music\Gavin DeGraw - Not Over You.mp3
+812 D:\Users\Phantom\Music\New Chart Music\I Can Ride My Bike With No Handlebars.mp3
+813 D:\Users\Phantom\Music\New Chart Music\If We Ever Meet Again.mp3
+814 D:\Users\Phantom\Music\New Chart Music\In My Head.mp3
+815 D:\Users\Phantom\Music\New Chart Music\Jennifer Lopez - On The Floor (Feat. Pitbull).mp3
+816 D:\Users\Phantom\Music\New Chart Music\Jessie J - Nobody's Perfect.mp3
+817 D:\Users\Phantom\Music\New Chart Music\Just A Little Bit.mp3
+818 D:\Users\Phantom\Music\New Chart Music\Just the Way You Are.mp3
+819 D:\Users\Phantom\Music\New Chart Music\Kanye West feat. Rihanna - All Of The Lights.mp3
+820 D:\Users\Phantom\Music\New Chart Music\Katy Perry - Firework.mp3
+821 D:\Users\Phantom\Music\New Chart Music\Katy Perry - Teenage Dream.mp3
+822 D:\Users\Phantom\Music\New Chart Music\Ke$ha - Blow.mp3
+823 D:\Users\Phantom\Music\New Chart Music\Kelsey.mp3
+824 D:\Users\Phantom\Music\New Chart Music\Kings And Queens.mp3
+825 D:\Users\Phantom\Music\New Chart Music\last train home.mp3
+826 D:\Users\Phantom\Music\New Chart Music\LMFAO - Party Rock Anthem.mp3
+827 D:\Users\Phantom\Music\New Chart Music\Love Drunk.mp3
+828 D:\Users\Phantom\Music\New Chart Music\Memories.mp3
+829 D:\Users\Phantom\Music\New Chart Music\Nelly - Just A Dream 2010.mp3
+830 D:\Users\Phantom\Music\New Chart Music\Nothin On You.mp3
+831 D:\Users\Phantom\Music\New Chart Music\Numb-Encore.mp3
+832 D:\Users\Phantom\Music\New Chart Music\OMG.mp3
+833 D:\Users\Phantom\Music\New Chart Music\One Step Closer.mp3
+834 D:\Users\Phantom\Music\New Chart Music\OneRepublic - Good Life.mp3
+835 D:\Users\Phantom\Music\New Chart Music\P!nk (Pink) - Raise Your Glass [2010-Single][MJN].mp3
+836 D:\Users\Phantom\Music\New Chart Music\Pass Out.mp3
+837 D:\Users\Phantom\Music\New Chart Music\Pink - FucKIN Perfect.mp3
+838 D:\Users\Phantom\Music\New Chart Music\Rihanna - California King Bed.mp3
+839 D:\Users\Phantom\Music\New Chart Music\Rihanna - Only Girl (In The World) [www.RNBxBeatz.com].mp3
+840 D:\Users\Phantom\Music\New Chart Music\Rihanna - S&M.mp3
+841 D:\Users\Phantom\Music\New Chart Music\Rihanna-What's My Name (Feat. Drake).mp3
+842 D:\Users\Phantom\Music\New Chart Music\Rock That Body.mp3
+843 D:\Users\Phantom\Music\New Chart Music\Rooftops.mp3
+844 D:\Users\Phantom\Music\New Chart Music\Rude Boy.mp3
+845 D:\Users\Phantom\Music\New Chart Music\Shake It.mp3
+846 D:\Users\Phantom\Music\New Chart Music\Shut Up.mp3
+847 D:\Users\Phantom\Music\New Chart Music\Somewhere I Belong.mp3
+848 D:\Users\Phantom\Music\New Chart Music\Starstrukk.mp3
+849 D:\Users\Phantom\Music\New Chart Music\Stop & Stare.mp3
+850 D:\Users\Phantom\Music\New Chart Music\The Black Eyed Peas - The Time (The Dirty Bit).mp3
+851 D:\Users\Phantom\Music\New Chart Music\The Catalyst.mp3
+852 D:\Users\Phantom\Music\New Chart Music\The City Is At War.mp3
+853 D:\Users\Phantom\Music\New Chart Music\The Opposite Of Adults (KIDS).mp3
+854 D:\Users\Phantom\Music\New Chart Music\TiK ToK.mp3
+855 D:\Users\Phantom\Music\New Chart Music\Tinie Tempah - Invincible (feat. Kelly Rowland).mp3
+856 D:\Users\Phantom\Music\New Chart Music\Tinie Tempah - Pass Out.mp3
+857 D:\Users\Phantom\Music\New Chart Music\Undisclosed Desires.mp3
+858 D:\Users\Phantom\Music\New Chart Music\Uprising.mp3
+859 D:\Users\Phantom\Music\New Chart Music\Vindicated.mp3
+860 D:\Users\Phantom\Music\New Chart Music\What's My Name (Feat. Drake).mp3
+861 D:\Users\Phantom\Music\New Chart Music\Whatcha Say.mp3
+862 D:\Users\Phantom\Music\New Chart Music\Whatya Want From Me.mp3
+863 D:\Users\Phantom\Music\New Chart Music\You Got Me.mp3
+864 D:\Users\Phantom\Music\Nine Inch Nails\Year Zero\01 Hyperpower!.mp3
+865 D:\Users\Phantom\Music\Nine Inch Nails\Year Zero\02 The Beginning of the End.mp3
+866 D:\Users\Phantom\Music\Nine Inch Nails\Year Zero\03 Survivalism.mp3
+867 D:\Users\Phantom\Music\Nine Inch Nails\Year Zero\04 The Good Soldier.mp3
+868 D:\Users\Phantom\Music\Nine Inch Nails\Year Zero\05 Vessel.mp3
+869 D:\Users\Phantom\Music\Nine Inch Nails\Year Zero\06 Me, I'm Not.mp3
+870 D:\Users\Phantom\Music\Nine Inch Nails\Year Zero\07 Capital G.mp3
+871 D:\Users\Phantom\Music\Nine Inch Nails\Year Zero\08 My Violent Heart.mp3
+872 D:\Users\Phantom\Music\Nine Inch Nails\Year Zero\09 The Warning.mp3
+873 D:\Users\Phantom\Music\Nine Inch Nails\Year Zero\10 God Given.mp3
+874 D:\Users\Phantom\Music\Nine Inch Nails\Year Zero\11 Meet Your Master.mp3
+875 D:\Users\Phantom\Music\Nine Inch Nails\Year Zero\12 The Greater Good.mp3
+876 D:\Users\Phantom\Music\Nine Inch Nails\Year Zero\13 The Great Destroyer.mp3
+877 D:\Users\Phantom\Music\Nine Inch Nails\Year Zero\14 Another Version of the Truth.mp3
+878 D:\Users\Phantom\Music\Nine Inch Nails\Year Zero\15 In This Twilight.mp3
+879 D:\Users\Phantom\Music\Nine Inch Nails\Year Zero\16 Zero-Sum.mp3
+880 D:\Users\Phantom\Music\P.O.D\Greatest Hits- The Atlantic Years\01 Southtown.mp3
+881 D:\Users\Phantom\Music\P.O.D\Greatest Hits- The Atlantic Years\02 Boom.mp3
+882 D:\Users\Phantom\Music\P.O.D\Greatest Hits- The Atlantic Years\03 Going in Blind [#].mp3
+883 D:\Users\Phantom\Music\P.O.D\Greatest Hits- The Atlantic Years\04 Roots in Stereo.mp3
+884 D:\Users\Phantom\Music\P.O.D\Greatest Hits- The Atlantic Years\05 Alive.mp3
+885 D:\Users\Phantom\Music\P.O.D\Greatest Hits- The Atlantic Years\06 Youth of the Nation.mp3
+886 D:\Users\Phantom\Music\P.O.D\Greatest Hits- The Atlantic Years\07 Sleeping Awake.mp3
+887 D:\Users\Phantom\Music\P.O.D\Greatest Hits- The Atlantic Years\08 Rock the Party (Off the Hook).mp3
+888 D:\Users\Phantom\Music\P.O.D\Greatest Hits- The Atlantic Years\09 Lights Out.mp3
+889 D:\Users\Phantom\Music\P.O.D\Greatest Hits- The Atlantic Years\10 Goodbye for Now.mp3
+890 D:\Users\Phantom\Music\P.O.D\Greatest Hits- The Atlantic Years\11 Execute the Sounds.mp3
+891 D:\Users\Phantom\Music\P.O.D\Greatest Hits- The Atlantic Years\12 Will You.mp3
+892 D:\Users\Phantom\Music\P.O.D\Greatest Hits- The Atlantic Years\13 Truly Amazing.mp3
+893 D:\Users\Phantom\Music\P.O.D\Greatest Hits- The Atlantic Years\14 Satellite.mp3
+894 D:\Users\Phantom\Music\P.O.D\Greatest Hits- The Atlantic Years\15 Set Your Eyes to Zion.mp3
+895 D:\Users\Phantom\Music\P.O.D\Greatest Hits- The Atlantic Years\16 Here We Go [#].mp3
+896 D:\Users\Phantom\Music\P.O.D\Greatest Hits- The Atlantic Years\17 If It Wasn't for You.mp3
+897 D:\Users\Phantom\Music\Pacifier\Pacifier [UK Bonus Tracks] Disc 1\Pacifier-01-Comfort Me.mp3
+898 D:\Users\Phantom\Music\Pacifier\Pacifier [UK Bonus Tracks] Disc 1\Pacifier-02-Semi-Normal.mp3
+899 D:\Users\Phantom\Music\Pacifier\Pacifier [UK Bonus Tracks] Disc 1\Pacifier-03-Run.mp3
+900 D:\Users\Phantom\Music\Pacifier\Pacifier [UK Bonus Tracks] Disc 1\Pacifier-04-Everything.mp3
+901 D:\Users\Phantom\Music\Pacifier\Pacifier [UK Bonus Tracks] Disc 1\Pacifier-05-Stranger.mp3
+902 D:\Users\Phantom\Music\Pacifier\Pacifier [UK Bonus Tracks] Disc 1\Pacifier-06-Home.mp3
+903 D:\Users\Phantom\Music\Pacifier\Pacifier [UK Bonus Tracks] Disc 1\Pacifier-07-Nothing.mp3
+904 D:\Users\Phantom\Music\Pacifier\Pacifier [UK Bonus Tracks] Disc 1\Pacifier-08-Bullitproof.mp3
+905 D:\Users\Phantom\Music\Pacifier\Pacifier [UK Bonus Tracks] Disc 1\Pacifier-09-Walls.mp3
+906 D:\Users\Phantom\Music\Pacifier\Pacifier [UK Bonus Tracks] Disc 1\Pacifier-10-Just a Shadow.mp3
+907 D:\Users\Phantom\Music\Pacifier\Pacifier [UK Bonus Tracks] Disc 1\Pacifier-11-Trademark.mp3
+908 D:\Users\Phantom\Music\Pacifier\Pacifier [UK Bonus Tracks] Disc 1\Pacifier-12-Coming Down.mp3
+909 D:\Users\Phantom\Music\Papa Roach\Infest\Papa Roach - Last Resort.mp3
+910 D:\Users\Phantom\Music\Phil Collins\Genesis\Platinum Collection Disc 1\01 No Son of Mine.mp3
+911 D:\Users\Phantom\Music\Phil Collins\Genesis\Platinum Collection Disc 1\02 I Can't Dance.mp3
+912 D:\Users\Phantom\Music\Phil Collins\Genesis\Platinum Collection Disc 1\03 Jesus He Knows Me.mp3
+913 D:\Users\Phantom\Music\Phil Collins\Genesis\Platinum Collection Disc 1\04 Hold on My Heart.mp3
+914 D:\Users\Phantom\Music\Phil Collins\Genesis\Platinum Collection Disc 1\05 Invisible Touch.mp3
+915 D:\Users\Phantom\Music\Phil Collins\Genesis\Platinum Collection Disc 1\06 Throwing It All Away.mp3
+916 D:\Users\Phantom\Music\Phil Collins\Genesis\Platinum Collection Disc 1\07 Tonight Tonight Tonight [Edit].mp3
+917 D:\Users\Phantom\Music\Phil Collins\Genesis\Platinum Collection Disc 1\08 Land of Confusion.mp3
+918 D:\Users\Phantom\Music\Phil Collins\Genesis\Platinum Collection Disc 1\09 In Too Deep.mp3
+919 D:\Users\Phantom\Music\Phil Collins\Genesis\Platinum Collection Disc 1\10 Mama.mp3
+920 D:\Users\Phantom\Music\Phil Collins\Genesis\Platinum Collection Disc 1\11 That's All.mp3
+921 D:\Users\Phantom\Music\Phil Collins\Genesis\Platinum Collection Disc 1\12 Home by the Sea.mp3
+922 D:\Users\Phantom\Music\Phil Collins\Genesis\Platinum Collection Disc 1\13 Second Home by the Sea.mp3
+923 D:\Users\Phantom\Music\Phil Collins\Genesis\Platinum Collection Disc 1\14 Illegal Alien.mp3
+924 D:\Users\Phantom\Music\Phil Collins\Genesis\Platinum Collection Disc 1\15 Paperlate.mp3
+925 D:\Users\Phantom\Music\Phil Collins\Genesis\Platinum Collection Disc 1\16 Calling All Stations.mp3
+926 D:\Users\Phantom\Music\Phil Collins\Hits\01 Another Day in Paradise.mp3
+927 D:\Users\Phantom\Music\Phil Collins\Hits\02 True Colors.mp3
+928 D:\Users\Phantom\Music\Phil Collins\Hits\03 Easy Lover.mp3
+929 D:\Users\Phantom\Music\Phil Collins\Hits\04 You Can't Hurry Love.mp3
+930 D:\Users\Phantom\Music\Phil Collins\Hits\05 Two Hearts.mp3
+931 D:\Users\Phantom\Music\Phil Collins\Hits\06 I Wish It Would Rain Down.mp3
+932 D:\Users\Phantom\Music\Phil Collins\Hits\07 Against All Odds (Take a Look at Me Now).mp3
+933 D:\Users\Phantom\Music\Phil Collins\Hits\08 Something Happened on the Way to Heaven.mp3
+934 D:\Users\Phantom\Music\Phil Collins\Hits\09 Separate Lives.mp3
+935 D:\Users\Phantom\Music\Phil Collins\Hits\10 Both Sides of the Story.mp3
+936 D:\Users\Phantom\Music\Phil Collins\Hits\11 One More Night.mp3
+937 D:\Users\Phantom\Music\Phil Collins\Hits\12 Sussudio.mp3
+938 D:\Users\Phantom\Music\Phil Collins\Hits\13 Dance into the Light.mp3
+939 D:\Users\Phantom\Music\Phil Collins\Hits\14 A Groovy Kind of Love.mp3
+940 D:\Users\Phantom\Music\Phil Collins\Hits\15 In the Air Tonight.mp3
+941 D:\Users\Phantom\Music\Phil Collins\Hits\16 Take Me Home.mp3
+942 D:\Users\Phantom\Music\Queen\Greatest Hits [Parlophone]\Queen-01-Bohemian Rhapsody.mp3
+943 D:\Users\Phantom\Music\Queen\Greatest Hits [Parlophone]\Queen-02-Another One Bites the Dust.mp3
+944 D:\Users\Phantom\Music\Queen\Greatest Hits [Parlophone]\Queen-03-Killer Queen.mp3
+945 D:\Users\Phantom\Music\Queen\Greatest Hits [Parlophone]\Queen-04-Fat Bottomed Girls.mp3
+946 D:\Users\Phantom\Music\Queen\Greatest Hits [Parlophone]\Queen-05-Bicycle Race.mp3
+947 D:\Users\Phantom\Music\Queen\Greatest Hits [Parlophone]\Queen-06-You're My Best Friend.mp3
+948 D:\Users\Phantom\Music\Queen\Greatest Hits [Parlophone]\Queen-07-Don't Stop Me Now.mp3
+949 D:\Users\Phantom\Music\Queen\Greatest Hits [Parlophone]\Queen-08-Save Me.mp3
+950 D:\Users\Phantom\Music\Queen\Greatest Hits [Parlophone]\Queen-09-Crazy Little Thing Called Love.mp3
+951 D:\Users\Phantom\Music\Queen\Greatest Hits [Parlophone]\Queen-10-Somebody to Love.mp3
+952 D:\Users\Phantom\Music\Queen\Greatest Hits [Parlophone]\Queen-11-Now I'm Here.mp3
+953 D:\Users\Phantom\Music\Queen\Greatest Hits [Parlophone]\Queen-12-Good Old-Fashioned Lover Boy.mp3
+954 D:\Users\Phantom\Music\Queen\Greatest Hits [Parlophone]\Queen-13-Play the Game.mp3
+955 D:\Users\Phantom\Music\Queen\Greatest Hits [Parlophone]\Queen-14-Flash.mp3
+956 D:\Users\Phantom\Music\Queen\Greatest Hits [Parlophone]\Queen-15-Seven Seas of Rhye.mp3
+957 D:\Users\Phantom\Music\Queen\Greatest Hits [Parlophone]\Queen-16-We Will Rock You.mp3
+958 D:\Users\Phantom\Music\Queen\Greatest Hits [Parlophone]\Queen-17-We Are the Champions.mp3
+959 D:\Users\Phantom\Music\Queens of the Stone Age\09 Track 9.mp3
+960 D:\Users\Phantom\Music\Queens of the Stone Age\10 Track 10.mp3
+961 D:\Users\Phantom\Music\Queens of the Stone Age\Queens of the Stone Age - Era Vulgaris.mp3
+962 D:\Users\Phantom\Music\Queens of the Stone Age\Queens Of The Stone Age - Lullabies To Paralyze - 03 - Everybody Knows That You're Insane.mp3
+963 D:\Users\Phantom\Music\Red Hot Chili Peppers\Californication\The Red Hot Chili Peppers-01-Around the World.mp3
+964 D:\Users\Phantom\Music\Red Hot Chili Peppers\Californication\The Red Hot Chili Peppers-02-Parallel Universe.mp3
+965 D:\Users\Phantom\Music\Red Hot Chili Peppers\Californication\The Red Hot Chili Peppers-03-Scar Tissue.mp3
+966 D:\Users\Phantom\Music\Red Hot Chili Peppers\Californication\The Red Hot Chili Peppers-04-Otherside.mp3
+967 D:\Users\Phantom\Music\Red Hot Chili Peppers\Californication\The Red Hot Chili Peppers-05-Get on Top.mp3
+968 D:\Users\Phantom\Music\Red Hot Chili Peppers\Californication\The Red Hot Chili Peppers-06-Californication.mp3
+969 D:\Users\Phantom\Music\Red Hot Chili Peppers\Californication\The Red Hot Chili Peppers-07-Easily.mp3
+970 D:\Users\Phantom\Music\Red Hot Chili Peppers\Californication\The Red Hot Chili Peppers-08-Porcelain.mp3
+971 D:\Users\Phantom\Music\Red Hot Chili Peppers\Californication\The Red Hot Chili Peppers-09-Emit Remmus.mp3
+972 D:\Users\Phantom\Music\Red Hot Chili Peppers\Californication\The Red Hot Chili Peppers-10-I Like Dirt.mp3
+973 D:\Users\Phantom\Music\Red Hot Chili Peppers\Californication\The Red Hot Chili Peppers-11-This Velvet Glove.mp3
+974 D:\Users\Phantom\Music\Red Hot Chili Peppers\Californication\The Red Hot Chili Peppers-12-Savior.mp3
+975 D:\Users\Phantom\Music\Red Hot Chili Peppers\Californication\The Red Hot Chili Peppers-13-Purple Stain.mp3
+976 D:\Users\Phantom\Music\Red Hot Chili Peppers\Californication\The Red Hot Chili Peppers-14-Right on Time.mp3
+977 D:\Users\Phantom\Music\Red Hot Chili Peppers\Californication\The Red Hot Chili Peppers-15-Road Trippin'.mp3
+978 D:\Users\Phantom\Music\Sammy Hagar\Sammy Hagar - Heavy Metal.mp3
+979 D:\Users\Phantom\Music\Savage Garden\Savage Garden [Australia Bonus Tracks]\01 To the Moon and Back.mp3
+980 D:\Users\Phantom\Music\Savage Garden\Savage Garden [Australia Bonus Tracks]\02 Carry on Dancing.mp3
+981 D:\Users\Phantom\Music\Savage Garden\Savage Garden [Australia Bonus Tracks]\03 Tears of Pearls.mp3
+982 D:\Users\Phantom\Music\Savage Garden\Savage Garden [Australia Bonus Tracks]\04 I Want You.mp3
+983 D:\Users\Phantom\Music\Savage Garden\Savage Garden [Australia Bonus Tracks]\05 Truly Madly Deeply.mp3
+984 D:\Users\Phantom\Music\Savage Garden\Savage Garden [Australia Bonus Tracks]\06 Violet.mp3
+985 D:\Users\Phantom\Music\Savage Garden\Savage Garden [Australia Bonus Tracks]\07 All Around Me.mp3
+986 D:\Users\Phantom\Music\Savage Garden\Savage Garden [Australia Bonus Tracks]\08 Universe.mp3
+987 D:\Users\Phantom\Music\Savage Garden\Savage Garden [Australia Bonus Tracks]\09 A Thousand Words.mp3
+988 D:\Users\Phantom\Music\Savage Garden\Savage Garden [Australia Bonus Tracks]\10 Break Me Shake Me.mp3
+989 D:\Users\Phantom\Music\Savage Garden\Savage Garden [Australia Bonus Tracks]\11 Mine.mp3
+990 D:\Users\Phantom\Music\Savage Garden\Savage Garden [Australia Bonus Tracks]\12 Santa Monica.mp3
+991 D:\Users\Phantom\Music\Shihad\Churn\01 Track 1.mp3
+992 D:\Users\Phantom\Music\Shihad\Churn\02 Track 2.mp3
+993 D:\Users\Phantom\Music\Shihad\Churn\03 Track 3.mp3
+994 D:\Users\Phantom\Music\Shihad\Churn\04 Track 4.mp3
+995 D:\Users\Phantom\Music\Shihad\Churn\05 Track 5.mp3
+996 D:\Users\Phantom\Music\Shihad\Churn\06 Track 6.mp3
+997 D:\Users\Phantom\Music\Shihad\Churn\07 Track 7.mp3
+998 D:\Users\Phantom\Music\Shihad\Churn\08 Track 8.mp3
+999 D:\Users\Phantom\Music\Shihad\Churn\09 Track 9.mp3
+1000 D:\Users\Phantom\Music\Shihad\Killjoy\01 You Again.mp3
+1001 D:\Users\Phantom\Music\Shihad\Killjoy\02 Gimme Gimme.mp3
+1002 D:\Users\Phantom\Music\Shihad\Killjoy\03 The Call.mp3
+1003 D:\Users\Phantom\Music\Shihad\Killjoy\04 Envy.mp3
+1004 D:\Users\Phantom\Music\Shihad\Killjoy\05 Debs Night Out.mp3
+1005 D:\Users\Phantom\Music\Shihad\Killjoy\06 Bitter.mp3
+1006 D:\Users\Phantom\Music\Shihad\Killjoy\07 For What You Burn.mp3
+1007 D:\Users\Phantom\Music\Shihad\Killjoy\08 Silvercup.mp3
+1008 D:\Users\Phantom\Music\Shihad\Killjoy\09 Get Up.mp3
+1009 D:\Users\Phantom\Music\Shihad\Love is the New Hate\01 None Of The Above.mp3
+1010 D:\Users\Phantom\Music\Shihad\Love is the New Hate\02 empty shell.mp3
+1011 D:\Users\Phantom\Music\Shihad\Love is the New Hate\03 day will come.mp3
+1012 D:\Users\Phantom\Music\Shihad\Love is the New Hate\04 All The Young Fascists.mp3
+1013 D:\Users\Phantom\Music\Shihad\Love is the New Hate\05 Saddest Song in the World.mp3
+1014 D:\Users\Phantom\Music\Shihad\Love is the New Hate\06 Big Future.mp3
+1015 D:\Users\Phantom\Music\Shihad\Love is the New Hate\07 Shot In The Head.mp3
+1016 D:\Users\Phantom\Music\Shihad\Love is the New Hate\08 Dark Times.mp3
+1017 D:\Users\Phantom\Music\Shihad\Love is the New Hate\09 Traitor.mp3
+1018 D:\Users\Phantom\Music\Shihad\Love is the New Hate\10 Stop.mp3
+1019 D:\Users\Phantom\Music\Shihad\Love is the New Hate\11 Alive.mp3
+1020 D:\Users\Phantom\Music\Shihad\Love is the New Hate\12 Guts and the Glory.mp3
+1021 D:\Users\Phantom\Music\Silverchair\Rarities\Silverchair-01-Untitled.mp3
+1022 D:\Users\Phantom\Music\Silverchair\Rarities\Silverchair-02-New Race.mp3
+1023 D:\Users\Phantom\Music\Silverchair\Rarities\Silverchair-03-Trash.mp3
+1024 D:\Users\Phantom\Music\Silverchair\Rarities\Silverchair-04-Ana's Song (Open Fire) [Acoustic Remix].mp3
+1025 D:\Users\Phantom\Music\Silverchair\Rarities\Silverchair-05-Madman.mp3
+1026 D:\Users\Phantom\Music\Silverchair\Rarities\Silverchair-06-Blind.mp3
+1027 D:\Users\Phantom\Music\Silverchair\Rarities\Silverchair-07-Punk Song 2.mp3
+1028 D:\Users\Phantom\Music\Silverchair\Rarities\Silverchair-08-Wasted-Fix Me.mp3
+1029 D:\Users\Phantom\Music\Silverchair\Rarities\Silverchair-09-Minor Threat.mp3
+1030 D:\Users\Phantom\Music\Silverchair\Rarities\Silverchair-10-Freak [Remix for Us Rejects].mp3
+1031 D:\Users\Phantom\Music\Silverchair\Rarities\Silverchair-11-Spawn [Pre-Vitro Version].mp3
+1032 D:\Users\Phantom\Music\Silverchair\The Best of Silverchair, Vol. 1\Silverchair-01-Anthem for the Year 2000.mp3
+1033 D:\Users\Phantom\Music\Silverchair\The Best of Silverchair, Vol. 1\Silverchair-02-Freak.mp3
+1034 D:\Users\Phantom\Music\Silverchair\The Best of Silverchair, Vol. 1\Silverchair-04-Emotion Sickness.mp3
+1035 D:\Users\Phantom\Music\Silverchair\The Best of Silverchair, Vol. 1\Silverchair-05-Israel's Son.mp3
+1036 D:\Users\Phantom\Music\Silverchair\The Best of Silverchair, Vol. 1\Silverchair-06-Tomorrow.mp3
+1037 D:\Users\Phantom\Music\Silverchair\The Best of Silverchair, Vol. 1\Silverchair-07-Cemetery.mp3
+1038 D:\Users\Phantom\Music\Silverchair\The Best of Silverchair, Vol. 1\Silverchair-08-The Door.mp3
+1039 D:\Users\Phantom\Music\Silverchair\The Best of Silverchair, Vol. 1\Silverchair-09-Miss You Love.mp3
+1040 D:\Users\Phantom\Music\Silverchair\The Best of Silverchair, Vol. 1\Silverchair-10-Abuse Me.mp3
+1041 D:\Users\Phantom\Music\Silverchair\The Best of Silverchair, Vol. 1\Silverchair-11-Pure Massacre.mp3
+1042 D:\Users\Phantom\Music\Sound Garden\Sound Garden - Rusty Cage.mp3
+1043 D:\Users\Phantom\Music\Steriogram\Schmack!\Steriogram-01-Road Trip.mp3
+1044 D:\Users\Phantom\Music\Steriogram\Schmack!\Steriogram-02-Walkie Talkie Man.mp3
+1045 D:\Users\Phantom\Music\Steriogram\Schmack!\Steriogram-03-Schmack!.mp3
+1046 D:\Users\Phantom\Music\Steriogram\Schmack!\Steriogram-04-Was The Day.mp3
+1047 D:\Users\Phantom\Music\Steriogram\Schmack!\Steriogram-05-White Trash.mp3
+1048 D:\Users\Phantom\Music\Steriogram\Schmack!\Steriogram-06-In The City.mp3
+1049 D:\Users\Phantom\Music\Steriogram\Schmack!\Steriogram-07-Go.mp3
+1050 D:\Users\Phantom\Music\Steriogram\Schmack!\Steriogram-08-Fat And Proud.mp3
+1051 D:\Users\Phantom\Music\Steriogram\Schmack!\Steriogram-09-Tsunami.mp3
+1052 D:\Users\Phantom\Music\Steriogram\Schmack!\Steriogram-10-Wind It Up.mp3
+1053 D:\Users\Phantom\Music\Steriogram\Schmack!\Steriogram-11-Be Good To Me.mp3
+1054 D:\Users\Phantom\Music\Steriogram\Schmack!\Steriogram-12-On And On.mp3
+1055 D:\Users\Phantom\Music\Stone Sour\Come What(ever) May\01 30-30-150.mp3
+1056 D:\Users\Phantom\Music\Stone Sour\Come What(ever) May\02 Come What(ever) May.mp3
+1057 D:\Users\Phantom\Music\Stone Sour\Come What(ever) May\03 Hell & Consequences.mp3
+1058 D:\Users\Phantom\Music\Stone Sour\Come What(ever) May\04 Sillyworld.mp3
+1059 D:\Users\Phantom\Music\Stone Sour\Come What(ever) May\05 Made of Scars.mp3
+1060 D:\Users\Phantom\Music\Stone Sour\Come What(ever) May\06 Reborn.mp3
+1061 D:\Users\Phantom\Music\Stone Sour\Come What(ever) May\07 Your God.mp3
+1062 D:\Users\Phantom\Music\Stone Sour\Come What(ever) May\08 Through Glass.mp3
+1063 D:\Users\Phantom\Music\Stone Sour\Come What(ever) May\09 Socio.mp3
+1064 D:\Users\Phantom\Music\Stone Sour\Come What(ever) May\10 1st Person.mp3
+1065 D:\Users\Phantom\Music\Stone Sour\Come What(ever) May\11 Cardiff.mp3
+1066 D:\Users\Phantom\Music\Stone Sour\Come What(ever) May\12 Zzyzx Rd.mp3
+1067 D:\Users\Phantom\Music\System of a Down\Hypnotize\01 Attack.mp3
+1068 D:\Users\Phantom\Music\System of a Down\Hypnotize\02 Dreaming.mp3
+1069 D:\Users\Phantom\Music\System of a Down\Hypnotize\03 Kill Rock 'N Roll.mp3
+1070 D:\Users\Phantom\Music\System of a Down\Hypnotize\04 Hypnotize.mp3
+1071 D:\Users\Phantom\Music\System of a Down\Hypnotize\05 Stealing Society.mp3
+1072 D:\Users\Phantom\Music\System of a Down\Hypnotize\06 Tentative.mp3
+1073 D:\Users\Phantom\Music\System of a Down\Hypnotize\07 U-Fig.mp3
+1074 D:\Users\Phantom\Music\System of a Down\Hypnotize\08 Holy Mountains.mp3
+1075 D:\Users\Phantom\Music\System of a Down\Hypnotize\09 Vicinity of Obscenity.mp3
+1076 D:\Users\Phantom\Music\System of a Down\Hypnotize\10 She's Like Heroin.mp3
+1077 D:\Users\Phantom\Music\System of a Down\Hypnotize\11 Lonely Day.mp3
+1078 D:\Users\Phantom\Music\System of a Down\Hypnotize\12 Soldier Side.mp3
+1079 D:\Users\Phantom\Music\The Eagles\The Very Best of the Eagles [1994]\The Eagles-01-Take It Easy.mp3
+1080 D:\Users\Phantom\Music\The Eagles\The Very Best of the Eagles [1994]\The Eagles-02-Witchy Woman.mp3
+1081 D:\Users\Phantom\Music\The Eagles\The Very Best of the Eagles [1994]\The Eagles-03-Peaceful Easy Feeling.mp3
+1082 D:\Users\Phantom\Music\The Eagles\The Very Best of the Eagles [1994]\The Eagles-04-Doolin Dalton.mp3
+1083 D:\Users\Phantom\Music\The Eagles\The Very Best of the Eagles [1994]\The Eagles-05-Desperado.mp3
+1084 D:\Users\Phantom\Music\The Eagles\The Very Best of the Eagles [1994]\The Eagles-06-Tequila Sunrise.mp3
+1085 D:\Users\Phantom\Music\The Eagles\The Very Best of the Eagles [1994]\The Eagles-07-Best of My Love.mp3
+1086 D:\Users\Phantom\Music\The Eagles\The Very Best of the Eagles [1994]\The Eagles-08-James Dean.mp3
+1087 D:\Users\Phantom\Music\The Eagles\The Very Best of the Eagles [1994]\The Eagles-09-I Can't Tell You Why.mp3
+1088 D:\Users\Phantom\Music\The Eagles\The Very Best of the Eagles [1994]\The Eagles-10-One of These Nights.mp3
+1089 D:\Users\Phantom\Music\The Eagles\The Very Best of the Eagles [1994]\The Eagles-11-Lyin' Eyes.mp3
+1090 D:\Users\Phantom\Music\The Eagles\The Very Best of the Eagles [1994]\The Eagles-12-Take It to the Limit.mp3
+1091 D:\Users\Phantom\Music\The Eagles\The Very Best of the Eagles [1994]\The Eagles-13-Hotel California.mp3
+1092 D:\Users\Phantom\Music\The Eagles\The Very Best of the Eagles [1994]\The Eagles-14-New Kid in Town.mp3
+1093 D:\Users\Phantom\Music\The Eagles\The Very Best of the Eagles [1994]\The Eagles-15-Life in the Fast Lane.mp3
+1094 D:\Users\Phantom\Music\The Eagles\The Very Best of the Eagles [1994]\The Eagles-16-Heartache Tonight.mp3
+1095 D:\Users\Phantom\Music\The Eagles\The Very Best of the Eagles [1994]\The Eagles-17-The Long Run.mp3
+1096 D:\Users\Phantom\Music\The Great Divide\Broken.mp3
+1097 D:\Users\Phantom\Music\The Great Divide\Fight Song.mp3
+1098 D:\Users\Phantom\Music\The Great Divide\Hard Way.mp3
+1099 D:\Users\Phantom\Music\The Great Divide\Justify.mp3
+1100 D:\Users\Phantom\Music\The Great Divide\Let Me Go.mp3
+1101 D:\Users\Phantom\Music\The Great Divide\Reach Out.mp3
+1102 D:\Users\Phantom\Music\The Great Divide\Sublime.mp3
+1103 D:\Users\Phantom\Music\The Great Divide\Surround Me.mp3
+1104 D:\Users\Phantom\Music\The Great Divide\The Great Divide.mp3
+1105 D:\Users\Phantom\Music\The Great Divide\You Will Soar.mp3
+1106 D:\Users\Phantom\Music\The Killers\Sam's Town\01 Sam's Town.mp3
+1107 D:\Users\Phantom\Music\The Killers\Sam's Town\02 Enterlude.mp3
+1108 D:\Users\Phantom\Music\The Killers\Sam's Town\03 When You Were Young.mp3
+1109 D:\Users\Phantom\Music\The Killers\Sam's Town\04 Bling (Confession of a King).mp3
+1110 D:\Users\Phantom\Music\The Killers\Sam's Town\05 For Reasons Unknown.mp3
+1111 D:\Users\Phantom\Music\The Killers\Sam's Town\06 Read My Mind.mp3
+1112 D:\Users\Phantom\Music\The Killers\Sam's Town\07 Uncle Jonny.mp3
+1113 D:\Users\Phantom\Music\The Killers\Sam's Town\08 Bones.mp3
+1114 D:\Users\Phantom\Music\The Killers\Sam's Town\09 My List.mp3
+1115 D:\Users\Phantom\Music\The Killers\Sam's Town\10 This River Is Wild.mp3
+1116 D:\Users\Phantom\Music\The Killers\Sam's Town\11 Why Do I Keep Counting-.mp3
+1117 D:\Users\Phantom\Music\The Killers\Sam's Town\12 Exitlude.mp3
+1118 D:\Users\Phantom\Music\The Killers\Sam's Town\13.mp3
+1119 D:\Users\Phantom\Music\Unknown Artist\Unknown Album (29-04-2005 3-40-10 p.m.)\Unknown Artist-01-Track 1.mp3
+1120 D:\Users\Phantom\Music\Unknown Artist\Unknown Album (29-04-2005 3-40-10 p.m.)\Unknown Artist-02-Track 2.mp3
+1121 D:\Users\Phantom\Music\Unknown Artist\Unknown Album (29-04-2005 3-40-10 p.m.)\Unknown Artist-03-Track 3.mp3
+1122 D:\Users\Phantom\Music\Unknown Artist\Unknown Album (29-04-2005 3-40-10 p.m.)\Unknown Artist-04-Track 4.mp3
+1123 D:\Users\Phantom\Music\Unknown Artist\Unknown Album (29-04-2005 3-40-10 p.m.)\Unknown Artist-05-Track 5.mp3
+1124 D:\Users\Phantom\Music\Unknown Artist\Unknown Album (29-04-2005 3-40-10 p.m.)\Unknown Artist-06-Track 6.mp3
+1125 D:\Users\Phantom\Music\Unknown Artist\Unknown Album (29-04-2005 3-40-10 p.m.)\Unknown Artist-07-Track 7.mp3
+1126 D:\Users\Phantom\Music\Unknown Artist\Unknown Album (29-04-2005 3-40-10 p.m.)\Unknown Artist-08-Track 8.mp3
+1127 D:\Users\Phantom\Music\Unknown Artist\Unknown Album (29-04-2005 3-40-10 p.m.)\Unknown Artist-09-Track 9.mp3
+1128 D:\Users\Phantom\Music\Unknown Artist\Unknown Album (29-04-2005 3-40-10 p.m.)\Unknown Artist-10-Track 10.mp3
+1129 D:\Users\Phantom\Music\Unknown Artist\Unknown Album (29-04-2005 3-40-10 p.m.)\Unknown Artist-11-Track 11.mp3
+1130 D:\Users\Phantom\Music\Unknown Artist\Unknown Album (29-04-2005 3-40-10 p.m.)\Unknown Artist-12-Track 12.mp3
+1131 D:\Users\Phantom\Music\Unknown Artist\Unknown Album (29-04-2005 3-40-10 p.m.)\Unknown Artist-13-Track 13.mp3
+1132 D:\Users\Phantom\Music\Unknown Artist\Unknown Album (29-04-2005 3-40-10 p.m.)\Unknown Artist-14-Track 14.mp3
+1133 D:\Users\Phantom\Music\Unknown Artist\Unknown Album (29-04-2005 3-40-10 p.m.)\Unknown Artist-15-Track 15.mp3
+1134 D:\Users\Phantom\Music\Unknown Artist\Unknown Album (29-04-2005 3-40-10 p.m.)\Unknown Artist-16-Track 16.mp3
+1135 D:\Users\Phantom\Music\Unknown Artist\Unknown Album (29-04-2005 3-40-10 p.m.)\Unknown Artist-17-Track 17.mp3
+1136 D:\Users\Phantom\Music\Unknown Artist\Unknown Album (29-04-2005 3-40-10 p.m.)\Unknown Artist-18-Track 18.mp3
+1137 D:\Users\Phantom\Music\Unknown Artist\Unknown Album (29-04-2005 3-40-10 p.m.)\Unknown Artist-19-Track 19.mp3
+1138 D:\Users\Phantom\Music\Unknown Artist\Unknown Album (29-04-2005 3-40-10 p.m.)\Unknown Artist-20-Track 20.mp3
+1139 D:\Users\Phantom\Music\Unknown Artist\Unknown Album (29-04-2005 3-40-10 p.m.)\Unknown Artist-21-Track 21.mp3
+1140 D:\Users\Phantom\Music\Unknown Artist\Unknown Album (29-04-2005 3-40-10 p.m.)\Unknown Artist-22-Track 22.mp3
+1141 D:\Users\Phantom\Music\Unknown Artist\Unknown Album (6-27-2003 2-21-30 PM)\Creed-04-Torn.mp3
+1142 D:\Users\Phantom\Music\Unknown Artist\Unknown Album (6-27-2003 2-21-30 PM)\Creed-05-Track 5.mp3
+1143 D:\Users\Phantom\Music\Unknown Artist\Unknown Album (6-27-2003 2-21-30 PM)\Creed-06-What's This Life Fore.mp3
+1144 D:\Users\Phantom\Music\Unknown Artist\Unknown Album (6-27-2003 2-21-30 PM)\Creed-10-Falling.mp3
+1145 D:\Users\Phantom\Music\Unknown Artist\Unknown Album (6-27-2003 2-21-30 PM)\Creed-11-Sacrifice.mp3
+1146 D:\Users\Phantom\Music\Unknown Artist\Unknown Album (6-27-2003 2-21-30 PM)\Metalica-01-Track 1.mp3
+1147 D:\Users\Phantom\Music\Unknown Artist\Unknown Album (6-27-2003 2-21-30 PM)\Metalica-02-The Unforgiven.mp3
+1148 D:\Users\Phantom\Music\Unknown Artist\Unknown Album (6-27-2003 2-21-30 PM)\Metalica-03-Nothing Else Matteres.mp3
+1149 D:\Users\Phantom\Music\Unknown Artist\Unknown Album (6-27-2003 2-21-30 PM)\System of the down-07-Track 7.mp3
+1150 D:\Users\Phantom\Music\Unknown Artist\Unknown Album (6-27-2003 2-21-30 PM)\System of the down-08-Toxicity.mp3
+1151 D:\Users\Phantom\Music\Unknown Artist\Unknown Album (6-27-2003 2-21-30 PM)\System of the down-09-Aerials.mp3
+1152 D:\Users\Phantom\Music\Usenet - Downloaded Music\- LMFAO Feat. Lauren Bennett & Goon Rock - Party Rock Anthem.mp3
+1153 D:\Users\Phantom\Music\Usenet - Downloaded Music\05 - Christina Perri - Jar Of Hearts.mp3
+1154 D:\Users\Phantom\Music\Usenet - Downloaded Music\06 - Adele - Rolling In The Deep.mp3
+1155 D:\Users\Phantom\Music\Usenet - Downloaded Music\07 - Nicki Minaj - Super Bass.mp3
+1156 D:\Users\Phantom\Music\Usenet - Downloaded Music\08 - Nicole Scherzinger Feat. 50 Cent - Right There.mp3
+1157 D:\Users\Phantom\Music\Usenet - Downloaded Music\09 - Lady GaGa - The Edge Of Glory.mp3
+1158 D:\Users\Phantom\Music\Usenet - Downloaded Music\10 - Jessica Mauboy - Inescapable.mp3
+1159 D:\Users\Phantom\Music\Usenet - Downloaded Music\11 - LMFAO Feat. Natalia Kills - Champagne Showers.mp3
+1160 D:\Users\Phantom\Music\Usenet - Downloaded Music\12 - Jason DeRulo - Don't Wanna Go Home.mp3
+1161 D:\Users\Phantom\Music\Usenet - Downloaded Music\13 - Pitbull Feat. Ne-Yo, Afrojack & Nayer - Give Me Everything.mp3
+1162 D:\Users\Phantom\Music\Usenet - Downloaded Music\14 - Bruno Mars - Marry You.mp3
+1163 D:\Users\Phantom\Music\Usenet - Downloaded Music\15 - David Guetta Feat. Taio Cruz & Ludacris - Little Bad Girl.mp3
+1164 D:\Users\Phantom\Music\Usenet - Downloaded Music\16 - Calvin Harris Feat. Kelis - Bounce.mp3
+1165 D:\Users\Phantom\Music\Usenet - Downloaded Music\17 - Pitbull Feat. Marc Anthony - Rain Over Me.mp3
+1166 D:\Users\Phantom\Music\Usenet - Downloaded Music\18 - Beyonce - Best Thing I Never Had.mp3
+1167 D:\Users\Phantom\Music\Usenet - Downloaded Music\19 - Katy Perry - Last Friday Night (T.G.I.F.).mp3
+1168 D:\Users\Phantom\Music\Usenet - Downloaded Music\20 - Bad Meets Evil Feat. Bruno Mars - Lighters.mp3
+1169 D:\Users\Phantom\Music\Usenet - Downloaded Music\21 - Simple Plan Feat. Natasha Bedingfield - Jet Lag.mp3
+1170 D:\Users\Phantom\Music\Usenet - Downloaded Music\22 - Example - Changed The Way You Kiss Me.mp3
+1171 D:\Users\Phantom\Music\Usenet - Downloaded Music\23 - Chris Brown Feat. Justin Bieber - Next To You.mp3
+1172 D:\Users\Phantom\Music\Usenet - Downloaded Music\24 - Havana Brown - We Run The Night.mp3
+1173 D:\Users\Phantom\Music\Usenet - Downloaded Music\25 - These Kids Wear Crowns - Jumpstart.mp3
+1174 D:\Users\Phantom\Music\Usenet - Downloaded Music\26 - David Guetta Feat. Nicki Minaj & Flo Rida - Where Them Girls At.mp3
+1175 D:\Users\Phantom\Music\Usenet - Downloaded Music\27 - Bruno Mars - The Lazy Song.mp3
+1176 D:\Users\Phantom\Music\Usenet - Downloaded Music\28 - Benny Benassi Feat. Gary Go - Cinema.mp3
+1177 D:\Users\Phantom\Music\Usenet - Downloaded Music\29 - Aloe Blacc - I Need A Dollar.mp3
+1178 D:\Users\Phantom\Music\Usenet - Downloaded Music\30 - Jessie J - Nobody's Perfect.mp3
+1179 D:\Users\Phantom\Music\Usenet - Downloaded Music\31 - Britney Spears - I Wanna Go.mp3
+1180 D:\Users\Phantom\Music\Usenet - Downloaded Music\32 - Alexandra Stan - Mr. Saxobeat.mp3
+1181 D:\Users\Phantom\Music\Usenet - Downloaded Music\33 - Lady Gaga - Born This Way.mp3
+1182 D:\Users\Phantom\Music\Usenet - Downloaded Music\34 - Jessie J Feat. B.o.B - Price Tag.mp3
+1183 D:\Users\Phantom\Music\Usenet - Downloaded Music\35 - Jack Vidgen - Yes I Am.mp3
+1184 D:\Users\Phantom\Music\Usenet - Downloaded Music\36 - Jennifer Lopez Feat. Pitbull - On The Floor.mp3
+1185 D:\Users\Phantom\Music\Usenet - Downloaded Music\37 - The Black Eyed Peas - Don't Stop The Party.mp3
+1186 D:\Users\Phantom\Music\Usenet - Downloaded Music\38 - Stan Walker - Loud.mp3
+1187 D:\Users\Phantom\Music\Usenet - Downloaded Music\39 - Pete Murray - Always A Winner.mp3
+1188 D:\Users\Phantom\Music\Usenet - Downloaded Music\40 - Snoop Dogg Feat. T-Pain - Boom.mp3
+1189 D:\Users\Phantom\Music\Usenet - Downloaded Music\41 - Amy Winehouse - Rehab.mp3
+1190 D:\Users\Phantom\Music\Usenet - Downloaded Music\42 - Nicole Scherzinger - Don't Hold Your Breath.mp3
+1191 D:\Users\Phantom\Music\Usenet - Downloaded Music\43 - Snoop Dogg - Sweat (David Guetta Remix).mp3
+1192 D:\Users\Phantom\Music\Usenet - Downloaded Music\44 - Coldplay - Every Teardrop Is A Waterfall.mp3
+1193 D:\Users\Phantom\Music\Usenet - Downloaded Music\45 - Demi Lovato - Skyscraper.mp3
+1194 D:\Users\Phantom\Music\Usenet - Downloaded Music\46 - Rihanna - Cheers (Drink To That).mp3
+1195 D:\Users\Phantom\Music\Usenet - Downloaded Music\47 - LMFAO - Sexy And I Know It.mp3
+1196 D:\Users\Phantom\Music\Usenet - Downloaded Music\48 - Cold Chisel - Khe Sanh.mp3
+1197 D:\Users\Phantom\Music\Usenet - Downloaded Music\49 - Marvin Priest - Own This Club.mp3
+1198 D:\Users\Phantom\Music\Usenet - Downloaded Music\50 - Adele - Set Fire To The Rain.mp3
+1199 D:\Users\Phantom\Music\Usenet - Downloaded Music\Adele - Someone Like You.mp3
+1200 D:\Users\Phantom\Music\Usenet - Downloaded Music\Gotye Feat. Kimbra - Somebody That I Used To Know.mp3
+1201 D:\Users\Phantom\Music\Usenet - Downloaded Music\Maroon 5 Feat. Christina Aguilera - Moves Like Jagger.mp3
+1202 D:\Users\Phantom\Music\UT - Downloaded Music\01 Give Me Everything (feat. Ne-Yo, Afrojack & Nayer).mp3
+1203 D:\Users\Phantom\Music\UT - Downloaded Music\01 Sweat (David Guetta Remix).mp3
+1204 D:\Users\Phantom\Music\UT - Downloaded Music\11 - Someone Like You.mp3
+1205 D:\Users\Phantom\Music\UT - Downloaded Music\13 - Lady Gaga - You & I.mp3
+1206 D:\Users\Phantom\Music\UT - Downloaded Music\14-black_eyed_peas-just_cant_get_enough.mp3
+1207 D:\Users\Phantom\Music\UT - Downloaded Music\Adele - Rolling In the Deep.mp3
+1208 D:\Users\Phantom\Music\UT - Downloaded Music\Avril Lavigne - What The Hell [2010-Single][MJN].mp3
+1209 D:\Users\Phantom\Music\UT - Downloaded Music\Britney Spears - Hold It Against Me [2011-Single][MJN].mp3
+1210 D:\Users\Phantom\Music\UT - Downloaded Music\Bruno Mars - Grenade.mp3
+1211 D:\Users\Phantom\Music\UT - Downloaded Music\Cobra Starship - You Make Me Feel...(feat. Sabi).mp3
+1212 D:\Users\Phantom\Music\UT - Downloaded Music\David Guetta - Who's That Chick (feat Rihanna).mp3
+1213 D:\Users\Phantom\Music\UT - Downloaded Music\E.T. - Katy Perry.mp3
+1214 D:\Users\Phantom\Music\UT - Downloaded Music\Eminem Feat. Rihanna - Love The Way You Lie.mp3
+1215 D:\Users\Phantom\Music\UT - Downloaded Music\Gavin DeGraw - Not Over You.mp3
+1216 D:\Users\Phantom\Music\UT - Downloaded Music\Jennifer Lopez - On The Floor (Feat. Pitbull).mp3
+1217 D:\Users\Phantom\Music\UT - Downloaded Music\Jessie J - Nobody's Perfect.mp3
+1218 D:\Users\Phantom\Music\UT - Downloaded Music\Kanye West feat. Rihanna - All Of The Lights.mp3
+1219 D:\Users\Phantom\Music\UT - Downloaded Music\Katy Perry - Firework.mp3
+1220 D:\Users\Phantom\Music\UT - Downloaded Music\Katy Perry - Teenage Dream.mp3
+1221 D:\Users\Phantom\Music\UT - Downloaded Music\Ke$ha - Blow.mp3
+1222 D:\Users\Phantom\Music\UT - Downloaded Music\LMFAO - Party Rock Anthem.mp3
+1223 D:\Users\Phantom\Music\UT - Downloaded Music\Maroon 5 - Moves Like Jagger (feat. Christina Aguilera).mp3
+1224 D:\Users\Phantom\Music\UT - Downloaded Music\Nelly - Just A Dream 2010.mp3
+1225 D:\Users\Phantom\Music\UT - Downloaded Music\OneRepublic - Good Life.mp3
+1226 D:\Users\Phantom\Music\UT - Downloaded Music\P!nk (Pink) - Raise Your Glass [2010-Single][MJN].mp3
+1227 D:\Users\Phantom\Music\UT - Downloaded Music\Pink - FucKIN Perfect.mp3
+1228 D:\Users\Phantom\Music\UT - Downloaded Music\Rihanna - California King Bed.mp3
+1229 D:\Users\Phantom\Music\UT - Downloaded Music\Rihanna - Cheers (Drink To That).mp3
+1230 D:\Users\Phantom\Music\UT - Downloaded Music\Rihanna - Only Girl (In The World) [www.RNBxBeatz.com].mp3
+1231 D:\Users\Phantom\Music\UT - Downloaded Music\Rihanna - S&M.mp3
+1232 D:\Users\Phantom\Music\UT - Downloaded Music\Rihanna-What's My Name (Feat. Drake).mp3
+1233 D:\Users\Phantom\Music\UT - Downloaded Music\The Black Eyed Peas - The Time (The Dirty Bit).mp3
+1234 D:\Users\Phantom\Music\UT - Downloaded Music\Tinie Tempah - Invincible (feat. Kelly Rowland).mp3
+1235 D:\Users\Phantom\Music\Van Morrison\Enlightenment\01 Real Real Gone.mp3
+1236 D:\Users\Phantom\Music\Van Morrison\Enlightenment\02 Enlightenment.mp3
+1237 D:\Users\Phantom\Music\Van Morrison\Enlightenment\03 So Quiet in Here.mp3
+1238 D:\Users\Phantom\Music\Van Morrison\Enlightenment\04 Avalon of the Heart.mp3
+1239 D:\Users\Phantom\Music\Van Morrison\Enlightenment\05 See Me Through.mp3
+1240 D:\Users\Phantom\Music\Van Morrison\Enlightenment\06 Youth of 1,000 Summers.mp3
+1241 D:\Users\Phantom\Music\Van Morrison\Enlightenment\07 In the Days Before Rock'N'Roll.mp3
+1242 D:\Users\Phantom\Music\Van Morrison\Enlightenment\08 Start All over Again.mp3
+1243 D:\Users\Phantom\Music\Van Morrison\Enlightenment\09 She's My Baby.mp3
+1244 D:\Users\Phantom\Music\Van Morrison\Enlightenment\10 Memories.mp3
+1245 D:\Users\Phantom\Music\Various Artists\Edge of the 80s - Heart Of The Eighties\01 Before Too Long.mp3
+1246 D:\Users\Phantom\Music\Various Artists\Edge of the 80s - Heart Of The Eighties\02 Rock Me Amadeus.mp3
+1247 D:\Users\Phantom\Music\Various Artists\Edge of the 80s - Heart Of The Eighties\03 Take On Me.mp3
+1248 D:\Users\Phantom\Music\Various Artists\Edge of the 80s - Heart Of The Eighties\04 She Bop.mp3
+1249 D:\Users\Phantom\Music\Various Artists\Edge of the 80s - Heart Of The Eighties\05 Wouldn't it be Good.mp3
+1250 D:\Users\Phantom\Music\Various Artists\Edge of the 80s - Heart Of The Eighties\06 No One Is To Blame.mp3
+1251 D:\Users\Phantom\Music\Various Artists\Edge of the 80s - Heart Of The Eighties\07 Love Resurrection.mp3
+1252 D:\Users\Phantom\Music\Various Artists\Edge of the 80s - Heart Of The Eighties\08 Shout To The Top.mp3
+1253 D:\Users\Phantom\Music\Various Artists\Edge of the 80s - Heart Of The Eighties\09 Out Of Mind Out Of Sight.mp3
+1254 D:\Users\Phantom\Music\Various Artists\Edge of the 80s - Heart Of The Eighties\10 The Reflex.mp3
+1255 D:\Users\Phantom\Music\Various Artists\Edge of the 80s - Heart Of The Eighties\11 Only When You Leave.mp3
+1256 D:\Users\Phantom\Music\Various Artists\Edge of the 80s - Heart Of The Eighties\12 You Keep Me Hangin' On.mp3
+1257 D:\Users\Phantom\Music\Various Artists\Edge of the 80s - Heart Of The Eighties\13 Rush Rush.mp3
+1258 D:\Users\Phantom\Music\Various Artists\Edge of the 80s - Heart Of The Eighties\14 We Built This City.mp3
+1259 D:\Users\Phantom\Music\Various Artists\Edge of the 80s - Heart Of The Eighties\15 Axel F.mp3

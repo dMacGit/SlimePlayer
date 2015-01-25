@@ -3,7 +3,9 @@ package slime.junit;
 import static org.junit.Assert.*;
 
 import java.io.File;
+import java.io.IOException;
 
+import org.farng.mp3.TagException;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -48,11 +50,19 @@ public class JUnit_LibrarySearchTest
 		
 		//First Validate the first music file!
 		try{
-			SongTag testTag = new SongTag(musicFileOne);
-			System.out.println(testTag.toString());
+			SongTag testTag = new SongTag(musicFileOne);	//<--- Incomplete music tag (Has NULL fields!)
+			assertEquals(testTag.getSongTitle(),"Dragonballz Theme Song");
+			assertEquals(testTag.getArtist(),"Unknown");
+			assertEquals(testTag.getRecordingTitle(),"Unknown");
+			//System.out.println(testTag.toString());
+			
+			SongTag testTagTwo = new SongTag(musicFileTwo);
+			assertEquals(testTagTwo.getSongTitle(),"Transformers Theme Song");
+			assertEquals(testTagTwo.getArtist(),"White Lion");
+			assertEquals(testTagTwo.getRecordingTitle(),"soundtrack");
 			
 		}
-		catch(WrongFileTypeException e){
+		catch(WrongFileTypeException | IOException | TagException e){
 			e.printStackTrace();
 		}
 		

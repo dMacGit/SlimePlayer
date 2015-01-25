@@ -40,6 +40,9 @@ import org.farng.mp3.MP3File;
 import org.farng.mp3.TagException;
 import org.tritonus.share.sampled.file.TAudioFileFormat;
 
+import slime.media.SongTag;
+import slime.media.WrongFileTypeException;
+
 public class manualLibraryCreation extends JPanel implements ActionListener
 {
     private static final boolean DEBUG = false;
@@ -351,254 +354,73 @@ public class manualLibraryCreation extends JPanel implements ActionListener
             //Of the validated files, proceed to scan tag info
             for (int i = 0; i < listOfFiles.length; i++)
             {
-                
                 filePaths.put(countSongs, listOfFiles[i]);
+                
+                Character tab = (Character)('\t');
                 try
                 {
-                    MP3File mp3file = new MP3File(listOfFiles[i]);
-                    
-                    if(mp3file.hasID3v1Tag())
-                    {
-                        Character tab = (Character)('\t');
-                        try
-                        {
-                            title = mp3file.getID3v1Tag().getSongTitle();
-                            
-                            artist = mp3file.getID3v1Tag().getArtist();
-                            recordingTitle = mp3file.getID3v1Tag().getAlbum();
-                            String tempValue = mp3file.getID3v1Tag().getYear();
-                            if(tempValue != null & tempValue != "")
-                            {
-                            	try{
-                            		year = Integer.parseInt(mp3file.getID3v1Tag().getYear());
-                            	}
-                            	catch(NumberFormatException ex)
-                                {
-                                    System.out.println(" ~> No release year value found!");
-                                    //countSongs--;
-                                    System.out.println("<<<"+tab+title+tab+artist+tab+recordingTitle+tab+durration+tab+year+tab+popularity+tab+datAdded+">>>");
-                                }
-                            }
-                            else
-                            {
-                            	year = 0;
-                            }
-                            //mp3file.getID3v2Tag().get
-                            durration = 0;
-                            int val = 0;
-                            AudioFileFormat baseFileFormat = null;
-                            try
-                            {
-                                baseFileFormat = AudioSystem.getAudioFileFormat(listOfFiles[i]);
-                            }
-                            catch (UnsupportedAudioFileException ex)
-                            {
-                                System.out.println("Unsupported Audio File!! "+ex);
-                            }
-
-                            if (baseFileFormat instanceof TAudioFileFormat)
-                            {
-                                Map properties = ((TAudioFileFormat) baseFileFormat).properties();
-                                String key = "duration";
-                                val = Integer.parseInt(properties.get(key).toString())/1000000;
-                            }
-                            durration = val;
-                            /*idLabel.setText("[ID] "+identificationNumberStart);
-                            titleLabel.setText("[Title] "+title);
-                            artistLabel.setText("[Artist] "+artist);
-                            albumLabel.setText("[Album] "+recordingTitle);
-                            timeLabel.setText("[Seconds] "+durration);
-                            yearLabel.setText("[Year] "+year);
-                            titleField.setText("");
-                            artistField.setText("");
-                            albumField.setText("");
-                            secondsField.setText("");
-                            yearField.setText("");
-
-                            if(title.compareTo("") == 0 || artist.compareTo("") == 0 || year == 0 || recordingTitle.compareTo("") == 0 || durration == 0)
-                            {
-                                add(adjustPanel);
-                                revalidate();
-                                while(notPressedContinue)
-                                {
-                                }
-                                notPressedContinue = true;
-                                if(titleField.getText().compareTo("") != 0 && title.compareTo("") == 0)
-                                {
-                                    title = titleField.getText();
-                                }
-                                if(artistField.getText().compareTo("") != 0 && artist.compareTo("") == 0)
-                                {
-                                    artist = artistField.getText();
-                                }
-                                if(albumField.getText().compareTo("") != 0 && recordingTitle.compareTo("") == 0)
-                                {
-                                    recordingTitle = albumField.getText();
-                                }
-                                if(secondsField.getText().compareTo("") != 0 && durration == 0)
-                                {
-                                    durration = Integer.parseInt(secondsField.getText());
-                                }
-                                if(yearField.getText().compareTo("") != 0 && year == 0)
-                                {
-                                    year = Integer.parseInt(yearField.getText());
-                                }
-                            }
-                            revalidate();
-                            */
-                        }
-
-                        catch(NumberFormatException ex)
-                        {
-                            System.out.println("error formating number! "+ex);
-                            countSongs--;
-                            //System.out.println("<<<"+tab+title+tab+artist+tab+recordingTitle+tab+durration+tab+year+tab+popularity+tab+datAdded+">>>");
-                        }
-                        /*
-                        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-                        Date timeAdded = new Date();
-                        String yearDate = dateFormat.format(timeAdded).substring(0, dateFormat.format(timeAdded).indexOf("/"));
-                        String findRest = dateFormat.format(timeAdded).substring(dateFormat.format(timeAdded).indexOf("/")+1);
-                        String monthDate = findRest.substring(0, findRest.indexOf("/"));
-                        String restDate = findRest.substring(findRest.indexOf("/")+1);
-                        String dayDate = restDate.substring(restDate.indexOf("/")+1, restDate.indexOf(" "));
-                        datAdded = dayDate+"/"+monthDate+"/"+yearDate;
-                        //Character tab = (Character)('\t');
-                        
-                        String holdingSongLine = Integer.toString(identificationNumberStart)+tab+title+tab+artist+tab+recordingTitle+tab+durration+tab+year+tab+popularity+tab+datAdded;
-                        
-                        holdingSongLines.put(identificationNumberStart, holdingSongLine);*/
-                        //System.out.println("[:Added<ID3v1>:] "+identificationNumberStart+"/"+i+" "+title+" "+artist);
-                        identificationNumberStart++;
-                        
-                    }
-                    else
-                    {
-                        if(mp3file.hasID3v2Tag())
-                        {
-                            Character tab = (Character) ('\t');
-                            try {
-                                title = mp3file.getID3v2Tag().getSongTitle();
-                                artist = mp3file.getID3v2Tag().getAuthorComposer();
-                                recordingTitle = mp3file.getID3v2Tag().getAlbumTitle();
-                                year = Integer.parseInt(mp3file.getID3v2Tag().getYearReleased());
-                                durration = 0;
-                                int val = 0;
-                                AudioFileFormat baseFileFormat = null;
-                                try {
-                                    baseFileFormat = AudioSystem.getAudioFileFormat(listOfFiles[i]);
-                                } catch (UnsupportedAudioFileException ex) {
-                                    System.out.println("Unsupported Audio File!! " + ex);
-                                }
-
-                                if (baseFileFormat instanceof TAudioFileFormat) {
-                                    Map properties = ((TAudioFileFormat) baseFileFormat).properties();
-                                    String key = "duration";
-                                    val = Integer.parseInt(properties.get(key).toString()) / 1000000;
-                                }
-                                durration = val;
-                                /*idLabel.setText("[ID] " + identificationNumberStart);
-                                titleLabel.setText("[Title] " + title);
-                                artistLabel.setText("[Artist] " + artist);
-                                albumLabel.setText("[Album] " + recordingTitle);
-                                timeLabel.setText("[Seconds] " + durration);
-                                yearLabel.setText("[Year] " + year);
-                                titleField.setText("");
-                                artistField.setText("");
-                                albumField.setText("");
-                                secondsField.setText("");
-                                yearField.setText("");
-
-                                if (title.compareTo("") == 0 || artist.compareTo("") == 0 || year == 0 || recordingTitle.compareTo("") == 0 || durration == 0) {
-                                    add(adjustPanel);
-                                    revalidate();
-                                    while (notPressedContinue) {
-                                    }
-                                    notPressedContinue = true;
-                                    if (titleField.getText().compareTo("") != 0 && title.compareTo("") == 0) {
-                                        title = titleField.getText();
-                                    }
-                                    if (artistField.getText().compareTo("") != 0 && artist.compareTo("") == 0) {
-                                        artist = artistField.getText();
-                                    }
-                                    if (albumField.getText().compareTo("") != 0 && recordingTitle.compareTo("") == 0) {
-                                        recordingTitle = albumField.getText();
-                                    }
-                                    if (secondsField.getText().compareTo("") != 0 && durration == 0) {
-                                        durration = Integer.parseInt(secondsField.getText());
-                                    }
-                                    if (yearField.getText().compareTo("") != 0 && year == 0) {
-                                        year = Integer.parseInt(yearField.getText());
-                                    }
-                                }
-                                revalidate();*/
-                            } catch (NumberFormatException ex) {
-                                System.out.println("error formating number! " + ex);
-                                countSongs--;
-                                //System.out.println("<<<"+tab+title+tab+artist+tab+recordingTitle+tab+durration+tab+year+tab+popularity+tab+datAdded+">>>");
-                            }
-                            /*DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-                            Date timeAdded = new Date();
-                            String yearDate = dateFormat.format(timeAdded).substring(0, dateFormat.format(timeAdded).indexOf("/"));
-                            String findRest = dateFormat.format(timeAdded).substring(dateFormat.format(timeAdded).indexOf("/") + 1);
-                            String monthDate = findRest.substring(0, findRest.indexOf("/"));
-                            String restDate = findRest.substring(findRest.indexOf("/") + 1);
-                            String dayDate = restDate.substring(restDate.indexOf("/") + 1, restDate.indexOf(" "));
-                            datAdded = dayDate + "/" + monthDate + "/" + yearDate;
-                            //Character tab = (Character)('\t');
-
-                            String holdingSongLine = Integer.toString(identificationNumberStart) + tab + title + tab + artist + tab + recordingTitle + tab + durration + tab + year + tab + popularity + tab + datAdded;
-
-                            holdingSongLines.put(identificationNumberStart, holdingSongLine);*/
-                            //System.out.println("[:Added<ID3v2>:] " + identificationNumberStart + " " + title + " " + artist);
-                            identificationNumberStart++;
-                        }
-                        else
-                        {
-                            countSongs--;
-                            System.out.println("<<<:Tag not supported:>>>");
-                        }
-                    }
+                	SongTag newTempTag = new SongTag(listOfFiles[i]);
+                    title = newTempTag.getSongTitle();                
+                    artist = newTempTag.getArtist();
+                    recordingTitle = newTempTag.getRecordingTitle();
+                    year = newTempTag.getYear();
+                    durration += newTempTag.getDurration();
                 }
-                catch (IOException ex)
+                catch(WrongFileTypeException ex)
                 {
-                    countSongs--;
-                    //identificationNumberStart++;
-                    System.out.println("<< Error reading file!! >> "+ex);
+                	System.out.println("Error reading File!");
+                	countSongs--;
                 }
-                catch (TagException ex)
+                catch(NumberFormatException ex)
                 {
+                    System.out.println("error formating number! ");
                     countSongs--;
-                    //identificationNumberStart++;
-                    System.out.println("<< Tag error!! >> "+ex);
                 }
                 catch(UnsupportedOperationException ex)
                 {
                     countSongs--;
-                    //identificationNumberStart++;
                     System.out.println("<< Unsupported Operation!! >> "+ex);
-                }
+                } 
+                catch (IOException e) 
+                {
+                	countSongs--;
+                	System.out.println("<< IO Exception!! >> "+e);
+				} 
+                catch (TagException e) 
+                {
+                	countSongs--;
+                	System.out.println("<< Tag Exception!! >> "+e);
+				}
+                DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+                Date timeAdded = new Date();
+                String yearDate = dateFormat.format(timeAdded).substring(0, dateFormat.format(timeAdded).indexOf("/"));
+                String findRest = dateFormat.format(timeAdded).substring(dateFormat.format(timeAdded).indexOf("/")+1);
+                String monthDate = findRest.substring(0, findRest.indexOf("/"));
+                String restDate = findRest.substring(findRest.indexOf("/")+1);
+                String dayDate = restDate.substring(restDate.indexOf("/")+1, restDate.indexOf(" "));
+                datAdded = dayDate+"/"+monthDate+"/"+yearDate;
+                
+                String librarySongLine = Integer.toString(identificationNumberStart)+tab+title+tab+artist+tab+recordingTitle+tab+durration+tab+year+tab+popularity+tab+datAdded;
+                
+                holdingSongLines.put(identificationNumberStart, librarySongLine);
+                identificationNumberStart++;
+
                 countSongs++;
                 totalSongs = countSongs;
-                    
-               //System.out.println("Count Songs = "+countSongs);
-               if(i==354){
-            	   System.out.println("END IS NYE!!!!");
-               }
             }
-            System.out.println("We finished the job.");
+            System.out.println("~~~ Scanned Directory! ~~~");
         }
         System.out.println("Writing holdings file....");
-        //writeHoldFile();
-        //System.out.println("Finished holdings file....");
+        writeLibraryFile();
+        System.out.println("Finished holdings file....");
     }
-    public void writeHoldFile()
+    public void writeLibraryFile()
     {
-        PrintWriter holdingsPrintWriter = null;
+        PrintWriter libraryPrintWriter = null;
         PrintWriter songPathPrintWriter = null;
         try
         {
-            holdingsPrintWriter = new PrintWriter(new FileWriter(HOLDINGS_FILE));
+            libraryPrintWriter = new PrintWriter(new FileWriter(LIBRARY_FILE));
             songPathPrintWriter = new PrintWriter(new FileWriter(SONG_PATHS_FILE));
         }
         catch (IOException ex)
@@ -609,14 +431,14 @@ public class manualLibraryCreation extends JPanel implements ActionListener
         while(index < totalSongs)
         {
 
-            holdingsPrintWriter.println(holdingSongLines.get(index));
+            libraryPrintWriter.println(holdingSongLines.get(index));
             songPathPrintWriter.println(Integer.toString(index)+" "+filePaths.get(index).getAbsolutePath());
             //System.out.println(Integer.toString(index)+" "+filePaths.get(index).getAbsolutePath());
             index++;
         }
-        holdingsPrintWriter.flush();
+        libraryPrintWriter.flush();
         songPathPrintWriter.flush();
-        holdingsPrintWriter.close();
+        libraryPrintWriter.close();
         songPathPrintWriter.close();
     }
     private void loadLibraryFile()
