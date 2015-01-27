@@ -14,12 +14,10 @@ import slime.media.WrongFileTypeException;
 import slime.utills.LibraryHelper;
 import slime.utills.MusicFileFilter;
 import slime.utills.RecursiveSearch;
-import slime.utills.manualLibraryCreation;
 
 public class JUnit_LibrarySearchTest 
 {
 	protected static String TEST_DIRECTORY = "";
-	protected static String PROJECT_DIRECTORY = "D:/Users/Phantom/Documents/D Programing/Eclipse Projetcs/Java/SlimePlayer/bin/slime"; // <-- Change to represent the project DIR!
 	protected static File parentDirectory;
 	protected static File musicFileOne, musicFileTwo;
 	

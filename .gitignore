@@ -1,5 +1,8 @@
 *.class
 
+/Data_Files/SongPaths.txt
+/Data_Files/Lib_MP3player.txt
+
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 

@@ -14,7 +14,6 @@ import slime.utills.RecursiveSearch;
 public class JUnit_DirectoryTests
 {
 	protected static String TEST_DIRECTORY = "";
-	protected static String PROJECT_DIRECTORY = "D:/Users/Phantom/Documents/D Programing/Eclipse Projetcs/Java/SlimePlayer/bin/slime"; // <-- Change to represent the project DIR!
 	//protected static manualLibraryCreation newLibrary;
 	protected static MusicFileFilter testFilter;
 	protected static File testParentFileDirectory;
