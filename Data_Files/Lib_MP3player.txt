@@ -1,1259 +1,1259 @@
-1	Heaven Beside You	Alice In Chains	Alice In Chain's Greatest Hits	331	2001	100	25/01/2015
-2	Them Bones	Alice In Chains	Dirt	482	1992	100	25/01/2015
-3	Dam That River	Alice In Chains	Dirt	672	1992	100	25/01/2015
-4	Rain When I Die	Alice In Chains	Dirt	1034	1992	100	25/01/2015
-5	Sickman	Alice In Chains	Dirt	1364	1992	100	25/01/2015
-6	Rooster	Alice In Chains	Dirt	1740	1992	100	25/01/2015
-7	Junkhead	Alice In Chains	Dirt	2050	1992	100	25/01/2015
-8	Dirt	Alice In Chains	Dirt	2367	1992	100	25/01/2015
-9	God Smack	Alice In Chains	Dirt	2598	1992	100	25/01/2015
-10	Intro (Dream Sequence)	Alice In Chains	Dirt	2642	1992	100	25/01/2015
-11	Hate To Feel	Alice In Chains	Dirt	2959	1992	100	25/01/2015
-12	Angry Chair	Alice In Chains	Dirt	3247	1992	100	25/01/2015
-13	Down In A Hole	Alice In Chains	Dirt	3586	1992	100	25/01/2015
-14	Would?	Alice In Chains	Dirt	3795	1992	100	25/01/2015
-15	Man In The Box	Alice In Chains	Facelift	4086	1990	100	25/01/2015
-16	Sea Of Sorrow	Alice In Chains	Facelift	4440	1990	100	25/01/2015
-17	Nutshell	Alice In Chains	Jar Of Flies	4701	1993	100	25/01/2015
-18	A Little Bitter	Alice In Chains	Last Action Hero Soundtrack	4937	1993	100	25/01/2015
-19	Animals	Nickelback	All the Right Reasons	5126	2005	100	25/01/2015
-20	Far away	Nickelback	All the Right Reasons	5367	2005	100	25/01/2015
-21	Fight for all the wrong reason	Nickelback	All the Right Reasons	5594	2005	100	25/01/2015
-22	Follow you home	Nickelback	All the Right Reasons	5857	2005	100	25/01/2015
-23	If everyone cared	Nickelback	All the Right Reasons	6077	2005	100	25/01/2015
-24	Next contestant	Nickelback	All the Right Reasons	6294	2005	100	25/01/2015
-25	Photograph	Nickelback	All the Right Reasons	6555	2005	100	25/01/2015
-26	Rockstar	Nickelback	All the Right Reasons	6816	2005	100	25/01/2015
-27	Savin' me	Nickelback	All the Right Reasons	7038	2005	100	25/01/2015
-28	Side of a bullet	Nickelback	All the Right Reasons	7221	2005	100	25/01/2015
-29	Some day (Live-acoustic)	Nickelback	All the Right Reasons	7426	2005	100	25/01/2015
-30	Someone that you're with	Nickelback	All the Right Reasons	7670	2005	100	25/01/2015
-31	Revelations	Audioslave	Revelations	7923	2006	100	25/01/2015
-32	One and the Same	Audioslave	Revelations	8142	2006	100	25/01/2015
-33	Sound of a Gun	Audioslave	Revelations	8403	2006	100	25/01/2015
-34	Until We Fall	Audioslave	Revelations	8634	2006	100	25/01/2015
-35	Original Fire	Audioslave	Revelations	8853	2006	100	25/01/2015
-36	Broken City	Audioslave	Revelations	9082	2006	100	25/01/2015
-37	Somedays	Audioslave	Revelations	9297	2006	100	25/01/2015
-38	Shape of Things to Come	Audioslave	Revelations	9572	2006	100	25/01/2015
-39	Jewel of the Summertime	Audioslave	Revelations	9807	2006	100	25/01/2015
-40	Wide Awake	Audioslave	Revelations	10074	2006	100	25/01/2015
-41	Nothing Left to Say But Goodby	Audioslave	Revelations	10288	2006	100	25/01/2015
-42	Moth	Audioslave	Revelations	10586	2006	100	25/01/2015
-43	White Wedding	Billy Idol	Wedding Singer	10836	1998	100	25/01/2015
-44	Concrete Jungle	Black Label Society	Shot to Hell	11040	2006	100	25/01/2015
-45	Huge	Boris	Amplifier Worship	11595	1998	100	25/01/2015
-46	Ganbou-Ki	Boris	Amplifier Worship	12540	1998	100	25/01/2015
-47	Hama	Boris	Amplifier Worship	12991	1998	100	25/01/2015
-48	Kuruimizu	Boris	Amplifier Worship	13858	1998	100	25/01/2015
-49	Vomitself	Boris	Amplifier Worship	14875	1998	100	25/01/2015
-50	Farewell	Boris	Pink	15329	2005	100	25/01/2015
-51	Pink	Boris	Pink	15590	2005	100	25/01/2015
-52	Woman On The Screen	Boris	Pink	15749	2005	100	25/01/2015
-53	Nothing Special	Boris	Pink	15888	2005	100	25/01/2015
-54	Blackout	Boris	Pink	16179	2005	100	25/01/2015
-55	Electric	Boris	Pink	16285	2005	100	25/01/2015
-56	Pseudo-Bread	Boris	Pink	16556	2005	100	25/01/2015
-57	Afterburner	Boris	Pink	16819	2005	100	25/01/2015
-58	Six, Three Times	Boris	Pink	16993	2005	100	25/01/2015
-59	My Machine	Boris	Pink	17115	2005	100	25/01/2015
-60	Just Abondoned My-Self	Boris	Pink	18210	2005	100	25/01/2015
-61	Make It With You	Bread	Anthology	18402	1970	100	25/01/2015
-62	Dismal Day	Bread	Anthology	18538	1985	100	25/01/2015
-63	London Bridge	Bread	Anthology	18689	1985	100	25/01/2015
-64	Anyway You Want Me	Bread	Anthology	18876	1985	100	25/01/2015
-65	Look What You've Done	Bread	Anthology	19067	1970	100	25/01/2015
-66	It Don't Matter To Me	Bread	Anthology	19236	1970	100	25/01/2015
-67	The Last Time	Bread	Anthology	19479	1985	100	25/01/2015
-68	Let Your Love Go	Bread	Anthology	19620	1985	100	25/01/2015
-69	Truckin'	Bread	Anthology	19771	1971	100	25/01/2015
-70	If	Bread	Anthology	19925	1971	100	25/01/2015
-71	Baby I'm-A Want You	Bread	Anthology	20071	1972	100	25/01/2015
-72	Everything I Own	Bread	Anthology	20257	1972	100	25/01/2015
-73	Down On My Knees	Bread	Anthology	20420	1972	100	25/01/2015
-74	Aubrey	Bread	Anthology	20637	1985	100	25/01/2015
-75	Diary	Bread	Anthology	20824	1972	100	25/01/2015
-76	Sweet Surrender	Bread	Anthology	20979	1985	100	25/01/2015
-77	The Guitar Man	Bread	Anthology	21203	1972	100	25/01/2015
-78	Fancy Dancer	Bread	Anthology	21413	1985	100	25/01/2015
-79	She's The Only One	Bread	Anthology	21591	1985	100	25/01/2015
-80	Lost Without Your Love	Bread	Anthology	21764	1977	100	25/01/2015
-81	The Diary Of Jane	Breaking Benjamin	Phobia	21968	2006	100	25/01/2015
-82	So Cold	Breaking Benjamin	We Are Not Alone	22255	2004	100	25/01/2015
-83	Hit That Perfect Beat	Bronski Beat	Truthdare Doubledare	22493	1986	100	25/01/2015
-84	Truthdare Doubledare	Bronski Beat	Truthdare Doubledare	22700	1986	100	25/01/2015
-85	C'mon! C'mon!	Bronski Beat	Truthdare Doubledare	22937	1986	100	25/01/2015
-86	Punishment for Love	Bronski Beat	Truthdare Doubledare	23136	1986	100	25/01/2015
-87	We Know How It Feels	Bronski Beat	Truthdare Doubledare	23326	1986	100	25/01/2015
-88	This Heart	Bronski Beat	Truthdare Doubledare	23531	1986	100	25/01/2015
-89	Do It	Bronski Beat	Truthdare Doubledare	23770	1986	100	25/01/2015
-90	Dr. John	Bronski Beat	Truthdare Doubledare	24028	1986	100	25/01/2015
-91	In My Dreams	Bronski Beat	Truthdare Doubledare	24230	1986	100	25/01/2015
-92	What Are Your Going to Do Abou	Bronski Beat	Truthdare Doubledare	24468	1986	100	25/01/2015
-93	C'mon C'mon (12" Extended Mix)	Bronski Beat	Truthdare Doubledare	24725	1986	100	25/01/2015
-94	Hit That Perfect Beat [12" Ver	Bronski Beat	Truthdare Doubledare	24954	1986	100	25/01/2015
-95	I Gave You Everything [*]	Bronski Beat	Truthdare Doubledare	25213	1986	100	25/01/2015
-96	Track 14	Bronski Beat	Truthdare Doubledare	25447	1986	100	25/01/2015
-97	Track 15	Bronski Beat	Truthdare Doubledare	25898	1986	100	25/01/2015
-98	Summer of '69	Bryan Adams	So Far So Good	26112	1993	100	25/01/2015
-99	Straight from the Heart	Bryan Adams	So Far So Good	26321	1993	100	25/01/2015
-100	It's Only Love	Bryan Adams	So Far So Good	26516	1993	100	25/01/2015
-101	Can't Stop This Thing We Start	Bryan Adams	So Far So Good	26784	1993	100	25/01/2015
-102	Do I Have to Say the Words?	Bryan Adams	So Far So Good	27154	1993	100	25/01/2015
-103	This Time	Bryan Adams	So Far So Good	27353	1993	100	25/01/2015
-104	Run to You	Bryan Adams	So Far So Good	27586	1993	100	25/01/2015
-105	Heaven	Bryan Adams	So Far So Good	27829	1993	100	25/01/2015
-106	Cuts Like a Knife	Bryan Adams	So Far So Good	28141	1993	100	25/01/2015
-107	(Everything I Do) I Do It for	Bryan Adams	So Far So Good	28535	1993	100	25/01/2015
-108	Somebody	Bryan Adams	So Far So Good	28817	1993	100	25/01/2015
-109	Kids Wanna Rock	Bryan Adams	So Far So Good	28972	1993	100	25/01/2015
-110	Heat of the Night	Bryan Adams	So Far So Good	29277	1993	100	25/01/2015
-111	Please Forgive Me	Bryan Adams	So Far So Good	29633	1993	100	25/01/2015
-112	Act on Instinct	Frank Klepacki	Command & Conquer OST	29805	1994	100	25/01/2015
-113	No Mercy	Frank Klepacki	Command & Conquer OST	30006	1994	100	25/01/2015
-114	Industrial One	Frank Klepacki	Command & Conquer OST	30179	1994	100	25/01/2015
-115	Iron Fist	Frank Klepacki	Command & Conquer OST	30389	1994	100	25/01/2015
-116	We Will Stop Them	Frank Klepacki	Command & Conquer OST	30578	1994	100	25/01/2015
-117	Radio	Frank Klepacki	Command & Conquer OST	30759	1994	100	25/01/2015
-118	On the Prowl	Frank Klepacki	Command & Conquer OST	30941	1994	100	25/01/2015
-119	Re-con	Frank Klepacki	Command & Conquer OST	31203	1994	100	25/01/2015
-120	Drone	Frank Klepacki	Command & Conquer OST	31475	1994	100	25/01/2015
-121	In the Line of Fire	Frank Klepacki	Command & Conquer OST	31599	1994	100	25/01/2015
-122	Prepare for Battle	Frank Klepacki	Command & Conquer OST	31808	1994	100	25/01/2015
-123	Depth Charge	Frank Klepacki	Command & Conquer OST	32063	1994	100	25/01/2015
-124	Rain in the Night	Frank Klepacki	Command & Conquer OST	32217	1994	100	25/01/2015
-125	Creeping Upon	Frank Klepacki	Command & Conquer OST	32434	1994	100	25/01/2015
-126	Target	Frank Klepacki	Command & Conquer OST	32606	1994	100	25/01/2015
-127	Just Do It Up	Frank Klepacki	Command & Conquer OST	32748	1994	100	25/01/2015
-128	C&C Thang	Frank Klepacki	Command & Conquer OST	32940	1994	100	25/01/2015
-129	To Be Feared	Frank Klepacki	Command & Conquer OST	33105	1994	100	25/01/2015
-130	Drill	Frank Klepacki	Command & Conquer OST	33372	1994	100	25/01/2015
-131	Full Stop	Frank Klepacki	Command & Conquer OST	33553	1994	100	25/01/2015
-132	In Trouble	Frank Klepacki	Command & Conquer OST	33765	1994	100	25/01/2015
-133	Air Strike	Frank Klepacki	Command & Conquer OST	33962	1994	100	25/01/2015
-134	Hell March	Frank Klepacki	C&C Red Alert OST	34346	2000	100	25/01/2015
-135	Radio	Frank Klepacki	C&C Red Alert OST	34591	2000	100	25/01/2015
-136	Crush	Frank Klepacki	C&C Red Alert OST	34820	2000	100	25/01/2015
-137	Roll Out	Frank Klepacki	C&C Red Alert OST	35055	2000	100	25/01/2015
-138	Mud	Frank Klepacki	C&C Red Alert OST	35343	2000	100	25/01/2015
-139	Twin Cannon	Frank Klepacki	C&C Red Alert OST	35578	2000	100	25/01/2015
-140	Face the Enemy	Frank Klepacki	C&C Red Alert OST	35914	2000	100	25/01/2015
-141	Run	Frank Klepacki	C&C Red Alert OST	36227	2000	100	25/01/2015
-142	Terminate	Frank Klepacki	C&C Red Alert OST	36547	2000	100	25/01/2015
-143	Big Foot	Frank Klepacki	C&C Red Alert OST	36862	2000	100	25/01/2015
-144	Workmen	Frank Klepacki	C&C Red Alert OST	37146	2000	100	25/01/2015
-145	Militant Force	Frank Klepacki	C&C Red Alert OST	37256	2000	100	25/01/2015
-146	Dense	Frank Klepacki	C&C Red Alert OST	37558	2000	100	25/01/2015
-147	Vector	Frank Klepacki	C&C Red Alert OST	37816	2000	100	25/01/2015
-148	Smash	Frank Klepacki	C&C Red Alert OST	38303	2000	100	25/01/2015
-149	Hell March 2	Frank Klepacki	C&C Red Alert 2 OST	38527	2000	100	25/01/2015
-150	Industrofunk	Frank Klepacki	C&C Red Alert 2 OST	38719	2000	100	25/01/2015
-151	Ready The Army	Frank Klepacki	C&C Red Alert 2 OST	39016	2000	100	25/01/2015
-152	Grinder	Frank Klepacki	C&C Red Alert 2 OST	39163	2000	100	25/01/2015
-153	In Deep	Frank Klepacki	C&C Red Alert 2 OST	39367	2000	100	25/01/2015
-154	Motorized	Frank Klepacki	C&C Red Alert 2 OST	39609	2000	100	25/01/2015
-155	Power	Frank Klepacki	C&C Red Alert 2 OST	39845	2000	100	25/01/2015
-156	200 Meters	Frank Klepacki	C&C Red Alert 2 OST	40097	2000	100	25/01/2015
-157	Destroy	Frank Klepacki	C&C Red Alert 2 OST	40375	2000	100	25/01/2015
-158	Burn	Frank Klepacki	C&C Red Alert 2 OST	40652	2000	100	25/01/2015
-159	Probing	Frank Klepacki	C&C Red Alert 2 OST	40911	2000	100	25/01/2015
-160	Blow It Up	Frank Klepacki	C&C Red Alert 2 OST	41102	2000	100	25/01/2015
-161	Eagle Hunter	Frank Klepacki	C&C Red Alert 2 OST	41358	2000	100	25/01/2015
-162	Fortification	Frank Klepacki	C&C Red Alert 2 OST	41600	2000	100	25/01/2015
-163	Jank	Frank Klepacki	C&C Red Alert 2 OST	41826	2000	100	25/01/2015
-164	C&C In The House	Frank Klepacki	C&C Red Alert 2 OST	42072	2000	100	25/01/2015
-165	Timebomb	Frank Klepacki	C&C Tiberian Sun OST	42199	2000	100	25/01/2015
-166	Pharotek	Frank Klepacki	C&C Tiberian Sun OST	42480	2000	100	25/01/2015
-167	Lone Trooper	Frank Klepacki	C&C Tiberian Sun OST	42762	2000	100	25/01/2015
-168	Scouting	Frank Klepacki	C&C Tiberian Sun OST	43019	2000	100	25/01/2015
-169	Infrared	Frank Klepacki	C&C Tiberian Sun OST	43290	2000	100	25/01/2015
-170	Flurry	Frank Klepacki	C&C Tiberian Sun OST	43545	2000	100	25/01/2015
-171	Mutants	Frank Klepacki	C&C Tiberian Sun OST	43800	2000	100	25/01/2015
-172	Gloom	Frank Klepacki	C&C Tiberian Sun OST	44041	2000	100	25/01/2015
-173	Heroism	Frank Klepacki	C&C Tiberian Sun OST	44284	2000	100	25/01/2015
-174	Approach	Frank Klepacki	C&C Tiberian Sun OST	44567	2000	100	25/01/2015
-175	Dusk Hour	Frank Klepacki	C&C Tiberian Sun OST	44825	2000	100	25/01/2015
-176	The Defense	Frank Klepacki	C&C Tiberian Sun OST	45070	2000	100	25/01/2015
-177	Mad Rap	Frank Klepacki	C&C Tiberian Sun OST	45343	2000	100	25/01/2015
-178	Valves	Frank Klepacki	C&C Tiberian Sun OST	45605	2000	100	25/01/2015
-179	What Lurks	Frank Klepacki	C&C Tiberian Sun OST	45922	2000	100	25/01/2015
-180	Score	Frank Klepacki	C&C Tiberian Sun OST	46031	2000	100	25/01/2015
-181	Square One	Coldplay	X&Y	46318	2005	100	25/01/2015
-182	What If	Coldplay	X&Y	46615	2005	100	25/01/2015
-183	White Shadows	Coldplay	X&Y	46943	2005	100	25/01/2015
-184	Fix You	Coldplay	X&Y	47238	2005	100	25/01/2015
-185	Talk	Coldplay	X&Y	47549	2005	100	25/01/2015
-186	X&Y	Coldplay	X&Y	47823	2005	100	25/01/2015
-187	Speed of Sound	Coldplay	X&Y	48111	2005	100	25/01/2015
-188	A Message	Coldplay	X&Y	48396	2005	100	25/01/2015
-189	Low	Coldplay	X&Y	48728	2005	100	25/01/2015
-190	The Hardest Part	Coldplay	X&Y	48993	2005	100	25/01/2015
-191	Swallowed in the Sea	Coldplay	X&Y	49232	2005	100	25/01/2015
-192	Twisted Logic	Coldplay	X&Y	49533	2005	100	25/01/2015
-193	Til Kingdom Come [Hidden Track	Coldplay	X&Y	49783	2005	100	25/01/2015
-194	Angel	Massive Attack	Collected	50158	2006	100	25/01/2015
-195	Butterfly Caught	Massive Attack	Collected	50467	2006	100	25/01/2015
-196	Five Man Army	Massive Attack	Collected	50789	2006	100	25/01/2015
-197	Future Proof	Massive Attack	Collected	51132	2006	100	25/01/2015
-198	Inertia Creeps	Massive Attack	Collected	51487	2006	100	25/01/2015
-199	Karmacoma	Massive Attack	Collected	51801	2006	100	25/01/2015
-200	Live With Me	Massive Attack	Collected	52092	2006	100	25/01/2015
-201	Protection	Massive Attack	Collected	52558	2006	100	25/01/2015
-202	Risingson	Massive Attack	Collected	52856	2006	100	25/01/2015
-203	Safe From Harm	Massive Attack	Collected	53176	2006	100	25/01/2015
-204	Sly	Massive Attack	Collected	53473	2006	100	25/01/2015
-205	Teardrop	Massive Attack	Collected	53801	2006	100	25/01/2015
-206	Unfinished Sympathy	Massive Attack	Collected	54114	2006	100	25/01/2015
-207	What Your Soul Sings	Massive Attack	Collected	54512	2006	100	25/01/2015
-208	Revelations	Audioslave	Revelations	54765	2006	100	25/01/2015
-209	Them Bones	Alice In Chains	Dirt	54916	1992	100	25/01/2015
-210	Dam That River	Alice In Chains	Dirt	55106	1992	100	25/01/2015
-211	One And The Same	Audioslave	Revelations	55325	2006	100	25/01/2015
-212	Rain When I Die	Alice In Chains	Dirt	55687	1992	100	25/01/2015
-213	Sound Of A Gun	Audioslave	Revelations	55948	2006	100	25/01/2015
-214	Take On Me	A-Ha	Edge of the 80s - Heart Of The	56178	1988	100	25/01/2015
-215	Sickman	Alice In Chains	Dirt	56508	1992	100	25/01/2015
-216	Until We Fall	Audioslave	Revelations	56739	2006	100	25/01/2015
-217	Original Fire	Audioslave	Revelations	56958	2006	100	25/01/2015
-218	Rooster	Alice In Chains	Dirt	57334	1992	100	25/01/2015
-219	Broken City	Audioslave	Revelations	57563	2006	100	25/01/2015
-220	Junkhead	Alice In Chains	Dirt	57873	1992	100	25/01/2015
-221	Dirt	Alice In Chains	Dirt	58190	1992	100	25/01/2015
-222	Love Resurrection	Alison Moyet	Edge of the 80s - Heart Of The	58423	1988	100	25/01/2015
-223	Somedays	Audioslave	Revelations	58638	2006	100	25/01/2015
-224	God Smack	Alice In Chains	Dirt	58869	1992	100	25/01/2015
-225	Shape Of Things To Come	Audioslave	Revelations	59144	2006	100	25/01/2015
-226	Intro (Dream Sequence)	Alice In Chains	Dirt	59188	1992	100	25/01/2015
-227	Jewel Of The Summertime	Audioslave	Revelations	59423	2006	100	25/01/2015
-228	Hate To Feel	Alice In Chains	Dirt	59740	1992	100	25/01/2015
-229	Wide Awake	Audioslave	Revelations	60007	2006	100	25/01/2015
-230	Angry Chair	Alice In Chains	Dirt	60295	1992	100	25/01/2015
-231	Nothing Left To Say But Goodby	Audioslave	Revelations	60509	2006	100	25/01/2015
-232	Down In A Hole	Alice In Chains	Dirt	60848	1992	100	25/01/2015
-233	Long Way to Go	André 3000	Love.Angel.Music.Baby [Bonus T	61138	2004	100	25/01/2015
-234	Moth	Audioslave	Revelations	61436	2006	100	25/01/2015
-235	Would?	Alice In Chains	Dirt	61645	1992	100	25/01/2015
-236	A Little Bitter	Alice In Chains	Last Action Hero Soundtrack	61881	1993	100	25/01/2015
-237	Its a long way to the top	ACDC	TNT	62198	1976	100	25/01/2015
-238	Man in the Box	Alice In Chains	Facelift	62485	1991	100	25/01/2015
-239	Nutshell	Alice in Chains	Jar of Flies	62744	1994	100	25/01/2015
-240	Sea Of Sorrow	Alice In Chains	Facelift	63094	1990	100	25/01/2015
-241	Bat Country	Avenged Sevenfold	Avenged Sevenfold	63407	2007	100	25/01/2015
-242	Beast And The Harlot	Avenged Sevenfold	Avenged Sevenfold	63748	2007	100	25/01/2015
-243	White Wedding	Billy Idol	Wedding Singer	63998	1998	100	25/01/2015
-244	Blue Oyster Cult - Dont Fear T	Blue Öyster Cult	Agents of Fortune	64250	1976	100	25/01/2015
-245	Love Letters	Bonnie Raitt	Duets	64491	1993	100	25/01/2015
-246	Concrete Jungle	Black Label Society	Shot to Hell	64695	2006	100	25/01/2015
-247	Heaven Beside You	Alice In Chains	Alice in chains	65024	1996	100	25/01/2015
-248	Don't Let Me Be Misunderstood	Animals	Best of the Animals [ABKCO]	65172	1988	100	25/01/2015
-249	All the Way	Craig David	The Story Goes...	65408	2005	100	25/01/2015
-250	Don't Love You No More (I'm So	Craig David	The Story Goes...	65652	2005	100	25/01/2015
-251	Hypnotic	Craig David	The Story Goes...	65911	2005	100	25/01/2015
-252	Separate Ways	Craig David	The Story Goes...	66152	2005	100	25/01/2015
-253	Johnny	Craig David	The Story Goes...	66412	2005	100	25/01/2015
-254	Do You Believe in Love	Craig David	The Story Goes...	66638	2005	100	25/01/2015
-255	One Last Dance	Craig David	The Story Goes...	66865	2005	100	25/01/2015
-256	Unbelievable	Craig David	The Story Goes...	67067	2005	100	25/01/2015
-257	Just Chillin'	Craig David	The Story Goes...	67348	2005	100	25/01/2015
-258	Theif in the Night	Craig David	The Story Goes...	67614	2005	100	25/01/2015
-259	Take 'Em Off	Craig David	The Story Goes...	67860	2005	100	25/01/2015
-260	My Love Don't Stop	Craig David	The Story Goes...	68112	2005	100	25/01/2015
-261	Let Her Go	Craig David	The Story Goes...	68354	2005	100	25/01/2015
-262	White Flag	Dido	Life for Rent	68596	2003	100	25/01/2015
-263	Stoned	Dido	Life for Rent	68951	2003	100	25/01/2015
-264	Life for Rent	Dido	Life for Rent	69172	2003	100	25/01/2015
-265	Mary's in India	Dido	Life for Rent	69393	2003	100	25/01/2015
-266	See You When You're 40	Dido	Life for Rent	69713	2003	100	25/01/2015
-267	Don't Leave Home	Dido	Life for Rent	69940	2003	100	25/01/2015
-268	Who Makes You Feel	Dido	Life for Rent	70201	2003	100	25/01/2015
-269	Sand in My Shoes	Dido	Life for Rent	70500	2003	100	25/01/2015
-270	Do You Have a Little Time	Dido	Life for Rent	70735	2003	100	25/01/2015
-271	This Land Is Mine	Dido	Life for Rent	70961	2003	100	25/01/2015
-272	See the Sun	Dido	Life for Rent	71596	2003	100	25/01/2015
-273	Sultans of Swing	Dire Straits	Sultans of Swing: The Very Bes	71946	1998	100	25/01/2015
-274	Lady Writer	Dire Straits	Sultans of Swing: The Very Bes	72175	1998	100	25/01/2015
-275	Romeo and Juliet	Dire Straits	Sultans of Swing: The Very Bes	72540	1998	100	25/01/2015
-276	Tunnel of Love	Dire Straits	Sultans of Swing: The Very Bes	73034	1998	100	25/01/2015
-277	Private Investigations	Dire Straits	Sultans of Swing: The Very Bes	73388	1998	100	25/01/2015
-278	Twisting by the Pool	Dire Straits	Sultans of Swing: The Very Bes	73604	1998	100	25/01/2015
-279	Love Over Gold [Live]	Dire Straits	Sultans of Swing: The Very Bes	73824	1998	100	25/01/2015
-280	So Far Away	Dire Straits	Sultans of Swing: The Very Bes	74067	1998	100	25/01/2015
-281	Money for Nothing	Dire Straits	Sultans of Swing: The Very Bes	74316	1998	100	25/01/2015
-282	Brothers in Arms	Dire Straits	Sultans of Swing: The Very Bes	74611	1998	100	25/01/2015
-283	Walk of Life	Dire Straits	Sultans of Swing: The Very Bes	74863	1998	100	25/01/2015
-284	Calling Elvis	Dire Straits	Sultans of Swing: The Very Bes	75144	1998	100	25/01/2015
-285	Heavy Fuel	Dire Straits	Sultans of Swing: The Very Bes	75445	1998	100	25/01/2015
-286	On Every Street	Dire Straits	Sultans of Swing: The Very Bes	75724	1998	100	25/01/2015
-287	Your Latest Trick [Live]	Dire Straits	Sultans of Swing: The Very Bes	76065	1998	100	25/01/2015
-288	Local Hero/Wild Theme [Live]	Dire Straits	Sultans of Swing: The Very Bes	76329	1998	100	25/01/2015
-289	Prayer	Disturbed	Believe	76552	2002	100	25/01/2015
-290	Liberate	Disturbed	Believe	76764	2002	100	25/01/2015
-291	Awaken	Disturbed	Believe	77035	2002	100	25/01/2015
-292	Believe	Disturbed	Believe	77304	2002	100	25/01/2015
-293	Remember	Disturbed	Believe	77557	2002	100	25/01/2015
-294	Intoxication	Disturbed	Believe	77753	2002	100	25/01/2015
-295	Rise	Disturbed	Believe	77993	2002	100	25/01/2015
-296	Mistress	Disturbed	Believe	78222	2002	100	25/01/2015
-297	Breathe	Disturbed	Believe	78486	2002	100	25/01/2015
-298	Bound	Disturbed	Believe	78722	2002	100	25/01/2015
-299	Devour	Disturbed	Believe	78957	2002	100	25/01/2015
-300	Darkness	Disturbed	Believe	79197	2002	100	25/01/2015
-301	Stricken	Disturbed	Ten Thousand Fists	79445	2005	100	25/01/2015
-302	Voices	Disturbed	The Sickness [Bonus Tracks]	79637	2002	100	25/01/2015
-303	Down With the Sickness	Disturbed	The Sickness [Bonus Tracks]	79916	2002	100	25/01/2015
-304	Violence Fetish	Disturbed	The Sickness [Bonus Tracks]	80120	2002	100	25/01/2015
-305	Fear	Disturbed	The Sickness [Bonus Tracks]	80347	2002	100	25/01/2015
-306	Numb	Disturbed	The Sickness [Bonus Tracks]	80572	2002	100	25/01/2015
-307	Want	Disturbed	The Sickness [Bonus Tracks]	80805	2002	100	25/01/2015
-308	Conflict	Disturbed	The Sickness [Bonus Tracks]	81080	2002	100	25/01/2015
-309	Shout 2000	Disturbed	The Sickness [Bonus Tracks]	81338	2002	100	25/01/2015
-310	Droppin' Plates	Disturbed	The Sickness [Bonus Tracks]	81567	2002	100	25/01/2015
-311	Meaning of Life	Disturbed	The Sickness [Bonus Tracks]	81809	2002	100	25/01/2015
-312	God of the Mind [*]	Disturbed	The Sickness [Bonus Tracks]	81994	2002	100	25/01/2015
-313	Stupify [Live][*]	Disturbed	The Sickness [Bonus Tracks]	82287	2002	100	25/01/2015
-314	The Game [Live][*]	Disturbed	The Sickness [Bonus Tracks]	82519	2002	100	25/01/2015
-315	Voices [Live][*]	Disturbed	The Sickness [Bonus Tracks]	82735	2002	100	25/01/2015
-316	Down With the Sicknesss [Live]	Disturbed	The Sickness [Bonus Tracks]	83111	2002	100	25/01/2015
-317	Sylvia's Mother	Dr. Hook	Completely Hooked (The Best Of	83341	0	100	25/01/2015
-318	Cover Of The Rolling Stone	Dr. Hook	Completely Hooked (The Best Of	83515	0	100	25/01/2015
-319	Everybody's Makin' It Big But	Dr. Hook	Completely Hooked (The Best Of	83693	0	100	25/01/2015
-320	You Make My Pants Want To Get	Dr. Hook	Completely Hooked (The Best Of	83839	0	100	25/01/2015
-321	Sleepin' Late	Dr. Hook	Completely Hooked (The Best Of	84032	0	100	25/01/2015
-322	Only Sixteen	Dr. Hook	Completely Hooked (The Best Of	84199	0	100	25/01/2015
-323	Walk Right In	Dr. Hook	Completely Hooked (The Best Of	84386	0	100	25/01/2015
-324	Millionaire	Dr. Hook	Completely Hooked (The Best Of	84579	0	100	25/01/2015
-325	More Like The Movies	Dr. Hook	Completely Hooked (The Best Of	84803	0	100	25/01/2015
-326	When You're In Love With A Bea	Dr. Hook	Completely Hooked (The Best Of	85118	0	100	25/01/2015
-327	Sexy Eyes	Dr. Hook	Completely Hooked (The Best Of	85298	0	100	25/01/2015
-328	If Not You	Dr. Hook	Completely Hooked (The Best Of	85491	0	100	25/01/2015
-329	Little Bit More	Dr. Hook	Completely Hooked (The Best Of	85665	0	100	25/01/2015
-330	Sharing The Night Together	Dr. Hook	Completely Hooked (The Best Of	85840	0	100	25/01/2015
-331	I Don't Want To Be Alone Tonig	Dr. Hook	Completely Hooked (The Best Of	86045	0	100	25/01/2015
-332	Better Love Next Time	Dr. Hook	Completely Hooked (The Best Of	86228	0	100	25/01/2015
-333	In Over My Head	Dr. Hook	Completely Hooked (The Best Of	86450	0	100	25/01/2015
-334	Years From Now	Dr. Hook	Completely Hooked (The Best Of	86628	0	100	25/01/2015
-335	Sweetest Of All	Dr. Hook	Completely Hooked (The Best Of	86789	0	100	25/01/2015
-336	Couple More Years	Dr. Hook	Completely Hooked (The Best Of	86976	0	100	25/01/2015
-337	Purple Haze	Jimi Hendrix	The Ultimate Experience	87149	1993	100	25/01/2015
-338	Stinkfist	Tool	Ænima	87462	1996	100	25/01/2015
-339	You Again	Shihad	Killjoy	87740	1995	100	25/01/2015
-340	Bodies	Drowning Pool	Sinner	87944	2001	100	25/01/2015
-341	Praise	Sevendust	Animosity	88165	2001	100	25/01/2015
-342	The Unforgiven II	Metallica	Reload	88562	1997	100	25/01/2015
-343	All Along The Watchtower	Jimi Hendrix	The Ultimate Experience	88802	1993	100	25/01/2015
-344	Reminded	Drowning Pool	Sinner	89008	2001	100	25/01/2015
-345	Schism	Tool	Lateralus	89416	2001	100	25/01/2015
-346	Bad Seed	Metallica	Reload	89663	1997	100	25/01/2015
-347	The Call of Ktulu	Metallica	Ride The Lightning	90198	1984	100	25/01/2015
-348	Little Wing	Jimi Hendrix	The Ultimate Experience	90345	1993	100	25/01/2015
-349	Whiskey In The Jar	Metallica	Garage Inc. [Disc 1]	90651	1998	100	25/01/2015
-350	Foxy Lady	Jimi Hendrix	The Ultimate Experience	90851	1993	100	25/01/2015
-351	Ænema	Tool	Ænima	91252	1996	100	25/01/2015
-352	Tommy The Cat	Primus	Liger	91507	0	100	25/01/2015
-353	Voodoo Child (Slight Return)	Jimi Hendrix	The Ultimate Experience	91821	1993	100	25/01/2015
-354	BLACK BETTY	RAM JAM	pt001	92060	1996	100	25/01/2015
-355	The People That We Love (Speed	Bush	Golden State [Japan Bonus Trac	92303	2002	100	25/01/2015
-356	Dragonballz Theme Song	Unknown	Unknown	92363	0	100	25/01/2015
-357	Emerald	Mastodon	Remission	92593	2003	100	25/01/2015
-358	Just hate me	Pain	Nothing remains the same	92833	0	100	25/01/2015
-359	Stupify	Disturbed	The Sickness [Bonus Tracks]	93108	2002	100	25/01/2015
-360	The Game	Disturbed	The Sickness [Bonus Tracks]	93336	2002	100	25/01/2015
-361	Transformers Theme Song	White Lion	soundtrack	93551	1986	100	25/01/2015
-362	Two Tickets to Paradise	Eddie Money	Greatest Hits: The Sound of Mo	93787	1989	100	25/01/2015
-363	Love Letters	Bonnie Raitt	Duets	94028	1993	100	25/01/2015
-364	If You Were Me	Chris Rea	Duets	94294	1993	100	25/01/2015
-365	Shakey Ground	Don Henley	Duets	94525	1993	100	25/01/2015
-366	Teardrops	Elton John	Duets	94820	1993	100	25/01/2015
-367	When I Think About Love (I Thi	Elton John	Duets	95094	1993	100	25/01/2015
-368	The Power	Elton John	Duets	95479	1993	100	25/01/2015
-369	True Love	Elton John	Duets	95693	1993	100	25/01/2015
-370	A Woman's Needs	Elton John	Duets	96011	1993	100	25/01/2015
-371	Old Friend	Elton John	Duets	96267	1993	100	25/01/2015
-372	Go on and On	Elton John	Duets	96617	1993	100	25/01/2015
-373	Don't Go Breaking My Heart	Elton John	Duets	96917	1993	100	25/01/2015
-374	Ain't Nothing Like the Real Th	Elton John	Duets	97133	1993	100	25/01/2015
-375	I'm Your Puppet	Elton John	Duets	97349	1993	100	25/01/2015
-376	Born to Lose	Elton John	Duets	97622	1993	100	25/01/2015
-377	Don't Let the Sun Go Down on M	Elton John	Duets	97969	1993	100	25/01/2015
-378	Duets for One	Elton John	Duets	98261	1993	100	25/01/2015
-379	Funeral For A Friend/Love Lies	Elton John	The Collection	98928	0	100	25/01/2015
-380	Sweet painted lady	Elton John	The Collection	99160	0	100	25/01/2015
-381	Track 3	Elton John	The Collection	99372	0	100	25/01/2015
-382	Track 4	Elton John	The Collection	99581	0	100	25/01/2015
-383	Track 5	Elton John	The Collection	99734	0	100	25/01/2015
-384	Track 6	Elton John	The Collection	99938	0	100	25/01/2015
-385	Track 7	Elton John	The Collection	100170	0	100	25/01/2015
-386	Track 8	Elton John	The Collection	100471	0	100	25/01/2015
-387	Track 9	Elton John	The Collection	100722	0	100	25/01/2015
-388	Track 10	Elton John	The Collection	101031	0	100	25/01/2015
-389	Track 11	Elton John	The Collection	101372	0	100	25/01/2015
-390	Track 12	Elton John	The Collection	101539	0	100	25/01/2015
-391	Track 13	Elton John	The Collection	101791	0	100	25/01/2015
-392	Track 14	Elton John	The Collection	102086	0	100	25/01/2015
-393	I Shot the Sheriff	Eric Clapton	Time Pieces: Best of Eric Clap	102350	1982	100	25/01/2015
-394	After Midnight	Eric Clapton	Time Pieces: Best of Eric Clap	102538	1982	100	25/01/2015
-395	Knockin' on Heaven's Door	Eric Clapton	Time Pieces: Best of Eric Clap	102799	1982	100	25/01/2015
-396	Wonderful Tonight	Eric Clapton	Time Pieces: Best of Eric Clap	103018	1982	100	25/01/2015
-397	Layla	Eric Clapton	Time Pieces: Best of Eric Clap	103444	1982	100	25/01/2015
-398	Cocaine	Eric Clapton	Time Pieces: Best of Eric Clap	103658	1982	100	25/01/2015
-399	Lay Down Sally	Eric Clapton	Time Pieces: Best of Eric Clap	103887	1982	100	25/01/2015
-400	Willie and the Hand Jive	Eric Clapton	Time Pieces: Best of Eric Clap	104095	1982	100	25/01/2015
-401	Promises	Eric Clapton	Time Pieces: Best of Eric Clap	104275	1982	100	25/01/2015
-402	Swing Low, Sweet Chariot	Eric Clapton	Time Pieces: Best of Eric Clap	104484	1982	100	25/01/2015
-403	Let It Grow	Eric Clapton	Time Pieces: Best of Eric Clap	104780	1982	100	25/01/2015
-404	Get Out	Faith No More	King for a Day, Fool for a Lif	104917	1995	100	25/01/2015
-405	Ricochet	Faith No More	King for a Day, Fool for a Lif	105186	1995	100	25/01/2015
-406	Evidence	Faith No More	King for a Day, Fool for a Lif	105479	1995	100	25/01/2015
-407	The Gentle Art of Making Enemi	Faith No More	King for a Day, Fool for a Lif	105688	1995	100	25/01/2015
-408	Star A.D.	Faith No More	King for a Day, Fool for a Lif	105891	1995	100	25/01/2015
-409	Cuckoo for Caca	Faith No More	King for a Day, Fool for a Lif	106113	1995	100	25/01/2015
-410	Caralho Voador	Faith No More	King for a Day, Fool for a Lif	106355	1995	100	25/01/2015
-411	Ugly in the Morning	Faith No More	King for a Day, Fool for a Lif	106541	1995	100	25/01/2015
-412	Digging the Grave	Faith No More	King for a Day, Fool for a Lif	106726	1995	100	25/01/2015
-413	Take This Bottle	Faith No More	King for a Day, Fool for a Lif	107024	1995	100	25/01/2015
-414	King for a Day	Faith No More	King for a Day, Fool for a Lif	107419	1995	100	25/01/2015
-415	What a Day	Faith No More	King for a Day, Fool for a Lif	107576	1995	100	25/01/2015
-416	The Last to Know	Faith No More	King for a Day, Fool for a Lif	107843	1995	100	25/01/2015
-417	Just a Man	Faith No More	King for a Day, Fool for a Lif	108182	1995	100	25/01/2015
-418	Thriller	Fall Out Boy	Infinity on High	108391	2007	100	25/01/2015
-419	The Take Over, The Breaks Over	Fall Out Boy	Infinity on High	108604	2007	100	25/01/2015
-420	This Ain't a Scene, It's an Ar	Fall Out Boy	Infinity on High	108816	2007	100	25/01/2015
-421	This Ain't a Scene, It's an Ar	Fall Out Boy	Infinity on High	108816	2007	100	25/01/2015
-422	Hum Hallelujah	Fall Out Boy	Infinity on High	109046	2007	100	25/01/2015
-423	Golden	Fall Out Boy	Infinity on High	109198	2007	100	25/01/2015
-424	Thnks fr th Mmrs	Fall Out Boy	Infinity on High	109401	2007	100	25/01/2015
-425	Don't You Know Who I Think I A	Fall Out Boy	Infinity on High	109573	2007	100	25/01/2015
-426	The (After) Life of the Party	Fall Out Boy	Infinity on High	109774	2007	100	25/01/2015
-427	The Carpal Tunnel of Love	Fall Out Boy	Infinity on High	109977	2007	100	25/01/2015
-428	Bang the Doldrums	Fall Out Boy	Infinity on High	110188	2007	100	25/01/2015
-429	Bang the Doldrums	Fall Out Boy	Infinity on High	110188	2007	100	25/01/2015
-430	You're Crashing, But You're No	Butch Walker	Infinity on High	110410	2007	100	25/01/2015
-431	I've Got All This Ringing in M	Fall Out Boy	Infinity on High	110653	2007	100	25/01/2015
-432	G.I.N.A.S.F.S.	Fall Out Boy	Infinity on High	110850	2007	100	25/01/2015
-433	Calypso	Fiend Without A Face	Fiend Without A Face	111002	0	100	25/01/2015
-434	Black Grass	Fiend Without A Face	Fiend Without A Face	111124	0	100	25/01/2015
-435	Green Slime	Fiend Without A Face	Fiend Without A Face	111225	0	100	25/01/2015
-436	Cha-Cha	Fiend Without A Face	Fiend Without A Face	111360	0	100	25/01/2015
-437	Bank Robbin' Bandits	Fiend Without A Face	Fiend Without A Face	111470	0	100	25/01/2015
-438	Tsunami	Fiend Without A Face	Fiend Without A Face	111581	0	100	25/01/2015
-439	Hot Rod	Fiend Without A Face	Fiend Without A Face	111702	0	100	25/01/2015
-440	New York	Fiend Without A Face	Fiend Without A Face	111852	0	100	25/01/2015
-441	Don't Like	Fiend Without A Face	Fiend Without A Face	112035	0	100	25/01/2015
-442	Cosmonaut	Fiend Without A Face	Fiend Without A Face	112209	0	100	25/01/2015
-443	Stupido	Fiend Without A Face	Fiend Without A Face	112313	0	100	25/01/2015
-444	Get Straight	Fiend Without A Face	Fiend Without A Face	112444	0	100	25/01/2015
-445	Volcano	Fiend Without A Face	Fiend Without A Face	112625	0	100	25/01/2015
-446	Have a Cigar	Brian May	Mission Impossible 2 [Soundtra	112870	2000	100	25/01/2015
-447	The Pretender	Foo Fighters	Echoes, Silence, Patience & Gr	113139	2007	100	25/01/2015
-448	Let It Die	Foo Fighters	Echoes, Silence, Patience & Gr	113384	2007	100	25/01/2015
-449	Erase/Replace	Foo Fighters	Echoes, Silence, Patience & Gr	113637	2007	100	25/01/2015
-450	Long Road To Ruin	Foo Fighters	Echoes, Silence, Patience & Gr	113862	2007	100	25/01/2015
-451	Come Alive	Foo Fighters	Echoes, Silence, Patience & Gr	114172	2007	100	25/01/2015
-452	Stranger Things Have Happened	Foo Fighters	Echoes, Silence, Patience & Gr	114493	2007	100	25/01/2015
-453	Cheer Up, Boys (Your Make Up I	Foo Fighters	Echoes, Silence, Patience & Gr	114714	2007	100	25/01/2015
-454	Summer's End	Foo Fighters	Echoes, Silence, Patience & Gr	114992	2007	100	25/01/2015
-455	Ballad Of The Beaconsfield Min	Foo Fighters	Echoes, Silence, Patience & Gr	115144	2007	100	25/01/2015
-456	Statues	Foo Fighters	Echoes, Silence, Patience & Gr	115372	2007	100	25/01/2015
-457	But, Honestly	Foo Fighters	Echoes, Silence, Patience & Gr	115647	2007	100	25/01/2015
-458	Home	Foo Fighters	Echoes, Silence, Patience & Gr	115940	2007	100	25/01/2015
-459	In Your Honor	Foo Fighters	In Your Honor [Disc 1]	116171	2005	100	25/01/2015
-460	No Way Back	Foo Fighters	In Your Honor [Disc 1]	116369	2005	100	25/01/2015
-461	Best Of You	Foo Fighters	In Your Honor [Disc 1]	116626	2005	100	25/01/2015
-462	DOA	Foo Fighters	In Your Honor [Disc 1]	116879	2005	100	25/01/2015
-463	Hell	Foo Fighters	In Your Honor [Disc 1]	116997	2005	100	25/01/2015
-464	The Last Song	Foo Fighters	In Your Honor [Disc 1]	117197	2005	100	25/01/2015
-465	Free Me	Foo Fighters	In Your Honor [Disc 1]	117477	2005	100	25/01/2015
-466	Resolve	Foo Fighters	In Your Honor [Disc 1]	117767	2005	100	25/01/2015
-467	The Deepest Blues Are Black	Foo Fighters	In Your Honor [Disc 1]	118006	2005	100	25/01/2015
-468	End Over End	Foo Fighters	In Your Honor [Disc 1]	118359	2005	100	25/01/2015
-469	Still	Foo Fighters	In Your Honor [Disc 2]	118673	2005	100	25/01/2015
-470	What If I Do?	Foo Fighters	In Your Honor [Disc 2]	118977	2005	100	25/01/2015
-471	Miracle	Foo Fighters	In Your Honor [Disc 2]	119188	2005	100	25/01/2015
-472	Another Round	Foo Fighters	In Your Honor [Disc 2]	119455	2005	100	25/01/2015
-473	Friend Of A Friend	Foo Fighters	In Your Honor [Disc 2]	119649	2005	100	25/01/2015
-474	Over And Out	Foo Fighters	In Your Honor [Disc 2]	119966	2005	100	25/01/2015
-475	On The Mend	Foo Fighters	In Your Honor [Disc 2]	120239	2005	100	25/01/2015
-476	Virginia Moon	Foo Fighters	In Your Honor [Disc 2]	120469	2005	100	25/01/2015
-477	Cold Day In The Sun	Foo Fighters	In Your Honor [Disc 2]	120671	2005	100	25/01/2015
-478	Razor	Foo Fighters	In Your Honor [Disc 2]	120965	2005	100	25/01/2015
-479	All My Life	Foo Fighters	One by One	121219	2002	100	25/01/2015
-480	Baker Street	Foo Fighters	The Colour And The Shape	121559	2000	100	25/01/2015
-481	Monkey Wrench	Foo Fighters	The Colour And The Shape	121791	1997	100	25/01/2015
-482	My Hero	Foo Fighters	The Colour And The Shape	122051	1997	100	25/01/2015
-483	Learn To Fly	Foo Fighters	There Is Nothing Left To Lose	122289	1999	100	25/01/2015
-484	Stacked Actors	Foo Fighters	There Is Nothing Left To Lose	122547	0	100	25/01/2015
-485	Northern Lights	Goldenhorse	Riverhead	122725	0	100	25/01/2015
-486	Spice Islands	Goldenhorse	Riverhead	122995	0	100	25/01/2015
-487	Golden Dawn	Goldenhorse	Riverhead	123275	0	100	25/01/2015
-488	Maybe Tomorrow	Goldenhorse	Riverhead	123523	0	100	25/01/2015
-489	Riverhead	Goldenhorse	Riverhead	123818	0	100	25/01/2015
-490	Wake Up Brother	Goldenhorse	Riverhead	124033	0	100	25/01/2015
-491	Shrinking Her Legs	Goldenhorse	Riverhead	124410	0	100	25/01/2015
-492	Out Tonight	Goldenhorse	Riverhead	124616	0	100	25/01/2015
-493	Baby's Been Bad	Goldenhorse	Riverhead	124789	0	100	25/01/2015
-494	American Wife	Goldenhorse	Riverhead	124999	0	100	25/01/2015
-495	Dark Forest	Goldenhorse	Riverhead	125230	0	100	25/01/2015
-496	Track 12	Goldenhorse	Riverhead	125573	0	100	25/01/2015
-497	Little Things	Good Charlotte	Good Charlotte	125775	2000	100	25/01/2015
-498	Motivation Proclamation	Good Charlotte	Good Charlotte	125996	2000	100	25/01/2015
-499	Iris [From City of Angels]	The Goo Goo Dolls	Iris	126223	1998	100	25/01/2015
-500	Some Kind of Wonderful	Grand Funk Railroad	Grand Funk Hits	126429	1976	100	25/01/2015
-501	Welcome To The Jungle	Guns N' Roses	Greatest Hits	126701	2004	100	25/01/2015
-502	Paradise City	Guns N' Roses	Greatest Hits	127109	2004	100	25/01/2015
-503	Knockin' On Heaven's Door	Guns N' Roses	Greatest Hits	127445	2004	100	25/01/2015
-504	Civil War	Guns N' Roses	Greatest Hits	127908	2004	100	25/01/2015
-505	Yesterdays	Guns N' Roses	Greatest Hits	128104	2004	100	25/01/2015
-506	Ain't It Fun	Guns N' Roses	Greatest Hits	128412	2004	100	25/01/2015
-507	Sympathy For The Devil	Guns N' Roses	Greatest Hits	128868	2004	100	25/01/2015
-508	American Idiot	Green Day	American Idiot	129042	2004	100	25/01/2015
-509	Jesus of Suburbia: Jesus of Su	Green Day	American Idiot	129590	2004	100	25/01/2015
-510	Holiday	Green Day	American Idiot	129822	2004	100	25/01/2015
-511	Boulevard of Broken Dreams	Green Day	American Idiot	130082	2004	100	25/01/2015
-512	Are We the Waiting	Green Day	American Idiot	130245	2004	100	25/01/2015
-513	St. Jimmy	Green Day	American Idiot	130420	2004	100	25/01/2015
-514	Give Me Novacaine	Green Day	American Idiot	130625	2004	100	25/01/2015
-515	She's a Rebel	Green Day	American Idiot	130745	2004	100	25/01/2015
-516	Extraordinary Girl	Green Day	American Idiot	130959	2004	100	25/01/2015
-517	Letterbomb	Green Day	American Idiot	131205	2004	100	25/01/2015
-518	Wake Me Up When September Ends	Green Day	American Idiot	131490	2004	100	25/01/2015
-519	Homecoming: The Death of St. J	Green Day	American Idiot	132048	2004	100	25/01/2015
-520	Whatsername	Green Day	American Idiot	132300	2004	100	25/01/2015
-521	What You Waiting For?	Gwen Stefani	Love. Angel. Music. Baby.	132522	2004	100	25/01/2015
-522	Rich Girl	Eve	Love.Angel.Music.Baby [Bonus T	132759	2004	100	25/01/2015
-523	Hollaback Girl	Gwen Stefani	Love. Angel. Music. Baby.	132959	2004	100	25/01/2015
-524	Cool	Gwen Stefani	Love. Angel. Music. Baby.	133149	2004	100	25/01/2015
-525	Bubble Pop Electric	Gwen Stefani	Love.Angel.Music.Baby [Bonus T	133372	2004	100	25/01/2015
-526	Luxurious	Gwen Stefani	Love. Angel. Music. Baby.	133637	2004	100	25/01/2015
-527	Harajuku Girls	Gwen Stefani	Love. Angel. Music. Baby.	133929	2004	100	25/01/2015
-528	Crash	Gwen Stefani	Love. Angel. Music. Baby.	134176	2004	100	25/01/2015
-529	The Real Thing	Gwen Stefani	Love. Angel. Music. Baby.	134428	2004	100	25/01/2015
-530	Serious	Gwen Stefani	Love. Angel. Music. Baby.	134717	2004	100	25/01/2015
-531	Danger Zone	Gwen Stefani	Love. Angel. Music. Baby.	134935	2004	100	25/01/2015
-532	Long Way to Go	André 3000	Love.Angel.Music.Baby [Bonus T	135225	2004	100	25/01/2015
-533	Barracuda	Heart	Heart Greatest Hits: Live	135490	1980	100	25/01/2015
-534	Machine Gun	Jimi Hendrix	Band of Gypsys	136248	1970	100	25/01/2015
-535	The Wind Crys Mary	Jimi Hendrix	Are You Experienced? [US]	136451	2019	100	25/01/2015
-536	Born on the Bayou	John Fogerty	The Long Road Home: The Ultima	136764	2005	100	25/01/2015
-537	Bad Moon Rising	John Fogerty	The Long Road Home: The Ultima	136904	2005	100	25/01/2015
-538	Centerfield	John Fogerty	The Long Road Home: The Ultima	137137	2005	100	25/01/2015
-539	Who'll Stop the Rain	John Fogerty	The Long Road Home: The Ultima	137284	2005	100	25/01/2015
-540	Rambunctious Boy	John Fogerty	The Long Road Home: The Ultima	137517	2005	100	25/01/2015
-541	Fortunate Son	John Fogerty	The Long Road Home: The Ultima	137656	2005	100	25/01/2015
-542	Lookin' Out My Back Door	John Fogerty	The Long Road Home: The Ultima	137808	2005	100	25/01/2015
-543	Up Around the Bend	John Fogerty	The Long Road Home: The Ultima	137968	2005	100	25/01/2015
-544	Almost Saturday Night [Live]	John Fogerty	The Long Road Home: The Ultima	138115	2005	100	25/01/2015
-545	Down on the Corner	John Fogerty	The Long Road Home: The Ultima	138280	2005	100	25/01/2015
-546	Bootleg [Live][#]	John Fogerty	The Long Road Home: The Ultima	138461	2005	100	25/01/2015
-547	Have You Ever Seen the Rain?	John Fogerty	The Long Road Home: The Ultima	138620	2005	100	25/01/2015
-548	Sweet Hitch-Hiker	John Fogerty	The Long Road Home: The Ultima	138796	2005	100	25/01/2015
-549	Hey Tonight [Live][#]	John Fogerty	The Long Road Home: The Ultima	138949	2005	100	25/01/2015
-550	The Old Man Down the Road	John Fogerty	The Long Road Home: The Ultima	139162	2005	100	25/01/2015
-551	Rockin' All Over the World [Li	John Fogerty	The Long Road Home: The Ultima	139340	2005	100	25/01/2015
-552	Lodi	John Fogerty	The Long Road Home: The Ultima	139530	2005	100	25/01/2015
-553	Keep on Chooglin' [Live][#]	John Fogerty	The Long Road Home: The Ultima	139773	2005	100	25/01/2015
-554	Green River	John Fogerty	The Long Road Home: The Ultima	139926	2005	100	25/01/2015
-555	Déjà Vu (All Over Again)	John Fogerty	The Long Road Home: The Ultima	140179	2005	100	25/01/2015
-556	Run Through the Jungle	John Fogerty	The Long Road Home: The Ultima	140364	2005	100	25/01/2015
-557	Hot Rod Heart	John Fogerty	The Long Road Home: The Ultima	140573	2005	100	25/01/2015
-558	Travelin' Band	John Fogerty	The Long Road Home: The Ultima	140702	2005	100	25/01/2015
-559	Proud Mary	John Fogerty	The Long Road Home: The Ultima	140887	2005	100	25/01/2015
-560	Fortunate Son [Live][#]	John Fogerty	The Long Road Home: The Ultima	141065	2005	100	25/01/2015
-561	Communication Breakdown	Led Zeppelin	Remasters [UK] Disc 1	141214	2002	100	25/01/2015
-562	Stairway To Heaven	Led Zeppelin	Remasters [UK] Disc 1	141694	2002	100	25/01/2015
-563	Wake	Linkin Park	Minutes to Midnight	141795	2007	100	25/01/2015
-564	Given Up	Linkin Park	Minutes to Midnight	141984	2007	100	25/01/2015
-565	Leave out All the Rest	Linkin Park	Minutes to Midnight	142193	2007	100	25/01/2015
-566	Bleed It Out	Linkin Park	Minutes to Midnight	142357	2007	100	25/01/2015
-567	Shadow of the Day	Linkin Park	Minutes to Midnight	142646	2007	100	25/01/2015
-568	What I've Done	Linkin Park	Minutes to Midnight	142851	2007	100	25/01/2015
-569	Hands Held High	Linkin Park	Minutes to Midnight	143084	2007	100	25/01/2015
-570	No More Sorrow	Linkin Park	Minutes to Midnight	143305	2007	100	25/01/2015
-571	Valentine's Day	Linkin Park	Minutes to Midnight	143501	2007	100	25/01/2015
-572	In Between	Linkin Park	Minutes to Midnight	143697	2007	100	25/01/2015
-573	In Pieces	Linkin Park	Minutes to Midnight	143915	2007	100	25/01/2015
-574	The Little Things Give You Awa	Linkin Park	Minutes to Midnight	144298	2007	100	25/01/2015
-575	Clenching the Fists of Dissent	Machine Head	The Blackening	144934	2007	100	25/01/2015
-576	Beautiful Mourning	Machine Head	The Blackening	145220	2007	100	25/01/2015
-577	Aesthetics of Hate	Machine Head	The Blackening	145610	2007	100	25/01/2015
-578	Now I Lay Thee Down	Machine Head	The Blackening	145944	2007	100	25/01/2015
-579	Slanderous	Machine Head	The Blackening	146261	2007	100	25/01/2015
-580	Halo	Machine Head	The Blackening	146804	2007	100	25/01/2015
-581	Wolves	Machine Head	The Blackening	147345	2007	100	25/01/2015
-582	A Farewell to Arms	Machine Head	The Blackening	147960	2007	100	25/01/2015
-583	Battery (Metallica Cover)	Machine Head	The Blackening	148262	2007	100	25/01/2015
-584	The Wolf Is Loose	Mastodon	Blood Mountain	148478	2006	100	25/01/2015
-585	Crystal Skull	Mastodon	Blood Mountain	148687	2006	100	25/01/2015
-586	Sleeping Giant	Mastodon	Blood Mountain	149025	2006	100	25/01/2015
-587	Capillarian Crest	Mastodon	Blood Mountain	149292	2006	100	25/01/2015
-588	Circle of Cysquatch	Mastodon	Blood Mountain	149493	2006	100	25/01/2015
-589	Bladecatcher	Mastodon	Blood Mountain	149695	2006	100	25/01/2015
-590	Colony of Birchmen	Mastodon	Blood Mountain	149957	2006	100	25/01/2015
-591	Hunters of the Sky	Mastodon	Blood Mountain	150191	2006	100	25/01/2015
-592	Hand of Stone	Mastodon	Blood Mountain	150404	2006	100	25/01/2015
-593	This Mortal Soil	Mastodon	Blood Mountain	150706	2006	100	25/01/2015
-594	Siberian Divide	Mastodon	Blood Mountain	151040	2006	100	25/01/2015
-595	Pendulous Skin	Mastodon	Blood Mountain	152378	2006	100	25/01/2015
-596	Blood and Thunder	Mastodon	Leviathan	152609	2004	100	25/01/2015
-597	I Am Ahab	Mastodon	Leviathan	152777	2004	100	25/01/2015
-598	Seabeast	Mastodon	Leviathan	153035	2004	100	25/01/2015
-599	Ísland	Mastodon	Leviathan	153244	2004	100	25/01/2015
-600	Iron Tusk	Mastodon	Leviathan	153429	2004	100	25/01/2015
-601	Megalodon	Mastodon	Leviathan	153694	2004	100	25/01/2015
-602	Naked Burn	Mastodon	Leviathan	153919	2004	100	25/01/2015
-603	Aqua Dementia	Mastodon	Leviathan	154172	2004	100	25/01/2015
-604	Hearts Alive	Mastodon	Leviathan	154994	2004	100	25/01/2015
-605	Joseph Merrick	Mastodon	Leviathan	155209	2004	100	25/01/2015
-606	Crusher Destroyer	Mastodon	Remission	155329	2002	100	25/01/2015
-607	March of the Fire Ants	Mastodon	Remission	155595	2002	100	25/01/2015
-608	Where Strides the Behemoth	Mastodon	Remission	155771	2002	100	25/01/2015
-609	Workhorse	Mastodon	Remission	155997	2002	100	25/01/2015
-610	Ol'e Nessie	Mastodon	Remission	156362	2002	100	25/01/2015
-611	Burning Man	Mastodon	Remission	156529	2002	100	25/01/2015
-612	Trainwreck	Mastodon	Remission	156953	2002	100	25/01/2015
-613	Trampled Under Hoof	Mastodon	Remission	157134	2002	100	25/01/2015
-614	Trilobite	Mastodon	Remission	157523	2002	100	25/01/2015
-615	Mother Puncher	Mastodon	Remission	157752	2002	100	25/01/2015
-616	Elephant Man	Mastodon	Remission	158234	2002	100	25/01/2015
-617	null	null	null	158233	0	100	25/01/2015
-618	Eye Of The Beholder	Metallica	...And Justice For All	158624	1988	100	25/01/2015
-619	That Was Just Your Life	Metallica	Death Magnetic	159055	2008	100	25/01/2015
-620	The End Of The Line	Metallica	Death Magnetic	159530	2008	100	25/01/2015
-621	Broken, Beat & Scarred	Metallica	Death Magnetic	159918	2008	100	25/01/2015
-622	The Day That Never Comes	Metallica	Death Magnetic	160397	2008	100	25/01/2015
-623	All Nightmare Long	Metallica	Death Magnetic	160877	2008	100	25/01/2015
-624	Cyanide	Metallica	Death Magnetic	161279	2008	100	25/01/2015
-625	The Unforgiven III	Metallica	Death Magnetic	161748	2008	100	25/01/2015
-626	The Judas Kiss	Metallica	Death Magnetic	162231	2008	100	25/01/2015
-627	Suicide & Redemption	Metallica	Death Magnetic	162831	2008	100	25/01/2015
-628	My Apocalypse	Metallica	Death Magnetic	163134	2008	100	25/01/2015
-629	Free Speech For The Dumb	Metallica	Garage Inc. [Disc 1]	163290	1998	100	25/01/2015
-630	It's Electric	Metallica	Garage Inc. [Disc 1]	163504	1998	100	25/01/2015
-631	Sabbra Cadabra	Metallica	Garage Inc. [Disc 1]	163884	1998	100	25/01/2015
-632	Turn The Page	Metallica	Garage Inc. [Disc 1]	164252	1998	100	25/01/2015
-633	Die Die My Darling	Metallica	Garage Inc. [Disc 1]	164402	1998	100	25/01/2015
-634	Loverman	Metallica	Garage Inc. [Disc 1]	164875	1998	100	25/01/2015
-635	Mercyful Fate	Metallica	Garage Inc. [Disc 1]	165547	1998	100	25/01/2015
-636	Astronomy	Metallica	Garage Inc. [Disc 1]	165945	1998	100	25/01/2015
-637	Tuesday's Gone	Metallica	Garage Inc. [Disc 1]	166491	1998	100	25/01/2015
-638	The More I See	Metallica	Garage Inc. [Disc 1]	166782	1998	100	25/01/2015
-639	Helpless	Metallica	Garage, Inc. Disc 2	167181	1998	100	25/01/2015
-640	The Small Hours	Metallica	Garage, Inc. Disc 2	167586	1998	100	25/01/2015
-641	The Wait	Metallica	Garage, Inc. Disc 2	167883	1998	100	25/01/2015
-642	Crash Course in Brain Surgery	Metallica	Garage, Inc. Disc 2	168074	1998	100	25/01/2015
-643	Last Caress/Green Hell	Metallica	Garage, Inc. Disc 2	168284	1998	100	25/01/2015
-644	Am I Evil?	Metallica	Garage, Inc. Disc 2	168754	1998	100	25/01/2015
-645	Blitzkrieg	Metallica	Garage, Inc. Disc 2	168971	1998	100	25/01/2015
-646	Breadfan	Metallica	Garage, Inc. Disc 2	169314	1998	100	25/01/2015
-647	The Prince	Metallica	Garage, Inc. Disc 2	169580	1998	100	25/01/2015
-648	Stone Cold Crazy	Metallica	Garage, Inc. Disc 2	169718	1998	100	25/01/2015
-649	So What	Metallica	Garage, Inc. Disc 2	169907	1998	100	25/01/2015
-650	Killing Time	Metallica	Garage, Inc. Disc 2	170091	1998	100	25/01/2015
-651	Overkill	Metallica	Garage, Inc. Disc 2	170336	1998	100	25/01/2015
-652	Damage Case	Metallica	Garage, Inc. Disc 2	170557	1998	100	25/01/2015
-653	Stone Dead Forever	Metallica	Garage, Inc. Disc 2	170849	1998	100	25/01/2015
-654	Too Late Too Late	Metallica	Garage, Inc. Disc 2	171044	1998	100	25/01/2015
-655	Hit The Lights	Metallica	Kill 'Em All	171303	1983	100	25/01/2015
-656	Seek & Destroy	Metallica	Kill 'Em All	171719	1983	100	25/01/2015
-657	The Four Horsemen	Metallica	Kill 'Em All	172154	1983	100	25/01/2015
-658	Whiplash	Metallica	Kill 'Em All	172401	1983	100	25/01/2015
-659	Ain't My Bitch	Metallica	Load	172706	1996	100	25/01/2015
-660	Cure	Metallica	Load	173001	1996	100	25/01/2015
-661	Hero of the Day	Metallica	Load	173264	1996	100	25/01/2015
-662	King Nothing	Metallica	Load	173594	1996	100	25/01/2015
-663	Thorn Within	Metallica	Load	173945	1996	100	25/01/2015
-664	Until It Sleeps	Metallica	Load	174214	1996	100	25/01/2015
-665	Battery	Metallica	Master of Puppets	174527	1986	100	25/01/2015
-666	Master of Puppets	Metallica	Master of Puppets	175042	1986	100	25/01/2015
-667	The Thing That Should Not Be	Metallica	Master of Puppets	175438	1986	100	25/01/2015
-668	Welcome Home (Sanitarium)	Metallica	Master of Puppets	175825	1986	100	25/01/2015
-669	Disposable Heroes	Metallica	Master of Puppets	176322	1986	100	25/01/2015
-670	Leper Messiah	Metallica	Master of Puppets	176662	1986	100	25/01/2015
-671	Orion [Instrumental]	Metallica	Master of Puppets	177169	1986	100	25/01/2015
-672	Damage, Inc.	Metallica	Master of Puppets	177499	1986	100	25/01/2015
-673	Enter Sandman	Metallica	Black Album	177831	1991	100	25/01/2015
-674	Sad But True	Metallica	Black Album	178156	1991	100	25/01/2015
-675	Holier Than Thou	Metallica	Black Album	178384	1991	100	25/01/2015
-676	The Unforgiven	Metallica	Black Album	178771	1991	100	25/01/2015
-677	Wherever I May Roam	Metallica	Black Album	179175	1991	100	25/01/2015
-678	Don't Tread On Me	Metallica	Black Album	179415	1991	100	25/01/2015
-679	Through The Never	Metallica	Black Album	179660	1991	100	25/01/2015
-680	Nothing Else Matters	Metallica	Black Album	180049	1991	100	25/01/2015
-681	Of Wolf And Man	Metallica	Black Album	180306	1991	100	25/01/2015
-682	The God That Failed	Metallica	Black Album	180615	1991	100	25/01/2015
-683	My Friend Of Misery	Metallica	Black Album	181025	1991	100	25/01/2015
-684	The Struggle Within	Metallica	Black Album	181260	1991	100	25/01/2015
-685	I Disappear	Metallica	Mission Impossible 2 [Soundtra	181529	2000	100	25/01/2015
-686	Fuel	Metallica	Reload	181799	1997	100	25/01/2015
-687	Devil's Dance	Metallica	Reload	182119	1997	100	25/01/2015
-688	The Memory Remains	Matallica	rock mix	182397	1997	100	25/01/2015
-689	Ride The Lightning	Metallica	Ride The Lightning	182796	1984	100	25/01/2015
-690	For Whom The Bell Tolls	Metallica	Ride The Lightning	183109	1984	100	25/01/2015
-691	Fade To Black	Metallica	Ride The Lightning	183525	1984	100	25/01/2015
-692	Fight Fire With Fire	Metallica	Ride The Lightning	183811	1984	100	25/01/2015
-693	Human	Metallica	S&M [Disc 2]	184071	1999	100	25/01/2015
-694	No Leaf Clover	Metallica	S&M [Edited] Disc 1	184415	1999	100	25/01/2015
-695	Fools  Love	Misfits of Science	MOS PRESENTS	184656	0	100	25/01/2015
-696	Ace of spades	Motorhead	No Remorse	184825	2000	100	25/01/2015
-697	Apocalypse Please	Muse	Absolution [Bonus DVD]	185078	2003	100	25/01/2015
-698	Stockholm Syndrome	Muse	Absolution	185375	2003	100	25/01/2015
-699	Time is Running Out	Muse	Absolution	185612	2003	100	25/01/2015
-700	Starlight	Muse	Black Holes And Revelations	185851	2006	100	25/01/2015
-701	Triracial Isolates	Four Hour Fogger	1998 Demo	186026	0	100	25/01/2015
-702	The Bit	Mastodon	We Reach: The Music Of The Mel	186294	2005	100	25/01/2015
-703	In the Fire	Roadrunner United	Roadrunner	186541	2005	100	25/01/2015
-704	10 - Tidal Tantrum	Dark Tranquillity	The Mind's I	186717	1997	100	25/01/2015
-705	Hero	Chad Kroeger	Broken Dreams	186916	2005	100	25/01/2015
-706	Constitution Down	Roadrunner United	Roadrunner	187221	2005	100	25/01/2015
-707	Its a long way to the top	ACDC	TNT	187538	1976	100	25/01/2015
-708	Bat Country	Avenged Sevenfold	Avenged Sevenfold	187851	2007	100	25/01/2015
-709	Beast And The Harlot	Avenged Sevenfold	Avenged Sevenfold	188192	2007	100	25/01/2015
-710	Blue Oyster Cult - Dont Fear T	Blue Öyster Cult	Agents of Fortune	188444	1976	100	25/01/2015
-711	Comedy- Sesame Street On Drugs	Unknown	Unknown	188596	0	100	25/01/2015
-712	Mmm Mmm Mmm Mmm	Crash Test Dummies	God Shuffled His Feet	188831	1993	100	25/01/2015
-713	Sunshine of Your Love	Cream	The Very Best of Cream	189082	1995	100	25/01/2015
-714	Police Truck	Dead Kennedys	Give Me Convenience or Give Me	189226	1987	100	25/01/2015
-715	This Moment	Disturbed	Transformers Soundtrack	189412	2007	100	25/01/2015
-716	Track 01	Wolf Eyes & Black Dice	Wolf Eyes/Black Dice [Split CD	189632	2003	100	25/01/2015
-717	Track 02	Wolf Eyes & Black Dice	Wolf Eyes/Black Dice [Split CD	189932	2003	100	25/01/2015
-718	Half Mast	The Hidden Hand	Mother Teacher Destroyer	190168	2004	100	25/01/2015
-719	Baker Street	Foo Fighters	My Hero	190508	2000	100	25/01/2015
-720	Quarter	Fuel	The Best of Fuel	190728	2005	100	25/01/2015
-721	The Imperial March	John Williams, Kenny Haining	www.kennyhaining.co.uk	190880	2007	100	25/01/2015
-722	2 Minutes to Midnight	Iron Maiden	Powerslave	191244	1984	100	25/01/2015
-723	Aces High	Iron Maiden	Powerslave	191518	1984	100	25/01/2015
-724	Satch Boogie	Joe Satriani	Time Machine Disc 2	191712	1999	100	25/01/2015
-725	Kenny Goes To Hell	Metallica	South Park The Movie	191791	1999	100	25/01/2015
-726	Demon Cleaner	Kyuss	Muchas Gracias: The Best of Ky	192111	2000	100	25/01/2015
-727	Bron-Yr-Aur	Led Zepplin	Physical Graffiti - Disc 2	192237	1975	100	25/01/2015
-728	Over The Hills And Far Away	Led Zeppelin	Houses Of The Holy	192530	1973	100	25/01/2015
-729	Lakini's Juice	Live	Secret Samadhi	192830	1997	100	25/01/2015
-730	Lakini's Juice	Live	Secret Samadhi	192830	1997	100	25/01/2015
-731	Mastodon - Cut You Open With a	Unknown	Unknown	192939	0	100	25/01/2015
-732	Where Strides The Behemoth (Li	Mastodon	March Of The Fire Ants EP	193127	2003	100	25/01/2015
-733	Hail to Fire	Mastodon	Call of the Mastodon Disc 1	193255	2006	100	25/01/2015
-734	Slickleg	Mastodon	Call of the Mastodon Disc 1	193475	2006	100	25/01/2015
-735	Symphony of destruction	Megadeth	Couintdown to extinction	193716	1992	100	25/01/2015
-736	megadeth - Dave Is Pissed (liv	Megadeth	Unknown	193770	0	100	25/01/2015
-737	Hangar 18	Megadeth	Rust In Peace	194084	1990	100	25/01/2015
-738	Hangar 18	Megadeth	Rust In Peace	194084	1990	100	25/01/2015
-739	The Bit	Melvins	Stag	194368	1996	100	25/01/2015
-740	Star Wars Imperial March	Metallica	Unknown	194534	0	100	25/01/2015
-741	The Flames Beyond the Cold Mou	Goro, Takaakira "Taka"	You Are There	195099	2006	100	25/01/2015
-742	Track 07	Original Score	Changing Lanes	195522	2002	100	25/01/2015
-743	Neurosis_Lost	Unknown	Unknown	196104	0	100	25/01/2015
-744	Under The Surface	Neurosis	Times Of Grace	196545	1999	100	25/01/2015
-745	Orion	Mastodon	Drum 'N' Bass Mix	197043	2006	100	25/01/2015
-746	Crazy Train	Ozzy Osbourne	Blizzard of Ozz	197341	1980	100	25/01/2015
-747	That I Never Had	Ozzy Osbourne	Down to Earth	197604	2001	100	25/01/2015
-748	No More Tears	Ozzy Osbourne	No More Tears	197959	1991	100	25/01/2015
-749	Spår 2	Pain	Okänt album	198210	2007	100	25/01/2015
-750	Caged in a Rage	Diamond Darrell	Supercop	198412	1996	100	25/01/2015
-751	Heard It on the X	Diamond Darrell	ECW: Extreme Music	198586	1998	100	25/01/2015
-752	Control	Puddle of Mudd	Come Clean	198817	2001	100	25/01/2015
-753	Ruins-RefusalFossil	Ruins	Refusal Fossil	199038	1998	100	25/01/2015
-754	Warrido	Ruins	Vrresto	199352	1998	100	25/01/2015
-755	Black Magic Woman	Carlos Santana	Studio	199665	1974	100	25/01/2015
-756	Summer Breeze	Seals & Crofts	Summer Breeze	199871	1972	100	25/01/2015
-757	Licking Cream	Sevendust	Home	200069	1999	100	25/01/2015
-758	Waffle	Sevendust	Home	200280	2000	100	25/01/2015
-759	All I Wanna Do	Sheryl Crow	Awesome 4	200556	2003	100	25/01/2015
-760	My Mind's Sedate	Shihad	The General Electric	200730	1999	100	25/01/2015
-761	The Heretic Anthem	Slipknot	Iowa	200984	2001	100	25/01/2015
-762	Wait and Bleed	Slipknot	Slipknot	201169	1999	100	25/01/2015
-763	Stuck in the Middle With You	Stealers Wheel	Reservoir Dogs	201374	1992	100	25/01/2015
-764	Don't Let Me Be Misunderstood	Animals	Best of the Animals [ABKCO]	201522	1988	100	25/01/2015
-765	Light My Fire	The Doors	The Very Best of the Doors [20	201950	2001	100	25/01/2015
-766	People Are Strange	The Doors	The Very Best of the Doors [20	202081	2001	100	25/01/2015
-767	West End Riot	The Living End	The Living End	202315	1998	100	25/01/2015
-768	Pulp Fiction	Theme	King of the Surf Guitar: The B	202445	1995	100	25/01/2015
-769	Pinball Wizard	The Who	Tommy	202626	1969	100	25/01/2015
-770	Jailbreak	Thin Lizzy	Detroit Rock City Soundtrack	202866	1999	100	25/01/2015
-771	Runnin' Down a Dream	Tom Petty & the Heartbreakers	Greatest Hits	203127	1993	100	25/01/2015
-772	Hold Me Down	Tommy Lee	Never a Dull Moment	203323	2002	100	25/01/2015
-773	Tony Hawks Pro Skater - Even R	Unknown	Unknown	203510	0	100	25/01/2015
-774	Flood	Tool	undertow	203977	1999	100	25/01/2015
-775	Viva Zapata	Totimoshi	Ladron	204189	2006	100	25/01/2015
-776	Entrance of the Conflagration	Trivium	The Crusade	204464	2006	100	25/01/2015
-777	Master Of Puppets	Trivium	Kerrang Remastered(master of p	204951	0	100	25/01/2015
-778	Like Light To The Flies	Luna	3 song EP	205289	2004	100	25/01/2015
-779	I wanna rock	Twisted Sister	80s Rock	205473	1984	100	25/01/2015
-780	Committed	Unsane	Occupational Hazard	205635	1998	100	25/01/2015
-781	velvetrevolver_shebuildsquickm	Unknown	Unknown	205857	0	100	25/01/2015
-782	La Grange	ZZ Top	Armageddon	206071	1998	100	25/01/2015
-783	Airplanes (feat. Hayley Willia	B.o.B	Airplanes (feat. Hayley Willia	206254	2010	100	25/01/2015
-784	Give Me Everything (feat. Ne-Y	Pitbull	Give Me Everything (feat. Ne-Y	206513	2011	100	25/01/2015
-785	Sweat (David Guetta Remix)	Snoop Dogg & David Guetta	Sweat (David Guetta Remix) - S	206712	2011	100	25/01/2015
-786	Someone Like You	Unknown	21	206999	2011	100	25/01/2015
-787	Just Can't Get Enough	Black Eyed Peas	The Beginning (Deluxe Edition)	207218	2010	100	25/01/2015
-788	Rolling In the Deep	Adele	Rolling In the Deep - Single	207447	2010	100	25/01/2015
-789	Airplanes (feat. Hayley Willia	B.o.B	Airplanes (feat. Hayley Willia	207630	2010	100	25/01/2015
-790	All the Right Moves	One Republic	All the Right Moves - Single	207872	2009	100	25/01/2015
-791	What The Hell	Unknown	What The Hell - Single	208091	2011	100	25/01/2015
-792	Nothin' On You	Ari Levine/Bobby Ray Simmons Jr./Bruno Mars/Philip Lawrence	B.o.B Presents: The Adventures of Bobby Ray	208361	2010	100	25/01/2015
-793	Bad Romance	Lady Gaga	The Fame Monster	208656	2009	100	25/01/2015
-794	Beautiful Lie	30 Seconds To Mars	A Beautiful Lie	208898	2005	100	25/01/2015
-795	Brick By Boring Brick	Paramore	Brand New Eyes	209153	2009	100	25/01/2015
-796	Hold It Against Me	Britney Spears	Hold It Against Me - Single	209384	2011	100	25/01/2015
-797	Grenade	Bruno Mars	Doo-Wops & Hooligans (Limited	209609	2010	100	25/01/2015
-798	Carry Out	Timbaland	Presents Shock Value II	209841	2009	100	25/01/2015
-799	The Opposite Of Adults [ft. MG	Chiddy Bang	The Swelly Express	210039	2009	100	25/01/2015
-800	ÿþY o u   M a k e   M e   F e e l . . . ( f e a t .   S a b i )	Unknown	ÿþY o u   M a k e   M e   F e e l . . .   ( f e a t .   S a b i )   -   S i n g l e	210261	0	100	25/01/2015
-801	Commander (David Guetta Remix)	Kelly Rowland Feat. David Guet	Commander	210481	2010	100	25/01/2015
-802	crawling	linken park	Hybrid Theory [Japan Bonus Tra	210690	2000	100	25/01/2015
-803	Cruel	Dane Rumble	Cruel [Non-Rap Version]	210924	2009	100	25/01/2015
-804	Who's That Chick ? (Feat. Riha	David Guetta	One More Love	211089	2010	100	25/01/2015
-805	Decode	Paramore	Decode	211353	2008	100	25/01/2015
-806	DJ Got Us Fallin' In Love	Usher Feat. Pitbull	DJ Got Us Fallin' In Love	211578	2010	100	25/01/2015
-807	Unknown	Unknown	Unknown	211785	0	100	25/01/2015
-808	Unknown	Unknown	Unknown	212048	0	100	25/01/2015
-809	Empire State Of Mind	Jay-Z Ft. Alicia Keys	The Blueprint 3	212325	2009	100	25/01/2015
-810	Evacuate The Dancefloor	Cascada	Evacuate The Dancefloor	212532	2009	100	25/01/2015
-811	Fever	Cascada	Evacuate the Dancefloor	212732	2009	100	25/01/2015
-812	Fireflies	Owl City	Ocean Eyes	212960	2010	100	25/01/2015
-813	For Your Entertainment	Adam Lambert	For Your Entertainment	213175	2009	100	25/01/2015
-814	From Yesterday	30 Secounds To Mars	A Beautiful Lie	213418	2005	100	25/01/2015
-815	ÿþN o t   O v e r   Y o u	ÿþG a v i n   D e G r a w   &   R y a n   T e d d e r	ÿþN o t   O v e r   Y o u   -   S i n g l e	213639	0	100	25/01/2015
-816	I Can Ride My Bike With No Handlebars	Flobots	The Flowbot	213846	2008	100	25/01/2015
-817	If We Ever Meet Again w. Katy	Timbaland	Presents Shock Value II	214138	2009	100	25/01/2015
-818	In My Head	Jason Derulo	Jason Derulo	214340	2010	100	25/01/2015
-819	On The Floor (Feat. Pitbull)	Jennifer Lopez	Unknown	214623	2011	100	25/01/2015
-820	Nobody's Perfect	Jessie J	Who You Are	214887	2011	100	25/01/2015
-821	Just A Little Bit	Ko88	kids of 88	215070	2010	100	25/01/2015
-822	Just The Way You Are (Album Ve	Bruno Mars	Just The Way You Are	215295	2010	100	25/01/2015
-823	Monster	Bon Iver/Jay-Z/Kanye West/Nick	My Beautiful Dark Twisted Fant	215486	2010	100	25/01/2015
-824	Firework	Katy Perry	Teenage Dream	215716	2010	100	25/01/2015
-825	Teenage Dream	Katy Perry	Teenage Dream	215944	2010	100	25/01/2015
-826	Blow	Ke$ha	Blow - Single	216168	2010	100	25/01/2015
-827	Kelsey	Metro Station	Single	216386	2007	100	25/01/2015
-828	Kings And Queens	30 Seconds To Mars	Kings And Queens	216733	2009	100	25/01/2015
-829	Last train home	Lost Prophets	Start Something	216990	2004	100	25/01/2015
-830	Party Rock Anthem	LMFAO	Party Rock Anthem - Single	217257	2011	100	25/01/2015
-831	Love Drunk	Boys Like Girls	Love Drunk	217481	2009	100	25/01/2015
-832	Memories	David Guetta feat Kid Cudi	One Love	217690	2010	100	25/01/2015
-833	Just A Dream	Nelly	5.0	217929	2010	100	25/01/2015
-834	Nothin' On You	B.O.B Feat. Bruno Mars	B.o.B Presents: The Adventures	218205	2010	100	25/01/2015
-835	Encore	Jay-Z	Collision Course Disc 1	218409	2004	100	25/01/2015
-836	OMG	Usher feat. Will.I.Am	Raymond V Raymond	218678	2010	100	25/01/2015
-837	One Step Closer	Linkin Park	Hybrid Theory	218834	2000	100	25/01/2015
-838	Good Life (New Mix Version)	OneRepublic	Good Life - Single	219083	2010	100	25/01/2015
-839	Raise Your Glass	P!nk	Raise Your Glass - Single	219288	2010	100	25/01/2015
-840	Pass Out	Tinie Tempah	Uk Top 40 Singles Chart 14-03-	219559	2010	100	25/01/2015
-841	FucKIN Perfect	Pink	Greatest Hits... So Far!!!	219773	2010	100	25/01/2015
-842	California King Bed	Rihanna	Loud	220024	2010	100	25/01/2015
-843	Only Girl (In The World)	Rihanna  | www.RNBxBeatz.com	www.RNBxBeatz.com	220268	2010	100	25/01/2015
-844	S&M	Rihanna	Loud [Clean]	220512	2010	100	25/01/2015
-845	What's My Name?	Rihanna	Loud [Clean]	220769	2010	100	25/01/2015
-846	Rock That Body	Black Eyed Peas	THE E.N.D. (Energy Never Dies)	221037	2009	100	25/01/2015
-847	Rooftops - Lost Prophets*	Lost Prophets	Connect Set	221262	2006	100	25/01/2015
-848	Rude Boy	Rihanna	Rated R	221484	2009	100	25/01/2015
-849	Shake It	Metro Station	Metro Station	221664	2007	100	25/01/2015
-850	Points of Authority [Demo]	Linkin Park	Ultra rare Trakx vol. 2	221872	0	100	25/01/2015
-851	Somewhere I Belong	Linkin Park	Promo CDS	222086	2003	100	25/01/2015
-852	Starstrukk	3oh!3 & Katy Perry	Want	222288	2009	100	25/01/2015
-853	Stop & Stare	One Republic	Dreaming Out Loud	222513	2007	100	25/01/2015
-854	Stop & Stare	One Republic	Dreaming Out Loud	222513	2007	100	25/01/2015
-855	The Time (The Dirty Bit)	The Black Eyed Peas	The Beginning	222824	2010	100	25/01/2015
-856	The Catalyst	Linkin Park	A Thousand Suns	223167	2010	100	25/01/2015
-857	The City Is At War	Cobra Starship	Viva la Cobra	223340	2007	100	25/01/2015
-858	The Opposite Of Adults [ft. MG	Chiddy Bang	The Swelly Express	223538	2009	100	25/01/2015
-859	TiK ToK	KE$HA	Single	223741	2010	100	25/01/2015
-860	Invincible (feat. Kelly Rowlan	Tinie Tempah	Disc-Overy	223946	2010	100	25/01/2015
-861	Pass Out	Tinie Tempah	Uk Top 40 Singles Chart 14-03-	224217	2010	100	25/01/2015
-862	Undisclosed Desires	Muse	The Resistance	224463	2009	100	25/01/2015
-863	Uprising	Muse	The Resistance	224768	2009	100	25/01/2015
-864	Vindicated	Dashboard Confessional	Spider-Man 2 Soundtrack	224968	2004	100	25/01/2015
-865	What's My Name? feat. Drake	Rihanna	Loud	225233	2010	100	25/01/2015
-866	Whatcha Say	Jason Derulo	Jason Derulo	225457	2010	100	25/01/2015
-867	Whatya Want From Me	Adam Lambert	For Your Entertainment	225684	2009	100	25/01/2015
-868	You Got Me	J. Williams	Young Love	225912	2009	100	25/01/2015
-869	Hyperpower!	Nine Inch Nails	Year Zero	226014	2007	100	25/01/2015
-870	The Beginning of the End	Nine Inch Nails	Year Zero	226181	2007	100	25/01/2015
-871	Survivalism	Nine Inch Nails	Year Zero	226445	2007	100	25/01/2015
-872	The Good Soldier	Nine Inch Nails	Year Zero	226648	2007	100	25/01/2015
-873	Vessel	Nine Inch Nails	Year Zero	226940	2007	100	25/01/2015
-874	Me, I'm Not	Nine Inch Nails	Year Zero	227232	2007	100	25/01/2015
-875	Capital G	Nine Inch Nails	Year Zero	227462	2007	100	25/01/2015
-876	My Violent Heart	Nine Inch Nails	Year Zero	227715	2007	100	25/01/2015
-877	The Warning	Nine Inch Nails	Year Zero	227933	2007	100	25/01/2015
-878	God Given	Nine Inch Nails	Year Zero	228164	2007	100	25/01/2015
-879	Meet Your Master	Nine Inch Nails	Year Zero	228412	2007	100	25/01/2015
-880	The Greater Good	Nine Inch Nails	Year Zero	228704	2007	100	25/01/2015
-881	The Great Destroyer	Nine Inch Nails	Year Zero	228901	2007	100	25/01/2015
-882	Another Version of the Truth	Nine Inch Nails	Year Zero	229150	2007	100	25/01/2015
-883	In This Twilight	Nine Inch Nails	Year Zero	229363	2007	100	25/01/2015
-884	Zero-Sum	Nine Inch Nails	Year Zero	229737	2007	100	25/01/2015
-885	Southtown	P.O.D.	Greatest Hits: The Atlantic Ye	229985	2006	100	25/01/2015
-886	Boom	P.O.D.	Greatest Hits: The Atlantic Ye	230172	2006	100	25/01/2015
-887	Going in Blind [#]	P.O.D.	Greatest Hits: The Atlantic Ye	230440	2006	100	25/01/2015
-888	Roots in Stereo	P.O.D.	Greatest Hits: The Atlantic Ye	230723	2006	100	25/01/2015
-889	Alive	P.O.D.	Greatest Hits: The Atlantic Ye	230926	2006	100	25/01/2015
-890	Youth of the Nation	P.O.D.	Greatest Hits: The Atlantic Ye	231184	2006	100	25/01/2015
-891	Sleeping Awake	P.O.D.	Greatest Hits: The Atlantic Ye	231388	2006	100	25/01/2015
-892	Rock the Party (Off the Hook)	P.O.D.	Greatest Hits: The Atlantic Ye	231595	2006	100	25/01/2015
-893	Lights Out	P.O.D.	Greatest Hits: The Atlantic Ye	231762	2006	100	25/01/2015
-894	Goodbye for Now	P.O.D.	Greatest Hits: The Atlantic Ye	232035	2006	100	25/01/2015
-895	Execute the Sounds	P.O.D.	Greatest Hits: The Atlantic Ye	232216	2006	100	25/01/2015
-896	Will You	P.O.D.	Greatest Hits: The Atlantic Ye	232443	2006	100	25/01/2015
-897	Truly Amazing	P.O.D.	Greatest Hits: The Atlantic Ye	232626	2006	100	25/01/2015
-898	Satellite	P.O.D.	Greatest Hits: The Atlantic Ye	232838	2006	100	25/01/2015
-899	Set Your Eyes to Zion	P.O.D.	Greatest Hits: The Atlantic Ye	233086	2006	100	25/01/2015
-900	Here We Go [#]	P.O.D.	Greatest Hits: The Atlantic Ye	233294	2006	100	25/01/2015
-901	If It Wasn't for You	P.O.D.	Greatest Hits: The Atlantic Ye	233512	2006	100	25/01/2015
-902	Comfort Me	Pacifier	Pacifier [UK Bonus Tracks] Dis	233708	2003	100	25/01/2015
-903	Semi-Normal	Pacifier	Pacifier [UK Bonus Tracks] Dis	233884	2003	100	25/01/2015
-904	Run	Pacifier	Pacifier [UK Bonus Tracks] Dis	234114	2003	100	25/01/2015
-905	Everything	Pacifier	Pacifier [UK Bonus Tracks] Dis	234381	2003	100	25/01/2015
-906	Stranger	Pacifier	Pacifier [UK Bonus Tracks] Dis	234591	2003	100	25/01/2015
-907	Home	Pacifier	Pacifier [UK Bonus Tracks] Dis	234832	2003	100	25/01/2015
-908	Nothing	Pacifier	Pacifier [UK Bonus Tracks] Dis	235043	2003	100	25/01/2015
-909	Bullitproof	Pacifier	Pacifier [UK Bonus Tracks] Dis	235248	2003	100	25/01/2015
-910	Walls	Pacifier	Pacifier [UK Bonus Tracks] Dis	235516	2003	100	25/01/2015
-911	Just a Shadow	Pacifier	Pacifier [UK Bonus Tracks] Dis	235714	2003	100	25/01/2015
-912	Trademark	Pacifier	Pacifier [UK Bonus Tracks] Dis	235916	2003	100	25/01/2015
-913	Coming Down	Pacifier	Pacifier [UK Bonus Tracks] Dis	236172	2003	100	25/01/2015
-914	last resort	Papa Roach	Infest	236375	2000	100	25/01/2015
-915	No Son of Mine	Genesis	Platinum Collection Disc 1	236770	2004	100	25/01/2015
-916	I Can't Dance	Genesis	Platinum Collection Disc 1	237010	2004	100	25/01/2015
-917	Jesus He Knows Me	Genesis	Platinum Collection Disc 1	237267	2004	100	25/01/2015
-918	Hold on My Heart	Genesis	Platinum Collection Disc 1	237544	2004	100	25/01/2015
-919	Invisible Touch	Genesis	Platinum Collection Disc 1	237752	2004	100	25/01/2015
-920	Throwing It All Away	Genesis	Platinum Collection Disc 1	237982	2004	100	25/01/2015
-921	Tonight Tonight Tonight [Edit]	Genesis	Platinum Collection Disc 1	238251	2004	100	25/01/2015
-922	Land of Confusion	Genesis	Platinum Collection Disc 1	238537	2004	100	25/01/2015
-923	In Too Deep	Genesis	Platinum Collection Disc 1	238834	2004	100	25/01/2015
-924	Mama	Genesis	Platinum Collection Disc 1	239243	2004	100	25/01/2015
-925	That's All	Genesis	Platinum Collection Disc 1	239508	2004	100	25/01/2015
-926	Home by the Sea	Genesis	Platinum Collection Disc 1	239815	2004	100	25/01/2015
-927	Second Home by the Sea	Genesis	Platinum Collection Disc 1	240181	2004	100	25/01/2015
-928	Illegal Alien	Genesis	Platinum Collection Disc 1	240498	2004	100	25/01/2015
-929	Paperlate	Genesis	Platinum Collection Disc 1	240701	2004	100	25/01/2015
-930	Calling All Stations	Genesis	Platinum Collection Disc 1	241046	2004	100	25/01/2015
-931	Another Day in Paradise	Phil Collins	Hits	241369	1998	100	25/01/2015
-932	True Colors	Phil Collins	Hits	241643	1998	100	25/01/2015
-933	Easy Lover	Phil Collins	Hits	241945	1998	100	25/01/2015
-934	You Can't Hurry Love	Phil Collins	Hits	242117	1998	100	25/01/2015
-935	Two Hearts	Phil Collins	Hits	242321	1998	100	25/01/2015
-936	I Wish It Would Rain Down	Phil Collins	Hits	242649	1998	100	25/01/2015
-937	Against All Odds (Take a Look	Phil Collins	Hits	242854	1998	100	25/01/2015
-938	Something Happened on the Way	Phil Collins	Hits	243145	1998	100	25/01/2015
-939	Separate Lives	Phil Collins	Hits	243391	1998	100	25/01/2015
-940	Both Sides of the Story	Phil Collins	Hits	243788	1998	100	25/01/2015
-941	One More Night	Phil Collins	Hits	244074	1998	100	25/01/2015
-942	Sussudio	Phil Collins	Hits	244336	1998	100	25/01/2015
-943	Dance into the Light	Phil Collins	Hits	244598	1998	100	25/01/2015
-944	A Groovy Kind of Love	Phil Collins	Hits	244807	1998	100	25/01/2015
-945	In the Air Tonight	Phil Collins	Hits	245137	1998	100	25/01/2015
-946	Take Me Home	Phil Collins	Hits	245489	1998	100	25/01/2015
-947	Bohemian Rhapsody	Queen	Greatest Hits [Parlophone]	245847	1994	100	25/01/2015
-948	Another One Bites the Dust	Queen	Greatest Hits [Parlophone]	246063	1994	100	25/01/2015
-949	Killer Queen	Queen	Greatest Hits [Parlophone]	246245	1994	100	25/01/2015
-950	Fat Bottomed Girls	Queen	Greatest Hits [Parlophone]	246449	1994	100	25/01/2015
-951	Bicycle Race	Queen	Greatest Hits [Parlophone]	246632	1994	100	25/01/2015
-952	You're My Best Friend	Queen	Greatest Hits [Parlophone]	246804	1994	100	25/01/2015
-953	Don't Stop Me Now	Queen	Greatest Hits [Parlophone]	247015	1994	100	25/01/2015
-954	Save Me	Queen	Greatest Hits [Parlophone]	247243	1994	100	25/01/2015
-955	Crazy Little Thing Called Love	Queen	Greatest Hits [Parlophone]	247408	1994	100	25/01/2015
-956	Somebody to Love	Queen	Greatest Hits [Parlophone]	247704	1994	100	25/01/2015
-957	Now I'm Here	Queen	Greatest Hits [Parlophone]	247959	1994	100	25/01/2015
-958	Good Old-Fashioned Lover Boy	Queen	Greatest Hits [Parlophone]	248135	1994	100	25/01/2015
-959	Play the Game	Queen	Greatest Hits [Parlophone]	248348	1994	100	25/01/2015
-960	Flash	Queen	Greatest Hits [Parlophone]	248516	1994	100	25/01/2015
-961	Seven Seas of Rhye	Queen	Greatest Hits [Parlophone]	248686	1994	100	25/01/2015
-962	We Will Rock You	Queen	Greatest Hits [Parlophone]	248809	1994	100	25/01/2015
-963	We Are the Champions	Queen	Greatest Hits [Parlophone]	248993	1994	100	25/01/2015
-964	The Lost Art Of Keeping A Secr	Oueens Of The Stone Age	Liger	249211	0	100	25/01/2015
-965	Go With The Flow	Oueens Of The Stone Age	Liger	249400	0	100	25/01/2015
-966	You Know What You Did	Queens of the Stone Age	ERA Vulgaris	249663	0	100	25/01/2015
-967	Everybody Knows That You Are I	Queens of the Stone Age	Lullabies to Paralyze	249917	2005	100	25/01/2015
-968	Around the World	The Red Hot Chili Peppers	Californication	250157	1999	100	25/01/2015
-969	Parallel Universe	The Red Hot Chili Peppers	Californication	250428	1999	100	25/01/2015
-970	Scar Tissue	The Red Hot Chili Peppers	Californication	250646	1999	100	25/01/2015
-971	Otherside	The Red Hot Chili Peppers	Californication	250902	1999	100	25/01/2015
-972	Get on Top	The Red Hot Chili Peppers	Californication	251101	1999	100	25/01/2015
-973	Californication	The Red Hot Chili Peppers	Californication	251423	1999	100	25/01/2015
-974	Easily	The Red Hot Chili Peppers	Californication	251655	1999	100	25/01/2015
-975	Porcelain	The Red Hot Chili Peppers	Californication	251819	1999	100	25/01/2015
-976	Emit Remmus	The Red Hot Chili Peppers	Californication	252060	1999	100	25/01/2015
-977	I Like Dirt	The Red Hot Chili Peppers	Californication	252219	1999	100	25/01/2015
-978	This Velvet Glove	The Red Hot Chili Peppers	Californication	252445	1999	100	25/01/2015
-979	Savior	The Red Hot Chili Peppers	Californication	252739	1999	100	25/01/2015
-980	Purple Stain	The Red Hot Chili Peppers	Californication	252993	1999	100	25/01/2015
-981	Right on Time	The Red Hot Chili Peppers	Californication	253107	1999	100	25/01/2015
-982	Road Trippin'	The Red Hot Chili Peppers	Californication	253314	1999	100	25/01/2015
-983	Heavy Metal	Sammy Hagar	Heavy Metal Soundtrack	253547	1981	100	25/01/2015
-984	To the Moon and Back	Savage Garden	Savage Garden [Australia Bonus	253888	2000	100	25/01/2015
-985	Carry on Dancing	Savage Garden	Savage Garden [Australia Bonus	254112	2000	100	25/01/2015
-986	Tears of Pearls	Savage Garden	Savage Garden [Australia Bonus	254338	2000	100	25/01/2015
-987	I Want You	Savage Garden	Savage Garden [Australia Bonus	254570	2000	100	25/01/2015
-988	Truly Madly Deeply	Savage Garden	Savage Garden [Australia Bonus	254847	2000	100	25/01/2015
-989	Violet	Savage Garden	Savage Garden [Australia Bonus	255090	2000	100	25/01/2015
-990	All Around Me	Savage Garden	Savage Garden [Australia Bonus	255340	2000	100	25/01/2015
-991	Universe	Savage Garden	Savage Garden [Australia Bonus	255600	2000	100	25/01/2015
-992	A Thousand Words	Savage Garden	Savage Garden [Australia Bonus	255839	2000	100	25/01/2015
-993	Break Me Shake Me	Savage Garden	Savage Garden [Australia Bonus	256042	2000	100	25/01/2015
-994	Mine	Savage Garden	Savage Garden [Australia Bonus	256312	2000	100	25/01/2015
-995	Santa Monica	Savage Garden	Savage Garden [Australia Bonus	256526	2000	100	25/01/2015
-996	Factory (Album Version)	Shihad	Churn	256842	2007	100	25/01/2015
-997	Screwtop (Album Version)	Shihad	Churn	257211	2007	100	25/01/2015
-998	Fracture (Album Version)	Shihad	Churn	257519	2007	100	25/01/2015
-999	Stations (Album Version)	Shihad	Churn	257798	2007	100	25/01/2015
-1000	Clapper-Loader (Album Version)	Shihad	Churn	258006	2007	100	25/01/2015
-1001	I Only Said	Shihad	Churn	258245	2007	100	25/01/2015
-1002	Derail (Album Version)	Shihad	Churn	258530	2007	100	25/01/2015
-1003	Bone Orchard (Album Version)	Shihad	Churn	258735	2007	100	25/01/2015
-1004	The Happy Meal (Album Version)	Shihad	Churn	259005	2007	100	25/01/2015
-1005	You Again	Shihad	Killjoy	259283	1995	100	25/01/2015
-1006	Gimme Gimme	Shihad	Killjoy	259600	1995	100	25/01/2015
-1007	The Call	Shihad	Killjoy	259913	1995	100	25/01/2015
-1008	Envy	Shihad	Killjoy	260147	1995	100	25/01/2015
-1009	Debs Night Out	Shihad	Killjoy	260364	1995	100	25/01/2015
-1010	Bitter	Shihad	Killjoy	260616	1995	100	25/01/2015
-1011	For What You Burn	Shihad	Killjoy	260959	1995	100	25/01/2015
-1012	Silvercup	Shihad	Killjoy	261263	1995	100	25/01/2015
-1013	Get Up	Shihad	Killjoy	261514	1995	100	25/01/2015
-1014	None Of The Above	Shihad	Love Is The New Hate	261657	2005	100	25/01/2015
-1015	Empty Shell	Shihad	Love Is The New Hate	261864	2005	100	25/01/2015
-1016	Day Will Come	Shihad	Love Is The New Hate	262056	2005	100	25/01/2015
-1017	All The Young Fascists	Shihad	Love Is The New Hate	262247	2005	100	25/01/2015
-1018	Saddest Song In The World	Shihad	Love Is The New Hate	262499	2005	100	25/01/2015
-1019	Big Future	Shihad	Love Is The New Hate	262624	2005	100	25/01/2015
-1020	Shot In The Head	Shihad	Love Is The New Hate	262825	2005	100	25/01/2015
-1021	Dark Times	Shihad	Love Is The New Hate	263068	2005	100	25/01/2015
-1022	Traitor	Shihad	Love Is The New Hate	263243	2005	100	25/01/2015
-1023	Stop	Shihad	Love Is The New Hate	263413	2005	100	25/01/2015
-1024	Alive	Shihad	Love Is The New Hate	263657	2005	100	25/01/2015
-1025	Guts And The Glory	Shihad	Love Is The New Hate	263866	2005	100	25/01/2015
-1026	Untitled	Silverchair	The Best Of, Volume 1 [Disc 2]	264076	2002	100	25/01/2015
-1027	New Race	Silverchair	The Best Of, Volume 1 [Disc 2]	264276	2002	100	25/01/2015
-1028	Trash	Silverchair	The Best Of, Volume 1 [Disc 2]	264442	2002	100	25/01/2015
-1029	Acoustic Re-Mix	Silverchair	The Best Of, Volume 1 [Disc 2]	264672	2002	100	25/01/2015
-1030	Madman	Silverchair	The Best Of, Volume 1 [Disc 2]	264835	2002	100	25/01/2015
-1031	Blind	Silverchair	The Best Of, Volume 1 [Disc 2]	265089	2002	100	25/01/2015
-1032	Punk Song #2	Silverchair	The Best Of, Volume 1 [Disc 2]	265254	2002	100	25/01/2015
-1033	Wasted / Fix Me	Silverchair	The Best Of, Volume 1 [Disc 2]	265365	2002	100	25/01/2015
-1034	Minor Threat	Silverchair	The Best Of, Volume 1 [Disc 2]	265461	2002	100	25/01/2015
-1035	Freak (Remix For Us Rejects)	Silverchair	The Best Of, Volume 1 [Disc 2]	265714	2002	100	25/01/2015
-1036	Spawn (Originaol Version)	Silverchair	The Best Of, Volume 1 [Disc 2]	265890	2002	100	25/01/2015
-1037	Anthem for the Year 2000	Silverchair	The Best of Silverchair, Vol.	266154	2000	100	25/01/2015
-1038	Freak	Silverchair	The Best of Silverchair, Vol.	266382	2000	100	25/01/2015
-1039	Freak	Silverchair	The Best of Silverchair, Vol.	266382	2000	100	25/01/2015
-1040	Emotion Sickness	Silverchair	The Best of Silverchair, Vol.	266744	2000	100	25/01/2015
-1041	Israel's Son	Silverchair	The Best of Silverchair, Vol.	267065	2000	100	25/01/2015
-1042	Tomorrow	Silverchair	The Best of Silverchair, Vol.	267333	2000	100	25/01/2015
-1043	Cemetery	Silverchair	The Best of Silverchair, Vol.	267577	2000	100	25/01/2015
-1044	The Door	Silverchair	The Best of Silverchair, Vol.	267793	2000	100	25/01/2015
-1045	Miss You Love	Silverchair	The Best of Silverchair, Vol.	268035	2000	100	25/01/2015
-1046	Abuse Me	Silverchair	The Best of Silverchair, Vol.	268278	2000	100	25/01/2015
-1047	Pure Massacre	Silverchair	The Best of Silverchair, Vol.	268552	2000	100	25/01/2015
-1048	Rusty Cage	Soundgarden	Badmotorfinger	268818	1991	100	25/01/2015
-1049	Road Trip	Steriogram	Schmack!	268997	2004	100	25/01/2015
-1050	Walkie Talkie Man	Steriogram	Schmack!	269130	2004	100	25/01/2015
-1051	Schmack!	Steriogram	Schmack!	269275	2004	100	25/01/2015
-1052	Was the Day	Steriogram	Schmack!	269408	2004	100	25/01/2015
-1053	White Trash	Steriogram	Schmack!	269632	2004	100	25/01/2015
-1054	In the City	Steriogram	Schmack!	269793	2004	100	25/01/2015
-1055	Go	Steriogram	Schmack!	269969	2004	100	25/01/2015
-1056	Fat and Proud	Steriogram	Schmack!	270176	2004	100	25/01/2015
-1057	Tsunami	Steriogram	Schmack!	270357	2004	100	25/01/2015
-1058	Wind It Up	Steriogram	Schmack!	270551	2004	100	25/01/2015
-1059	Be Good to Me	Steriogram	Schmack!	270730	2004	100	25/01/2015
-1060	On and On	Steriogram	Schmack!	270969	2004	100	25/01/2015
-1061	30/30-150	Stone Sour	Come What(Ever) May	271228	2006	100	25/01/2015
-1062	Come What(Ever) May	Stone Sour	Come What(Ever) May	271448	2006	100	25/01/2015
-1063	Hell & Consequences	Stone Sour	Come What(Ever) May	271660	2006	100	25/01/2015
-1064	Sillyworld	Stone Sour	Come What(Ever) May	271909	2006	100	25/01/2015
-1065	Made Of Scars	Stone Sour	Come What(Ever) May	272113	2006	100	25/01/2015
-1066	Reborn	Stone Sour	Come What(Ever) May	272306	2006	100	25/01/2015
-1067	Your God	Stone Sour	Come What(Ever) May	272590	2006	100	25/01/2015
-1068	Through Glass	Stone Sour	Come What(Ever) May	272873	2006	100	25/01/2015
-1069	Socio	Stone Sour	Come What(Ever) May	273074	2006	100	25/01/2015
-1070	1st Person	Stone Sour	Come What(Ever) May	273316	2006	100	25/01/2015
-1071	Cardiff	Stone Sour	Come What(Ever) May	273599	2006	100	25/01/2015
-1072	Zzyzx Rd.	Stone Sour	Come What(Ever) May	273915	2006	100	25/01/2015
-1073	Attack	System of a Down	Hypnotize	274101	2005	100	25/01/2015
-1074	Dreaming	System of a Down	Hypnotize	274340	2005	100	25/01/2015
-1075	Kill Rock 'N Roll	System of a Down	Hypnotize	274488	2005	100	25/01/2015
-1076	Hypnotize	System of a Down	Hypnotize	274677	2005	100	25/01/2015
-1077	Stealing Society	System of a Down	Hypnotize	274855	2005	100	25/01/2015
-1078	Tentative	System of a Down	Hypnotize	275071	2005	100	25/01/2015
-1079	U-Fig	System of a Down	Hypnotize	275246	2005	100	25/01/2015
-1080	Holy Mountains	System of a Down	Hypnotize	275574	2005	100	25/01/2015
-1081	Vicinity of Obscenity	System of a Down	Hypnotize	275745	2005	100	25/01/2015
-1082	She's Like Heroin	System of a Down	Hypnotize	275909	2005	100	25/01/2015
-1083	Lonely Day	System of a Down	Hypnotize	276076	2005	100	25/01/2015
-1084	Soldier Side	System of a Down	Hypnotize	276296	2005	100	25/01/2015
-1085	Take It Easy	The Eagles	The Very Best of the Eagles [1	276508	1994	100	25/01/2015
-1086	Witchy Woman	The Eagles	The Very Best of the Eagles [1	276763	1994	100	25/01/2015
-1087	Peaceful Easy Feeling	The Eagles	The Very Best of the Eagles [1	277024	1994	100	25/01/2015
-1088	Doolin Dalton	The Eagles	The Very Best of the Eagles [1	277233	1994	100	25/01/2015
-1089	Desperado	The Eagles	The Very Best of the Eagles [1	277448	1994	100	25/01/2015
-1090	Tequila Sunrise	The Eagles	The Very Best of the Eagles [1	277623	1994	100	25/01/2015
-1091	Best of My Love	The Eagles	The Very Best of the Eagles [1	277899	1994	100	25/01/2015
-1092	James Dean	The Eagles	The Very Best of the Eagles [1	278119	1994	100	25/01/2015
-1093	I Can't Tell You Why	The Eagles	The Very Best of the Eagles [1	278414	1994	100	25/01/2015
-1094	One of These Nights	The Eagles	The Very Best of the Eagles [1	278797	1994	100	25/01/2015
-1095	Lyin' Eyes	The Eagles	The Very Best of the Eagles [1	279085	1994	100	25/01/2015
-1096	Take It to the Limit	The Eagles	The Very Best of the Eagles [1	279378	1994	100	25/01/2015
-1097	Hotel California	The Eagles	The Very Best of the Eagles [1	279768	1994	100	25/01/2015
-1098	New Kid in Town	The Eagles	The Very Best of the Eagles [1	280072	1994	100	25/01/2015
-1099	Life in the Fast Lane	The Eagles	The Very Best of the Eagles [1	280359	1994	100	25/01/2015
-1100	Heartache Tonight	The Eagles	The Very Best of the Eagles [1	280625	1994	100	25/01/2015
-1101	The Long Run	The Eagles	The Very Best of the Eagles [1	280848	1994	100	25/01/2015
-1102	Broken	Scott Stapp	The Great Divide	281105	2005	100	25/01/2015
-1103	Fight Song	Scott Stapp	The Great Divide	281351	2005	100	25/01/2015
-1104	Hard Way	Scott Stapp	The Great Divide	281574	2005	100	25/01/2015
-1105	Justify	Scott Stapp	The Great Divide	281898	2005	100	25/01/2015
-1106	Let Me Go	Scott Stapp	The Great Divide	282153	2005	100	25/01/2015
-1107	Reach Out	Scott Stapp	The Great Divide	282420	2005	100	25/01/2015
-1108	Sublime	Scott Stapp	The Great Divide	282674	2005	100	25/01/2015
-1109	Surround Me	Scott Stapp	The Great Divide	282950	2005	100	25/01/2015
-1110	The Great Divide	Scott Stapp	The Great Divide	283192	2005	100	25/01/2015
-1111	You Will Soar	Scott Stapp	The Great Divide	283412	2005	100	25/01/2015
-1112	Sam's Town	The Killers	Sam's Town	283658	2006	100	25/01/2015
-1113	Enterlude	The Killers	Sam's Town	283707	2006	100	25/01/2015
-1114	When You Were Young	The Killers	Sam's Town	283927	2006	100	25/01/2015
-1115	Bling (Confession of a King)	The Killers	Sam's Town	284175	2006	100	25/01/2015
-1116	For Reasons Unknown	The Killers	Sam's Town	284387	2006	100	25/01/2015
-1117	Read My Mind	The Killers	Sam's Town	284633	2006	100	25/01/2015
-1118	Uncle Jonny	The Killers	Sam's Town	284898	2006	100	25/01/2015
-1119	Bones	The Killers	Sam's Town	285125	2006	100	25/01/2015
-1120	My List	The Killers	Sam's Town	285373	2006	100	25/01/2015
-1121	This River Is Wild	The Killers	Sam's Town	285651	2006	100	25/01/2015
-1122	Why Do I Keep Counting?	The Killers	Sam's Town	285915	2006	100	25/01/2015
-1123	Exitlude	The Killers	Sam's Town	286066	2006	100	25/01/2015
-1124	Where the White Boys Dance	The Killers	Sam's Town	286274	2006	100	25/01/2015
-1125	Track 1	Unknown Artist	Unknown Album (29/04/2005 3:40	286320	0	100	25/01/2015
-1126	Track 2	Unknown Artist	Unknown Album (29/04/2005 3:40	286504	0	100	25/01/2015
-1127	Track 3	Unknown Artist	Unknown Album (29/04/2005 3:40	286723	0	100	25/01/2015
-1128	Track 4	Unknown Artist	Unknown Album (29/04/2005 3:40	286866	0	100	25/01/2015
-1129	Track 5	Unknown Artist	Unknown Album (29/04/2005 3:40	287072	0	100	25/01/2015
-1130	Track 6	Unknown Artist	Unknown Album (29/04/2005 3:40	287243	0	100	25/01/2015
-1131	Track 7	Unknown Artist	Unknown Album (29/04/2005 3:40	287408	0	100	25/01/2015
-1132	Track 8	Unknown Artist	Unknown Album (29/04/2005 3:40	287557	0	100	25/01/2015
-1133	Track 9	Unknown Artist	Unknown Album (29/04/2005 3:40	287771	0	100	25/01/2015
-1134	Track 10	Unknown Artist	Unknown Album (29/04/2005 3:40	287887	0	100	25/01/2015
-1135	Track 11	Unknown Artist	Unknown Album (29/04/2005 3:40	288069	0	100	25/01/2015
-1136	Track 12	Unknown Artist	Unknown Album (29/04/2005 3:40	288267	0	100	25/01/2015
-1137	Track 13	Unknown Artist	Unknown Album (29/04/2005 3:40	288547	0	100	25/01/2015
-1138	Track 14	Unknown Artist	Unknown Album (29/04/2005 3:40	288739	0	100	25/01/2015
-1139	Track 15	Unknown Artist	Unknown Album (29/04/2005 3:40	288947	0	100	25/01/2015
-1140	Track 16	Unknown Artist	Unknown Album (29/04/2005 3:40	289174	0	100	25/01/2015
-1141	Track 17	Unknown Artist	Unknown Album (29/04/2005 3:40	289357	0	100	25/01/2015
-1142	Track 18	Unknown Artist	Unknown Album (29/04/2005 3:40	289608	0	100	25/01/2015
-1143	Track 19	Unknown Artist	Unknown Album (29/04/2005 3:40	289899	0	100	25/01/2015
-1144	Track 20	Unknown Artist	Unknown Album (29/04/2005 3:40	290193	0	100	25/01/2015
-1145	Track 21	Unknown Artist	Unknown Album (29/04/2005 3:40	290558	0	100	25/01/2015
-1146	Track 22	Unknown Artist	Unknown Album (29/04/2005 3:40	290671	0	100	25/01/2015
-1147	Torn	Creed	Unknown Album (6/27/2003 2:21:	291057	0	100	25/01/2015
-1148	Track 5	Creed	Unknown Album (6/27/2003 2:21:	291355	0	100	25/01/2015
-1149	What's This Life Fore	Creed	Unknown Album (6/27/2003 2:21:	291604	0	100	25/01/2015
-1150	Falling	Creed	Unknown Album (6/27/2003 2:21:	291844	0	100	25/01/2015
-1151	Sacrifice	Creed	Unknown Album (6/27/2003 2:21:	292138	0	100	25/01/2015
-1152	Entre Sandman	Metalica	Unknown Album (6/27/2003 2:21	292470	0	100	25/01/2015
-1153	The Unforgiven	Metalica	Unknown Album (6/27/2003 2:21:	292859	0	100	25/01/2015
-1154	Nothing Else Matteres	Metalica	Unknown Album (6/27/2003 2:21:	293248	0	100	25/01/2015
-1155	Track 7	System of the down	Unknown Album (6/27/2003 2:21:	293460	0	100	25/01/2015
-1156	Toxicity	System of the down	Unknown Album (6/27/2003 2:21:	293683	0	100	25/01/2015
-1157	Aerials	System of the down	Unknown Album (6/27/2003 2:21:	294056	0	100	25/01/2015
-1158	Unknown	Unknown	Unknown	294318	0	100	25/01/2015
-1159	Unknown	Unknown	Unknown	294569	0	100	25/01/2015
-1160	Adele - Rolling In The Deep	Adele	21	294798	2011	100	25/01/2015
-1161	Nicki Minaj - Super Bass	Nicki Minaj	Pink Friday [Deluxe Version]	295017	2010	100	25/01/2015
-1162	ÿþR i g h t   T h e r e	ÿþ[ P R I M E ]	ÿþ[ P R I M E ]	295278	0	100	25/01/2015
-1163	Lady GaGa - The Edge Of Glory	Unknown	Unknown	295599	0	100	25/01/2015
-1164	Jessica Mauboy - Inescapable	Unknown	Unknown	295813	0	100	25/01/2015
-1165	LMFAO Feat. Natalia Kills - Ch	Unknown	Unknown	296083	0	100	25/01/2015
-1166	Unknown	Unknown	Unknown	296293	0	100	25/01/2015
-1167	Pitbull Feat. Ne-Yo, Afrojack	Unknown	Unknown	296538	0	100	25/01/2015
-1168	Bruno Mars - Marry You	Unknown	Unknown	296770	0	100	25/01/2015
-1169	David Guetta Feat. Taio Cruz &	Unknown	Unknown	296973	0	100	25/01/2015
-1170	Calvin Harris Feat. Kelis - Bo	Unknown	Unknown	297196	0	100	25/01/2015
-1171	Pitbull Feat. Marc Anthony - R	Unknown	Unknown	297429	0	100	25/01/2015
-1172	Beyonce - Best Thing I Never H	Unknown	Unknown	297683	0	100	25/01/2015
-1173	Katy Perry - Last Friday Night	Katy Perry	Teenage Dream	297914	2010	100	25/01/2015
-1174	Bad Meets Evil Feat. Bruno Mar	Unknown	Unknown	298218	0	100	25/01/2015
-1175	Simple Plan Feat. Natasha Bedi	Unknown	Unknown	298417	0	100	25/01/2015
-1176	Example - Changed The Way You	Unknown	Unknown	298613	0	100	25/01/2015
-1177	Chris Brown Feat. Justin Biebe	Chris Brown/Justin Bieber	F.A.M.E. [Deluxe Version]	298902	2011	100	25/01/2015
-1178	Havana Brown - We Run The Nigh	Unknown	Unknown	299124	0	100	25/01/2015
-1179	These Kids Wear Crowns - Jumps	These Kids Wear Crowns	Jumpstart	299343	2011	100	25/01/2015
-1180	David Guetta Feat. Nicki Minaj	Unknown	Unknown	299560	0	100	25/01/2015
-1181	Bruno Mars - The Lazy Song	Bruno Mars	Doo-Wops & Hooligans	299756	2010	100	25/01/2015
-1182	Benny Benassi Feat. Gary Go -	Unknown	Unknown	300051	0	100	25/01/2015
-1183	Aloe Blacc - I Need A Dollar	Bucks Fizz	Die Ultimative Chartshow: Gran	300295	2008	100	25/01/2015
-1184	Jessie J - Nobody's Perfect	Jessie J	Who You Are	300555	2011	100	25/01/2015
-1185	Unknown	Unknown	Unknown	300793	0	100	25/01/2015
-1186	Alexandra Stan - Mr. Saxobeat	Unknown	Unknown	300945	0	100	25/01/2015
-1187	Lady Gaga - Born This Way	Unknown	Unknown	301203	0	100	25/01/2015
-1188	Jessie J Feat. B.o.B - Price T	Unknown	Unknown	301425	0	100	25/01/2015
-1189	Jack Vidgen - Yes I Am	Unknown	Unknown	301640	0	100	25/01/2015
-1190	Jennifer Lopez Feat. Pitbull -	Unknown	Unknown	301876	0	100	25/01/2015
-1191	The Black Eyed Peas - Don't St	The Black Eyed Peas	The Beginning	302245	2010	100	25/01/2015
-1192	Stan Walker - Loud	Unknown	Unknown	302453	0	100	25/01/2015
-1193	Pete Murray - Always A Winner	Unknown	Unknown	302706	0	100	25/01/2015
-1194	Snoop Dogg Feat. T-Pain - Boom	Snoop Dogg/T-Pain	Doggumentary	302937	2011	100	25/01/2015
-1195	Amy Winehouse - Rehab	Unknown	Unknown	303153	0	100	25/01/2015
-1196	Nicole Scherzinger - Don't Hol	Unknown	Unknown	303351	0	100	25/01/2015
-1197	Unknown	Unknown	Unknown	303554	0	100	25/01/2015
-1198	Coldplay - Every Teardrop Is A	Unknown	Unknown	303797	0	100	25/01/2015
-1199	Demi Lovato - Skyscraper	Unknown	Unknown	304025	0	100	25/01/2015
-1200	Rihanna - Cheers (Drink To Tha	Rihanna	Loud [Clean]	304288	2010	100	25/01/2015
-1201	LMFAO - Sexy And I Know It	Unknown	Unknown	304488	0	100	25/01/2015
-1202	Cold Chisel - Khe Sanh	Various Artists	Australian Cricket's Classic C	304742	2003	100	25/01/2015
-1203	Marvin Priest - Own This Club	Unknown	Unknown	304947	0	100	25/01/2015
-1204	Adele - Set Fire To The Rain	Adele	21	305190	2011	100	25/01/2015
-1205	Someone Like You	Adele	21	305476	2011	100	25/01/2015
-1206	Unknown	Unknown	Unknown	305726	0	100	25/01/2015
-1207	Unknown	Unknown	Unknown	305927	0	100	25/01/2015
-1208	Give Me Everything (feat. Ne-Y	Pitbull	Give Me Everything (feat. Ne-Y	306186	2011	100	25/01/2015
-1209	Sweat (David Guetta Remix)	Snoop Dogg & David Guetta	Sweat (David Guetta Remix) - S	306385	2011	100	25/01/2015
-1210	Someone Like You	Adele Adkins/Dan Wilson	21	306672	2011	100	25/01/2015
-1211	Yoü & I	Lady GaGa	Unknown	306979	0	100	25/01/2015
-1212	Just Can't Get Enough	Black Eyed Peas	The Beginning (Deluxe Edition)	307198	2010	100	25/01/2015
-1213	Rolling In the Deep	Adele	Rolling In the Deep - Single	307427	2010	100	25/01/2015
-1214	What The Hell	Avril Lavigne/Max Martin/Shellback	What The Hell - Single	307646	2011	100	25/01/2015
-1215	Hold It Against Me	Britney Spears	Hold It Against Me - Single	307877	2011	100	25/01/2015
-1216	Grenade	Bruno Mars	Grenade - Single	308100	2010	100	25/01/2015
-1217	ÿþY o u   M a k e   M e   F e e l . . . ( f e a t .   S a b i )	Unknown	ÿþY o u   M a k e   M e   F e e l . . .   ( f e a t .   S a b i )   -   S i n g l e	308322	0	100	25/01/2015
-1218	Who's That Chick (Radio Edit)	David Guetta feat. Rihanna	One More Love	308487	2010	100	25/01/2015
-1219	Unknown	Unknown	Unknown	308694	0	100	25/01/2015
-1220	Unknown	Unknown	Unknown	308957	0	100	25/01/2015
-1221	ÿþN o t   O v e r   Y o u	ÿþG a v i n   D e G r a w   &   R y a n   T e d d e r	ÿþN o t   O v e r   Y o u   -   S i n g l e	309178	0	100	25/01/2015
-1222	On The Floor (Feat. Pitbull)	Jennifer Lopez	Unknown	309461	2011	100	25/01/2015
-1223	Nobody's Perfect	Jessie J	Who You Are	309725	2011	100	25/01/2015
-1224	All Of The Lights	Kanye West feat. Rihanna	My Beautiful Dark Twisted Fant	309916	2010	100	25/01/2015
-1225	Firework	Katy Perry	Teenage Dream	310146	2010	100	25/01/2015
-1226	Teenage Dream	Katy Perry	Teenage Dream	310374	2010	100	25/01/2015
-1227	Blow	Ke$ha	Blow - Single	310598	2010	100	25/01/2015
-1228	Party Rock Anthem	LMFAO	Party Rock Anthem - Single	310865	2011	100	25/01/2015
-1229	Moves Like Jagger (feat. Chris	Maroon 5	Moves Like Jagger (feat. Chris	311069	2011	100	25/01/2015
-1230	Just A Dream	Nelly	5.0	311307	2010	100	25/01/2015
-1231	Good Life (New Mix Version)	OneRepublic	Good Life - Single	311556	2010	100	25/01/2015
-1232	Raise Your Glass	P!nk	Raise Your Glass - Single	311761	2010	100	25/01/2015
-1233	FucKIN Perfect	Pink	Greatest Hits... So Far!!!	311975	2010	100	25/01/2015
-1234	California King Bed	Rihanna	Loud	312226	2010	100	25/01/2015
-1235	Cheers (Drink To That)	Rihanna	Loud	312530	2010	100	25/01/2015
-1236	Only Girl (In The World)	Rihanna  | www.RNBxBeatz.com	www.RNBxBeatz.com	312774	2010	100	25/01/2015
-1237	S&M	Rihanna	Loud [Clean]	313018	2010	100	25/01/2015
-1238	What's My Name?	Rihanna	Loud [Clean]	313275	2010	100	25/01/2015
-1239	The Time (The Dirty Bit)	The Black Eyed Peas	The Beginning	313586	2010	100	25/01/2015
-1240	Invincible (feat. Kelly Rowlan	Tinie Tempah	Disc-Overy	313791	2010	100	25/01/2015
-1241	Real Real Gone	Van Morrison	Enlightenment	314012	1990	100	25/01/2015
-1242	Enlightenment	Van Morrison	Enlightenment	314258	1990	100	25/01/2015
-1243	So Quiet in Here	Van Morrison	Enlightenment	314635	1990	100	25/01/2015
-1244	Avalon of the Heart	Van Morrison	Enlightenment	314925	1990	100	25/01/2015
-1245	See Me Through	Van Morrison	Enlightenment	315305	1990	100	25/01/2015
-1246	Youth of 1,000 Summers	Van Morrison	Enlightenment	315529	1990	100	25/01/2015
-1247	In the Days Before Rock'N'Roll	Van Morrison	Enlightenment	316021	1990	100	25/01/2015
-1248	Start All over Again	Van Morrison	Enlightenment	316275	1990	100	25/01/2015
-1249	She's My Baby	Van Morrison	Enlightenment	316592	1990	100	25/01/2015
-1250	Memories	Van Morrison	Enlightenment	316853	1990	100	25/01/2015
-1251	Before Too Long	Paul Kelly & The Coloured Girl	Edge of the 80s - Heart Of The	317056	1988	100	25/01/2015
-1252	Rock Me Amadeus	Falco	Edge of the 80s - Heart Of The	317258	1988	100	25/01/2015
-1253	Take On Me	A-Ha	Edge of the 80s - Heart Of The	317488	1988	100	25/01/2015
-1254	She Bop	Cyndi Lauper	Edge of the 80s - Heart Of The	317716	1988	100	25/01/2015
-1255	Wouldn't it be Good	Nik Kershaw	Edge of the 80s - Heart Of The	317983	1988	100	25/01/2015
-1256	No One Is To Blame	Howard Jones	Edge of the 80s - Heart Of The	318236	1988	100	25/01/2015
-1257	Love Resurrection	Alison Moyet	Edge of the 80s - Heart Of The	318469	1988	100	25/01/2015
-1258	Shout To The Top	The Style Council	Edge of the 80s - Heart Of The	318668	1988	100	25/01/2015
-1259	Out Of Mind Out Of Sight	Models	Edge of the 80s - Heart Of The	318884	1988	100	25/01/2015
+1	Heaven Beside You	Alice In Chains	Alice In Chain's Greatest Hits	331	2001	100	27/01/2015
+2	Them Bones	Alice In Chains	Dirt	482	1992	100	27/01/2015
+3	Dam That River	Alice In Chains	Dirt	672	1992	100	27/01/2015
+4	Rain When I Die	Alice In Chains	Dirt	1034	1992	100	27/01/2015
+5	Sickman	Alice In Chains	Dirt	1364	1992	100	27/01/2015
+6	Rooster	Alice In Chains	Dirt	1740	1992	100	27/01/2015
+7	Junkhead	Alice In Chains	Dirt	2050	1992	100	27/01/2015
+8	Dirt	Alice In Chains	Dirt	2367	1992	100	27/01/2015
+9	God Smack	Alice In Chains	Dirt	2598	1992	100	27/01/2015
+10	Intro (Dream Sequence)	Alice In Chains	Dirt	2642	1992	100	27/01/2015
+11	Hate To Feel	Alice In Chains	Dirt	2959	1992	100	27/01/2015
+12	Angry Chair	Alice In Chains	Dirt	3247	1992	100	27/01/2015
+13	Down In A Hole	Alice In Chains	Dirt	3586	1992	100	27/01/2015
+14	Would?	Alice In Chains	Dirt	3795	1992	100	27/01/2015
+15	Man In The Box	Alice In Chains	Facelift	4086	1990	100	27/01/2015
+16	Sea Of Sorrow	Alice In Chains	Facelift	4440	1990	100	27/01/2015
+17	Nutshell	Alice In Chains	Jar Of Flies	4701	1993	100	27/01/2015
+18	A Little Bitter	Alice In Chains	Last Action Hero Soundtrack	4937	1993	100	27/01/2015
+19	Animals	Nickelback	All the Right Reasons	5126	2005	100	27/01/2015
+20	Far away	Nickelback	All the Right Reasons	5367	2005	100	27/01/2015
+21	Fight for all the wrong reason	Nickelback	All the Right Reasons	5594	2005	100	27/01/2015
+22	Follow you home	Nickelback	All the Right Reasons	5857	2005	100	27/01/2015
+23	If everyone cared	Nickelback	All the Right Reasons	6077	2005	100	27/01/2015
+24	Next contestant	Nickelback	All the Right Reasons	6294	2005	100	27/01/2015
+25	Photograph	Nickelback	All the Right Reasons	6555	2005	100	27/01/2015
+26	Rockstar	Nickelback	All the Right Reasons	6816	2005	100	27/01/2015
+27	Savin' me	Nickelback	All the Right Reasons	7038	2005	100	27/01/2015
+28	Side of a bullet	Nickelback	All the Right Reasons	7221	2005	100	27/01/2015
+29	Some day (Live-acoustic)	Nickelback	All the Right Reasons	7426	2005	100	27/01/2015
+30	Someone that you're with	Nickelback	All the Right Reasons	7670	2005	100	27/01/2015
+31	Revelations	Audioslave	Revelations	7923	2006	100	27/01/2015
+32	One and the Same	Audioslave	Revelations	8142	2006	100	27/01/2015
+33	Sound of a Gun	Audioslave	Revelations	8403	2006	100	27/01/2015
+34	Until We Fall	Audioslave	Revelations	8634	2006	100	27/01/2015
+35	Original Fire	Audioslave	Revelations	8853	2006	100	27/01/2015
+36	Broken City	Audioslave	Revelations	9082	2006	100	27/01/2015
+37	Somedays	Audioslave	Revelations	9297	2006	100	27/01/2015
+38	Shape of Things to Come	Audioslave	Revelations	9572	2006	100	27/01/2015
+39	Jewel of the Summertime	Audioslave	Revelations	9807	2006	100	27/01/2015
+40	Wide Awake	Audioslave	Revelations	10074	2006	100	27/01/2015
+41	Nothing Left to Say But Goodby	Audioslave	Revelations	10288	2006	100	27/01/2015
+42	Moth	Audioslave	Revelations	10586	2006	100	27/01/2015
+43	White Wedding	Billy Idol	Wedding Singer	10836	1998	100	27/01/2015
+44	Concrete Jungle	Black Label Society	Shot to Hell	11040	2006	100	27/01/2015
+45	Huge	Boris	Amplifier Worship	11595	1998	100	27/01/2015
+46	Ganbou-Ki	Boris	Amplifier Worship	12540	1998	100	27/01/2015
+47	Hama	Boris	Amplifier Worship	12991	1998	100	27/01/2015
+48	Kuruimizu	Boris	Amplifier Worship	13858	1998	100	27/01/2015
+49	Vomitself	Boris	Amplifier Worship	14875	1998	100	27/01/2015
+50	Farewell	Boris	Pink	15329	2005	100	27/01/2015
+51	Pink	Boris	Pink	15590	2005	100	27/01/2015
+52	Woman On The Screen	Boris	Pink	15749	2005	100	27/01/2015
+53	Nothing Special	Boris	Pink	15888	2005	100	27/01/2015
+54	Blackout	Boris	Pink	16179	2005	100	27/01/2015
+55	Electric	Boris	Pink	16285	2005	100	27/01/2015
+56	Pseudo-Bread	Boris	Pink	16556	2005	100	27/01/2015
+57	Afterburner	Boris	Pink	16819	2005	100	27/01/2015
+58	Six, Three Times	Boris	Pink	16993	2005	100	27/01/2015
+59	My Machine	Boris	Pink	17115	2005	100	27/01/2015
+60	Just Abondoned My-Self	Boris	Pink	18210	2005	100	27/01/2015
+61	Make It With You	Bread	Anthology	18402	1970	100	27/01/2015
+62	Dismal Day	Bread	Anthology	18538	1985	100	27/01/2015
+63	London Bridge	Bread	Anthology	18689	1985	100	27/01/2015
+64	Anyway You Want Me	Bread	Anthology	18876	1985	100	27/01/2015
+65	Look What You've Done	Bread	Anthology	19067	1970	100	27/01/2015
+66	It Don't Matter To Me	Bread	Anthology	19236	1970	100	27/01/2015
+67	The Last Time	Bread	Anthology	19479	1985	100	27/01/2015
+68	Let Your Love Go	Bread	Anthology	19620	1985	100	27/01/2015
+69	Truckin'	Bread	Anthology	19771	1971	100	27/01/2015
+70	If	Bread	Anthology	19925	1971	100	27/01/2015
+71	Baby I'm-A Want You	Bread	Anthology	20071	1972	100	27/01/2015
+72	Everything I Own	Bread	Anthology	20257	1972	100	27/01/2015
+73	Down On My Knees	Bread	Anthology	20420	1972	100	27/01/2015
+74	Aubrey	Bread	Anthology	20637	1985	100	27/01/2015
+75	Diary	Bread	Anthology	20824	1972	100	27/01/2015
+76	Sweet Surrender	Bread	Anthology	20979	1985	100	27/01/2015
+77	The Guitar Man	Bread	Anthology	21203	1972	100	27/01/2015
+78	Fancy Dancer	Bread	Anthology	21413	1985	100	27/01/2015
+79	She's The Only One	Bread	Anthology	21591	1985	100	27/01/2015
+80	Lost Without Your Love	Bread	Anthology	21764	1977	100	27/01/2015
+81	The Diary Of Jane	Breaking Benjamin	Phobia	21968	2006	100	27/01/2015
+82	So Cold	Breaking Benjamin	We Are Not Alone	22255	2004	100	27/01/2015
+83	Hit That Perfect Beat	Bronski Beat	Truthdare Doubledare	22493	1986	100	27/01/2015
+84	Truthdare Doubledare	Bronski Beat	Truthdare Doubledare	22700	1986	100	27/01/2015
+85	C'mon! C'mon!	Bronski Beat	Truthdare Doubledare	22937	1986	100	27/01/2015
+86	Punishment for Love	Bronski Beat	Truthdare Doubledare	23136	1986	100	27/01/2015
+87	We Know How It Feels	Bronski Beat	Truthdare Doubledare	23326	1986	100	27/01/2015
+88	This Heart	Bronski Beat	Truthdare Doubledare	23531	1986	100	27/01/2015
+89	Do It	Bronski Beat	Truthdare Doubledare	23770	1986	100	27/01/2015
+90	Dr. John	Bronski Beat	Truthdare Doubledare	24028	1986	100	27/01/2015
+91	In My Dreams	Bronski Beat	Truthdare Doubledare	24230	1986	100	27/01/2015
+92	What Are Your Going to Do Abou	Bronski Beat	Truthdare Doubledare	24468	1986	100	27/01/2015
+93	C'mon C'mon (12" Extended Mix)	Bronski Beat	Truthdare Doubledare	24725	1986	100	27/01/2015
+94	Hit That Perfect Beat [12" Ver	Bronski Beat	Truthdare Doubledare	24954	1986	100	27/01/2015
+95	I Gave You Everything [*]	Bronski Beat	Truthdare Doubledare	25213	1986	100	27/01/2015
+96	Track 14	Bronski Beat	Truthdare Doubledare	25447	1986	100	27/01/2015
+97	Track 15	Bronski Beat	Truthdare Doubledare	25898	1986	100	27/01/2015
+98	Summer of '69	Bryan Adams	So Far So Good	26112	1993	100	27/01/2015
+99	Straight from the Heart	Bryan Adams	So Far So Good	26321	1993	100	27/01/2015
+100	It's Only Love	Bryan Adams	So Far So Good	26516	1993	100	27/01/2015
+101	Can't Stop This Thing We Start	Bryan Adams	So Far So Good	26784	1993	100	27/01/2015
+102	Do I Have to Say the Words?	Bryan Adams	So Far So Good	27154	1993	100	27/01/2015
+103	This Time	Bryan Adams	So Far So Good	27353	1993	100	27/01/2015
+104	Run to You	Bryan Adams	So Far So Good	27586	1993	100	27/01/2015
+105	Heaven	Bryan Adams	So Far So Good	27829	1993	100	27/01/2015
+106	Cuts Like a Knife	Bryan Adams	So Far So Good	28141	1993	100	27/01/2015
+107	(Everything I Do) I Do It for	Bryan Adams	So Far So Good	28535	1993	100	27/01/2015
+108	Somebody	Bryan Adams	So Far So Good	28817	1993	100	27/01/2015
+109	Kids Wanna Rock	Bryan Adams	So Far So Good	28972	1993	100	27/01/2015
+110	Heat of the Night	Bryan Adams	So Far So Good	29277	1993	100	27/01/2015
+111	Please Forgive Me	Bryan Adams	So Far So Good	29633	1993	100	27/01/2015
+112	Act on Instinct	Frank Klepacki	Command & Conquer OST	29805	1994	100	27/01/2015
+113	No Mercy	Frank Klepacki	Command & Conquer OST	30006	1994	100	27/01/2015
+114	Industrial One	Frank Klepacki	Command & Conquer OST	30179	1994	100	27/01/2015
+115	Iron Fist	Frank Klepacki	Command & Conquer OST	30389	1994	100	27/01/2015
+116	We Will Stop Them	Frank Klepacki	Command & Conquer OST	30578	1994	100	27/01/2015
+117	Radio	Frank Klepacki	Command & Conquer OST	30759	1994	100	27/01/2015
+118	On the Prowl	Frank Klepacki	Command & Conquer OST	30941	1994	100	27/01/2015
+119	Re-con	Frank Klepacki	Command & Conquer OST	31203	1994	100	27/01/2015
+120	Drone	Frank Klepacki	Command & Conquer OST	31475	1994	100	27/01/2015
+121	In the Line of Fire	Frank Klepacki	Command & Conquer OST	31599	1994	100	27/01/2015
+122	Prepare for Battle	Frank Klepacki	Command & Conquer OST	31808	1994	100	27/01/2015
+123	Depth Charge	Frank Klepacki	Command & Conquer OST	32063	1994	100	27/01/2015
+124	Rain in the Night	Frank Klepacki	Command & Conquer OST	32217	1994	100	27/01/2015
+125	Creeping Upon	Frank Klepacki	Command & Conquer OST	32434	1994	100	27/01/2015
+126	Target	Frank Klepacki	Command & Conquer OST	32606	1994	100	27/01/2015
+127	Just Do It Up	Frank Klepacki	Command & Conquer OST	32748	1994	100	27/01/2015
+128	C&C Thang	Frank Klepacki	Command & Conquer OST	32940	1994	100	27/01/2015
+129	To Be Feared	Frank Klepacki	Command & Conquer OST	33105	1994	100	27/01/2015
+130	Drill	Frank Klepacki	Command & Conquer OST	33372	1994	100	27/01/2015
+131	Full Stop	Frank Klepacki	Command & Conquer OST	33553	1994	100	27/01/2015
+132	In Trouble	Frank Klepacki	Command & Conquer OST	33765	1994	100	27/01/2015
+133	Air Strike	Frank Klepacki	Command & Conquer OST	33962	1994	100	27/01/2015
+134	Hell March	Frank Klepacki	C&C Red Alert OST	34346	2000	100	27/01/2015
+135	Radio	Frank Klepacki	C&C Red Alert OST	34591	2000	100	27/01/2015
+136	Crush	Frank Klepacki	C&C Red Alert OST	34820	2000	100	27/01/2015
+137	Roll Out	Frank Klepacki	C&C Red Alert OST	35055	2000	100	27/01/2015
+138	Mud	Frank Klepacki	C&C Red Alert OST	35343	2000	100	27/01/2015
+139	Twin Cannon	Frank Klepacki	C&C Red Alert OST	35578	2000	100	27/01/2015
+140	Face the Enemy	Frank Klepacki	C&C Red Alert OST	35914	2000	100	27/01/2015
+141	Run	Frank Klepacki	C&C Red Alert OST	36227	2000	100	27/01/2015
+142	Terminate	Frank Klepacki	C&C Red Alert OST	36547	2000	100	27/01/2015
+143	Big Foot	Frank Klepacki	C&C Red Alert OST	36862	2000	100	27/01/2015
+144	Workmen	Frank Klepacki	C&C Red Alert OST	37146	2000	100	27/01/2015
+145	Militant Force	Frank Klepacki	C&C Red Alert OST	37256	2000	100	27/01/2015
+146	Dense	Frank Klepacki	C&C Red Alert OST	37558	2000	100	27/01/2015
+147	Vector	Frank Klepacki	C&C Red Alert OST	37816	2000	100	27/01/2015
+148	Smash	Frank Klepacki	C&C Red Alert OST	38303	2000	100	27/01/2015
+149	Hell March 2	Frank Klepacki	C&C Red Alert 2 OST	38527	2000	100	27/01/2015
+150	Industrofunk	Frank Klepacki	C&C Red Alert 2 OST	38719	2000	100	27/01/2015
+151	Ready The Army	Frank Klepacki	C&C Red Alert 2 OST	39016	2000	100	27/01/2015
+152	Grinder	Frank Klepacki	C&C Red Alert 2 OST	39163	2000	100	27/01/2015
+153	In Deep	Frank Klepacki	C&C Red Alert 2 OST	39367	2000	100	27/01/2015
+154	Motorized	Frank Klepacki	C&C Red Alert 2 OST	39609	2000	100	27/01/2015
+155	Power	Frank Klepacki	C&C Red Alert 2 OST	39845	2000	100	27/01/2015
+156	200 Meters	Frank Klepacki	C&C Red Alert 2 OST	40097	2000	100	27/01/2015
+157	Destroy	Frank Klepacki	C&C Red Alert 2 OST	40375	2000	100	27/01/2015
+158	Burn	Frank Klepacki	C&C Red Alert 2 OST	40652	2000	100	27/01/2015
+159	Probing	Frank Klepacki	C&C Red Alert 2 OST	40911	2000	100	27/01/2015
+160	Blow It Up	Frank Klepacki	C&C Red Alert 2 OST	41102	2000	100	27/01/2015
+161	Eagle Hunter	Frank Klepacki	C&C Red Alert 2 OST	41358	2000	100	27/01/2015
+162	Fortification	Frank Klepacki	C&C Red Alert 2 OST	41600	2000	100	27/01/2015
+163	Jank	Frank Klepacki	C&C Red Alert 2 OST	41826	2000	100	27/01/2015
+164	C&C In The House	Frank Klepacki	C&C Red Alert 2 OST	42072	2000	100	27/01/2015
+165	Timebomb	Frank Klepacki	C&C Tiberian Sun OST	42199	2000	100	27/01/2015
+166	Pharotek	Frank Klepacki	C&C Tiberian Sun OST	42480	2000	100	27/01/2015
+167	Lone Trooper	Frank Klepacki	C&C Tiberian Sun OST	42762	2000	100	27/01/2015
+168	Scouting	Frank Klepacki	C&C Tiberian Sun OST	43019	2000	100	27/01/2015
+169	Infrared	Frank Klepacki	C&C Tiberian Sun OST	43290	2000	100	27/01/2015
+170	Flurry	Frank Klepacki	C&C Tiberian Sun OST	43545	2000	100	27/01/2015
+171	Mutants	Frank Klepacki	C&C Tiberian Sun OST	43800	2000	100	27/01/2015
+172	Gloom	Frank Klepacki	C&C Tiberian Sun OST	44041	2000	100	27/01/2015
+173	Heroism	Frank Klepacki	C&C Tiberian Sun OST	44284	2000	100	27/01/2015
+174	Approach	Frank Klepacki	C&C Tiberian Sun OST	44567	2000	100	27/01/2015
+175	Dusk Hour	Frank Klepacki	C&C Tiberian Sun OST	44825	2000	100	27/01/2015
+176	The Defense	Frank Klepacki	C&C Tiberian Sun OST	45070	2000	100	27/01/2015
+177	Mad Rap	Frank Klepacki	C&C Tiberian Sun OST	45343	2000	100	27/01/2015
+178	Valves	Frank Klepacki	C&C Tiberian Sun OST	45605	2000	100	27/01/2015
+179	What Lurks	Frank Klepacki	C&C Tiberian Sun OST	45922	2000	100	27/01/2015
+180	Score	Frank Klepacki	C&C Tiberian Sun OST	46031	2000	100	27/01/2015
+181	Square One	Coldplay	X&Y	46318	2005	100	27/01/2015
+182	What If	Coldplay	X&Y	46615	2005	100	27/01/2015
+183	White Shadows	Coldplay	X&Y	46943	2005	100	27/01/2015
+184	Fix You	Coldplay	X&Y	47238	2005	100	27/01/2015
+185	Talk	Coldplay	X&Y	47549	2005	100	27/01/2015
+186	X&Y	Coldplay	X&Y	47823	2005	100	27/01/2015
+187	Speed of Sound	Coldplay	X&Y	48111	2005	100	27/01/2015
+188	A Message	Coldplay	X&Y	48396	2005	100	27/01/2015
+189	Low	Coldplay	X&Y	48728	2005	100	27/01/2015
+190	The Hardest Part	Coldplay	X&Y	48993	2005	100	27/01/2015
+191	Swallowed in the Sea	Coldplay	X&Y	49232	2005	100	27/01/2015
+192	Twisted Logic	Coldplay	X&Y	49533	2005	100	27/01/2015
+193	Til Kingdom Come [Hidden Track	Coldplay	X&Y	49783	2005	100	27/01/2015
+194	Angel	Massive Attack	Collected	50158	2006	100	27/01/2015
+195	Butterfly Caught	Massive Attack	Collected	50467	2006	100	27/01/2015
+196	Five Man Army	Massive Attack	Collected	50789	2006	100	27/01/2015
+197	Future Proof	Massive Attack	Collected	51132	2006	100	27/01/2015
+198	Inertia Creeps	Massive Attack	Collected	51487	2006	100	27/01/2015
+199	Karmacoma	Massive Attack	Collected	51801	2006	100	27/01/2015
+200	Live With Me	Massive Attack	Collected	52092	2006	100	27/01/2015
+201	Protection	Massive Attack	Collected	52558	2006	100	27/01/2015
+202	Risingson	Massive Attack	Collected	52856	2006	100	27/01/2015
+203	Safe From Harm	Massive Attack	Collected	53176	2006	100	27/01/2015
+204	Sly	Massive Attack	Collected	53473	2006	100	27/01/2015
+205	Teardrop	Massive Attack	Collected	53801	2006	100	27/01/2015
+206	Unfinished Sympathy	Massive Attack	Collected	54114	2006	100	27/01/2015
+207	What Your Soul Sings	Massive Attack	Collected	54512	2006	100	27/01/2015
+208	Revelations	Audioslave	Revelations	54765	2006	100	27/01/2015
+209	Them Bones	Alice In Chains	Dirt	54916	1992	100	27/01/2015
+210	Dam That River	Alice In Chains	Dirt	55106	1992	100	27/01/2015
+211	One And The Same	Audioslave	Revelations	55325	2006	100	27/01/2015
+212	Rain When I Die	Alice In Chains	Dirt	55687	1992	100	27/01/2015
+213	Sound Of A Gun	Audioslave	Revelations	55948	2006	100	27/01/2015
+214	Take On Me	A-Ha	Edge of the 80s - Heart Of The	56178	1988	100	27/01/2015
+215	Sickman	Alice In Chains	Dirt	56508	1992	100	27/01/2015
+216	Until We Fall	Audioslave	Revelations	56739	2006	100	27/01/2015
+217	Original Fire	Audioslave	Revelations	56958	2006	100	27/01/2015
+218	Rooster	Alice In Chains	Dirt	57334	1992	100	27/01/2015
+219	Broken City	Audioslave	Revelations	57563	2006	100	27/01/2015
+220	Junkhead	Alice In Chains	Dirt	57873	1992	100	27/01/2015
+221	Dirt	Alice In Chains	Dirt	58190	1992	100	27/01/2015
+222	Love Resurrection	Alison Moyet	Edge of the 80s - Heart Of The	58423	1988	100	27/01/2015
+223	Somedays	Audioslave	Revelations	58638	2006	100	27/01/2015
+224	God Smack	Alice In Chains	Dirt	58869	1992	100	27/01/2015
+225	Shape Of Things To Come	Audioslave	Revelations	59144	2006	100	27/01/2015
+226	Intro (Dream Sequence)	Alice In Chains	Dirt	59188	1992	100	27/01/2015
+227	Jewel Of The Summertime	Audioslave	Revelations	59423	2006	100	27/01/2015
+228	Hate To Feel	Alice In Chains	Dirt	59740	1992	100	27/01/2015
+229	Wide Awake	Audioslave	Revelations	60007	2006	100	27/01/2015
+230	Angry Chair	Alice In Chains	Dirt	60295	1992	100	27/01/2015
+231	Nothing Left To Say But Goodby	Audioslave	Revelations	60509	2006	100	27/01/2015
+232	Down In A Hole	Alice In Chains	Dirt	60848	1992	100	27/01/2015
+233	Long Way to Go	André 3000	Love.Angel.Music.Baby [Bonus T	61138	2004	100	27/01/2015
+234	Moth	Audioslave	Revelations	61436	2006	100	27/01/2015
+235	Would?	Alice In Chains	Dirt	61645	1992	100	27/01/2015
+236	A Little Bitter	Alice In Chains	Last Action Hero Soundtrack	61881	1993	100	27/01/2015
+237	Its a long way to the top	ACDC	TNT	62198	1976	100	27/01/2015
+238	Man in the Box	Alice In Chains	Facelift	62485	1991	100	27/01/2015
+239	Nutshell	Alice in Chains	Jar of Flies	62744	1994	100	27/01/2015
+240	Sea Of Sorrow	Alice In Chains	Facelift	63094	1990	100	27/01/2015
+241	Bat Country	Avenged Sevenfold	Avenged Sevenfold	63407	2007	100	27/01/2015
+242	Beast And The Harlot	Avenged Sevenfold	Avenged Sevenfold	63748	2007	100	27/01/2015
+243	White Wedding	Billy Idol	Wedding Singer	63998	1998	100	27/01/2015
+244	Blue Oyster Cult - Dont Fear T	Blue Öyster Cult	Agents of Fortune	64250	1976	100	27/01/2015
+245	Love Letters	Bonnie Raitt	Duets	64491	1993	100	27/01/2015
+246	Concrete Jungle	Black Label Society	Shot to Hell	64695	2006	100	27/01/2015
+247	Heaven Beside You	Alice In Chains	Alice in chains	65024	1996	100	27/01/2015
+248	Don't Let Me Be Misunderstood	Animals	Best of the Animals [ABKCO]	65172	1988	100	27/01/2015
+249	All the Way	Craig David	The Story Goes...	65408	2005	100	27/01/2015
+250	Don't Love You No More (I'm So	Craig David	The Story Goes...	65652	2005	100	27/01/2015
+251	Hypnotic	Craig David	The Story Goes...	65911	2005	100	27/01/2015
+252	Separate Ways	Craig David	The Story Goes...	66152	2005	100	27/01/2015
+253	Johnny	Craig David	The Story Goes...	66412	2005	100	27/01/2015
+254	Do You Believe in Love	Craig David	The Story Goes...	66638	2005	100	27/01/2015
+255	One Last Dance	Craig David	The Story Goes...	66865	2005	100	27/01/2015
+256	Unbelievable	Craig David	The Story Goes...	67067	2005	100	27/01/2015
+257	Just Chillin'	Craig David	The Story Goes...	67348	2005	100	27/01/2015
+258	Theif in the Night	Craig David	The Story Goes...	67614	2005	100	27/01/2015
+259	Take 'Em Off	Craig David	The Story Goes...	67860	2005	100	27/01/2015
+260	My Love Don't Stop	Craig David	The Story Goes...	68112	2005	100	27/01/2015
+261	Let Her Go	Craig David	The Story Goes...	68354	2005	100	27/01/2015
+262	White Flag	Dido	Life for Rent	68596	2003	100	27/01/2015
+263	Stoned	Dido	Life for Rent	68951	2003	100	27/01/2015
+264	Life for Rent	Dido	Life for Rent	69172	2003	100	27/01/2015
+265	Mary's in India	Dido	Life for Rent	69393	2003	100	27/01/2015
+266	See You When You're 40	Dido	Life for Rent	69713	2003	100	27/01/2015
+267	Don't Leave Home	Dido	Life for Rent	69940	2003	100	27/01/2015
+268	Who Makes You Feel	Dido	Life for Rent	70201	2003	100	27/01/2015
+269	Sand in My Shoes	Dido	Life for Rent	70500	2003	100	27/01/2015
+270	Do You Have a Little Time	Dido	Life for Rent	70735	2003	100	27/01/2015
+271	This Land Is Mine	Dido	Life for Rent	70961	2003	100	27/01/2015
+272	See the Sun	Dido	Life for Rent	71596	2003	100	27/01/2015
+273	Sultans of Swing	Dire Straits	Sultans of Swing: The Very Bes	71946	1998	100	27/01/2015
+274	Lady Writer	Dire Straits	Sultans of Swing: The Very Bes	72175	1998	100	27/01/2015
+275	Romeo and Juliet	Dire Straits	Sultans of Swing: The Very Bes	72540	1998	100	27/01/2015
+276	Tunnel of Love	Dire Straits	Sultans of Swing: The Very Bes	73034	1998	100	27/01/2015
+277	Private Investigations	Dire Straits	Sultans of Swing: The Very Bes	73388	1998	100	27/01/2015
+278	Twisting by the Pool	Dire Straits	Sultans of Swing: The Very Bes	73604	1998	100	27/01/2015
+279	Love Over Gold [Live]	Dire Straits	Sultans of Swing: The Very Bes	73824	1998	100	27/01/2015
+280	So Far Away	Dire Straits	Sultans of Swing: The Very Bes	74067	1998	100	27/01/2015
+281	Money for Nothing	Dire Straits	Sultans of Swing: The Very Bes	74316	1998	100	27/01/2015
+282	Brothers in Arms	Dire Straits	Sultans of Swing: The Very Bes	74611	1998	100	27/01/2015
+283	Walk of Life	Dire Straits	Sultans of Swing: The Very Bes	74863	1998	100	27/01/2015
+284	Calling Elvis	Dire Straits	Sultans of Swing: The Very Bes	75144	1998	100	27/01/2015
+285	Heavy Fuel	Dire Straits	Sultans of Swing: The Very Bes	75445	1998	100	27/01/2015
+286	On Every Street	Dire Straits	Sultans of Swing: The Very Bes	75724	1998	100	27/01/2015
+287	Your Latest Trick [Live]	Dire Straits	Sultans of Swing: The Very Bes	76065	1998	100	27/01/2015
+288	Local Hero/Wild Theme [Live]	Dire Straits	Sultans of Swing: The Very Bes	76329	1998	100	27/01/2015
+289	Prayer	Disturbed	Believe	76552	2002	100	27/01/2015
+290	Liberate	Disturbed	Believe	76764	2002	100	27/01/2015
+291	Awaken	Disturbed	Believe	77035	2002	100	27/01/2015
+292	Believe	Disturbed	Believe	77304	2002	100	27/01/2015
+293	Remember	Disturbed	Believe	77557	2002	100	27/01/2015
+294	Intoxication	Disturbed	Believe	77753	2002	100	27/01/2015
+295	Rise	Disturbed	Believe	77993	2002	100	27/01/2015
+296	Mistress	Disturbed	Believe	78222	2002	100	27/01/2015
+297	Breathe	Disturbed	Believe	78486	2002	100	27/01/2015
+298	Bound	Disturbed	Believe	78722	2002	100	27/01/2015
+299	Devour	Disturbed	Believe	78957	2002	100	27/01/2015
+300	Darkness	Disturbed	Believe	79197	2002	100	27/01/2015
+301	Stricken	Disturbed	Ten Thousand Fists	79445	2005	100	27/01/2015
+302	Voices	Disturbed	The Sickness [Bonus Tracks]	79637	2002	100	27/01/2015
+303	Down With the Sickness	Disturbed	The Sickness [Bonus Tracks]	79916	2002	100	27/01/2015
+304	Violence Fetish	Disturbed	The Sickness [Bonus Tracks]	80120	2002	100	27/01/2015
+305	Fear	Disturbed	The Sickness [Bonus Tracks]	80347	2002	100	27/01/2015
+306	Numb	Disturbed	The Sickness [Bonus Tracks]	80572	2002	100	27/01/2015
+307	Want	Disturbed	The Sickness [Bonus Tracks]	80805	2002	100	27/01/2015
+308	Conflict	Disturbed	The Sickness [Bonus Tracks]	81080	2002	100	27/01/2015
+309	Shout 2000	Disturbed	The Sickness [Bonus Tracks]	81338	2002	100	27/01/2015
+310	Droppin' Plates	Disturbed	The Sickness [Bonus Tracks]	81567	2002	100	27/01/2015
+311	Meaning of Life	Disturbed	The Sickness [Bonus Tracks]	81809	2002	100	27/01/2015
+312	God of the Mind [*]	Disturbed	The Sickness [Bonus Tracks]	81994	2002	100	27/01/2015
+313	Stupify [Live][*]	Disturbed	The Sickness [Bonus Tracks]	82287	2002	100	27/01/2015
+314	The Game [Live][*]	Disturbed	The Sickness [Bonus Tracks]	82519	2002	100	27/01/2015
+315	Voices [Live][*]	Disturbed	The Sickness [Bonus Tracks]	82735	2002	100	27/01/2015
+316	Down With the Sicknesss [Live]	Disturbed	The Sickness [Bonus Tracks]	83111	2002	100	27/01/2015
+317	Sylvia's Mother	Dr. Hook	Completely Hooked (The Best Of	83341	0	100	27/01/2015
+318	Cover Of The Rolling Stone	Dr. Hook	Completely Hooked (The Best Of	83515	0	100	27/01/2015
+319	Everybody's Makin' It Big But	Dr. Hook	Completely Hooked (The Best Of	83693	0	100	27/01/2015
+320	You Make My Pants Want To Get	Dr. Hook	Completely Hooked (The Best Of	83839	0	100	27/01/2015
+321	Sleepin' Late	Dr. Hook	Completely Hooked (The Best Of	84032	0	100	27/01/2015
+322	Only Sixteen	Dr. Hook	Completely Hooked (The Best Of	84199	0	100	27/01/2015
+323	Walk Right In	Dr. Hook	Completely Hooked (The Best Of	84386	0	100	27/01/2015
+324	Millionaire	Dr. Hook	Completely Hooked (The Best Of	84579	0	100	27/01/2015
+325	More Like The Movies	Dr. Hook	Completely Hooked (The Best Of	84803	0	100	27/01/2015
+326	When You're In Love With A Bea	Dr. Hook	Completely Hooked (The Best Of	85118	0	100	27/01/2015
+327	Sexy Eyes	Dr. Hook	Completely Hooked (The Best Of	85298	0	100	27/01/2015
+328	If Not You	Dr. Hook	Completely Hooked (The Best Of	85491	0	100	27/01/2015
+329	Little Bit More	Dr. Hook	Completely Hooked (The Best Of	85665	0	100	27/01/2015
+330	Sharing The Night Together	Dr. Hook	Completely Hooked (The Best Of	85840	0	100	27/01/2015
+331	I Don't Want To Be Alone Tonig	Dr. Hook	Completely Hooked (The Best Of	86045	0	100	27/01/2015
+332	Better Love Next Time	Dr. Hook	Completely Hooked (The Best Of	86228	0	100	27/01/2015
+333	In Over My Head	Dr. Hook	Completely Hooked (The Best Of	86450	0	100	27/01/2015
+334	Years From Now	Dr. Hook	Completely Hooked (The Best Of	86628	0	100	27/01/2015
+335	Sweetest Of All	Dr. Hook	Completely Hooked (The Best Of	86789	0	100	27/01/2015
+336	Couple More Years	Dr. Hook	Completely Hooked (The Best Of	86976	0	100	27/01/2015
+337	Purple Haze	Jimi Hendrix	The Ultimate Experience	87149	1993	100	27/01/2015
+338	Stinkfist	Tool	Ænima	87462	1996	100	27/01/2015
+339	You Again	Shihad	Killjoy	87740	1995	100	27/01/2015
+340	Bodies	Drowning Pool	Sinner	87944	2001	100	27/01/2015
+341	Praise	Sevendust	Animosity	88165	2001	100	27/01/2015
+342	The Unforgiven II	Metallica	Reload	88562	1997	100	27/01/2015
+343	All Along The Watchtower	Jimi Hendrix	The Ultimate Experience	88802	1993	100	27/01/2015
+344	Reminded	Drowning Pool	Sinner	89008	2001	100	27/01/2015
+345	Schism	Tool	Lateralus	89416	2001	100	27/01/2015
+346	Bad Seed	Metallica	Reload	89663	1997	100	27/01/2015
+347	The Call of Ktulu	Metallica	Ride The Lightning	90198	1984	100	27/01/2015
+348	Little Wing	Jimi Hendrix	The Ultimate Experience	90345	1993	100	27/01/2015
+349	Whiskey In The Jar	Metallica	Garage Inc. [Disc 1]	90651	1998	100	27/01/2015
+350	Foxy Lady	Jimi Hendrix	The Ultimate Experience	90851	1993	100	27/01/2015
+351	Ænema	Tool	Ænima	91252	1996	100	27/01/2015
+352	Tommy The Cat	Primus	Liger	91507	0	100	27/01/2015
+353	Voodoo Child (Slight Return)	Jimi Hendrix	The Ultimate Experience	91821	1993	100	27/01/2015
+354	BLACK BETTY	RAM JAM	pt001	92060	1996	100	27/01/2015
+355	The People That We Love (Speed	Bush	Golden State [Japan Bonus Trac	92303	2002	100	27/01/2015
+356	Dragonballz Theme Song	Unknown	Unknown	92363	0	100	27/01/2015
+357	Emerald	Mastodon	Remission	92593	2003	100	27/01/2015
+358	Just hate me	Pain	Nothing remains the same	92833	0	100	27/01/2015
+359	Stupify	Disturbed	The Sickness [Bonus Tracks]	93108	2002	100	27/01/2015
+360	The Game	Disturbed	The Sickness [Bonus Tracks]	93336	2002	100	27/01/2015
+361	Transformers Theme Song	White Lion	soundtrack	93551	1986	100	27/01/2015
+362	Two Tickets to Paradise	Eddie Money	Greatest Hits: The Sound of Mo	93787	1989	100	27/01/2015
+363	Love Letters	Bonnie Raitt	Duets	94028	1993	100	27/01/2015
+364	If You Were Me	Chris Rea	Duets	94294	1993	100	27/01/2015
+365	Shakey Ground	Don Henley	Duets	94525	1993	100	27/01/2015
+366	Teardrops	Elton John	Duets	94820	1993	100	27/01/2015
+367	When I Think About Love (I Thi	Elton John	Duets	95094	1993	100	27/01/2015
+368	The Power	Elton John	Duets	95479	1993	100	27/01/2015
+369	True Love	Elton John	Duets	95693	1993	100	27/01/2015
+370	A Woman's Needs	Elton John	Duets	96011	1993	100	27/01/2015
+371	Old Friend	Elton John	Duets	96267	1993	100	27/01/2015
+372	Go on and On	Elton John	Duets	96617	1993	100	27/01/2015
+373	Don't Go Breaking My Heart	Elton John	Duets	96917	1993	100	27/01/2015
+374	Ain't Nothing Like the Real Th	Elton John	Duets	97133	1993	100	27/01/2015
+375	I'm Your Puppet	Elton John	Duets	97349	1993	100	27/01/2015
+376	Born to Lose	Elton John	Duets	97622	1993	100	27/01/2015
+377	Don't Let the Sun Go Down on M	Elton John	Duets	97969	1993	100	27/01/2015
+378	Duets for One	Elton John	Duets	98261	1993	100	27/01/2015
+379	Funeral For A Friend/Love Lies	Elton John	The Collection	98928	0	100	27/01/2015
+380	Sweet painted lady	Elton John	The Collection	99160	0	100	27/01/2015
+381	Track 3	Elton John	The Collection	99372	0	100	27/01/2015
+382	Track 4	Elton John	The Collection	99581	0	100	27/01/2015
+383	Track 5	Elton John	The Collection	99734	0	100	27/01/2015
+384	Track 6	Elton John	The Collection	99938	0	100	27/01/2015
+385	Track 7	Elton John	The Collection	100170	0	100	27/01/2015
+386	Track 8	Elton John	The Collection	100471	0	100	27/01/2015
+387	Track 9	Elton John	The Collection	100722	0	100	27/01/2015
+388	Track 10	Elton John	The Collection	101031	0	100	27/01/2015
+389	Track 11	Elton John	The Collection	101372	0	100	27/01/2015
+390	Track 12	Elton John	The Collection	101539	0	100	27/01/2015
+391	Track 13	Elton John	The Collection	101791	0	100	27/01/2015
+392	Track 14	Elton John	The Collection	102086	0	100	27/01/2015
+393	I Shot the Sheriff	Eric Clapton	Time Pieces: Best of Eric Clap	102350	1982	100	27/01/2015
+394	After Midnight	Eric Clapton	Time Pieces: Best of Eric Clap	102538	1982	100	27/01/2015
+395	Knockin' on Heaven's Door	Eric Clapton	Time Pieces: Best of Eric Clap	102799	1982	100	27/01/2015
+396	Wonderful Tonight	Eric Clapton	Time Pieces: Best of Eric Clap	103018	1982	100	27/01/2015
+397	Layla	Eric Clapton	Time Pieces: Best of Eric Clap	103444	1982	100	27/01/2015
+398	Cocaine	Eric Clapton	Time Pieces: Best of Eric Clap	103658	1982	100	27/01/2015
+399	Lay Down Sally	Eric Clapton	Time Pieces: Best of Eric Clap	103887	1982	100	27/01/2015
+400	Willie and the Hand Jive	Eric Clapton	Time Pieces: Best of Eric Clap	104095	1982	100	27/01/2015
+401	Promises	Eric Clapton	Time Pieces: Best of Eric Clap	104275	1982	100	27/01/2015
+402	Swing Low, Sweet Chariot	Eric Clapton	Time Pieces: Best of Eric Clap	104484	1982	100	27/01/2015
+403	Let It Grow	Eric Clapton	Time Pieces: Best of Eric Clap	104780	1982	100	27/01/2015
+404	Get Out	Faith No More	King for a Day, Fool for a Lif	104917	1995	100	27/01/2015
+405	Ricochet	Faith No More	King for a Day, Fool for a Lif	105186	1995	100	27/01/2015
+406	Evidence	Faith No More	King for a Day, Fool for a Lif	105479	1995	100	27/01/2015
+407	The Gentle Art of Making Enemi	Faith No More	King for a Day, Fool for a Lif	105688	1995	100	27/01/2015
+408	Star A.D.	Faith No More	King for a Day, Fool for a Lif	105891	1995	100	27/01/2015
+409	Cuckoo for Caca	Faith No More	King for a Day, Fool for a Lif	106113	1995	100	27/01/2015
+410	Caralho Voador	Faith No More	King for a Day, Fool for a Lif	106355	1995	100	27/01/2015
+411	Ugly in the Morning	Faith No More	King for a Day, Fool for a Lif	106541	1995	100	27/01/2015
+412	Digging the Grave	Faith No More	King for a Day, Fool for a Lif	106726	1995	100	27/01/2015
+413	Take This Bottle	Faith No More	King for a Day, Fool for a Lif	107024	1995	100	27/01/2015
+414	King for a Day	Faith No More	King for a Day, Fool for a Lif	107419	1995	100	27/01/2015
+415	What a Day	Faith No More	King for a Day, Fool for a Lif	107576	1995	100	27/01/2015
+416	The Last to Know	Faith No More	King for a Day, Fool for a Lif	107843	1995	100	27/01/2015
+417	Just a Man	Faith No More	King for a Day, Fool for a Lif	108182	1995	100	27/01/2015
+418	Thriller	Fall Out Boy	Infinity on High	108391	2007	100	27/01/2015
+419	The Take Over, The Breaks Over	Fall Out Boy	Infinity on High	108604	2007	100	27/01/2015
+420	This Ain't a Scene, It's an Ar	Fall Out Boy	Infinity on High	108816	2007	100	27/01/2015
+421	This Ain't a Scene, It's an Ar	Fall Out Boy	Infinity on High	108816	2007	100	27/01/2015
+422	Hum Hallelujah	Fall Out Boy	Infinity on High	109046	2007	100	27/01/2015
+423	Golden	Fall Out Boy	Infinity on High	109198	2007	100	27/01/2015
+424	Thnks fr th Mmrs	Fall Out Boy	Infinity on High	109401	2007	100	27/01/2015
+425	Don't You Know Who I Think I A	Fall Out Boy	Infinity on High	109573	2007	100	27/01/2015
+426	The (After) Life of the Party	Fall Out Boy	Infinity on High	109774	2007	100	27/01/2015
+427	The Carpal Tunnel of Love	Fall Out Boy	Infinity on High	109977	2007	100	27/01/2015
+428	Bang the Doldrums	Fall Out Boy	Infinity on High	110188	2007	100	27/01/2015
+429	Bang the Doldrums	Fall Out Boy	Infinity on High	110188	2007	100	27/01/2015
+430	You're Crashing, But You're No	Butch Walker	Infinity on High	110410	2007	100	27/01/2015
+431	I've Got All This Ringing in M	Fall Out Boy	Infinity on High	110653	2007	100	27/01/2015
+432	G.I.N.A.S.F.S.	Fall Out Boy	Infinity on High	110850	2007	100	27/01/2015
+433	Calypso	Fiend Without A Face	Fiend Without A Face	111002	0	100	27/01/2015
+434	Black Grass	Fiend Without A Face	Fiend Without A Face	111124	0	100	27/01/2015
+435	Green Slime	Fiend Without A Face	Fiend Without A Face	111225	0	100	27/01/2015
+436	Cha-Cha	Fiend Without A Face	Fiend Without A Face	111360	0	100	27/01/2015
+437	Bank Robbin' Bandits	Fiend Without A Face	Fiend Without A Face	111470	0	100	27/01/2015
+438	Tsunami	Fiend Without A Face	Fiend Without A Face	111581	0	100	27/01/2015
+439	Hot Rod	Fiend Without A Face	Fiend Without A Face	111702	0	100	27/01/2015
+440	New York	Fiend Without A Face	Fiend Without A Face	111852	0	100	27/01/2015
+441	Don't Like	Fiend Without A Face	Fiend Without A Face	112035	0	100	27/01/2015
+442	Cosmonaut	Fiend Without A Face	Fiend Without A Face	112209	0	100	27/01/2015
+443	Stupido	Fiend Without A Face	Fiend Without A Face	112313	0	100	27/01/2015
+444	Get Straight	Fiend Without A Face	Fiend Without A Face	112444	0	100	27/01/2015
+445	Volcano	Fiend Without A Face	Fiend Without A Face	112625	0	100	27/01/2015
+446	Have a Cigar	Brian May	Mission Impossible 2 [Soundtra	112870	2000	100	27/01/2015
+447	The Pretender	Foo Fighters	Echoes, Silence, Patience & Gr	113139	2007	100	27/01/2015
+448	Let It Die	Foo Fighters	Echoes, Silence, Patience & Gr	113384	2007	100	27/01/2015
+449	Erase/Replace	Foo Fighters	Echoes, Silence, Patience & Gr	113637	2007	100	27/01/2015
+450	Long Road To Ruin	Foo Fighters	Echoes, Silence, Patience & Gr	113862	2007	100	27/01/2015
+451	Come Alive	Foo Fighters	Echoes, Silence, Patience & Gr	114172	2007	100	27/01/2015
+452	Stranger Things Have Happened	Foo Fighters	Echoes, Silence, Patience & Gr	114493	2007	100	27/01/2015
+453	Cheer Up, Boys (Your Make Up I	Foo Fighters	Echoes, Silence, Patience & Gr	114714	2007	100	27/01/2015
+454	Summer's End	Foo Fighters	Echoes, Silence, Patience & Gr	114992	2007	100	27/01/2015
+455	Ballad Of The Beaconsfield Min	Foo Fighters	Echoes, Silence, Patience & Gr	115144	2007	100	27/01/2015
+456	Statues	Foo Fighters	Echoes, Silence, Patience & Gr	115372	2007	100	27/01/2015
+457	But, Honestly	Foo Fighters	Echoes, Silence, Patience & Gr	115647	2007	100	27/01/2015
+458	Home	Foo Fighters	Echoes, Silence, Patience & Gr	115940	2007	100	27/01/2015
+459	In Your Honor	Foo Fighters	In Your Honor [Disc 1]	116171	2005	100	27/01/2015
+460	No Way Back	Foo Fighters	In Your Honor [Disc 1]	116369	2005	100	27/01/2015
+461	Best Of You	Foo Fighters	In Your Honor [Disc 1]	116626	2005	100	27/01/2015
+462	DOA	Foo Fighters	In Your Honor [Disc 1]	116879	2005	100	27/01/2015
+463	Hell	Foo Fighters	In Your Honor [Disc 1]	116997	2005	100	27/01/2015
+464	The Last Song	Foo Fighters	In Your Honor [Disc 1]	117197	2005	100	27/01/2015
+465	Free Me	Foo Fighters	In Your Honor [Disc 1]	117477	2005	100	27/01/2015
+466	Resolve	Foo Fighters	In Your Honor [Disc 1]	117767	2005	100	27/01/2015
+467	The Deepest Blues Are Black	Foo Fighters	In Your Honor [Disc 1]	118006	2005	100	27/01/2015
+468	End Over End	Foo Fighters	In Your Honor [Disc 1]	118359	2005	100	27/01/2015
+469	Still	Foo Fighters	In Your Honor [Disc 2]	118673	2005	100	27/01/2015
+470	What If I Do?	Foo Fighters	In Your Honor [Disc 2]	118977	2005	100	27/01/2015
+471	Miracle	Foo Fighters	In Your Honor [Disc 2]	119188	2005	100	27/01/2015
+472	Another Round	Foo Fighters	In Your Honor [Disc 2]	119455	2005	100	27/01/2015
+473	Friend Of A Friend	Foo Fighters	In Your Honor [Disc 2]	119649	2005	100	27/01/2015
+474	Over And Out	Foo Fighters	In Your Honor [Disc 2]	119966	2005	100	27/01/2015
+475	On The Mend	Foo Fighters	In Your Honor [Disc 2]	120239	2005	100	27/01/2015
+476	Virginia Moon	Foo Fighters	In Your Honor [Disc 2]	120469	2005	100	27/01/2015
+477	Cold Day In The Sun	Foo Fighters	In Your Honor [Disc 2]	120671	2005	100	27/01/2015
+478	Razor	Foo Fighters	In Your Honor [Disc 2]	120965	2005	100	27/01/2015
+479	All My Life	Foo Fighters	One by One	121219	2002	100	27/01/2015
+480	Baker Street	Foo Fighters	The Colour And The Shape	121559	2000	100	27/01/2015
+481	Monkey Wrench	Foo Fighters	The Colour And The Shape	121791	1997	100	27/01/2015
+482	My Hero	Foo Fighters	The Colour And The Shape	122051	1997	100	27/01/2015
+483	Learn To Fly	Foo Fighters	There Is Nothing Left To Lose	122289	1999	100	27/01/2015
+484	Stacked Actors	Foo Fighters	There Is Nothing Left To Lose	122547	0	100	27/01/2015
+485	Northern Lights	Goldenhorse	Riverhead	122725	0	100	27/01/2015
+486	Spice Islands	Goldenhorse	Riverhead	122995	0	100	27/01/2015
+487	Golden Dawn	Goldenhorse	Riverhead	123275	0	100	27/01/2015
+488	Maybe Tomorrow	Goldenhorse	Riverhead	123523	0	100	27/01/2015
+489	Riverhead	Goldenhorse	Riverhead	123818	0	100	27/01/2015
+490	Wake Up Brother	Goldenhorse	Riverhead	124033	0	100	27/01/2015
+491	Shrinking Her Legs	Goldenhorse	Riverhead	124410	0	100	27/01/2015
+492	Out Tonight	Goldenhorse	Riverhead	124616	0	100	27/01/2015
+493	Baby's Been Bad	Goldenhorse	Riverhead	124789	0	100	27/01/2015
+494	American Wife	Goldenhorse	Riverhead	124999	0	100	27/01/2015
+495	Dark Forest	Goldenhorse	Riverhead	125230	0	100	27/01/2015
+496	Track 12	Goldenhorse	Riverhead	125573	0	100	27/01/2015
+497	Little Things	Good Charlotte	Good Charlotte	125775	2000	100	27/01/2015
+498	Motivation Proclamation	Good Charlotte	Good Charlotte	125996	2000	100	27/01/2015
+499	Iris [From City of Angels]	The Goo Goo Dolls	Iris	126223	1998	100	27/01/2015
+500	Some Kind of Wonderful	Grand Funk Railroad	Grand Funk Hits	126429	1976	100	27/01/2015
+501	Welcome To The Jungle	Guns N' Roses	Greatest Hits	126701	2004	100	27/01/2015
+502	Paradise City	Guns N' Roses	Greatest Hits	127109	2004	100	27/01/2015
+503	Knockin' On Heaven's Door	Guns N' Roses	Greatest Hits	127445	2004	100	27/01/2015
+504	Civil War	Guns N' Roses	Greatest Hits	127908	2004	100	27/01/2015
+505	Yesterdays	Guns N' Roses	Greatest Hits	128104	2004	100	27/01/2015
+506	Ain't It Fun	Guns N' Roses	Greatest Hits	128412	2004	100	27/01/2015
+507	Sympathy For The Devil	Guns N' Roses	Greatest Hits	128868	2004	100	27/01/2015
+508	American Idiot	Green Day	American Idiot	129042	2004	100	27/01/2015
+509	Jesus of Suburbia: Jesus of Su	Green Day	American Idiot	129590	2004	100	27/01/2015
+510	Holiday	Green Day	American Idiot	129822	2004	100	27/01/2015
+511	Boulevard of Broken Dreams	Green Day	American Idiot	130082	2004	100	27/01/2015
+512	Are We the Waiting	Green Day	American Idiot	130245	2004	100	27/01/2015
+513	St. Jimmy	Green Day	American Idiot	130420	2004	100	27/01/2015
+514	Give Me Novacaine	Green Day	American Idiot	130625	2004	100	27/01/2015
+515	She's a Rebel	Green Day	American Idiot	130745	2004	100	27/01/2015
+516	Extraordinary Girl	Green Day	American Idiot	130959	2004	100	27/01/2015
+517	Letterbomb	Green Day	American Idiot	131205	2004	100	27/01/2015
+518	Wake Me Up When September Ends	Green Day	American Idiot	131490	2004	100	27/01/2015
+519	Homecoming: The Death of St. J	Green Day	American Idiot	132048	2004	100	27/01/2015
+520	Whatsername	Green Day	American Idiot	132300	2004	100	27/01/2015
+521	What You Waiting For?	Gwen Stefani	Love. Angel. Music. Baby.	132522	2004	100	27/01/2015
+522	Rich Girl	Eve	Love.Angel.Music.Baby [Bonus T	132759	2004	100	27/01/2015
+523	Hollaback Girl	Gwen Stefani	Love. Angel. Music. Baby.	132959	2004	100	27/01/2015
+524	Cool	Gwen Stefani	Love. Angel. Music. Baby.	133149	2004	100	27/01/2015
+525	Bubble Pop Electric	Gwen Stefani	Love.Angel.Music.Baby [Bonus T	133372	2004	100	27/01/2015
+526	Luxurious	Gwen Stefani	Love. Angel. Music. Baby.	133637	2004	100	27/01/2015
+527	Harajuku Girls	Gwen Stefani	Love. Angel. Music. Baby.	133929	2004	100	27/01/2015
+528	Crash	Gwen Stefani	Love. Angel. Music. Baby.	134176	2004	100	27/01/2015
+529	The Real Thing	Gwen Stefani	Love. Angel. Music. Baby.	134428	2004	100	27/01/2015
+530	Serious	Gwen Stefani	Love. Angel. Music. Baby.	134717	2004	100	27/01/2015
+531	Danger Zone	Gwen Stefani	Love. Angel. Music. Baby.	134935	2004	100	27/01/2015
+532	Long Way to Go	André 3000	Love.Angel.Music.Baby [Bonus T	135225	2004	100	27/01/2015
+533	Barracuda	Heart	Heart Greatest Hits: Live	135490	1980	100	27/01/2015
+534	Machine Gun	Jimi Hendrix	Band of Gypsys	136248	1970	100	27/01/2015
+535	The Wind Crys Mary	Jimi Hendrix	Are You Experienced? [US]	136451	2019	100	27/01/2015
+536	Born on the Bayou	John Fogerty	The Long Road Home: The Ultima	136764	2005	100	27/01/2015
+537	Bad Moon Rising	John Fogerty	The Long Road Home: The Ultima	136904	2005	100	27/01/2015
+538	Centerfield	John Fogerty	The Long Road Home: The Ultima	137137	2005	100	27/01/2015
+539	Who'll Stop the Rain	John Fogerty	The Long Road Home: The Ultima	137284	2005	100	27/01/2015
+540	Rambunctious Boy	John Fogerty	The Long Road Home: The Ultima	137517	2005	100	27/01/2015
+541	Fortunate Son	John Fogerty	The Long Road Home: The Ultima	137656	2005	100	27/01/2015
+542	Lookin' Out My Back Door	John Fogerty	The Long Road Home: The Ultima	137808	2005	100	27/01/2015
+543	Up Around the Bend	John Fogerty	The Long Road Home: The Ultima	137968	2005	100	27/01/2015
+544	Almost Saturday Night [Live]	John Fogerty	The Long Road Home: The Ultima	138115	2005	100	27/01/2015
+545	Down on the Corner	John Fogerty	The Long Road Home: The Ultima	138280	2005	100	27/01/2015
+546	Bootleg [Live][#]	John Fogerty	The Long Road Home: The Ultima	138461	2005	100	27/01/2015
+547	Have You Ever Seen the Rain?	John Fogerty	The Long Road Home: The Ultima	138620	2005	100	27/01/2015
+548	Sweet Hitch-Hiker	John Fogerty	The Long Road Home: The Ultima	138796	2005	100	27/01/2015
+549	Hey Tonight [Live][#]	John Fogerty	The Long Road Home: The Ultima	138949	2005	100	27/01/2015
+550	The Old Man Down the Road	John Fogerty	The Long Road Home: The Ultima	139162	2005	100	27/01/2015
+551	Rockin' All Over the World [Li	John Fogerty	The Long Road Home: The Ultima	139340	2005	100	27/01/2015
+552	Lodi	John Fogerty	The Long Road Home: The Ultima	139530	2005	100	27/01/2015
+553	Keep on Chooglin' [Live][#]	John Fogerty	The Long Road Home: The Ultima	139773	2005	100	27/01/2015
+554	Green River	John Fogerty	The Long Road Home: The Ultima	139926	2005	100	27/01/2015
+555	Déjà Vu (All Over Again)	John Fogerty	The Long Road Home: The Ultima	140179	2005	100	27/01/2015
+556	Run Through the Jungle	John Fogerty	The Long Road Home: The Ultima	140364	2005	100	27/01/2015
+557	Hot Rod Heart	John Fogerty	The Long Road Home: The Ultima	140573	2005	100	27/01/2015
+558	Travelin' Band	John Fogerty	The Long Road Home: The Ultima	140702	2005	100	27/01/2015
+559	Proud Mary	John Fogerty	The Long Road Home: The Ultima	140887	2005	100	27/01/2015
+560	Fortunate Son [Live][#]	John Fogerty	The Long Road Home: The Ultima	141065	2005	100	27/01/2015
+561	Communication Breakdown	Led Zeppelin	Remasters [UK] Disc 1	141214	2002	100	27/01/2015
+562	Stairway To Heaven	Led Zeppelin	Remasters [UK] Disc 1	141694	2002	100	27/01/2015
+563	Wake	Linkin Park	Minutes to Midnight	141795	2007	100	27/01/2015
+564	Given Up	Linkin Park	Minutes to Midnight	141984	2007	100	27/01/2015
+565	Leave out All the Rest	Linkin Park	Minutes to Midnight	142193	2007	100	27/01/2015
+566	Bleed It Out	Linkin Park	Minutes to Midnight	142357	2007	100	27/01/2015
+567	Shadow of the Day	Linkin Park	Minutes to Midnight	142646	2007	100	27/01/2015
+568	What I've Done	Linkin Park	Minutes to Midnight	142851	2007	100	27/01/2015
+569	Hands Held High	Linkin Park	Minutes to Midnight	143084	2007	100	27/01/2015
+570	No More Sorrow	Linkin Park	Minutes to Midnight	143305	2007	100	27/01/2015
+571	Valentine's Day	Linkin Park	Minutes to Midnight	143501	2007	100	27/01/2015
+572	In Between	Linkin Park	Minutes to Midnight	143697	2007	100	27/01/2015
+573	In Pieces	Linkin Park	Minutes to Midnight	143915	2007	100	27/01/2015
+574	The Little Things Give You Awa	Linkin Park	Minutes to Midnight	144298	2007	100	27/01/2015
+575	Clenching the Fists of Dissent	Machine Head	The Blackening	144934	2007	100	27/01/2015
+576	Beautiful Mourning	Machine Head	The Blackening	145220	2007	100	27/01/2015
+577	Aesthetics of Hate	Machine Head	The Blackening	145610	2007	100	27/01/2015
+578	Now I Lay Thee Down	Machine Head	The Blackening	145944	2007	100	27/01/2015
+579	Slanderous	Machine Head	The Blackening	146261	2007	100	27/01/2015
+580	Halo	Machine Head	The Blackening	146804	2007	100	27/01/2015
+581	Wolves	Machine Head	The Blackening	147345	2007	100	27/01/2015
+582	A Farewell to Arms	Machine Head	The Blackening	147960	2007	100	27/01/2015
+583	Battery (Metallica Cover)	Machine Head	The Blackening	148262	2007	100	27/01/2015
+584	The Wolf Is Loose	Mastodon	Blood Mountain	148478	2006	100	27/01/2015
+585	Crystal Skull	Mastodon	Blood Mountain	148687	2006	100	27/01/2015
+586	Sleeping Giant	Mastodon	Blood Mountain	149025	2006	100	27/01/2015
+587	Capillarian Crest	Mastodon	Blood Mountain	149292	2006	100	27/01/2015
+588	Circle of Cysquatch	Mastodon	Blood Mountain	149493	2006	100	27/01/2015
+589	Bladecatcher	Mastodon	Blood Mountain	149695	2006	100	27/01/2015
+590	Colony of Birchmen	Mastodon	Blood Mountain	149957	2006	100	27/01/2015
+591	Hunters of the Sky	Mastodon	Blood Mountain	150191	2006	100	27/01/2015
+592	Hand of Stone	Mastodon	Blood Mountain	150404	2006	100	27/01/2015
+593	This Mortal Soil	Mastodon	Blood Mountain	150706	2006	100	27/01/2015
+594	Siberian Divide	Mastodon	Blood Mountain	151040	2006	100	27/01/2015
+595	Pendulous Skin	Mastodon	Blood Mountain	152378	2006	100	27/01/2015
+596	Blood and Thunder	Mastodon	Leviathan	152609	2004	100	27/01/2015
+597	I Am Ahab	Mastodon	Leviathan	152777	2004	100	27/01/2015
+598	Seabeast	Mastodon	Leviathan	153035	2004	100	27/01/2015
+599	Ísland	Mastodon	Leviathan	153244	2004	100	27/01/2015
+600	Iron Tusk	Mastodon	Leviathan	153429	2004	100	27/01/2015
+601	Megalodon	Mastodon	Leviathan	153694	2004	100	27/01/2015
+602	Naked Burn	Mastodon	Leviathan	153919	2004	100	27/01/2015
+603	Aqua Dementia	Mastodon	Leviathan	154172	2004	100	27/01/2015
+604	Hearts Alive	Mastodon	Leviathan	154994	2004	100	27/01/2015
+605	Joseph Merrick	Mastodon	Leviathan	155209	2004	100	27/01/2015
+606	Crusher Destroyer	Mastodon	Remission	155329	2002	100	27/01/2015
+607	March of the Fire Ants	Mastodon	Remission	155595	2002	100	27/01/2015
+608	Where Strides the Behemoth	Mastodon	Remission	155771	2002	100	27/01/2015
+609	Workhorse	Mastodon	Remission	155997	2002	100	27/01/2015
+610	Ol'e Nessie	Mastodon	Remission	156362	2002	100	27/01/2015
+611	Burning Man	Mastodon	Remission	156529	2002	100	27/01/2015
+612	Trainwreck	Mastodon	Remission	156953	2002	100	27/01/2015
+613	Trampled Under Hoof	Mastodon	Remission	157134	2002	100	27/01/2015
+614	Trilobite	Mastodon	Remission	157523	2002	100	27/01/2015
+615	Mother Puncher	Mastodon	Remission	157752	2002	100	27/01/2015
+616	Elephant Man	Mastodon	Remission	158234	2002	100	27/01/2015
+617	null	null	null	158233	0	100	27/01/2015
+618	Eye Of The Beholder	Metallica	...And Justice For All	158624	1988	100	27/01/2015
+619	That Was Just Your Life	Metallica	Death Magnetic	159055	2008	100	27/01/2015
+620	The End Of The Line	Metallica	Death Magnetic	159530	2008	100	27/01/2015
+621	Broken, Beat & Scarred	Metallica	Death Magnetic	159918	2008	100	27/01/2015
+622	The Day That Never Comes	Metallica	Death Magnetic	160397	2008	100	27/01/2015
+623	All Nightmare Long	Metallica	Death Magnetic	160877	2008	100	27/01/2015
+624	Cyanide	Metallica	Death Magnetic	161279	2008	100	27/01/2015
+625	The Unforgiven III	Metallica	Death Magnetic	161748	2008	100	27/01/2015
+626	The Judas Kiss	Metallica	Death Magnetic	162231	2008	100	27/01/2015
+627	Suicide & Redemption	Metallica	Death Magnetic	162831	2008	100	27/01/2015
+628	My Apocalypse	Metallica	Death Magnetic	163134	2008	100	27/01/2015
+629	Free Speech For The Dumb	Metallica	Garage Inc. [Disc 1]	163290	1998	100	27/01/2015
+630	It's Electric	Metallica	Garage Inc. [Disc 1]	163504	1998	100	27/01/2015
+631	Sabbra Cadabra	Metallica	Garage Inc. [Disc 1]	163884	1998	100	27/01/2015
+632	Turn The Page	Metallica	Garage Inc. [Disc 1]	164252	1998	100	27/01/2015
+633	Die Die My Darling	Metallica	Garage Inc. [Disc 1]	164402	1998	100	27/01/2015
+634	Loverman	Metallica	Garage Inc. [Disc 1]	164875	1998	100	27/01/2015
+635	Mercyful Fate	Metallica	Garage Inc. [Disc 1]	165547	1998	100	27/01/2015
+636	Astronomy	Metallica	Garage Inc. [Disc 1]	165945	1998	100	27/01/2015
+637	Tuesday's Gone	Metallica	Garage Inc. [Disc 1]	166491	1998	100	27/01/2015
+638	The More I See	Metallica	Garage Inc. [Disc 1]	166782	1998	100	27/01/2015
+639	Helpless	Metallica	Garage, Inc. Disc 2	167181	1998	100	27/01/2015
+640	The Small Hours	Metallica	Garage, Inc. Disc 2	167586	1998	100	27/01/2015
+641	The Wait	Metallica	Garage, Inc. Disc 2	167883	1998	100	27/01/2015
+642	Crash Course in Brain Surgery	Metallica	Garage, Inc. Disc 2	168074	1998	100	27/01/2015
+643	Last Caress/Green Hell	Metallica	Garage, Inc. Disc 2	168284	1998	100	27/01/2015
+644	Am I Evil?	Metallica	Garage, Inc. Disc 2	168754	1998	100	27/01/2015
+645	Blitzkrieg	Metallica	Garage, Inc. Disc 2	168971	1998	100	27/01/2015
+646	Breadfan	Metallica	Garage, Inc. Disc 2	169314	1998	100	27/01/2015
+647	The Prince	Metallica	Garage, Inc. Disc 2	169580	1998	100	27/01/2015
+648	Stone Cold Crazy	Metallica	Garage, Inc. Disc 2	169718	1998	100	27/01/2015
+649	So What	Metallica	Garage, Inc. Disc 2	169907	1998	100	27/01/2015
+650	Killing Time	Metallica	Garage, Inc. Disc 2	170091	1998	100	27/01/2015
+651	Overkill	Metallica	Garage, Inc. Disc 2	170336	1998	100	27/01/2015
+652	Damage Case	Metallica	Garage, Inc. Disc 2	170557	1998	100	27/01/2015
+653	Stone Dead Forever	Metallica	Garage, Inc. Disc 2	170849	1998	100	27/01/2015
+654	Too Late Too Late	Metallica	Garage, Inc. Disc 2	171044	1998	100	27/01/2015
+655	Hit The Lights	Metallica	Kill 'Em All	171303	1983	100	27/01/2015
+656	Seek & Destroy	Metallica	Kill 'Em All	171719	1983	100	27/01/2015
+657	The Four Horsemen	Metallica	Kill 'Em All	172154	1983	100	27/01/2015
+658	Whiplash	Metallica	Kill 'Em All	172401	1983	100	27/01/2015
+659	Ain't My Bitch	Metallica	Load	172706	1996	100	27/01/2015
+660	Cure	Metallica	Load	173001	1996	100	27/01/2015
+661	Hero of the Day	Metallica	Load	173264	1996	100	27/01/2015
+662	King Nothing	Metallica	Load	173594	1996	100	27/01/2015
+663	Thorn Within	Metallica	Load	173945	1996	100	27/01/2015
+664	Until It Sleeps	Metallica	Load	174214	1996	100	27/01/2015
+665	Battery	Metallica	Master of Puppets	174527	1986	100	27/01/2015
+666	Master of Puppets	Metallica	Master of Puppets	175042	1986	100	27/01/2015
+667	The Thing That Should Not Be	Metallica	Master of Puppets	175438	1986	100	27/01/2015
+668	Welcome Home (Sanitarium)	Metallica	Master of Puppets	175825	1986	100	27/01/2015
+669	Disposable Heroes	Metallica	Master of Puppets	176322	1986	100	27/01/2015
+670	Leper Messiah	Metallica	Master of Puppets	176662	1986	100	27/01/2015
+671	Orion [Instrumental]	Metallica	Master of Puppets	177169	1986	100	27/01/2015
+672	Damage, Inc.	Metallica	Master of Puppets	177499	1986	100	27/01/2015
+673	Enter Sandman	Metallica	Black Album	177831	1991	100	27/01/2015
+674	Sad But True	Metallica	Black Album	178156	1991	100	27/01/2015
+675	Holier Than Thou	Metallica	Black Album	178384	1991	100	27/01/2015
+676	The Unforgiven	Metallica	Black Album	178771	1991	100	27/01/2015
+677	Wherever I May Roam	Metallica	Black Album	179175	1991	100	27/01/2015
+678	Don't Tread On Me	Metallica	Black Album	179415	1991	100	27/01/2015
+679	Through The Never	Metallica	Black Album	179660	1991	100	27/01/2015
+680	Nothing Else Matters	Metallica	Black Album	180049	1991	100	27/01/2015
+681	Of Wolf And Man	Metallica	Black Album	180306	1991	100	27/01/2015
+682	The God That Failed	Metallica	Black Album	180615	1991	100	27/01/2015
+683	My Friend Of Misery	Metallica	Black Album	181025	1991	100	27/01/2015
+684	The Struggle Within	Metallica	Black Album	181260	1991	100	27/01/2015
+685	I Disappear	Metallica	Mission Impossible 2 [Soundtra	181529	2000	100	27/01/2015
+686	Fuel	Metallica	Reload	181799	1997	100	27/01/2015
+687	Devil's Dance	Metallica	Reload	182119	1997	100	27/01/2015
+688	The Memory Remains	Matallica	rock mix	182397	1997	100	27/01/2015
+689	Ride The Lightning	Metallica	Ride The Lightning	182796	1984	100	27/01/2015
+690	For Whom The Bell Tolls	Metallica	Ride The Lightning	183109	1984	100	27/01/2015
+691	Fade To Black	Metallica	Ride The Lightning	183525	1984	100	27/01/2015
+692	Fight Fire With Fire	Metallica	Ride The Lightning	183811	1984	100	27/01/2015
+693	Human	Metallica	S&M [Disc 2]	184071	1999	100	27/01/2015
+694	No Leaf Clover	Metallica	S&M [Edited] Disc 1	184415	1999	100	27/01/2015
+695	Fools  Love	Misfits of Science	MOS PRESENTS	184656	0	100	27/01/2015
+696	Ace of spades	Motorhead	No Remorse	184825	2000	100	27/01/2015
+697	Apocalypse Please	Muse	Absolution [Bonus DVD]	185078	2003	100	27/01/2015
+698	Stockholm Syndrome	Muse	Absolution	185375	2003	100	27/01/2015
+699	Time is Running Out	Muse	Absolution	185612	2003	100	27/01/2015
+700	Starlight	Muse	Black Holes And Revelations	185851	2006	100	27/01/2015
+701	Triracial Isolates	Four Hour Fogger	1998 Demo	186026	0	100	27/01/2015
+702	The Bit	Mastodon	We Reach: The Music Of The Mel	186294	2005	100	27/01/2015
+703	In the Fire	Roadrunner United	Roadrunner	186541	2005	100	27/01/2015
+704	10 - Tidal Tantrum	Dark Tranquillity	The Mind's I	186717	1997	100	27/01/2015
+705	Hero	Chad Kroeger	Broken Dreams	186916	2005	100	27/01/2015
+706	Constitution Down	Roadrunner United	Roadrunner	187221	2005	100	27/01/2015
+707	Its a long way to the top	ACDC	TNT	187538	1976	100	27/01/2015
+708	Bat Country	Avenged Sevenfold	Avenged Sevenfold	187851	2007	100	27/01/2015
+709	Beast And The Harlot	Avenged Sevenfold	Avenged Sevenfold	188192	2007	100	27/01/2015
+710	Blue Oyster Cult - Dont Fear T	Blue Öyster Cult	Agents of Fortune	188444	1976	100	27/01/2015
+711	Comedy- Sesame Street On Drugs	Unknown	Unknown	188596	0	100	27/01/2015
+712	Mmm Mmm Mmm Mmm	Crash Test Dummies	God Shuffled His Feet	188831	1993	100	27/01/2015
+713	Sunshine of Your Love	Cream	The Very Best of Cream	189082	1995	100	27/01/2015
+714	Police Truck	Dead Kennedys	Give Me Convenience or Give Me	189226	1987	100	27/01/2015
+715	This Moment	Disturbed	Transformers Soundtrack	189412	2007	100	27/01/2015
+716	Track 01	Wolf Eyes & Black Dice	Wolf Eyes/Black Dice [Split CD	189632	2003	100	27/01/2015
+717	Track 02	Wolf Eyes & Black Dice	Wolf Eyes/Black Dice [Split CD	189932	2003	100	27/01/2015
+718	Half Mast	The Hidden Hand	Mother Teacher Destroyer	190168	2004	100	27/01/2015
+719	Baker Street	Foo Fighters	My Hero	190508	2000	100	27/01/2015
+720	Quarter	Fuel	The Best of Fuel	190728	2005	100	27/01/2015
+721	The Imperial March	John Williams, Kenny Haining	www.kennyhaining.co.uk	190880	2007	100	27/01/2015
+722	2 Minutes to Midnight	Iron Maiden	Powerslave	191244	1984	100	27/01/2015
+723	Aces High	Iron Maiden	Powerslave	191518	1984	100	27/01/2015
+724	Satch Boogie	Joe Satriani	Time Machine Disc 2	191712	1999	100	27/01/2015
+725	Kenny Goes To Hell	Metallica	South Park The Movie	191791	1999	100	27/01/2015
+726	Demon Cleaner	Kyuss	Muchas Gracias: The Best of Ky	192111	2000	100	27/01/2015
+727	Bron-Yr-Aur	Led Zepplin	Physical Graffiti - Disc 2	192237	1975	100	27/01/2015
+728	Over The Hills And Far Away	Led Zeppelin	Houses Of The Holy	192530	1973	100	27/01/2015
+729	Lakini's Juice	Live	Secret Samadhi	192830	1997	100	27/01/2015
+730	Lakini's Juice	Live	Secret Samadhi	192830	1997	100	27/01/2015
+731	Mastodon - Cut You Open With a	Unknown	Unknown	192939	0	100	27/01/2015
+732	Where Strides The Behemoth (Li	Mastodon	March Of The Fire Ants EP	193127	2003	100	27/01/2015
+733	Hail to Fire	Mastodon	Call of the Mastodon Disc 1	193255	2006	100	27/01/2015
+734	Slickleg	Mastodon	Call of the Mastodon Disc 1	193475	2006	100	27/01/2015
+735	Symphony of destruction	Megadeth	Couintdown to extinction	193716	1992	100	27/01/2015
+736	megadeth - Dave Is Pissed (liv	Megadeth	Unknown	193770	0	100	27/01/2015
+737	Hangar 18	Megadeth	Rust In Peace	194084	1990	100	27/01/2015
+738	Hangar 18	Megadeth	Rust In Peace	194084	1990	100	27/01/2015
+739	The Bit	Melvins	Stag	194368	1996	100	27/01/2015
+740	Star Wars Imperial March	Metallica	Unknown	194534	0	100	27/01/2015
+741	The Flames Beyond the Cold Mou	Goro, Takaakira "Taka"	You Are There	195099	2006	100	27/01/2015
+742	Track 07	Original Score	Changing Lanes	195522	2002	100	27/01/2015
+743	Neurosis_Lost	Unknown	Unknown	196104	0	100	27/01/2015
+744	Under The Surface	Neurosis	Times Of Grace	196545	1999	100	27/01/2015
+745	Orion	Mastodon	Drum 'N' Bass Mix	197043	2006	100	27/01/2015
+746	Crazy Train	Ozzy Osbourne	Blizzard of Ozz	197341	1980	100	27/01/2015
+747	That I Never Had	Ozzy Osbourne	Down to Earth	197604	2001	100	27/01/2015
+748	No More Tears	Ozzy Osbourne	No More Tears	197959	1991	100	27/01/2015
+749	Spår 2	Pain	Okänt album	198210	2007	100	27/01/2015
+750	Caged in a Rage	Diamond Darrell	Supercop	198412	1996	100	27/01/2015
+751	Heard It on the X	Diamond Darrell	ECW: Extreme Music	198586	1998	100	27/01/2015
+752	Control	Puddle of Mudd	Come Clean	198817	2001	100	27/01/2015
+753	Ruins-RefusalFossil	Ruins	Refusal Fossil	199038	1998	100	27/01/2015
+754	Warrido	Ruins	Vrresto	199352	1998	100	27/01/2015
+755	Black Magic Woman	Carlos Santana	Studio	199665	1974	100	27/01/2015
+756	Summer Breeze	Seals & Crofts	Summer Breeze	199871	1972	100	27/01/2015
+757	Licking Cream	Sevendust	Home	200069	1999	100	27/01/2015
+758	Waffle	Sevendust	Home	200280	2000	100	27/01/2015
+759	All I Wanna Do	Sheryl Crow	Awesome 4	200556	2003	100	27/01/2015
+760	My Mind's Sedate	Shihad	The General Electric	200730	1999	100	27/01/2015
+761	The Heretic Anthem	Slipknot	Iowa	200984	2001	100	27/01/2015
+762	Wait and Bleed	Slipknot	Slipknot	201169	1999	100	27/01/2015
+763	Stuck in the Middle With You	Stealers Wheel	Reservoir Dogs	201374	1992	100	27/01/2015
+764	Don't Let Me Be Misunderstood	Animals	Best of the Animals [ABKCO]	201522	1988	100	27/01/2015
+765	Light My Fire	The Doors	The Very Best of the Doors [20	201950	2001	100	27/01/2015
+766	People Are Strange	The Doors	The Very Best of the Doors [20	202081	2001	100	27/01/2015
+767	West End Riot	The Living End	The Living End	202315	1998	100	27/01/2015
+768	Pulp Fiction	Theme	King of the Surf Guitar: The B	202445	1995	100	27/01/2015
+769	Pinball Wizard	The Who	Tommy	202626	1969	100	27/01/2015
+770	Jailbreak	Thin Lizzy	Detroit Rock City Soundtrack	202866	1999	100	27/01/2015
+771	Runnin' Down a Dream	Tom Petty & the Heartbreakers	Greatest Hits	203127	1993	100	27/01/2015
+772	Hold Me Down	Tommy Lee	Never a Dull Moment	203323	2002	100	27/01/2015
+773	Tony Hawks Pro Skater - Even R	Unknown	Unknown	203510	0	100	27/01/2015
+774	Flood	Tool	undertow	203977	1999	100	27/01/2015
+775	Viva Zapata	Totimoshi	Ladron	204189	2006	100	27/01/2015
+776	Entrance of the Conflagration	Trivium	The Crusade	204464	2006	100	27/01/2015
+777	Master Of Puppets	Trivium	Kerrang Remastered(master of p	204951	0	100	27/01/2015
+778	Like Light To The Flies	Luna	3 song EP	205289	2004	100	27/01/2015
+779	I wanna rock	Twisted Sister	80s Rock	205473	1984	100	27/01/2015
+780	Committed	Unsane	Occupational Hazard	205635	1998	100	27/01/2015
+781	velvetrevolver_shebuildsquickm	Unknown	Unknown	205857	0	100	27/01/2015
+782	La Grange	ZZ Top	Armageddon	206071	1998	100	27/01/2015
+783	Airplanes (feat. Hayley Willia	B.o.B	Airplanes (feat. Hayley Willia	206254	2010	100	27/01/2015
+784	Give Me Everything (feat. Ne-Y	Pitbull	Give Me Everything (feat. Ne-Y	206513	2011	100	27/01/2015
+785	Sweat (David Guetta Remix)	Snoop Dogg & David Guetta	Sweat (David Guetta Remix) - S	206712	2011	100	27/01/2015
+786	Someone Like You	Unknown	21	206999	2011	100	27/01/2015
+787	Just Can't Get Enough	Black Eyed Peas	The Beginning (Deluxe Edition)	207218	2010	100	27/01/2015
+788	Rolling In the Deep	Adele	Rolling In the Deep - Single	207447	2010	100	27/01/2015
+789	Airplanes (feat. Hayley Willia	B.o.B	Airplanes (feat. Hayley Willia	207630	2010	100	27/01/2015
+790	All the Right Moves	One Republic	All the Right Moves - Single	207872	2009	100	27/01/2015
+791	What The Hell	Unknown	What The Hell - Single	208091	2011	100	27/01/2015
+792	Nothin' On You	Ari Levine/Bobby Ray Simmons Jr./Bruno Mars/Philip Lawrence	B.o.B Presents: The Adventures of Bobby Ray	208361	2010	100	27/01/2015
+793	Bad Romance	Lady Gaga	The Fame Monster	208656	2009	100	27/01/2015
+794	Beautiful Lie	30 Seconds To Mars	A Beautiful Lie	208898	2005	100	27/01/2015
+795	Brick By Boring Brick	Paramore	Brand New Eyes	209153	2009	100	27/01/2015
+796	Hold It Against Me	Britney Spears	Hold It Against Me - Single	209384	2011	100	27/01/2015
+797	Grenade	Bruno Mars	Doo-Wops & Hooligans (Limited	209609	2010	100	27/01/2015
+798	Carry Out	Timbaland	Presents Shock Value II	209841	2009	100	27/01/2015
+799	The Opposite Of Adults [ft. MG	Chiddy Bang	The Swelly Express	210039	2009	100	27/01/2015
+800	ÿþY o u   M a k e   M e   F e e l . . . ( f e a t .   S a b i )	Unknown	ÿþY o u   M a k e   M e   F e e l . . .   ( f e a t .   S a b i )   -   S i n g l e	210261	0	100	27/01/2015
+801	Commander (David Guetta Remix)	Kelly Rowland Feat. David Guet	Commander	210481	2010	100	27/01/2015
+802	crawling	linken park	Hybrid Theory [Japan Bonus Tra	210690	2000	100	27/01/2015
+803	Cruel	Dane Rumble	Cruel [Non-Rap Version]	210924	2009	100	27/01/2015
+804	Who's That Chick ? (Feat. Riha	David Guetta	One More Love	211089	2010	100	27/01/2015
+805	Decode	Paramore	Decode	211353	2008	100	27/01/2015
+806	DJ Got Us Fallin' In Love	Usher Feat. Pitbull	DJ Got Us Fallin' In Love	211578	2010	100	27/01/2015
+807	Unknown	Unknown	Unknown	211785	0	100	27/01/2015
+808	Unknown	Unknown	Unknown	212048	0	100	27/01/2015
+809	Empire State Of Mind	Jay-Z Ft. Alicia Keys	The Blueprint 3	212325	2009	100	27/01/2015
+810	Evacuate The Dancefloor	Cascada	Evacuate The Dancefloor	212532	2009	100	27/01/2015
+811	Fever	Cascada	Evacuate the Dancefloor	212732	2009	100	27/01/2015
+812	Fireflies	Owl City	Ocean Eyes	212960	2010	100	27/01/2015
+813	For Your Entertainment	Adam Lambert	For Your Entertainment	213175	2009	100	27/01/2015
+814	From Yesterday	30 Secounds To Mars	A Beautiful Lie	213418	2005	100	27/01/2015
+815	ÿþN o t   O v e r   Y o u	ÿþG a v i n   D e G r a w   &   R y a n   T e d d e r	ÿþN o t   O v e r   Y o u   -   S i n g l e	213639	0	100	27/01/2015
+816	I Can Ride My Bike With No Handlebars	Flobots	The Flowbot	213846	2008	100	27/01/2015
+817	If We Ever Meet Again w. Katy	Timbaland	Presents Shock Value II	214138	2009	100	27/01/2015
+818	In My Head	Jason Derulo	Jason Derulo	214340	2010	100	27/01/2015
+819	On The Floor (Feat. Pitbull)	Jennifer Lopez	Unknown	214623	2011	100	27/01/2015
+820	Nobody's Perfect	Jessie J	Who You Are	214887	2011	100	27/01/2015
+821	Just A Little Bit	Ko88	kids of 88	215070	2010	100	27/01/2015
+822	Just The Way You Are (Album Ve	Bruno Mars	Just The Way You Are	215295	2010	100	27/01/2015
+823	Monster	Bon Iver/Jay-Z/Kanye West/Nick	My Beautiful Dark Twisted Fant	215486	2010	100	27/01/2015
+824	Firework	Katy Perry	Teenage Dream	215716	2010	100	27/01/2015
+825	Teenage Dream	Katy Perry	Teenage Dream	215944	2010	100	27/01/2015
+826	Blow	Ke$ha	Blow - Single	216168	2010	100	27/01/2015
+827	Kelsey	Metro Station	Single	216386	2007	100	27/01/2015
+828	Kings And Queens	30 Seconds To Mars	Kings And Queens	216733	2009	100	27/01/2015
+829	Last train home	Lost Prophets	Start Something	216990	2004	100	27/01/2015
+830	Party Rock Anthem	LMFAO	Party Rock Anthem - Single	217257	2011	100	27/01/2015
+831	Love Drunk	Boys Like Girls	Love Drunk	217481	2009	100	27/01/2015
+832	Memories	David Guetta feat Kid Cudi	One Love	217690	2010	100	27/01/2015
+833	Just A Dream	Nelly	5.0	217929	2010	100	27/01/2015
+834	Nothin' On You	B.O.B Feat. Bruno Mars	B.o.B Presents: The Adventures	218205	2010	100	27/01/2015
+835	Encore	Jay-Z	Collision Course Disc 1	218409	2004	100	27/01/2015
+836	OMG	Usher feat. Will.I.Am	Raymond V Raymond	218678	2010	100	27/01/2015
+837	One Step Closer	Linkin Park	Hybrid Theory	218834	2000	100	27/01/2015
+838	Good Life (New Mix Version)	OneRepublic	Good Life - Single	219083	2010	100	27/01/2015
+839	Raise Your Glass	P!nk	Raise Your Glass - Single	219288	2010	100	27/01/2015
+840	Pass Out	Tinie Tempah	Uk Top 40 Singles Chart 14-03-	219559	2010	100	27/01/2015
+841	FucKIN Perfect	Pink	Greatest Hits... So Far!!!	219773	2010	100	27/01/2015
+842	California King Bed	Rihanna	Loud	220024	2010	100	27/01/2015
+843	Only Girl (In The World)	Rihanna  | www.RNBxBeatz.com	www.RNBxBeatz.com	220268	2010	100	27/01/2015
+844	S&M	Rihanna	Loud [Clean]	220512	2010	100	27/01/2015
+845	What's My Name?	Rihanna	Loud [Clean]	220769	2010	100	27/01/2015
+846	Rock That Body	Black Eyed Peas	THE E.N.D. (Energy Never Dies)	221037	2009	100	27/01/2015
+847	Rooftops - Lost Prophets*	Lost Prophets	Connect Set	221262	2006	100	27/01/2015
+848	Rude Boy	Rihanna	Rated R	221484	2009	100	27/01/2015
+849	Shake It	Metro Station	Metro Station	221664	2007	100	27/01/2015
+850	Points of Authority [Demo]	Linkin Park	Ultra rare Trakx vol. 2	221872	0	100	27/01/2015
+851	Somewhere I Belong	Linkin Park	Promo CDS	222086	2003	100	27/01/2015
+852	Starstrukk	3oh!3 & Katy Perry	Want	222288	2009	100	27/01/2015
+853	Stop & Stare	One Republic	Dreaming Out Loud	222513	2007	100	27/01/2015
+854	Stop & Stare	One Republic	Dreaming Out Loud	222513	2007	100	27/01/2015
+855	The Time (The Dirty Bit)	The Black Eyed Peas	The Beginning	222824	2010	100	27/01/2015
+856	The Catalyst	Linkin Park	A Thousand Suns	223167	2010	100	27/01/2015
+857	The City Is At War	Cobra Starship	Viva la Cobra	223340	2007	100	27/01/2015
+858	The Opposite Of Adults [ft. MG	Chiddy Bang	The Swelly Express	223538	2009	100	27/01/2015
+859	TiK ToK	KE$HA	Single	223741	2010	100	27/01/2015
+860	Invincible (feat. Kelly Rowlan	Tinie Tempah	Disc-Overy	223946	2010	100	27/01/2015
+861	Pass Out	Tinie Tempah	Uk Top 40 Singles Chart 14-03-	224217	2010	100	27/01/2015
+862	Undisclosed Desires	Muse	The Resistance	224463	2009	100	27/01/2015
+863	Uprising	Muse	The Resistance	224768	2009	100	27/01/2015
+864	Vindicated	Dashboard Confessional	Spider-Man 2 Soundtrack	224968	2004	100	27/01/2015
+865	What's My Name? feat. Drake	Rihanna	Loud	225233	2010	100	27/01/2015
+866	Whatcha Say	Jason Derulo	Jason Derulo	225457	2010	100	27/01/2015
+867	Whatya Want From Me	Adam Lambert	For Your Entertainment	225684	2009	100	27/01/2015
+868	You Got Me	J. Williams	Young Love	225912	2009	100	27/01/2015
+869	Hyperpower!	Nine Inch Nails	Year Zero	226014	2007	100	27/01/2015
+870	The Beginning of the End	Nine Inch Nails	Year Zero	226181	2007	100	27/01/2015
+871	Survivalism	Nine Inch Nails	Year Zero	226445	2007	100	27/01/2015
+872	The Good Soldier	Nine Inch Nails	Year Zero	226648	2007	100	27/01/2015
+873	Vessel	Nine Inch Nails	Year Zero	226940	2007	100	27/01/2015
+874	Me, I'm Not	Nine Inch Nails	Year Zero	227232	2007	100	27/01/2015
+875	Capital G	Nine Inch Nails	Year Zero	227462	2007	100	27/01/2015
+876	My Violent Heart	Nine Inch Nails	Year Zero	227715	2007	100	27/01/2015
+877	The Warning	Nine Inch Nails	Year Zero	227933	2007	100	27/01/2015
+878	God Given	Nine Inch Nails	Year Zero	228164	2007	100	27/01/2015
+879	Meet Your Master	Nine Inch Nails	Year Zero	228412	2007	100	27/01/2015
+880	The Greater Good	Nine Inch Nails	Year Zero	228704	2007	100	27/01/2015
+881	The Great Destroyer	Nine Inch Nails	Year Zero	228901	2007	100	27/01/2015
+882	Another Version of the Truth	Nine Inch Nails	Year Zero	229150	2007	100	27/01/2015
+883	In This Twilight	Nine Inch Nails	Year Zero	229363	2007	100	27/01/2015
+884	Zero-Sum	Nine Inch Nails	Year Zero	229737	2007	100	27/01/2015
+885	Southtown	P.O.D.	Greatest Hits: The Atlantic Ye	229985	2006	100	27/01/2015
+886	Boom	P.O.D.	Greatest Hits: The Atlantic Ye	230172	2006	100	27/01/2015
+887	Going in Blind [#]	P.O.D.	Greatest Hits: The Atlantic Ye	230440	2006	100	27/01/2015
+888	Roots in Stereo	P.O.D.	Greatest Hits: The Atlantic Ye	230723	2006	100	27/01/2015
+889	Alive	P.O.D.	Greatest Hits: The Atlantic Ye	230926	2006	100	27/01/2015
+890	Youth of the Nation	P.O.D.	Greatest Hits: The Atlantic Ye	231184	2006	100	27/01/2015
+891	Sleeping Awake	P.O.D.	Greatest Hits: The Atlantic Ye	231388	2006	100	27/01/2015
+892	Rock the Party (Off the Hook)	P.O.D.	Greatest Hits: The Atlantic Ye	231595	2006	100	27/01/2015
+893	Lights Out	P.O.D.	Greatest Hits: The Atlantic Ye	231762	2006	100	27/01/2015
+894	Goodbye for Now	P.O.D.	Greatest Hits: The Atlantic Ye	232035	2006	100	27/01/2015
+895	Execute the Sounds	P.O.D.	Greatest Hits: The Atlantic Ye	232216	2006	100	27/01/2015
+896	Will You	P.O.D.	Greatest Hits: The Atlantic Ye	232443	2006	100	27/01/2015
+897	Truly Amazing	P.O.D.	Greatest Hits: The Atlantic Ye	232626	2006	100	27/01/2015
+898	Satellite	P.O.D.	Greatest Hits: The Atlantic Ye	232838	2006	100	27/01/2015
+899	Set Your Eyes to Zion	P.O.D.	Greatest Hits: The Atlantic Ye	233086	2006	100	27/01/2015
+900	Here We Go [#]	P.O.D.	Greatest Hits: The Atlantic Ye	233294	2006	100	27/01/2015
+901	If It Wasn't for You	P.O.D.	Greatest Hits: The Atlantic Ye	233512	2006	100	27/01/2015
+902	Comfort Me	Pacifier	Pacifier [UK Bonus Tracks] Dis	233708	2003	100	27/01/2015
+903	Semi-Normal	Pacifier	Pacifier [UK Bonus Tracks] Dis	233884	2003	100	27/01/2015
+904	Run	Pacifier	Pacifier [UK Bonus Tracks] Dis	234114	2003	100	27/01/2015
+905	Everything	Pacifier	Pacifier [UK Bonus Tracks] Dis	234381	2003	100	27/01/2015
+906	Stranger	Pacifier	Pacifier [UK Bonus Tracks] Dis	234591	2003	100	27/01/2015
+907	Home	Pacifier	Pacifier [UK Bonus Tracks] Dis	234832	2003	100	27/01/2015
+908	Nothing	Pacifier	Pacifier [UK Bonus Tracks] Dis	235043	2003	100	27/01/2015
+909	Bullitproof	Pacifier	Pacifier [UK Bonus Tracks] Dis	235248	2003	100	27/01/2015
+910	Walls	Pacifier	Pacifier [UK Bonus Tracks] Dis	235516	2003	100	27/01/2015
+911	Just a Shadow	Pacifier	Pacifier [UK Bonus Tracks] Dis	235714	2003	100	27/01/2015
+912	Trademark	Pacifier	Pacifier [UK Bonus Tracks] Dis	235916	2003	100	27/01/2015
+913	Coming Down	Pacifier	Pacifier [UK Bonus Tracks] Dis	236172	2003	100	27/01/2015
+914	last resort	Papa Roach	Infest	236375	2000	100	27/01/2015
+915	No Son of Mine	Genesis	Platinum Collection Disc 1	236770	2004	100	27/01/2015
+916	I Can't Dance	Genesis	Platinum Collection Disc 1	237010	2004	100	27/01/2015
+917	Jesus He Knows Me	Genesis	Platinum Collection Disc 1	237267	2004	100	27/01/2015
+918	Hold on My Heart	Genesis	Platinum Collection Disc 1	237544	2004	100	27/01/2015
+919	Invisible Touch	Genesis	Platinum Collection Disc 1	237752	2004	100	27/01/2015
+920	Throwing It All Away	Genesis	Platinum Collection Disc 1	237982	2004	100	27/01/2015
+921	Tonight Tonight Tonight [Edit]	Genesis	Platinum Collection Disc 1	238251	2004	100	27/01/2015
+922	Land of Confusion	Genesis	Platinum Collection Disc 1	238537	2004	100	27/01/2015
+923	In Too Deep	Genesis	Platinum Collection Disc 1	238834	2004	100	27/01/2015
+924	Mama	Genesis	Platinum Collection Disc 1	239243	2004	100	27/01/2015
+925	That's All	Genesis	Platinum Collection Disc 1	239508	2004	100	27/01/2015
+926	Home by the Sea	Genesis	Platinum Collection Disc 1	239815	2004	100	27/01/2015
+927	Second Home by the Sea	Genesis	Platinum Collection Disc 1	240181	2004	100	27/01/2015
+928	Illegal Alien	Genesis	Platinum Collection Disc 1	240498	2004	100	27/01/2015
+929	Paperlate	Genesis	Platinum Collection Disc 1	240701	2004	100	27/01/2015
+930	Calling All Stations	Genesis	Platinum Collection Disc 1	241046	2004	100	27/01/2015
+931	Another Day in Paradise	Phil Collins	Hits	241369	1998	100	27/01/2015
+932	True Colors	Phil Collins	Hits	241643	1998	100	27/01/2015
+933	Easy Lover	Phil Collins	Hits	241945	1998	100	27/01/2015
+934	You Can't Hurry Love	Phil Collins	Hits	242117	1998	100	27/01/2015
+935	Two Hearts	Phil Collins	Hits	242321	1998	100	27/01/2015
+936	I Wish It Would Rain Down	Phil Collins	Hits	242649	1998	100	27/01/2015
+937	Against All Odds (Take a Look	Phil Collins	Hits	242854	1998	100	27/01/2015
+938	Something Happened on the Way	Phil Collins	Hits	243145	1998	100	27/01/2015
+939	Separate Lives	Phil Collins	Hits	243391	1998	100	27/01/2015
+940	Both Sides of the Story	Phil Collins	Hits	243788	1998	100	27/01/2015
+941	One More Night	Phil Collins	Hits	244074	1998	100	27/01/2015
+942	Sussudio	Phil Collins	Hits	244336	1998	100	27/01/2015
+943	Dance into the Light	Phil Collins	Hits	244598	1998	100	27/01/2015
+944	A Groovy Kind of Love	Phil Collins	Hits	244807	1998	100	27/01/2015
+945	In the Air Tonight	Phil Collins	Hits	245137	1998	100	27/01/2015
+946	Take Me Home	Phil Collins	Hits	245489	1998	100	27/01/2015
+947	Bohemian Rhapsody	Queen	Greatest Hits [Parlophone]	245847	1994	100	27/01/2015
+948	Another One Bites the Dust	Queen	Greatest Hits [Parlophone]	246063	1994	100	27/01/2015
+949	Killer Queen	Queen	Greatest Hits [Parlophone]	246245	1994	100	27/01/2015
+950	Fat Bottomed Girls	Queen	Greatest Hits [Parlophone]	246449	1994	100	27/01/2015
+951	Bicycle Race	Queen	Greatest Hits [Parlophone]	246632	1994	100	27/01/2015
+952	You're My Best Friend	Queen	Greatest Hits [Parlophone]	246804	1994	100	27/01/2015
+953	Don't Stop Me Now	Queen	Greatest Hits [Parlophone]	247015	1994	100	27/01/2015
+954	Save Me	Queen	Greatest Hits [Parlophone]	247243	1994	100	27/01/2015
+955	Crazy Little Thing Called Love	Queen	Greatest Hits [Parlophone]	247408	1994	100	27/01/2015
+956	Somebody to Love	Queen	Greatest Hits [Parlophone]	247704	1994	100	27/01/2015
+957	Now I'm Here	Queen	Greatest Hits [Parlophone]	247959	1994	100	27/01/2015
+958	Good Old-Fashioned Lover Boy	Queen	Greatest Hits [Parlophone]	248135	1994	100	27/01/2015
+959	Play the Game	Queen	Greatest Hits [Parlophone]	248348	1994	100	27/01/2015
+960	Flash	Queen	Greatest Hits [Parlophone]	248516	1994	100	27/01/2015
+961	Seven Seas of Rhye	Queen	Greatest Hits [Parlophone]	248686	1994	100	27/01/2015
+962	We Will Rock You	Queen	Greatest Hits [Parlophone]	248809	1994	100	27/01/2015
+963	We Are the Champions	Queen	Greatest Hits [Parlophone]	248993	1994	100	27/01/2015
+964	The Lost Art Of Keeping A Secr	Oueens Of The Stone Age	Liger	249211	0	100	27/01/2015
+965	Go With The Flow	Oueens Of The Stone Age	Liger	249400	0	100	27/01/2015
+966	You Know What You Did	Queens of the Stone Age	ERA Vulgaris	249663	0	100	27/01/2015
+967	Everybody Knows That You Are I	Queens of the Stone Age	Lullabies to Paralyze	249917	2005	100	27/01/2015
+968	Around the World	The Red Hot Chili Peppers	Californication	250157	1999	100	27/01/2015
+969	Parallel Universe	The Red Hot Chili Peppers	Californication	250428	1999	100	27/01/2015
+970	Scar Tissue	The Red Hot Chili Peppers	Californication	250646	1999	100	27/01/2015
+971	Otherside	The Red Hot Chili Peppers	Californication	250902	1999	100	27/01/2015
+972	Get on Top	The Red Hot Chili Peppers	Californication	251101	1999	100	27/01/2015
+973	Californication	The Red Hot Chili Peppers	Californication	251423	1999	100	27/01/2015
+974	Easily	The Red Hot Chili Peppers	Californication	251655	1999	100	27/01/2015
+975	Porcelain	The Red Hot Chili Peppers	Californication	251819	1999	100	27/01/2015
+976	Emit Remmus	The Red Hot Chili Peppers	Californication	252060	1999	100	27/01/2015
+977	I Like Dirt	The Red Hot Chili Peppers	Californication	252219	1999	100	27/01/2015
+978	This Velvet Glove	The Red Hot Chili Peppers	Californication	252445	1999	100	27/01/2015
+979	Savior	The Red Hot Chili Peppers	Californication	252739	1999	100	27/01/2015
+980	Purple Stain	The Red Hot Chili Peppers	Californication	252993	1999	100	27/01/2015
+981	Right on Time	The Red Hot Chili Peppers	Californication	253107	1999	100	27/01/2015
+982	Road Trippin'	The Red Hot Chili Peppers	Californication	253314	1999	100	27/01/2015
+983	Heavy Metal	Sammy Hagar	Heavy Metal Soundtrack	253547	1981	100	27/01/2015
+984	To the Moon and Back	Savage Garden	Savage Garden [Australia Bonus	253888	2000	100	27/01/2015
+985	Carry on Dancing	Savage Garden	Savage Garden [Australia Bonus	254112	2000	100	27/01/2015
+986	Tears of Pearls	Savage Garden	Savage Garden [Australia Bonus	254338	2000	100	27/01/2015
+987	I Want You	Savage Garden	Savage Garden [Australia Bonus	254570	2000	100	27/01/2015
+988	Truly Madly Deeply	Savage Garden	Savage Garden [Australia Bonus	254847	2000	100	27/01/2015
+989	Violet	Savage Garden	Savage Garden [Australia Bonus	255090	2000	100	27/01/2015
+990	All Around Me	Savage Garden	Savage Garden [Australia Bonus	255340	2000	100	27/01/2015
+991	Universe	Savage Garden	Savage Garden [Australia Bonus	255600	2000	100	27/01/2015
+992	A Thousand Words	Savage Garden	Savage Garden [Australia Bonus	255839	2000	100	27/01/2015
+993	Break Me Shake Me	Savage Garden	Savage Garden [Australia Bonus	256042	2000	100	27/01/2015
+994	Mine	Savage Garden	Savage Garden [Australia Bonus	256312	2000	100	27/01/2015
+995	Santa Monica	Savage Garden	Savage Garden [Australia Bonus	256526	2000	100	27/01/2015
+996	Factory (Album Version)	Shihad	Churn	256842	2007	100	27/01/2015
+997	Screwtop (Album Version)	Shihad	Churn	257211	2007	100	27/01/2015
+998	Fracture (Album Version)	Shihad	Churn	257519	2007	100	27/01/2015
+999	Stations (Album Version)	Shihad	Churn	257798	2007	100	27/01/2015
+1000	Clapper-Loader (Album Version)	Shihad	Churn	258006	2007	100	27/01/2015
+1001	I Only Said	Shihad	Churn	258245	2007	100	27/01/2015
+1002	Derail (Album Version)	Shihad	Churn	258530	2007	100	27/01/2015
+1003	Bone Orchard (Album Version)	Shihad	Churn	258735	2007	100	27/01/2015
+1004	The Happy Meal (Album Version)	Shihad	Churn	259005	2007	100	27/01/2015
+1005	You Again	Shihad	Killjoy	259283	1995	100	27/01/2015
+1006	Gimme Gimme	Shihad	Killjoy	259600	1995	100	27/01/2015
+1007	The Call	Shihad	Killjoy	259913	1995	100	27/01/2015
+1008	Envy	Shihad	Killjoy	260147	1995	100	27/01/2015
+1009	Debs Night Out	Shihad	Killjoy	260364	1995	100	27/01/2015
+1010	Bitter	Shihad	Killjoy	260616	1995	100	27/01/2015
+1011	For What You Burn	Shihad	Killjoy	260959	1995	100	27/01/2015
+1012	Silvercup	Shihad	Killjoy	261263	1995	100	27/01/2015
+1013	Get Up	Shihad	Killjoy	261514	1995	100	27/01/2015
+1014	None Of The Above	Shihad	Love Is The New Hate	261657	2005	100	27/01/2015
+1015	Empty Shell	Shihad	Love Is The New Hate	261864	2005	100	27/01/2015
+1016	Day Will Come	Shihad	Love Is The New Hate	262056	2005	100	27/01/2015
+1017	All The Young Fascists	Shihad	Love Is The New Hate	262247	2005	100	27/01/2015
+1018	Saddest Song In The World	Shihad	Love Is The New Hate	262499	2005	100	27/01/2015
+1019	Big Future	Shihad	Love Is The New Hate	262624	2005	100	27/01/2015
+1020	Shot In The Head	Shihad	Love Is The New Hate	262825	2005	100	27/01/2015
+1021	Dark Times	Shihad	Love Is The New Hate	263068	2005	100	27/01/2015
+1022	Traitor	Shihad	Love Is The New Hate	263243	2005	100	27/01/2015
+1023	Stop	Shihad	Love Is The New Hate	263413	2005	100	27/01/2015
+1024	Alive	Shihad	Love Is The New Hate	263657	2005	100	27/01/2015
+1025	Guts And The Glory	Shihad	Love Is The New Hate	263866	2005	100	27/01/2015
+1026	Untitled	Silverchair	The Best Of, Volume 1 [Disc 2]	264076	2002	100	27/01/2015
+1027	New Race	Silverchair	The Best Of, Volume 1 [Disc 2]	264276	2002	100	27/01/2015
+1028	Trash	Silverchair	The Best Of, Volume 1 [Disc 2]	264442	2002	100	27/01/2015
+1029	Acoustic Re-Mix	Silverchair	The Best Of, Volume 1 [Disc 2]	264672	2002	100	27/01/2015
+1030	Madman	Silverchair	The Best Of, Volume 1 [Disc 2]	264835	2002	100	27/01/2015
+1031	Blind	Silverchair	The Best Of, Volume 1 [Disc 2]	265089	2002	100	27/01/2015
+1032	Punk Song #2	Silverchair	The Best Of, Volume 1 [Disc 2]	265254	2002	100	27/01/2015
+1033	Wasted / Fix Me	Silverchair	The Best Of, Volume 1 [Disc 2]	265365	2002	100	27/01/2015
+1034	Minor Threat	Silverchair	The Best Of, Volume 1 [Disc 2]	265461	2002	100	27/01/2015
+1035	Freak (Remix For Us Rejects)	Silverchair	The Best Of, Volume 1 [Disc 2]	265714	2002	100	27/01/2015
+1036	Spawn (Originaol Version)	Silverchair	The Best Of, Volume 1 [Disc 2]	265890	2002	100	27/01/2015
+1037	Anthem for the Year 2000	Silverchair	The Best of Silverchair, Vol.	266154	2000	100	27/01/2015
+1038	Freak	Silverchair	The Best of Silverchair, Vol.	266382	2000	100	27/01/2015
+1039	Freak	Silverchair	The Best of Silverchair, Vol.	266382	2000	100	27/01/2015
+1040	Emotion Sickness	Silverchair	The Best of Silverchair, Vol.	266744	2000	100	27/01/2015
+1041	Israel's Son	Silverchair	The Best of Silverchair, Vol.	267065	2000	100	27/01/2015
+1042	Tomorrow	Silverchair	The Best of Silverchair, Vol.	267333	2000	100	27/01/2015
+1043	Cemetery	Silverchair	The Best of Silverchair, Vol.	267577	2000	100	27/01/2015
+1044	The Door	Silverchair	The Best of Silverchair, Vol.	267793	2000	100	27/01/2015
+1045	Miss You Love	Silverchair	The Best of Silverchair, Vol.	268035	2000	100	27/01/2015
+1046	Abuse Me	Silverchair	The Best of Silverchair, Vol.	268278	2000	100	27/01/2015
+1047	Pure Massacre	Silverchair	The Best of Silverchair, Vol.	268552	2000	100	27/01/2015
+1048	Rusty Cage	Soundgarden	Badmotorfinger	268818	1991	100	27/01/2015
+1049	Road Trip	Steriogram	Schmack!	268997	2004	100	27/01/2015
+1050	Walkie Talkie Man	Steriogram	Schmack!	269130	2004	100	27/01/2015
+1051	Schmack!	Steriogram	Schmack!	269275	2004	100	27/01/2015
+1052	Was the Day	Steriogram	Schmack!	269408	2004	100	27/01/2015
+1053	White Trash	Steriogram	Schmack!	269632	2004	100	27/01/2015
+1054	In the City	Steriogram	Schmack!	269793	2004	100	27/01/2015
+1055	Go	Steriogram	Schmack!	269969	2004	100	27/01/2015
+1056	Fat and Proud	Steriogram	Schmack!	270176	2004	100	27/01/2015
+1057	Tsunami	Steriogram	Schmack!	270357	2004	100	27/01/2015
+1058	Wind It Up	Steriogram	Schmack!	270551	2004	100	27/01/2015
+1059	Be Good to Me	Steriogram	Schmack!	270730	2004	100	27/01/2015
+1060	On and On	Steriogram	Schmack!	270969	2004	100	27/01/2015
+1061	30/30-150	Stone Sour	Come What(Ever) May	271228	2006	100	27/01/2015
+1062	Come What(Ever) May	Stone Sour	Come What(Ever) May	271448	2006	100	27/01/2015
+1063	Hell & Consequences	Stone Sour	Come What(Ever) May	271660	2006	100	27/01/2015
+1064	Sillyworld	Stone Sour	Come What(Ever) May	271909	2006	100	27/01/2015
+1065	Made Of Scars	Stone Sour	Come What(Ever) May	272113	2006	100	27/01/2015
+1066	Reborn	Stone Sour	Come What(Ever) May	272306	2006	100	27/01/2015
+1067	Your God	Stone Sour	Come What(Ever) May	272590	2006	100	27/01/2015
+1068	Through Glass	Stone Sour	Come What(Ever) May	272873	2006	100	27/01/2015
+1069	Socio	Stone Sour	Come What(Ever) May	273074	2006	100	27/01/2015
+1070	1st Person	Stone Sour	Come What(Ever) May	273316	2006	100	27/01/2015
+1071	Cardiff	Stone Sour	Come What(Ever) May	273599	2006	100	27/01/2015
+1072	Zzyzx Rd.	Stone Sour	Come What(Ever) May	273915	2006	100	27/01/2015
+1073	Attack	System of a Down	Hypnotize	274101	2005	100	27/01/2015
+1074	Dreaming	System of a Down	Hypnotize	274340	2005	100	27/01/2015
+1075	Kill Rock 'N Roll	System of a Down	Hypnotize	274488	2005	100	27/01/2015
+1076	Hypnotize	System of a Down	Hypnotize	274677	2005	100	27/01/2015
+1077	Stealing Society	System of a Down	Hypnotize	274855	2005	100	27/01/2015
+1078	Tentative	System of a Down	Hypnotize	275071	2005	100	27/01/2015
+1079	U-Fig	System of a Down	Hypnotize	275246	2005	100	27/01/2015
+1080	Holy Mountains	System of a Down	Hypnotize	275574	2005	100	27/01/2015
+1081	Vicinity of Obscenity	System of a Down	Hypnotize	275745	2005	100	27/01/2015
+1082	She's Like Heroin	System of a Down	Hypnotize	275909	2005	100	27/01/2015
+1083	Lonely Day	System of a Down	Hypnotize	276076	2005	100	27/01/2015
+1084	Soldier Side	System of a Down	Hypnotize	276296	2005	100	27/01/2015
+1085	Take It Easy	The Eagles	The Very Best of the Eagles [1	276508	1994	100	27/01/2015
+1086	Witchy Woman	The Eagles	The Very Best of the Eagles [1	276763	1994	100	27/01/2015
+1087	Peaceful Easy Feeling	The Eagles	The Very Best of the Eagles [1	277024	1994	100	27/01/2015
+1088	Doolin Dalton	The Eagles	The Very Best of the Eagles [1	277233	1994	100	27/01/2015
+1089	Desperado	The Eagles	The Very Best of the Eagles [1	277448	1994	100	27/01/2015
+1090	Tequila Sunrise	The Eagles	The Very Best of the Eagles [1	277623	1994	100	27/01/2015
+1091	Best of My Love	The Eagles	The Very Best of the Eagles [1	277899	1994	100	27/01/2015
+1092	James Dean	The Eagles	The Very Best of the Eagles [1	278119	1994	100	27/01/2015
+1093	I Can't Tell You Why	The Eagles	The Very Best of the Eagles [1	278414	1994	100	27/01/2015
+1094	One of These Nights	The Eagles	The Very Best of the Eagles [1	278797	1994	100	27/01/2015
+1095	Lyin' Eyes	The Eagles	The Very Best of the Eagles [1	279085	1994	100	27/01/2015
+1096	Take It to the Limit	The Eagles	The Very Best of the Eagles [1	279378	1994	100	27/01/2015
+1097	Hotel California	The Eagles	The Very Best of the Eagles [1	279768	1994	100	27/01/2015
+1098	New Kid in Town	The Eagles	The Very Best of the Eagles [1	280072	1994	100	27/01/2015
+1099	Life in the Fast Lane	The Eagles	The Very Best of the Eagles [1	280359	1994	100	27/01/2015
+1100	Heartache Tonight	The Eagles	The Very Best of the Eagles [1	280625	1994	100	27/01/2015
+1101	The Long Run	The Eagles	The Very Best of the Eagles [1	280848	1994	100	27/01/2015
+1102	Broken	Scott Stapp	The Great Divide	281105	2005	100	27/01/2015
+1103	Fight Song	Scott Stapp	The Great Divide	281351	2005	100	27/01/2015
+1104	Hard Way	Scott Stapp	The Great Divide	281574	2005	100	27/01/2015
+1105	Justify	Scott Stapp	The Great Divide	281898	2005	100	27/01/2015
+1106	Let Me Go	Scott Stapp	The Great Divide	282153	2005	100	27/01/2015
+1107	Reach Out	Scott Stapp	The Great Divide	282420	2005	100	27/01/2015
+1108	Sublime	Scott Stapp	The Great Divide	282674	2005	100	27/01/2015
+1109	Surround Me	Scott Stapp	The Great Divide	282950	2005	100	27/01/2015
+1110	The Great Divide	Scott Stapp	The Great Divide	283192	2005	100	27/01/2015
+1111	You Will Soar	Scott Stapp	The Great Divide	283412	2005	100	27/01/2015
+1112	Sam's Town	The Killers	Sam's Town	283658	2006	100	27/01/2015
+1113	Enterlude	The Killers	Sam's Town	283707	2006	100	27/01/2015
+1114	When You Were Young	The Killers	Sam's Town	283927	2006	100	27/01/2015
+1115	Bling (Confession of a King)	The Killers	Sam's Town	284175	2006	100	27/01/2015
+1116	For Reasons Unknown	The Killers	Sam's Town	284387	2006	100	27/01/2015
+1117	Read My Mind	The Killers	Sam's Town	284633	2006	100	27/01/2015
+1118	Uncle Jonny	The Killers	Sam's Town	284898	2006	100	27/01/2015
+1119	Bones	The Killers	Sam's Town	285125	2006	100	27/01/2015
+1120	My List	The Killers	Sam's Town	285373	2006	100	27/01/2015
+1121	This River Is Wild	The Killers	Sam's Town	285651	2006	100	27/01/2015
+1122	Why Do I Keep Counting?	The Killers	Sam's Town	285915	2006	100	27/01/2015
+1123	Exitlude	The Killers	Sam's Town	286066	2006	100	27/01/2015
+1124	Where the White Boys Dance	The Killers	Sam's Town	286274	2006	100	27/01/2015
+1125	Track 1	Unknown Artist	Unknown Album (29/04/2005 3:40	286320	0	100	27/01/2015
+1126	Track 2	Unknown Artist	Unknown Album (29/04/2005 3:40	286504	0	100	27/01/2015
+1127	Track 3	Unknown Artist	Unknown Album (29/04/2005 3:40	286723	0	100	27/01/2015
+1128	Track 4	Unknown Artist	Unknown Album (29/04/2005 3:40	286866	0	100	27/01/2015
+1129	Track 5	Unknown Artist	Unknown Album (29/04/2005 3:40	287072	0	100	27/01/2015
+1130	Track 6	Unknown Artist	Unknown Album (29/04/2005 3:40	287243	0	100	27/01/2015
+1131	Track 7	Unknown Artist	Unknown Album (29/04/2005 3:40	287408	0	100	27/01/2015
+1132	Track 8	Unknown Artist	Unknown Album (29/04/2005 3:40	287557	0	100	27/01/2015
+1133	Track 9	Unknown Artist	Unknown Album (29/04/2005 3:40	287771	0	100	27/01/2015
+1134	Track 10	Unknown Artist	Unknown Album (29/04/2005 3:40	287887	0	100	27/01/2015
+1135	Track 11	Unknown Artist	Unknown Album (29/04/2005 3:40	288069	0	100	27/01/2015
+1136	Track 12	Unknown Artist	Unknown Album (29/04/2005 3:40	288267	0	100	27/01/2015
+1137	Track 13	Unknown Artist	Unknown Album (29/04/2005 3:40	288547	0	100	27/01/2015
+1138	Track 14	Unknown Artist	Unknown Album (29/04/2005 3:40	288739	0	100	27/01/2015
+1139	Track 15	Unknown Artist	Unknown Album (29/04/2005 3:40	288947	0	100	27/01/2015
+1140	Track 16	Unknown Artist	Unknown Album (29/04/2005 3:40	289174	0	100	27/01/2015
+1141	Track 17	Unknown Artist	Unknown Album (29/04/2005 3:40	289357	0	100	27/01/2015
+1142	Track 18	Unknown Artist	Unknown Album (29/04/2005 3:40	289608	0	100	27/01/2015
+1143	Track 19	Unknown Artist	Unknown Album (29/04/2005 3:40	289899	0	100	27/01/2015
+1144	Track 20	Unknown Artist	Unknown Album (29/04/2005 3:40	290193	0	100	27/01/2015
+1145	Track 21	Unknown Artist	Unknown Album (29/04/2005 3:40	290558	0	100	27/01/2015
+1146	Track 22	Unknown Artist	Unknown Album (29/04/2005 3:40	290671	0	100	27/01/2015
+1147	Torn	Creed	Unknown Album (6/27/2003 2:21:	291057	0	100	27/01/2015
+1148	Track 5	Creed	Unknown Album (6/27/2003 2:21:	291355	0	100	27/01/2015
+1149	What's This Life Fore	Creed	Unknown Album (6/27/2003 2:21:	291604	0	100	27/01/2015
+1150	Falling	Creed	Unknown Album (6/27/2003 2:21:	291844	0	100	27/01/2015
+1151	Sacrifice	Creed	Unknown Album (6/27/2003 2:21:	292138	0	100	27/01/2015
+1152	Entre Sandman	Metalica	Unknown Album (6/27/2003 2:21	292470	0	100	27/01/2015
+1153	The Unforgiven	Metalica	Unknown Album (6/27/2003 2:21:	292859	0	100	27/01/2015
+1154	Nothing Else Matteres	Metalica	Unknown Album (6/27/2003 2:21:	293248	0	100	27/01/2015
+1155	Track 7	System of the down	Unknown Album (6/27/2003 2:21:	293460	0	100	27/01/2015
+1156	Toxicity	System of the down	Unknown Album (6/27/2003 2:21:	293683	0	100	27/01/2015
+1157	Aerials	System of the down	Unknown Album (6/27/2003 2:21:	294056	0	100	27/01/2015
+1158	Unknown	Unknown	Unknown	294318	0	100	27/01/2015
+1159	Unknown	Unknown	Unknown	294569	0	100	27/01/2015
+1160	Adele - Rolling In The Deep	Adele	21	294798	2011	100	27/01/2015
+1161	Nicki Minaj - Super Bass	Nicki Minaj	Pink Friday [Deluxe Version]	295017	2010	100	27/01/2015
+1162	ÿþR i g h t   T h e r e	ÿþ[ P R I M E ]	ÿþ[ P R I M E ]	295278	0	100	27/01/2015
+1163	Lady GaGa - The Edge Of Glory	Unknown	Unknown	295599	0	100	27/01/2015
+1164	Jessica Mauboy - Inescapable	Unknown	Unknown	295813	0	100	27/01/2015
+1165	LMFAO Feat. Natalia Kills - Ch	Unknown	Unknown	296083	0	100	27/01/2015
+1166	Unknown	Unknown	Unknown	296293	0	100	27/01/2015
+1167	Pitbull Feat. Ne-Yo, Afrojack	Unknown	Unknown	296538	0	100	27/01/2015
+1168	Bruno Mars - Marry You	Unknown	Unknown	296770	0	100	27/01/2015
+1169	David Guetta Feat. Taio Cruz &	Unknown	Unknown	296973	0	100	27/01/2015
+1170	Calvin Harris Feat. Kelis - Bo	Unknown	Unknown	297196	0	100	27/01/2015
+1171	Pitbull Feat. Marc Anthony - R	Unknown	Unknown	297429	0	100	27/01/2015
+1172	Beyonce - Best Thing I Never H	Unknown	Unknown	297683	0	100	27/01/2015
+1173	Katy Perry - Last Friday Night	Katy Perry	Teenage Dream	297914	2010	100	27/01/2015
+1174	Bad Meets Evil Feat. Bruno Mar	Unknown	Unknown	298218	0	100	27/01/2015
+1175	Simple Plan Feat. Natasha Bedi	Unknown	Unknown	298417	0	100	27/01/2015
+1176	Example - Changed The Way You	Unknown	Unknown	298613	0	100	27/01/2015
+1177	Chris Brown Feat. Justin Biebe	Chris Brown/Justin Bieber	F.A.M.E. [Deluxe Version]	298902	2011	100	27/01/2015
+1178	Havana Brown - We Run The Nigh	Unknown	Unknown	299124	0	100	27/01/2015
+1179	These Kids Wear Crowns - Jumps	These Kids Wear Crowns	Jumpstart	299343	2011	100	27/01/2015
+1180	David Guetta Feat. Nicki Minaj	Unknown	Unknown	299560	0	100	27/01/2015
+1181	Bruno Mars - The Lazy Song	Bruno Mars	Doo-Wops & Hooligans	299756	2010	100	27/01/2015
+1182	Benny Benassi Feat. Gary Go -	Unknown	Unknown	300051	0	100	27/01/2015
+1183	Aloe Blacc - I Need A Dollar	Bucks Fizz	Die Ultimative Chartshow: Gran	300295	2008	100	27/01/2015
+1184	Jessie J - Nobody's Perfect	Jessie J	Who You Are	300555	2011	100	27/01/2015
+1185	Unknown	Unknown	Unknown	300793	0	100	27/01/2015
+1186	Alexandra Stan - Mr. Saxobeat	Unknown	Unknown	300945	0	100	27/01/2015
+1187	Lady Gaga - Born This Way	Unknown	Unknown	301203	0	100	27/01/2015
+1188	Jessie J Feat. B.o.B - Price T	Unknown	Unknown	301425	0	100	27/01/2015
+1189	Jack Vidgen - Yes I Am	Unknown	Unknown	301640	0	100	27/01/2015
+1190	Jennifer Lopez Feat. Pitbull -	Unknown	Unknown	301876	0	100	27/01/2015
+1191	The Black Eyed Peas - Don't St	The Black Eyed Peas	The Beginning	302245	2010	100	27/01/2015
+1192	Stan Walker - Loud	Unknown	Unknown	302453	0	100	27/01/2015
+1193	Pete Murray - Always A Winner	Unknown	Unknown	302706	0	100	27/01/2015
+1194	Snoop Dogg Feat. T-Pain - Boom	Snoop Dogg/T-Pain	Doggumentary	302937	2011	100	27/01/2015
+1195	Amy Winehouse - Rehab	Unknown	Unknown	303153	0	100	27/01/2015
+1196	Nicole Scherzinger - Don't Hol	Unknown	Unknown	303351	0	100	27/01/2015
+1197	Unknown	Unknown	Unknown	303554	0	100	27/01/2015
+1198	Coldplay - Every Teardrop Is A	Unknown	Unknown	303797	0	100	27/01/2015
+1199	Demi Lovato - Skyscraper	Unknown	Unknown	304025	0	100	27/01/2015
+1200	Rihanna - Cheers (Drink To Tha	Rihanna	Loud [Clean]	304288	2010	100	27/01/2015
+1201	LMFAO - Sexy And I Know It	Unknown	Unknown	304488	0	100	27/01/2015
+1202	Cold Chisel - Khe Sanh	Various Artists	Australian Cricket's Classic C	304742	2003	100	27/01/2015
+1203	Marvin Priest - Own This Club	Unknown	Unknown	304947	0	100	27/01/2015
+1204	Adele - Set Fire To The Rain	Adele	21	305190	2011	100	27/01/2015
+1205	Someone Like You	Adele	21	305476	2011	100	27/01/2015
+1206	Unknown	Unknown	Unknown	305726	0	100	27/01/2015
+1207	Unknown	Unknown	Unknown	305927	0	100	27/01/2015
+1208	Give Me Everything (feat. Ne-Y	Pitbull	Give Me Everything (feat. Ne-Y	306186	2011	100	27/01/2015
+1209	Sweat (David Guetta Remix)	Snoop Dogg & David Guetta	Sweat (David Guetta Remix) - S	306385	2011	100	27/01/2015
+1210	Someone Like You	Adele Adkins/Dan Wilson	21	306672	2011	100	27/01/2015
+1211	Yoü & I	Lady GaGa	Unknown	306979	0	100	27/01/2015
+1212	Just Can't Get Enough	Black Eyed Peas	The Beginning (Deluxe Edition)	307198	2010	100	27/01/2015
+1213	Rolling In the Deep	Adele	Rolling In the Deep - Single	307427	2010	100	27/01/2015
+1214	What The Hell	Avril Lavigne/Max Martin/Shellback	What The Hell - Single	307646	2011	100	27/01/2015
+1215	Hold It Against Me	Britney Spears	Hold It Against Me - Single	307877	2011	100	27/01/2015
+1216	Grenade	Bruno Mars	Grenade - Single	308100	2010	100	27/01/2015
+1217	ÿþY o u   M a k e   M e   F e e l . . . ( f e a t .   S a b i )	Unknown	ÿþY o u   M a k e   M e   F e e l . . .   ( f e a t .   S a b i )   -   S i n g l e	308322	0	100	27/01/2015
+1218	Who's That Chick (Radio Edit)	David Guetta feat. Rihanna	One More Love	308487	2010	100	27/01/2015
+1219	Unknown	Unknown	Unknown	308694	0	100	27/01/2015
+1220	Unknown	Unknown	Unknown	308957	0	100	27/01/2015
+1221	ÿþN o t   O v e r   Y o u	ÿþG a v i n   D e G r a w   &   R y a n   T e d d e r	ÿþN o t   O v e r   Y o u   -   S i n g l e	309178	0	100	27/01/2015
+1222	On The Floor (Feat. Pitbull)	Jennifer Lopez	Unknown	309461	2011	100	27/01/2015
+1223	Nobody's Perfect	Jessie J	Who You Are	309725	2011	100	27/01/2015
+1224	All Of The Lights	Kanye West feat. Rihanna	My Beautiful Dark Twisted Fant	309916	2010	100	27/01/2015
+1225	Firework	Katy Perry	Teenage Dream	310146	2010	100	27/01/2015
+1226	Teenage Dream	Katy Perry	Teenage Dream	310374	2010	100	27/01/2015
+1227	Blow	Ke$ha	Blow - Single	310598	2010	100	27/01/2015
+1228	Party Rock Anthem	LMFAO	Party Rock Anthem - Single	310865	2011	100	27/01/2015
+1229	Moves Like Jagger (feat. Chris	Maroon 5	Moves Like Jagger (feat. Chris	311069	2011	100	27/01/2015
+1230	Just A Dream	Nelly	5.0	311307	2010	100	27/01/2015
+1231	Good Life (New Mix Version)	OneRepublic	Good Life - Single	311556	2010	100	27/01/2015
+1232	Raise Your Glass	P!nk	Raise Your Glass - Single	311761	2010	100	27/01/2015
+1233	FucKIN Perfect	Pink	Greatest Hits... So Far!!!	311975	2010	100	27/01/2015
+1234	California King Bed	Rihanna	Loud	312226	2010	100	27/01/2015
+1235	Cheers (Drink To That)	Rihanna	Loud	312530	2010	100	27/01/2015
+1236	Only Girl (In The World)	Rihanna  | www.RNBxBeatz.com	www.RNBxBeatz.com	312774	2010	100	27/01/2015
+1237	S&M	Rihanna	Loud [Clean]	313018	2010	100	27/01/2015
+1238	What's My Name?	Rihanna	Loud [Clean]	313275	2010	100	27/01/2015
+1239	The Time (The Dirty Bit)	The Black Eyed Peas	The Beginning	313586	2010	100	27/01/2015
+1240	Invincible (feat. Kelly Rowlan	Tinie Tempah	Disc-Overy	313791	2010	100	27/01/2015
+1241	Real Real Gone	Van Morrison	Enlightenment	314012	1990	100	27/01/2015
+1242	Enlightenment	Van Morrison	Enlightenment	314258	1990	100	27/01/2015
+1243	So Quiet in Here	Van Morrison	Enlightenment	314635	1990	100	27/01/2015
+1244	Avalon of the Heart	Van Morrison	Enlightenment	314925	1990	100	27/01/2015
+1245	See Me Through	Van Morrison	Enlightenment	315305	1990	100	27/01/2015
+1246	Youth of 1,000 Summers	Van Morrison	Enlightenment	315529	1990	100	27/01/2015
+1247	In the Days Before Rock'N'Roll	Van Morrison	Enlightenment	316021	1990	100	27/01/2015
+1248	Start All over Again	Van Morrison	Enlightenment	316275	1990	100	27/01/2015
+1249	She's My Baby	Van Morrison	Enlightenment	316592	1990	100	27/01/2015
+1250	Memories	Van Morrison	Enlightenment	316853	1990	100	27/01/2015
+1251	Before Too Long	Paul Kelly & The Coloured Girl	Edge of the 80s - Heart Of The	317056	1988	100	27/01/2015
+1252	Rock Me Amadeus	Falco	Edge of the 80s - Heart Of The	317258	1988	100	27/01/2015
+1253	Take On Me	A-Ha	Edge of the 80s - Heart Of The	317488	1988	100	27/01/2015
+1254	She Bop	Cyndi Lauper	Edge of the 80s - Heart Of The	317716	1988	100	27/01/2015
+1255	Wouldn't it be Good	Nik Kershaw	Edge of the 80s - Heart Of The	317983	1988	100	27/01/2015
+1256	No One Is To Blame	Howard Jones	Edge of the 80s - Heart Of The	318236	1988	100	27/01/2015
+1257	Love Resurrection	Alison Moyet	Edge of the 80s - Heart Of The	318469	1988	100	27/01/2015
+1258	Shout To The Top	The Style Council	Edge of the 80s - Heart Of The	318668	1988	100	27/01/2015
+1259	Out Of Mind Out Of Sight	Models	Edge of the 80s - Heart Of The	318884	1988	100	27/01/2015

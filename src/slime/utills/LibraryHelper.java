@@ -1,9 +1,9 @@
-package slime.junit;
+package slime.utills;
 
 import java.io.File;
 import java.io.FilenameFilter;
 
-public class JUnit_TestHelper 
+public class LibraryHelper 
 {
 	public static boolean DirectoryChecker(String directory)
     {
@@ -41,4 +41,23 @@ public class JUnit_TestHelper
         else
         	return false;
     }
+    
+    /*
+    *
+    * File path grabber
+    * 
+    * Grabs the path to the validated music file and adds it to the String Array!
+    * 
+    */
+   public static String[] MusicFilePathGrabber(File[] fileArray)
+   {
+	   	//Iterate over the list and extract the paths!
+	   	String[] dirs = new String[fileArray.length];
+	   	
+	   	for(int index = 0; index < fileArray.length; index++)
+	   	{
+	   		dirs[index] = fileArray[index].getPath();
+	   	}
+	   	return dirs;
+   }
 }

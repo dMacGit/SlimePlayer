@@ -45,41 +45,67 @@ import slime.media.WrongFileTypeException;
 
 public class manualLibraryCreation extends JPanel implements ActionListener
 {
-    private static final boolean DEBUG = false;
+    /**
+	 * Class for manually adding directories and creating the required text files
+	 * for the application to operate.
+	 * 
+	 * Contains GUI elements so user can edit JTextfield to required path of directory, or
+	 * press the Add Folder JButton to open up a JFileChooser, and select the desired
+	 * directory. Once the user is satisfied, the Accept button can be pressed to start
+	 * the validation/Searching and file writing procedures.
+	 * 
+	 */
+	
+	private static final long serialVersionUID = -1522556823783906998L;
+	private static final boolean DEBUG = false;
+	
 	private String[] fileDirectory;
     private int identificationNumberStart;
     private int totalSongs = 1;
-    private FileInputStream fis;
-    private final String HOLDINGS_FILE = "Data_Files/HoldingsFile.txt";//The written holdings file
     private final String LIBRARY_FILE = "Data_Files/Lib_MP3player.txt";
-    private final String SONG_PATHS_FILE = "Data_Files/SongPaths.txt";   
+    private final String SONG_PATHS_FILE = "Data_Files/SongPaths.txt";
+    
+    private final static String DEFAULT_HOME_MUSIC_DIR = System.getProperty("user.home") + System.getProperty("file.separator")+"Music";
+    
     private File[] listOfFiles;
-    private HashMap<Integer, String> holdingSongLines;
+    
+    private HashMap<Integer, String> librarySongLines;
     private HashMap<Integer,File> filePaths;
+    
     public boolean startPlayer = false;
     public String theCurrentSongTitle = null;
+    public String theCurrentDirPath = DEFAULT_HOME_MUSIC_DIR;
+    
     private String title = null;
     private String artist = null;
     private String recordingTitle = null;
     private int durration = 0;
     private int year = 0;
+    
     private int popularity = 100;
+    
     private String datAdded = null;
-    private JPanel libraryPanel, displayPanel, adjustPanel,subTitlePanel, subArtistPanel,subAlbumPanel,subSecondsPanel,subYearPanel;
-    private JTextField titleField,artistField,yearField,secondsField,albumField;
-    private JLabel idLabel,titleLabel,artistLabel,albumLabel,timeLabel,yearLabel,ratingLabel,dateLabel;
-    private boolean notPressedContinue = true;
-    private JButton continueSearch, addToLibrary;
+    
+    private JPanel libraryPanel, displayPanel, adjustPanel;
+    private JTextField currentDirectoryToSearch;
+    private JLabel searchDirectoryLabel;
+    private JButton addToLibrary, Accept;
 
-    public manualLibraryCreation(String[] directoryToSrearch)
+    /*
+     * The main catch all constructor.
+     * 
+     * All other constructors make calls to here.
+     */
+    public manualLibraryCreation(String directoryToSrearch)
     {
+    	fileDirectory = new String[1];
         filePaths = new HashMap<Integer,File>();
-        holdingSongLines = new HashMap<Integer,String>();
+        librarySongLines = new HashMap<Integer,String>();
 
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-        //this.setPreferredSize(new Dimension(900,120));
         
-        fileDirectory = directoryToSrearch;
+        //fileDirectory = directoryToSrearch;
+        theCurrentDirPath = directoryToSrearch;
         identificationNumberStart = 1;
 
         displayPanel = new JPanel();
@@ -87,220 +113,94 @@ public class manualLibraryCreation extends JPanel implements ActionListener
         libraryPanel = new JPanel();
 
         addToLibrary = new JButton("Add Folder");
-        //adjustPanel.setPreferredSize(new Dimension(900,50));
+        Accept = new JButton("Accept");
+
         adjustPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
 
-        titleField = new JTextField("");
-        titleField.setColumns(10);
-        artistField = new JTextField("");
-        artistField.setColumns(10);
-        albumField = new JTextField("");
-        albumField.setColumns(10);
-        yearField = new JTextField("");
-        yearField.setColumns(10);
-        secondsField = new JTextField("");
-        secondsField.setColumns(10);
+        searchDirectoryLabel = new JLabel("Directory: ");
+        
+        currentDirectoryToSearch = new JTextField(theCurrentDirPath);
+        
+        //Null check
+        if(theCurrentDirPath != null)
+        {
+        	currentDirectoryToSearch.setColumns(currentDirectoryToSearch.getText().length());
+        }
+        else{
+        	theCurrentDirPath = DEFAULT_HOME_MUSIC_DIR;
+        	currentDirectoryToSearch.setText(theCurrentDirPath);
+        }
 
-        subTitlePanel = new JPanel();
-        subTitlePanel.add(new JLabel("Title: "));
-        subTitlePanel.add(titleField);
-
-        subArtistPanel = new JPanel();
-        subArtistPanel.add(new JLabel("Artist: "));
-        subArtistPanel.add(artistField);
-
-        subAlbumPanel = new JPanel();
-        subAlbumPanel.add(new JLabel("Album: "));
-        subAlbumPanel.add(albumField);
-
-        subSecondsPanel = new JPanel();
-        subSecondsPanel.add(new JLabel("Seconds: "));
-        subSecondsPanel.add(secondsField);
-
-        subYearPanel = new JPanel();
-        subYearPanel.add(new JLabel("Year: "));
-        subYearPanel.add(yearField);
-
-        adjustPanel.add(subTitlePanel);
-        adjustPanel.add(subArtistPanel);
-        adjustPanel.add(subAlbumPanel);
-        adjustPanel.add(subSecondsPanel);
-        adjustPanel.add(subYearPanel);
-
-        //displayPanel.setPreferredSize(new Dimension(900,50));
         displayPanel.setLayout(new FlowLayout());
-        continueSearch = new JButton("Next");
 
-        idLabel = new JLabel("[ID] ");
-        titleLabel = new JLabel("[Title] ");
-        artistLabel = new JLabel("[Artist] ");
-        albumLabel = new JLabel("[Album] ");
-        timeLabel = new JLabel("[Seconds] ");
-        yearLabel = new JLabel("[Year] ");
-        ratingLabel = new JLabel("[Rating] ");
-        dateLabel = new JLabel("[Date added] ");
-
-        displayPanel.add(idLabel);
-        displayPanel.add(titleLabel);
-        displayPanel.add(artistLabel);
-        displayPanel.add(albumLabel);
-        displayPanel.add(timeLabel);
-        displayPanel.add(yearLabel);
-        displayPanel.add(ratingLabel);
-        displayPanel.add(dateLabel);
-        displayPanel.add(continueSearch);
-
+        libraryPanel.add(searchDirectoryLabel);
+        libraryPanel.add(currentDirectoryToSearch);
         libraryPanel.add(addToLibrary);
+        libraryPanel.add(Accept);
 
         add(libraryPanel);
         add(displayPanel);
 
-        continueSearch.addActionListener(this);
         addToLibrary.addActionListener(this);
+        Accept.addActionListener(this);
     }
+    
+    //Constructor called when no directory specified: Creation Method
     public manualLibraryCreation()
     {
-        filePaths = new HashMap<Integer,File>();
-        holdingSongLines = new HashMap<Integer,String>();
-
-        this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-        //this.setPreferredSize(new Dimension(900,120));
-
-        fileDirectory = null;
-        identificationNumberStart = 1;
-
-        displayPanel = new JPanel();
-        adjustPanel = new JPanel();
-        libraryPanel = new JPanel();
-
-        addToLibrary = new JButton("Add Folder");
-        //adjustPanel.setPreferredSize(new Dimension(900,50));
-        adjustPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
-
-        titleField = new JTextField("");
-        titleField.setColumns(10);
-        artistField = new JTextField("");
-        artistField.setColumns(10);
-        albumField = new JTextField("");
-        albumField.setColumns(10);
-        yearField = new JTextField("");
-        yearField.setColumns(10);
-        secondsField = new JTextField("");
-        secondsField.setColumns(10);
-
-        subTitlePanel = new JPanel();
-        subTitlePanel.add(new JLabel("Title: "));
-        subTitlePanel.add(titleField);
-
-        subArtistPanel = new JPanel();
-        subArtistPanel.add(new JLabel("Artist: "));
-        subArtistPanel.add(artistField);
-
-        subAlbumPanel = new JPanel();
-        subAlbumPanel.add(new JLabel("Album: "));
-        subAlbumPanel.add(albumField);
-
-        subSecondsPanel = new JPanel();
-        subSecondsPanel.add(new JLabel("Seconds: "));
-        subSecondsPanel.add(secondsField);
-
-        subYearPanel = new JPanel();
-        subYearPanel.add(new JLabel("Year: "));
-        subYearPanel.add(yearField);
-
-        adjustPanel.add(subTitlePanel);
-        adjustPanel.add(subArtistPanel);
-        adjustPanel.add(subAlbumPanel);
-        adjustPanel.add(subSecondsPanel);
-        adjustPanel.add(subYearPanel);
-
-        //displayPanel.setPreferredSize(new Dimension(900,50));
-        displayPanel.setLayout(new FlowLayout());
-        continueSearch = new JButton("Next");
-
-        idLabel = new JLabel("[ID] ");
-        titleLabel = new JLabel("[Title] ");
-        artistLabel = new JLabel("[Artist] ");
-        albumLabel = new JLabel("[Album] ");
-        timeLabel = new JLabel("[Seconds] ");
-        yearLabel = new JLabel("[Year] ");
-        ratingLabel = new JLabel("[Rating] ");
-        dateLabel = new JLabel("[Date added] ");
-
-        displayPanel.add(idLabel);
-        displayPanel.add(titleLabel);
-        displayPanel.add(artistLabel);
-        displayPanel.add(albumLabel);
-        displayPanel.add(timeLabel);
-        displayPanel.add(yearLabel);
-        displayPanel.add(ratingLabel);
-        displayPanel.add(dateLabel);
-        displayPanel.add(continueSearch);
-
-        libraryPanel.add(addToLibrary);
-
-        add(libraryPanel);
-        add(displayPanel);
-
-        continueSearch.addActionListener(this);
-        addToLibrary.addActionListener(this);
-    }
-    public void selectFolder()
-    {
-        JFileChooser fileChooser = new JFileChooser(".");
-        //FileFilter filter1 = new ExtensionFileFilter("JPG and JPEG", new String[]{"JPG", "JPEG"});
-        fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-        fileChooser.setMultiSelectionEnabled(true);
-        //fileChooser.setFileFilter(filter1);
-        //Disables all files options
-        fileChooser.setAcceptAllFileFilterUsed(false);
-        int status = fileChooser.showOpenDialog(null);
-        if (status == JFileChooser.APPROVE_OPTION) {
-            File[] files = fileChooser.getSelectedFiles();
-            String[] dirs = new String[files.length];
-            System.out.println("Adding ["+files.length+"] folders from: "+files[0].getParent());
-            for(int i = 0; i < files.length; i++)
-            {
-                System.out.println("["+i+"] "+files[i].getName()+" ~ "+files[i].getPath());
-                File subFile = new File (files[i].getPath());
-                if(subFile.isDirectory()){
-                	File[] value = subFile.listFiles();
-                	System.out.println("\t ~ "+value.length + " Directories / Files!");
-                }
-                dirs[i] = files[i].getPath();
-            }
-            fileDirectory = dirs;
-            //File selectedFile = fileChooser.getSelectedFile();
-            
-        } else if (status == JFileChooser.CANCEL_OPTION) {
-            System.out.println(JFileChooser.CANCEL_OPTION);
-        }
-        searchTheDirectory(fileDirectory);
+    	//Call to the main catch-all constructor
+        this(null);
     }
     
     /*
-     *
-     * File path grabber
-     * 
-     * Grabs the path to the validated music file and adds it to the String Array!
-     * 
+     *	SelectSingleFolder Method is called to open up a new JFileChooser
+     *	in order to manually select the directory. This then initiate the
+     *	validation, searching and the file writing process.  
      */
-    public String[] MusicFilePathGrabber(File[] fileArray)
+    public void selectSingleFolder()
     {
-    	//Iterate over the list and extract the paths!
-    	String[] dirs = new String[fileArray.length];
-    	
-    	for(int index = 0; index < fileArray.length; index++)
-    	{
-    		dirs[index] = fileArray[index].getPath();
-    	}
-    	return dirs;
+        JFileChooser fileChooser = new JFileChooser(theCurrentDirPath);
+        fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+        //This is a single file/directory selector so set Multi-selection to false
+        fileChooser.setMultiSelectionEnabled(false);
+        //Disables all files options
+        fileChooser.setAcceptAllFileFilterUsed(false);
+        int status = fileChooser.showOpenDialog(null);
+        if (status == JFileChooser.APPROVE_OPTION)
+        {
+        	
+        	String tempDir = fileChooser.getSelectedFile().getAbsolutePath();
+        	
+        	//Validation done by calls to validation utility methods
+        	if( LibraryHelper.DirectoryChecker(tempDir) && LibraryHelper.FileChecker(new File(tempDir)))
+        	{
+        		theCurrentDirPath = tempDir;
+        		System.out.println("Current Selected Directory: "+theCurrentDirPath);
+            	currentDirectoryToSearch.setText(theCurrentDirPath); 		
+        	}
+        	else
+        	{
+        		System.out.println("That was not valid!");
+        	}
+            
+        } else if (status == JFileChooser.CANCEL_OPTION) {
+            //Do nothing!
+        }
     }
     
+    /*
+     * SearchTheDirectory Method.
+     * 
+     * Firstly: Completes a recursive search through all the directories and
+     * does a final validation for .mp3 files while adding them to a list.
+     * 
+     * Secondly: Proceeds to complete more checks on filename sizes and adds
+     * the file path to the paths list. 
+     */
     public void searchTheDirectory(String[] directory)
     {
         //Loop through paths directory and validate each file, and tag data
-    	//and then add to the playlist paths list!
+    	//and then add to the paths list!
         int countSongs = 1;
         for(int index = 0; index < directory.length; index++)
         {
@@ -328,7 +228,7 @@ public class manualLibraryCreation extends JPanel implements ActionListener
             
             System.out.println("=== Parent Directory Stats ===");
             
-            
+            //Initial info on selected Directory: Just states the number of subDirs etc
             for(int stats_index = 0; stats_index < listOfFiles.length; stats_index++)
             {
                 File tempFile = listOfFiles[stats_index];
@@ -402,7 +302,7 @@ public class manualLibraryCreation extends JPanel implements ActionListener
                 
                 String librarySongLine = Integer.toString(identificationNumberStart)+tab+title+tab+artist+tab+recordingTitle+tab+durration+tab+year+tab+popularity+tab+datAdded;
                 
-                holdingSongLines.put(identificationNumberStart, librarySongLine);
+                librarySongLines.put(identificationNumberStart, librarySongLine);
                 identificationNumberStart++;
 
                 countSongs++;
@@ -430,10 +330,8 @@ public class manualLibraryCreation extends JPanel implements ActionListener
         int index = 1;
         while(index < totalSongs)
         {
-
-            libraryPrintWriter.println(holdingSongLines.get(index));
+            libraryPrintWriter.println(librarySongLines.get(index));
             songPathPrintWriter.println(Integer.toString(index)+" "+filePaths.get(index).getAbsolutePath());
-            //System.out.println(Integer.toString(index)+" "+filePaths.get(index).getAbsolutePath());
             index++;
         }
         libraryPrintWriter.flush();
@@ -441,6 +339,11 @@ public class manualLibraryCreation extends JPanel implements ActionListener
         libraryPrintWriter.close();
         songPathPrintWriter.close();
     }
+    
+    /*
+     * Unused old class.
+     * TODO May Reuse loadLibraryFile name.				 
+     */
     private void loadLibraryFile()
     {
         BufferedReader libraryReader = null;
@@ -476,43 +379,39 @@ public class manualLibraryCreation extends JPanel implements ActionListener
         } catch (Exception e) {
             System.out.println("Error setting native LAF: " + e);
         }
-
-        /*String firstFir = "C:/Users/phantomfightr/Documents/D Programming/New Chart Music";
-        String secondDir = "C:/Users/Phantom/Music/Audioslave/Revelations";//<----
-        String thirdDir = "C:/Users/Phantom/Music/Foo Fighters/Echoes, Silence, Patience & Grace";//<----
-        String fourthDir = "C:/Users/Phantom/Music/Metallica/Death Magnetic";//<----
-        String[] listOfDir = {firstFir,secondDir,thirdDir,fourthDir};*/
-        //LibraryFile newFile = new LibraryFile(listOfDir);
         manualLibraryCreation newFile = new manualLibraryCreation();
         Toolkit tools = Toolkit.getDefaultToolkit();
         Dimension dimension = tools.getScreenSize();
         int width = (int)dimension.getWidth() / 2;
         int height = (int)dimension.getHeight() / 2;
-        //MP3PlayerGUI gui = new MP3PlayerGUI();<----
-        //MenuBar bar = new MenuBar(gui);<----
         JFrame frame = new JFrame("Holdings File Writer");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getContentPane().add(newFile);
-        //frame.setJMenuBar(bar);<----
         frame.setSize(width, height);
         frame.setLocation(width / 2, height / 2);
         frame.setVisible(true);
         frame.pack();
-        newFile.loadLibraryFile();
-        //newFile.searchTheDirectory();<----
-        //newFile.writeHoldFile();<----
     }
 
     public void actionPerformed(ActionEvent e)
     {
         Object source = e.getSource();
-        if(continueSearch == source)
-        {
-            notPressedContinue = false;
-        }
         if(addToLibrary == source)
         {
-            selectFolder();
+            selectSingleFolder();
+        }
+        else if(Accept == source)
+        {
+        	if(this.currentDirectoryToSearch.getText() != null)
+        	{
+        		System.out.println(theCurrentDirPath);
+        		fileDirectory[0] = theCurrentDirPath;
+        		for(int x = 0 ; x < fileDirectory.length; x++)
+        		{
+        			System.out.println("Checking: "+x+" <> "+fileDirectory[x]);
+        		}
+        		searchTheDirectory(fileDirectory);
+        	}
         }
     }
 }

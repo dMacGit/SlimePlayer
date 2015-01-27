@@ -7,6 +7,7 @@ import java.io.File;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import slime.utills.LibraryHelper;
 import slime.utills.MusicFileFilter;
 import slime.utills.RecursiveSearch;
 
@@ -36,7 +37,7 @@ public class JUnit_DirectoryTests
 	public void TestDirectory()
 	{
 		System.out.println("[ JUnit Directory Test ] (1) Directory Check ==> "+TEST_DIRECTORY);
-		assertTrue(JUnit_TestHelper.DirectoryChecker(TEST_DIRECTORY));
+		assertTrue(LibraryHelper.DirectoryChecker(TEST_DIRECTORY));
 	}
 	
 	
@@ -53,8 +54,8 @@ public class JUnit_DirectoryTests
 		System.out.println("[ JUnit Directory Test ] (2) Is File Check ==> "+TEST_DIRECTORY);
 		File[] tempList = new File(TEST_DIRECTORY).listFiles(); 
 		File[] tempListTwo = new File(tempList[1].getAbsolutePath()).listFiles();	// <==== ListFiles() { Adjust [index] until returns correct value }.
-		assertTrue(JUnit_TestHelper.FileChecker(tempList[0]));
-		assertTrue(JUnit_TestHelper.FileChecker(tempListTwo[0]));
+		assertTrue(LibraryHelper.FileChecker(tempList[0]));
+		assertTrue(LibraryHelper.FileChecker(tempListTwo[0]));
 		assertEquals(tempList[0],testFileList[0]);
 		assertEquals(tempListTwo[0],testFileList[1]);
 	}
@@ -73,8 +74,8 @@ public class JUnit_DirectoryTests
 		File tempParentFile = new File(TEST_DIRECTORY);
 		File[] tempList = new File(TEST_DIRECTORY).listFiles(); 
 		File[] tempListTwo = new File(tempList[1].getAbsolutePath()).listFiles();	// <==== ListFiles() { Adjust [index] until returns correct value }.
-		assertTrue(JUnit_TestHelper.MP3FileChecker(tempList[0], tempParentFile, testFilter ));
-		assertTrue(JUnit_TestHelper.MP3FileChecker(tempListTwo[0], new File(tempList[1].getAbsolutePath()), testFilter ));
+		assertTrue(LibraryHelper.MP3FileChecker(tempList[0], tempParentFile, testFilter ));
+		assertTrue(LibraryHelper.MP3FileChecker(tempListTwo[0], new File(tempList[1].getAbsolutePath()), testFilter ));
 		assertEquals(tempList[0],testFileList[0]);
 		assertEquals(tempListTwo[0],testFileList[1]);
 	}

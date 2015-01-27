@@ -12,6 +12,9 @@ import org.farng.mp3.MP3File;
 import org.farng.mp3.TagException;
 import org.tritonus.share.sampled.file.TAudioFileFormat;
 
+import slime.utills.LibraryHelper;
+import slime.utills.MusicFileFilter;
+
 /*
  * The SongTag class maintains access to the Tag information off the
  * piece of music as well as error checking and null checking upon
@@ -41,8 +44,12 @@ public class SongTag
 	 */
 	public SongTag(File songFile)throws WrongFileTypeException, IOException, TagException
 	{
+		this(songFile,new MusicFileFilter(),new File(songFile.getParent()));
+	}
+	public SongTag(File songFile, MusicFileFilter filter, File fileDirectory)throws WrongFileTypeException, IOException, TagException
+	{
 		audioFile = songFile;
-		if(songFile.getName().contains(".mp3"))
+		if(LibraryHelper.MP3FileChecker(songFile, fileDirectory, filter))
 		{
 				this.extractMetaTagInfo(new MP3File(songFile));
 		}
@@ -139,7 +146,6 @@ public class SongTag
 	 */
 	private String ValidateData(String data)
 	{
-		//System.out.println(data);
 		if(data != null && !data.isEmpty()){
 			return data;
 		}
@@ -157,7 +163,6 @@ public class SongTag
 	 */
 	private int ValidateNumberData(int data) throws NumberFormatException
 	{
-		//System.out.println(data);
 		if(data != 0 && data > 1000){
 			return data;
 		}
