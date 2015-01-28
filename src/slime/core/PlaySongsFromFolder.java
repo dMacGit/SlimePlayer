@@ -16,6 +16,7 @@ import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
+import slime.utills.FileIO;
 import slime.utills.ShuffleArray;
 
 public class PlaySongsFromFolder
@@ -31,7 +32,7 @@ public class PlaySongsFromFolder
     private final String HOLDINGS_FILE_NAME = "Lib_MP3player.txt", SONG_PATHS_FILE_NAME = "SongPaths.txt";
     private String HOLDINGS_FILE_PATH, SONG_PATHS_FILE_PATH, holdingInfoForCurrentSong,
             ID, Title, Artist, Album, Durration, Year, songTime, theCurrentSongTitle = null,
-            FOLDER, FILE_DIR/* = "C:/Users/Phantom/Documents/D Programing/Software Engineering A/Assignments/RadioStation/RadioStation"*/;
+            FOLDER, FILE_DIR;
     private TimerTask secondsUpdating;
     private Timer timerObject,seconds;
     private updateHolingsInfo updater;
@@ -52,6 +53,7 @@ public class PlaySongsFromFolder
         scrollingTitle.setMaximumSize(new Dimension(225,25));
         scrollingTitle.setForeground(Color.WHITE);
         readHoldingsFile();
+        //populateLibrary();
         playRandomSong play = new playRandomSong();
         play.start();
         System.out.println("Player has been Started!");
@@ -59,6 +61,39 @@ public class PlaySongsFromFolder
     public HashMap<Integer,String> getMapOfSong()
     {
         return songTags;
+    }
+    
+    public void populateLibrary()
+    {
+    	Object[] libraryDataArray = null, pathsDataArray = null;
+    	HOLDINGS_FILE_LAST_MODIFIED = new File(HOLDINGS_FILE_PATH).lastModified();
+    	try 
+    	{
+    		libraryDataArray = FileIO.ReadData(this.HOLDINGS_FILE_PATH);
+    		pathsDataArray = FileIO.ReadData(this.SONG_PATHS_FILE_PATH);
+
+	    	for(int index = 0; index < libraryDataArray.length; index++)
+	    	{
+	    		songTags.put(index,libraryDataArray[index].toString());
+	    	}
+	    	for(int index = 0; index < pathsDataArray.length; index++)
+	    	{
+	    		listOfMP3.put(index,pathsDataArray[index].toString());
+	    	}
+        	
+    		
+		}
+    	catch (FileNotFoundException e) 
+    	{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	catch (IOException e) 
+    	{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	
     }
 
     /*
@@ -334,8 +369,8 @@ public class PlaySongsFromFolder
                         getUpdatedSongHoldingFileInfo(x);
                     }*/
                     setHoldingInfoForCurrentSong(songTags.get(shuffledList[currentPlayNum]));
-                    updater = new updateHolingsInfo();
-                    timerObject.schedule(updater, (Integer.parseInt(Durration)/2)*1000);
+                    //updater = new updateHolingsInfo();
+                    //timerObject.schedule(updater, (Integer.parseInt(Durration)/2)*1000);
                     theCurrentSongTitle = getCurrentSongInfo();
                     int checkTime = (Integer.parseInt(Durration))/2;
                     int realTime = (checkTime%60);
@@ -408,7 +443,7 @@ public class PlaySongsFromFolder
         songTime = "00:00";
         playSong.stopPlaying();
         seconds.cancel();
-        updater.cancel();
+        //updater.cancel();
         songThread.stop();
     }
     public void setJLabelBounds(int xPosition, int width)

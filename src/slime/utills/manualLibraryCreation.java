@@ -17,6 +17,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -70,7 +71,7 @@ public class manualLibraryCreation extends JPanel implements ActionListener
     private File[] listOfFiles;
     
     private HashMap<Integer, String> librarySongLines;
-    private HashMap<Integer,File> filePaths;
+    private HashMap<Integer,String> filePaths;
     
     public boolean startPlayer = false;
     public String theCurrentSongTitle = null;
@@ -99,7 +100,7 @@ public class manualLibraryCreation extends JPanel implements ActionListener
     public manualLibraryCreation(String directoryToSrearch)
     {
     	fileDirectory = new String[1];
-        filePaths = new HashMap<Integer,File>();
+        filePaths = new HashMap<Integer,String>();
         librarySongLines = new HashMap<Integer,String>();
 
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
@@ -254,7 +255,7 @@ public class manualLibraryCreation extends JPanel implements ActionListener
             //Of the validated files, proceed to scan tag info
             for (int i = 0; i < listOfFiles.length; i++)
             {
-                filePaths.put(countSongs, listOfFiles[i]);
+            	
                 
                 Character tab = (Character)('\t');
                 try
@@ -303,6 +304,10 @@ public class manualLibraryCreation extends JPanel implements ActionListener
                 String librarySongLine = Integer.toString(identificationNumberStart)+tab+title+tab+artist+tab+recordingTitle+tab+durration+tab+year+tab+popularity+tab+datAdded;
                 
                 librarySongLines.put(identificationNumberStart, librarySongLine);
+                
+                String pathLine = Integer.toString(identificationNumberStart)+" "+listOfFiles[i].getAbsolutePath();
+                filePaths.put(identificationNumberStart, pathLine);
+                
                 identificationNumberStart++;
 
                 countSongs++;
@@ -310,10 +315,24 @@ public class manualLibraryCreation extends JPanel implements ActionListener
             }
             System.out.println("~~~ Scanned Directory! ~~~");
         }
-        System.out.println("Writing holdings file....");
-        writeLibraryFile();
-        System.out.println("Finished holdings file....");
+        
+        try
+        {
+        	System.out.println("Writing Library file....");
+			FileIO.WriteData(LIBRARY_FILE,librarySongLines.values().toArray());
+			System.out.println("Finished Library file....");
+			System.out.println("Writing Paths file....");
+			FileIO.WriteData(SONG_PATHS_FILE,filePaths.values().toArray());
+			System.out.println("Finished Paths file....");
+		} 
+        catch (IOException e) 
+        {
+			e.printStackTrace();
+		}
+        //writeLibraryFile();
+       
     }
+    /*
     public void writeLibraryFile()
     {
         PrintWriter libraryPrintWriter = null;
@@ -331,14 +350,14 @@ public class manualLibraryCreation extends JPanel implements ActionListener
         while(index < totalSongs)
         {
             libraryPrintWriter.println(librarySongLines.get(index));
-            songPathPrintWriter.println(Integer.toString(index)+" "+filePaths.get(index).getAbsolutePath());
+            //songPathPrintWriter.println(Integer.toString(index)+" "+filePaths.get(index).getAbsolutePath());
             index++;
         }
         libraryPrintWriter.flush();
         songPathPrintWriter.flush();
         libraryPrintWriter.close();
         songPathPrintWriter.close();
-    }
+    }*/
     
     /*
      * Unused old class.

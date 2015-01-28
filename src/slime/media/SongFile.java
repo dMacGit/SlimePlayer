@@ -8,18 +8,34 @@ import org.farng.mp3.TagException;
 
 public class SongFile implements MediaFile
 {
-	public MP3File mp3File = null;
+	private MP3File mp3File;
+	private SongTag metaTag;
 	
 	public SongFile(File fileToPlay)
 	{
 		try 
 		{
 			this.mp3File = new MP3File(fileToPlay);
+			this.metaTag = new SongTag(fileToPlay);
 		}
-		catch (IOException e) {	e.printStackTrace(); }
-		catch (TagException e) {	e.printStackTrace();	}
+		catch ( IOException e) 
+		{	
+			e.printStackTrace();
+		}
+		catch ( TagException e) 
+		{	
+			e.printStackTrace();
+		}
+		catch( WrongFileTypeException e)
+		{ 
+			e.printStackTrace();
+		}
 	}
 
+	public SongTag readTag(){
+		return metaTag;
+	}
+	
 	@Override
 	public void playSong() 
 	{
