@@ -12,6 +12,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -19,6 +21,9 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
+import slime.media.PlayState;
+import slime.observe.Observer;
+import slime.observe.Subject;
 import slime.utills.ImageLoader;
 import slime.utills.ShrinkImageToSize;
 
@@ -27,7 +32,7 @@ import slime.utills.ShrinkImageToSize;
 // Set up the player gui as well as library checking
 // as well as the player controls.
 
-public class mainPlayer extends JPanel implements ActionListener
+public class mainPlayer extends JPanel implements ActionListener, Subject
 {
     /**
 	 * 
@@ -43,6 +48,8 @@ public class mainPlayer extends JPanel implements ActionListener
     private boolean notStarted = true;
     private final String defaultString = "Playing: ", FILE_DIR = "Data_Files";
     private final String defaultUserMusicDirectory = "%USERPROFILE%\\My Documents\\My Music";
+    private List<Observer> observerList = new ArrayList<Observer>();
+    private PlayState currentStateOfPlayer = PlayState.STOPPED;
     
     //This is the dir path to the images folder		---> Change if necessary!
     
@@ -124,11 +131,13 @@ public class mainPlayer extends JPanel implements ActionListener
             {
                 if(shuffle_Select)
                 {
+                	currentStateOfPlayer = PlayState.SUFFLE_OFF;
                     shuffle.setIcon(SHUFFLE_ICON_DE_SELECT);
                     shuffle_Select = false;
                 }
                 else
                 {
+                	currentStateOfPlayer = PlayState.SHUFFLE_ON;
                     shuffle.setIcon(SHUFFLE_ICON_SELECTED);
                     shuffle_Select = true;
                 }
@@ -139,22 +148,27 @@ public class mainPlayer extends JPanel implements ActionListener
                 if(repeat_Select)
                 {
                     repeat.setIcon(REPEAT_ICON_DE_SELECT);
+                    currentStateOfPlayer = PlayState.REPEAT_OFF;
                     repeat_Select = false;
                 }
                 else
                 {
                     repeat.setIcon(REPEAT_ICON_SELECTED);
+                    currentStateOfPlayer = PlayState.REPEAT_ON;
                     repeat_Select = true;
                 }
                 revalidate();
             }
             if (notStarted)
             {
+            		
                 if (source == playPause) {
+                	currentStateOfPlayer = PlayState.PLAYING;
                     notStarted = false;
                     playPause.setIcon(PAUSE_ICON);
                     revalidate();
                     readADirectory = new PlaySongsFromFolder(FILE_DIR);
+                    register(readADirectory);
                     System.out.println("Starting up Player!!");
                     readADirectory.setJLabelBounds(songName.getX(), songName.getWidth());
                 }
@@ -167,16 +181,19 @@ public class mainPlayer extends JPanel implements ActionListener
                     revalidate();
                 }
                 if (source == playPause && readADirectory.getPlayState()) {
+                	currentStateOfPlayer = PlayState.PLAYING;
                     readADirectory.playTheSong();
                     playPause.setIcon(PAUSE_ICON);
                     revalidate();
                 } else if (source == playPause && !readADirectory.getPlayState()) {
+                	currentStateOfPlayer = PlayState.PAUSED;
                     playPause.setIcon(PLAY_ICON);
                     revalidate();
                     readADirectory.pauseTheSong();
 
                 }
                 if (source == skip) {
+                	currentStateOfPlayer = PlayState.SKIPPED_FORWARDS;
                     readADirectory.skipTheSong();
                 }
             }
@@ -199,10 +216,14 @@ public class mainPlayer extends JPanel implements ActionListener
             }
             if(source == exit)
             {
+            	currentStateOfPlayer = PlayState.STOPPED;
+            	notifyObservers();
+            	deregister(readADirectory);
                 gui.setVisible( false );
                 System.exit(0);
                 System.gc();
             }
+            notifyObservers();
         }
         public void mouseReleased(MouseEvent e){}
         public void mouseEntered(MouseEvent e){}
@@ -278,5 +299,31 @@ public class mainPlayer extends JPanel implements ActionListener
             }
         }
     }
+
+	@Override
+	public void register(Observer observer) 
+	{
+		observerList.add(observer);
+		System.out.println("<<<< "+observer.getObserverName()+" Added! >>>>");
+	}
+
+	@Override
+	public void deregister(Observer observer) 
+	{
+		observerList.remove(observerList.indexOf(observer));
+		System.out.println("<<<< "+observer.getObserverName()+" Removed! >>>>");
+		
+	}
+
+	@Override
+	public void notifyObservers()
+	{
+		System.out.println("<<<< State Has Changed >>>>");
+		for(Observer observer : observerList){
+			System.out.println("-- "+observer.getObserverName()+" Notified --");
+			observer.update(currentStateOfPlayer);
+		}
+		
+	}
 
 }

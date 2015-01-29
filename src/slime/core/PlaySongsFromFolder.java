@@ -16,10 +16,12 @@ import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
+import slime.media.PlayState;
+import slime.observe.Observer;
 import slime.utills.FileIO;
 import slime.utills.ShuffleArray;
 
-public class PlaySongsFromFolder
+public class PlaySongsFromFolder implements Observer
 {
     private HashMap<Integer,String> listOfMP3, songTags;
     private boolean currentlyPlaying = false, stop = false, startPlayer = false, isPaused;
@@ -37,6 +39,7 @@ public class PlaySongsFromFolder
     private Timer timerObject,seconds;
     private updateHolingsInfo updater;
     private byte songMinutes, songSeconds, pausedSeconds, pausedMinutes;
+    private String OBSERVER_NAME = "PlaySongsFormFolder";
 
     public PlaySongsFromFolder(String dir)
     {
@@ -476,4 +479,15 @@ public class PlaySongsFromFolder
     {
         return listOfMP3.get(index);
     }
+	@Override
+	public void update(PlayState stateOfPlayer) 
+	{
+		System.out.println("Player is currently: "+stateOfPlayer);
+		
+	}
+	
+	@Override
+	public String getObserverName(){
+		return this.OBSERVER_NAME;
+	};
 }
