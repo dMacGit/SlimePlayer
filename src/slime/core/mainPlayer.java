@@ -22,8 +22,11 @@ import javax.swing.JPanel;
 import javax.swing.Timer;
 
 import slime.media.PlayState;
-import slime.observe.Observer;
-import slime.observe.Subject;
+import slime.media.SongTag;
+import slime.observe.AnimatorObserver;
+import slime.observe.AnimatorSubject;
+import slime.observe.MediaObserver;
+import slime.observe.MediaSubject;
 import slime.utills.ImageLoader;
 import slime.utills.ShrinkImageToSize;
 
@@ -32,7 +35,7 @@ import slime.utills.ShrinkImageToSize;
 // Set up the player gui as well as library checking
 // as well as the player controls.
 
-public class mainPlayer extends JPanel implements ActionListener, Subject
+public class mainPlayer extends JPanel implements ActionListener, MediaSubject, AnimatorSubject
 {
     /**
 	 * 
@@ -48,8 +51,12 @@ public class mainPlayer extends JPanel implements ActionListener, Subject
     private boolean notStarted = true;
     private final String defaultString = "Playing: ", FILE_DIR = "Data_Files";
     private final String defaultUserMusicDirectory = "%USERPROFILE%\\My Documents\\My Music";
-    private List<Observer> observerList = new ArrayList<Observer>();
+    private List<MediaObserver> mediaObserverList = new ArrayList<MediaObserver>();
+    private List<AnimatorObserver> animatorObserverList = new ArrayList<AnimatorObserver>();
     private PlayState currentStateOfPlayer = PlayState.STOPPED;
+    private SongTag currentSongTag = null;
+    
+    private AnimationController animator;
     
     //This is the dir path to the images folder		---> Change if necessary!
     
@@ -117,8 +124,14 @@ public class mainPlayer extends JPanel implements ActionListener, Subject
         shuffle.addMouseListener(listenerOne);
         repeat.addMouseListener(listenerOne);
 
+        animator = new AnimationController();
+        
+        registerAnimatorObserver(animator);
+        
         infoUpdater_Scroller = new Timer(50,this);
         infoUpdater_Scroller.start();
+        
+        
         
     }
     private class mouseListener implements MouseListener
@@ -168,9 +181,10 @@ public class mainPlayer extends JPanel implements ActionListener, Subject
                     playPause.setIcon(PAUSE_ICON);
                     revalidate();
                     readADirectory = new PlaySongsFromFolder(FILE_DIR);
-                    register(readADirectory);
+                    registerMediaObserver(readADirectory);
                     System.out.println("Starting up Player!!");
                     readADirectory.setJLabelBounds(songName.getX(), songName.getWidth());
+                    currentSongTag = readADirectory.getTheCurrentSong();
                 }
             }
             else
@@ -182,19 +196,23 @@ public class mainPlayer extends JPanel implements ActionListener, Subject
                 }
                 if (source == playPause && readADirectory.getPlayState()) {
                 	currentStateOfPlayer = PlayState.PLAYING;
+                	currentSongTag = readADirectory.getTheCurrentSong();
                     readADirectory.playTheSong();
                     playPause.setIcon(PAUSE_ICON);
                     revalidate();
                 } else if (source == playPause && !readADirectory.getPlayState()) {
                 	currentStateOfPlayer = PlayState.PAUSED;
+                	currentSongTag = readADirectory.getTheCurrentSong();
                     playPause.setIcon(PLAY_ICON);
                     revalidate();
                     readADirectory.pauseTheSong();
 
                 }
                 if (source == skip) {
+                	
                 	currentStateOfPlayer = PlayState.SKIPPED_FORWARDS;
                     readADirectory.skipTheSong();
+                    
                 }
             }
             if(source == playList)
@@ -217,13 +235,16 @@ public class mainPlayer extends JPanel implements ActionListener, Subject
             if(source == exit)
             {
             	currentStateOfPlayer = PlayState.STOPPED;
-            	notifyObservers();
-            	deregister(readADirectory);
+            	notifyAllMediaObservers();
+            	deregisterMediaObserver(readADirectory);
+            	deregisterAnimatorObserver(animator);
                 gui.setVisible( false );
                 System.exit(0);
                 System.gc();
             }
-            notifyObservers();
+            notifyAllMediaObservers();
+            currentSongTag = readADirectory.getTheCurrentSong();
+            notifyAllAnimatorObservers();
         }
         public void mouseReleased(MouseEvent e){}
         public void mouseEntered(MouseEvent e){}
@@ -301,27 +322,52 @@ public class mainPlayer extends JPanel implements ActionListener, Subject
     }
 
 	@Override
-	public void register(Observer observer) 
+	public void registerMediaObserver(MediaObserver observer) 
 	{
-		observerList.add(observer);
-		System.out.println("<<<< "+observer.getObserverName()+" Added! >>>>");
+		mediaObserverList.add(observer);
+		System.out.println("<<<< "+observer.getMediaObserverName()+" Added! >>>>");
 	}
 
 	@Override
-	public void deregister(Observer observer) 
+	public void deregisterMediaObserver(MediaObserver observer) 
 	{
-		observerList.remove(observerList.indexOf(observer));
-		System.out.println("<<<< "+observer.getObserverName()+" Removed! >>>>");
+		mediaObserverList.remove(mediaObserverList.indexOf(observer));
+		System.out.println("<<<< "+observer.getMediaObserverName()+" Removed! >>>>");
 		
 	}
 
 	@Override
-	public void notifyObservers()
+	public void notifyAllMediaObservers()
 	{
 		System.out.println("<<<< State Has Changed >>>>");
-		for(Observer observer : observerList){
-			System.out.println("-- "+observer.getObserverName()+" Notified --");
-			observer.update(currentStateOfPlayer);
+		for(MediaObserver observer : mediaObserverList){
+			System.out.println("-- "+observer.getMediaObserverName()+" Notified --");
+			observer.updateMediaObserver(currentStateOfPlayer);
+		}
+		
+	}
+
+	@Override
+	public void registerAnimatorObserver(AnimatorObserver observer) 
+	{
+		animatorObserverList.add(observer);
+		System.out.println("<<<< "+observer.getAnimatorObserverName()+" Added! >>>>");
+		
+	}
+
+	@Override
+	public void deregisterAnimatorObserver(AnimatorObserver observer) 
+	{
+		animatorObserverList.remove(animatorObserverList.indexOf(observer));
+		System.out.println("<<<< "+observer.getAnimatorObserverName()+" Removed! >>>>");
+		
+	}
+
+	@Override
+	public void notifyAllAnimatorObservers()
+	{
+		for(AnimatorObserver observer : animatorObserverList){
+			observer.updateAnimatorObserver(currentStateOfPlayer,currentSongTag);
 		}
 		
 	}

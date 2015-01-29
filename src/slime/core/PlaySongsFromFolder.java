@@ -16,19 +16,23 @@ import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
+import org.farng.mp3.TagException;
+
 import slime.media.PlayState;
-import slime.observe.Observer;
+import slime.media.SongTag;
+import slime.media.WrongFileTypeException;
+import slime.observe.MediaObserver;
 import slime.utills.FileIO;
 import slime.utills.ShuffleArray;
 
-public class PlaySongsFromFolder implements Observer
+public class PlaySongsFromFolder implements MediaObserver
 {
     private HashMap<Integer,String> listOfMP3, songTags;
     private boolean currentlyPlaying = false, stop = false, startPlayer = false, isPaused;
     public PlaySongControls playSong;
     private Thread songThread;
     private ScrollingText label;
-    private JLabel scrollingTitle;
+    private JLabel scrollingTitleLabel;
     private int labelXpos, labelWidth;
     private long HOLDINGS_FILE_LAST_MODIFIED;
     private final String HOLDINGS_FILE_NAME = "Lib_MP3player.txt", SONG_PATHS_FILE_NAME = "SongPaths.txt";
@@ -39,7 +43,9 @@ public class PlaySongsFromFolder implements Observer
     private Timer timerObject,seconds;
     private updateHolingsInfo updater;
     private byte songMinutes, songSeconds, pausedSeconds, pausedMinutes;
-    private String OBSERVER_NAME = "PlaySongsFormFolder";
+    private String MEDIA_OBSERVER_NAME = "PlaySongsFormFolder";
+    private PlayState playerCurrentState = PlayState.STOPPED;
+    private SongTag currentPlayingSongTag = null;
 
     public PlaySongsFromFolder(String dir)
     {
@@ -50,11 +56,11 @@ public class PlaySongsFromFolder implements Observer
         seconds = new Timer();
         listOfMP3 = new HashMap<Integer,String>();
         songTags = new HashMap<Integer,String>();
-        scrollingTitle = new JLabel("");
-        scrollingTitle.setPreferredSize(new Dimension(225,25));
-        scrollingTitle.setMinimumSize(new Dimension(225,25));
-        scrollingTitle.setMaximumSize(new Dimension(225,25));
-        scrollingTitle.setForeground(Color.WHITE);
+        scrollingTitleLabel = new JLabel("");
+        scrollingTitleLabel.setPreferredSize(new Dimension(225,25));
+        scrollingTitleLabel.setMinimumSize(new Dimension(225,25));
+        scrollingTitleLabel.setMaximumSize(new Dimension(225,25));
+        scrollingTitleLabel.setForeground(Color.WHITE);
         readHoldingsFile();
         //populateLibrary();
         playRandomSong play = new playRandomSong();
@@ -365,6 +371,23 @@ public class PlaySongsFromFolder implements Observer
                     System.out.println("Number chosen: "+shuffledList[currentPlayNum]+" out of "+(getTheNum()));
                     System.out.println("ID was for: "+songTags.get(shuffledList[currentPlayNum]));
                     File songFile = new File(getTheSong(shuffledList[currentPlayNum]));
+                    try 
+                    {
+						currentPlayingSongTag = new SongTag(songFile);
+					} 
+                    catch (WrongFileTypeException e)
+                    {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					} 
+                    catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+                    catch (TagException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
                     /*if(new File(HOLDINGS_FILE).lastModified() != HOLDINGS_FILE_LAST_MODIFIED)
                     {
                         System.out.println("Holdings file was modified durring play: ["+HOLDINGS_FILE_LAST_MODIFIED+"] <!=> ["+new File(HOLDINGS_FILE).lastModified()+"]");
@@ -402,7 +425,7 @@ public class PlaySongsFromFolder implements Observer
                 }
                 if(label.getImage() != null)
                 {
-                    scrollingTitle.setIcon(new ImageIcon(label.getImage()));
+                    scrollingTitleLabel.setIcon(new ImageIcon(label.getImage()));
                 }
                 try
                 {
@@ -456,7 +479,7 @@ public class PlaySongsFromFolder implements Observer
     }
     public JLabel getLabel()
     {
-        return scrollingTitle;
+        return scrollingTitleLabel;
     }
     public String getTheSongName()
     {
@@ -479,15 +502,20 @@ public class PlaySongsFromFolder implements Observer
     {
         return listOfMP3.get(index);
     }
+
 	@Override
-	public void update(PlayState stateOfPlayer) 
+	public String getMediaObserverName() 
 	{
-		System.out.println("Player is currently: "+stateOfPlayer);
+		return MEDIA_OBSERVER_NAME;
+	}
+	@Override
+	public void updateMediaObserver(PlayState stateOfPlayer) 
+	{
+		this.playerCurrentState = stateOfPlayer;
+		System.out.println("Player is currently: "+playerCurrentState);
 		
 	}
-	
-	@Override
-	public String getObserverName(){
-		return this.OBSERVER_NAME;
-	};
+	public SongTag getTheCurrentSong(){
+		return this.currentPlayingSongTag;
+	}
 }
