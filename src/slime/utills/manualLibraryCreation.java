@@ -266,6 +266,25 @@ public class manualLibraryCreation extends JPanel implements ActionListener
                     recordingTitle = newTempTag.getRecordingTitle();
                     year = newTempTag.getYear();
                     durration += newTempTag.getDurration();
+                    
+                    DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+                    Date timeAdded = new Date();
+                    String yearDate = dateFormat.format(timeAdded).substring(0, dateFormat.format(timeAdded).indexOf("/"));
+                    String findRest = dateFormat.format(timeAdded).substring(dateFormat.format(timeAdded).indexOf("/")+1);
+                    String monthDate = findRest.substring(0, findRest.indexOf("/"));
+                    String restDate = findRest.substring(findRest.indexOf("/")+1);
+                    String dayDate = restDate.substring(restDate.indexOf("/")+1, restDate.indexOf(" "));
+                    datAdded = dayDate+"/"+monthDate+"/"+yearDate;
+                    
+                    String librarySongLine = Integer.toString(identificationNumberStart)+tab+title+tab+artist+tab+recordingTitle+tab+durration+tab+year+tab+popularity+tab+datAdded;
+                    
+                    librarySongLines.put(identificationNumberStart, librarySongLine);
+                    
+                    String pathLine = Integer.toString(identificationNumberStart)+" "+listOfFiles[i].getAbsolutePath();
+                    filePaths.put(identificationNumberStart, pathLine);
+                    
+                    identificationNumberStart++;
+                    countSongs++;
                 }
                 catch(WrongFileTypeException ex)
                 {
@@ -292,25 +311,9 @@ public class manualLibraryCreation extends JPanel implements ActionListener
                 	countSongs--;
                 	System.out.println("<< Tag Exception!! >> "+e);
 				}
-                DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-                Date timeAdded = new Date();
-                String yearDate = dateFormat.format(timeAdded).substring(0, dateFormat.format(timeAdded).indexOf("/"));
-                String findRest = dateFormat.format(timeAdded).substring(dateFormat.format(timeAdded).indexOf("/")+1);
-                String monthDate = findRest.substring(0, findRest.indexOf("/"));
-                String restDate = findRest.substring(findRest.indexOf("/")+1);
-                String dayDate = restDate.substring(restDate.indexOf("/")+1, restDate.indexOf(" "));
-                datAdded = dayDate+"/"+monthDate+"/"+yearDate;
                 
-                String librarySongLine = Integer.toString(identificationNumberStart)+tab+title+tab+artist+tab+recordingTitle+tab+durration+tab+year+tab+popularity+tab+datAdded;
-                
-                librarySongLines.put(identificationNumberStart, librarySongLine);
-                
-                String pathLine = Integer.toString(identificationNumberStart)+" "+listOfFiles[i].getAbsolutePath();
-                filePaths.put(identificationNumberStart, pathLine);
-                
-                identificationNumberStart++;
 
-                countSongs++;
+                
                 totalSongs = countSongs;
             }
             System.out.println("~~~ Scanned Directory! ~~~");

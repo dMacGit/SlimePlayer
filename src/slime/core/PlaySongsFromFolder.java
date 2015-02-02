@@ -18,7 +18,10 @@ import javax.swing.JLabel;
 
 import org.farng.mp3.TagException;
 
+import slime.controller.MediaController;
 import slime.media.PlayState;
+import slime.media.Song;
+import slime.media.SongList;
 import slime.media.SongTag;
 import slime.media.WrongFileTypeException;
 import slime.observe.MediaObserver;
@@ -28,6 +31,7 @@ import slime.utills.ShuffleArray;
 public class PlaySongsFromFolder implements MediaObserver
 {
     private HashMap<Integer,String> listOfMP3, songTags;
+    private SongList librarySongList;
     private boolean currentlyPlaying = false, stop = false, startPlayer = false, isPaused;
     public PlaySongControls playSong;
     private Thread songThread;
@@ -46,6 +50,9 @@ public class PlaySongsFromFolder implements MediaObserver
     private String MEDIA_OBSERVER_NAME = "PlaySongsFormFolder";
     private PlayState playerCurrentState = PlayState.STOPPED;
     private SongTag currentPlayingSongTag = null;
+    private MediaController mediaController;
+    private SongList listOfSongs;
+    private Song currentSong;
 
     public PlaySongsFromFolder(String dir)
     {
@@ -54,8 +61,13 @@ public class PlaySongsFromFolder implements MediaObserver
         SONG_PATHS_FILE_PATH = FILE_DIR+SONG_PATHS_FILE_NAME;
         timerObject = new Timer();
         seconds = new Timer();
+        mediaController = new MediaController();
+        
         listOfMP3 = new HashMap<Integer,String>();
         songTags = new HashMap<Integer,String>();
+        
+        listOfSongs = new SongList();
+        
         scrollingTitleLabel = new JLabel("");
         scrollingTitleLabel.setPreferredSize(new Dimension(225,25));
         scrollingTitleLabel.setMinimumSize(new Dimension(225,25));
@@ -88,6 +100,17 @@ public class PlaySongsFromFolder implements MediaObserver
 	    	for(int index = 0; index < pathsDataArray.length; index++)
 	    	{
 	    		listOfMP3.put(index,pathsDataArray[index].toString());
+	    		String someRandomData = (pathsDataArray[index].toString()).substring((pathsDataArray[index].toString()).indexOf(" ")+1, (pathsDataArray[index].toString()).length());
+	    		//System.out.println(someRandomData);
+	    		
+    			try 
+    			{
+					listOfSongs.addSong(new Song(someRandomData));
+				} 
+    			catch (WrongFileTypeException | TagException e)
+    			{
+					System.out.println("Error trying to build the Tag! ~> "+someRandomData);
+				}
 	    	}
         	
     		
@@ -156,6 +179,16 @@ public class PlaySongsFromFolder implements MediaObserver
                 validated += first+"/"+last;
                 listOfMP3.put(count,validated);
                 songTags.put(count,tagInfo);
+                
+                try
+                {
+					listOfSongs.addSong(new Song(validated));
+				}
+                catch (WrongFileTypeException | TagException e)
+                {
+                	System.out.println("Error trying to build the Tag! ~> "+tagInfo);
+				}
+                
                 count++;
             }
             holdingsBufferedReader.close();
@@ -341,22 +374,6 @@ public class PlaySongsFromFolder implements MediaObserver
 
         public playRandomSong()
         {
-            for(int xy = 0; xy < getTheNum(); xy++)
-            {
-                shuffledList[xy] = xy+1;
-                orderedList[xy] = xy+1;
-            }
-            ShuffleArray.shuffleArray(shuffledList);
-            System.out.println("Ordeded list["+orderedList.length+"]: ");
-            for(int indexA = 0; indexA < orderedList.length; indexA++)
-            {
-                System.out.print(orderedList[indexA]+",");
-            }
-            System.out.println("Shuffleded list["+shuffledList.length+"]: ");
-            for(int indexA = 0; indexA < shuffledList.length; indexA++)
-            {
-                System.out.print(shuffledList[indexA]+",");
-            }
         }
 
         @Override
@@ -367,62 +384,46 @@ public class PlaySongsFromFolder implements MediaObserver
             {
                 if(!currentlyPlaying)
                 {
-                    System.out.println("Choosing Next song!!");
+                	if(!mediaController.hasPlaylist())
+                	{
+                		mediaController.setSongList(listOfSongs);
+                	}
+                	
+                    /*System.out.println("Choosing Next song!!");
+                    
                     System.out.println("Number chosen: "+shuffledList[currentPlayNum]+" out of "+(getTheNum()));
-                    System.out.println("ID was for: "+songTags.get(shuffledList[currentPlayNum]));
-                    File songFile = new File(getTheSong(shuffledList[currentPlayNum]));
-                    try 
-                    {
-						currentPlayingSongTag = new SongTag(songFile);
-					} 
-                    catch (WrongFileTypeException e)
-                    {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					} 
-                    catch (IOException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-                    catch (TagException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
+                    System.out.println("ID was for: "+songTags.get(shuffledList[currentPlayNum]));*/
+                    
+                    currentSong = mediaController.getCurrentSong();
+					currentPlayingSongTag = currentSong.getMetaTag();
+					
+					System.out.println("Current Song / Next Song to play: "+currentPlayingSongTag.getSongTitle());
+					//currentPlayingSongTag = new SongTag(songFile);
                     /*if(new File(HOLDINGS_FILE).lastModified() != HOLDINGS_FILE_LAST_MODIFIED)
                     {
                         System.out.println("Holdings file was modified durring play: ["+HOLDINGS_FILE_LAST_MODIFIED+"] <!=> ["+new File(HOLDINGS_FILE).lastModified()+"]");
                         setLastChecked(new File(HOLDINGS_FILE).lastModified());
                         getUpdatedSongHoldingFileInfo(x);
                     }*/
-                    setHoldingInfoForCurrentSong(songTags.get(shuffledList[currentPlayNum]));
+                    //setHoldingInfoForCurrentSong(songTags.get(shuffledList[currentPlayNum]));
                     //updater = new updateHolingsInfo();
                     //timerObject.schedule(updater, (Integer.parseInt(Durration)/2)*1000);
-                    theCurrentSongTitle = getCurrentSongInfo();
-                    int checkTime = (Integer.parseInt(Durration))/2;
+                    //theCurrentSongTitle = getCurrentSongInfo();
+                    int checkTime = (currentPlayingSongTag.getDurration())/2;
                     int realTime = (checkTime%60);
-                    System.out.println(theCurrentSongTitle+" <=["+Durration+"]=> "+checkTime+" ---> "+(int)(checkTime/60)+":"+realTime);
-                    playSong = new PlaySongControls(songFile);
-                    label = new ScrollingText( theCurrentSongTitle, labelXpos,labelWidth);
-                    songThread = new Thread(playSong);
+                    System.out.println(currentPlayingSongTag.getSongTitle()+" <=["+Durration+"]=> "+checkTime+" ---> "+(int)(checkTime/60)+":"+realTime);
+                    label = new ScrollingText( currentPlayingSongTag ,labelWidth);
+                    
+                    //songThread = new Thread(playSong);
                     secondsUpdating = new secondsUpdating();
                     seconds = new Timer();
                     seconds.scheduleAtFixedRate(secondsUpdating, 100, 1000);
-                    songThread.start();
+                    //songThread.start();
+                    mediaController.play();
                     currentlyPlaying = true;
                     currentPlayNum++;
                 }
 
-                if(!songThread.isAlive())
-                {
-                    currentlyPlaying = false;
-                    System.out.println("Song has finished!!");
-                    songThread = null;
-                    songMinutes = 0;
-                    songSeconds = 0;
-                    pausedSeconds = 0;
-                    pausedMinutes = 0;
-                    seconds.cancel();
-                }
                 if(label.getImage() != null)
                 {
                     scrollingTitleLabel.setIcon(new ImageIcon(label.getImage()));
@@ -441,7 +442,7 @@ public class PlaySongsFromFolder implements MediaObserver
     public void pauseTheSong()
     {
         label.pauseAnimation();
-        playSong.userPressedPause();
+        mediaController.pause();
         pausedSeconds = songSeconds;
         pausedMinutes = songMinutes;
         isPaused = true;
@@ -454,7 +455,7 @@ public class PlaySongsFromFolder implements MediaObserver
         songMinutes = pausedMinutes;
         pausedSeconds = 0;
         pausedMinutes = 0;
-        playSong.userPressedPlay();
+        mediaController.play();
     }
     public void skipTheSong()
     {
@@ -462,15 +463,17 @@ public class PlaySongsFromFolder implements MediaObserver
         {
             playTheSong();
         }
+        else{
+        	label.changeTag(this.currentPlayingSongTag);
+        }
         songMinutes = 0;
         songSeconds = 0;
         pausedSeconds = 0;
         pausedMinutes = 0;
         songTime = "00:00";
-        playSong.stopPlaying();
+        mediaController.skip();
         seconds.cancel();
         //updater.cancel();
-        songThread.stop();
     }
     public void setJLabelBounds(int xPosition, int width)
     {
@@ -485,13 +488,18 @@ public class PlaySongsFromFolder implements MediaObserver
     {
         return theCurrentSongTitle;
     }
-    public boolean getPlayState()
+    public boolean getPausedState()
     {
-        return playSong.pausedOrNot();
+        return mediaController.isPaused();
     }
     public void stopPlayer()
     {
         playSong.stopPlaying();
+        songMinutes = 0;
+        songSeconds = 0;
+        pausedSeconds = 0;
+        pausedMinutes = 0;
+        seconds.cancel();
         songThread.stop();
     }
     public int getTheNum()
@@ -515,7 +523,8 @@ public class PlaySongsFromFolder implements MediaObserver
 		System.out.println("Player is currently: "+playerCurrentState);
 		
 	}
-	public SongTag getTheCurrentSong(){
+	public SongTag getTheCurrentSong()
+	{
 		return this.currentPlayingSongTag;
 	}
 }

@@ -67,7 +67,7 @@ public class AnimationController implements AnimatorObserver
 	{
 		this.currentAnimatedTag = tagData;
 		this.playerState = playState;
-		System.out.println("<<<< Now animating tag for: "+tagData.getArtist()+">>>>>");
+		//System.out.println("<<<< Now animating tag for: "+tagData.getArtist()+">>>>>");
 		
 	}
 

@@ -22,6 +22,7 @@ import javax.swing.JPanel;
 import javax.swing.Timer;
 
 import slime.controller.AnimationController;
+import slime.controller.MediaController;
 import slime.media.PlayState;
 import slime.media.SongTag;
 import slime.observe.AnimatorObserver;
@@ -127,6 +128,10 @@ public class mainPlayer extends JPanel implements ActionListener, MediaSubject, 
 
         animator = new AnimationController();
         
+        //MediaController
+        //LibraryManager
+        //PlaylistManager
+        
         registerAnimatorObserver(animator);
         
         infoUpdater_Scroller = new Timer(50,this);
@@ -195,24 +200,26 @@ public class mainPlayer extends JPanel implements ActionListener, MediaSubject, 
                     songTime.setText(readADirectory.getSongTime());
                     revalidate();
                 }
-                if (source == playPause && readADirectory.getPlayState()) {
+                if (source == playPause && readADirectory.getPausedState()) {
                 	currentStateOfPlayer = PlayState.PLAYING;
                 	currentSongTag = readADirectory.getTheCurrentSong();
                     readADirectory.playTheSong();
                     playPause.setIcon(PAUSE_ICON);
                     revalidate();
-                } else if (source == playPause && !readADirectory.getPlayState()) {
+                } else if (source == playPause && !readADirectory.getPausedState()) {
                 	currentStateOfPlayer = PlayState.PAUSED;
                 	currentSongTag = readADirectory.getTheCurrentSong();
                     playPause.setIcon(PLAY_ICON);
                     revalidate();
                     readADirectory.pauseTheSong();
+                    
 
                 }
                 if (source == skip) {
                 	
                 	currentStateOfPlayer = PlayState.SKIPPED_FORWARDS;
                     readADirectory.skipTheSong();
+                    currentSongTag = readADirectory.getTheCurrentSong();
                     
                 }
             }
@@ -244,7 +251,7 @@ public class mainPlayer extends JPanel implements ActionListener, MediaSubject, 
                 System.gc();
             }
             notifyAllMediaObservers();
-            currentSongTag = readADirectory.getTheCurrentSong();
+            //currentSongTag = readADirectory.getTheCurrentSong();
             notifyAllAnimatorObservers();
         }
         public void mouseReleased(MouseEvent e){}
@@ -332,8 +339,11 @@ public class mainPlayer extends JPanel implements ActionListener, MediaSubject, 
 	@Override
 	public void deregisterMediaObserver(MediaObserver observer) 
 	{
-		mediaObserverList.remove(mediaObserverList.indexOf(observer));
-		System.out.println("<<<< "+observer.getMediaObserverName()+" Removed! >>>>");
+		if(!mediaObserverList.isEmpty())
+		{
+			mediaObserverList.remove(mediaObserverList.indexOf(observer));
+			System.out.println("<<<< "+observer.getMediaObserverName()+" Removed! >>>>");
+		}
 		
 	}
 
@@ -359,8 +369,11 @@ public class mainPlayer extends JPanel implements ActionListener, MediaSubject, 
 	@Override
 	public void deregisterAnimatorObserver(AnimatorObserver observer) 
 	{
-		animatorObserverList.remove(animatorObserverList.indexOf(observer));
-		System.out.println("<<<< "+observer.getAnimatorObserverName()+" Removed! >>>>");
+		if(!animatorObserverList.isEmpty())
+		{
+			animatorObserverList.remove(animatorObserverList.indexOf(observer));
+			System.out.println("<<<< "+observer.getAnimatorObserverName()+" Removed! >>>>");
+		}
 		
 	}
 

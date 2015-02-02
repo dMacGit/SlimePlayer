@@ -64,7 +64,7 @@ public class SongTag
 		} else if(songFile.hasID3v2Tag()){
 			tagVersion = TagVersion.ID3v2;
 		} else {
-			System.out.println("Cannot read tag data! Incorrect tag version!");
+			System.out.println("Cannot read tag data! Incorrect tag version! ");
 		}
 		
 		if(tagVersion == TagVersion.ID3v1)

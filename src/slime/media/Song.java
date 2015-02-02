@@ -11,25 +11,10 @@ public class Song
 	private String songPath;
 	private SongTag metaTag;
 	
-	public Song(String libraryPathLine)
+	public Song(String libraryPathLine) throws WrongFileTypeException, IOException, TagException
 	{
-		try 
-		{
 			this.songPath = libraryPathLine;
 			this.metaTag = new SongTag(new File(libraryPathLine));
-		}
-		catch ( IOException e) 
-		{	
-			e.printStackTrace();
-		}
-		catch ( TagException e) 
-		{	
-			e.printStackTrace();
-		}
-		catch( WrongFileTypeException e)
-		{ 
-			e.printStackTrace();
-		}
 	}
 
 	public String getSongPath() {

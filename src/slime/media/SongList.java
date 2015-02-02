@@ -21,6 +21,24 @@ public class SongList
 			totalPlayTime += nextSong.getMetaTag().getDurration();
 		}
 	}
+	public SongList()
+	{
+		listOfSongs = new ArrayList<Song>();
+	}
+	
+	public boolean isEmpty(){
+		if(this.size > 0){
+			return false;
+		}
+		else return true;
+	}
+	
+	public void addSong(Song songToAdd)
+	{
+		listOfSongs.add(songToAdd);
+		size++;
+		totalPlayTime += songToAdd.getMetaTag().getDurration();
+	}
 
 	public int getSize() {
 		return size;
