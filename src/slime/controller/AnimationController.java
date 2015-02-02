@@ -1,4 +1,4 @@
-package slime.core;
+package slime.controller;
 
 import slime.media.PlayState;
 import slime.media.SongTag;

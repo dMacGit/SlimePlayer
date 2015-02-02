@@ -21,6 +21,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
+import slime.controller.AnimationController;
 import slime.media.PlayState;
 import slime.media.SongTag;
 import slime.observe.AnimatorObserver;

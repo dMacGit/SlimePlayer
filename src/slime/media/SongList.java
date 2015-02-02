@@ -7,18 +7,18 @@ import java.util.List;
 public class SongList
 {
 	private int size = 0;
-	private List<SongTag> listOfSongs;
+	private List<Song> listOfSongs;
 	private int totalPlayTime = 0;
 	
-	public SongList(SongTag[] songTagsArray) 
+	public SongList(Song[] songTagsArray) 
 	{
-		listOfSongs = new ArrayList<SongTag>();
+		listOfSongs = new ArrayList<Song>();
 		listOfSongs = Arrays.asList(songTagsArray);
 		
 		size = listOfSongs.size();
 		
-		for(SongTag nextTag : listOfSongs){
-			totalPlayTime += nextTag.getDurration();
+		for(Song nextSong : listOfSongs){
+			totalPlayTime += nextSong.getMetaTag().getDurration();
 		}
 	}
 
@@ -26,7 +26,7 @@ public class SongList
 		return size;
 	}
 
-	public List<SongTag> getListOfSongs() {
+	public List<Song> getListOfSongs() {
 		return listOfSongs;
 	}
 

@@ -1,4 +1,4 @@
-package slime.media;
+package slime.controller;
 
 public class MediaController 
 {
