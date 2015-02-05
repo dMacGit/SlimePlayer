@@ -355,6 +355,29 @@ public class PlaySongsFromFolder implements MediaObserver
             }
         }
     }
+    
+    public void resetTime()
+    {
+    	songMinutes = 0;
+        songSeconds = 0;
+        pausedSeconds = 0;
+        pausedMinutes = 0;
+        songTime = "00:00";
+    }
+    public void pauseTime(){
+    	pausedSeconds = songSeconds;
+        pausedMinutes = songMinutes;
+        isPaused = true;
+    }
+    public void unpauseTime()
+    {
+    	songSeconds = pausedSeconds;
+        songMinutes = pausedMinutes;
+        pausedSeconds = 0;
+        pausedMinutes = 0;
+        isPaused = false;
+    }
+    
     public String getSongTime()
     {
         return songTime;
@@ -443,18 +466,12 @@ public class PlaySongsFromFolder implements MediaObserver
     {
         label.pauseAnimation();
         mediaController.pause();
-        pausedSeconds = songSeconds;
-        pausedMinutes = songMinutes;
-        isPaused = true;
+        pauseTime();
     }
     public void playTheSong()
     {
         label.startAnimation();
-        isPaused = false;
-        songSeconds = pausedSeconds;
-        songMinutes = pausedMinutes;
-        pausedSeconds = 0;
-        pausedMinutes = 0;
+        unpauseTime();
         mediaController.play();
     }
     public void skipTheSong()
@@ -464,15 +481,19 @@ public class PlaySongsFromFolder implements MediaObserver
             playTheSong();
         }
         else{
+        	resetTime();
+            mediaController.skip();
+            this.currentPlayingSongTag = mediaController.getCurrentSong().getMetaTag();
+        	System.out.println("Skipped song to -> "+currentPlayingSongTag.getSongTitle());
+        	label.resetAnimation();
+        	label.resetTimer();
         	label.changeTag(this.currentPlayingSongTag);
+        	label.startAnimation();
+        	
+        	
         }
-        songMinutes = 0;
-        songSeconds = 0;
-        pausedSeconds = 0;
-        pausedMinutes = 0;
-        songTime = "00:00";
-        mediaController.skip();
-        seconds.cancel();
+        
+        //seconds.cancel();
         //updater.cancel();
     }
     public void setJLabelBounds(int xPosition, int width)
@@ -495,10 +516,7 @@ public class PlaySongsFromFolder implements MediaObserver
     public void stopPlayer()
     {
         playSong.stopPlaying();
-        songMinutes = 0;
-        songSeconds = 0;
-        pausedSeconds = 0;
-        pausedMinutes = 0;
+        resetTime();
         seconds.cancel();
         songThread.stop();
     }
@@ -521,6 +539,10 @@ public class PlaySongsFromFolder implements MediaObserver
 	{
 		this.playerCurrentState = stateOfPlayer;
 		System.out.println("Player is currently: "+playerCurrentState);
+		if(mediaController != null)
+		{
+			mediaController.changeState(stateOfPlayer);
+		}
 		
 	}
 	public SongTag getTheCurrentSong()

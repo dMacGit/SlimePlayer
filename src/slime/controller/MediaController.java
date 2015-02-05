@@ -9,6 +9,7 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.DataLine;
 import javax.sound.sampled.SourceDataLine;
 
+import slime.media.PlayState;
 import slime.media.Song;
 import slime.media.SongList;
 import slime.media.SongTag;
@@ -28,6 +29,7 @@ public class MediaController
 	private Thread wrapperThread;
 	private int startOrder = 0;
 	private boolean threadStarted = false;
+	private PlayState playState = PlayState.STOPPED;
 	
 	public MediaController(SongList listOfSongs, boolean shuffle, boolean repeat, boolean initialized) 
 	{
@@ -71,6 +73,7 @@ public class MediaController
 		System.out.println("Choosing Next song!!");
 		if(shuffle)
 		{
+			System.out.println("Shuffle is activated!");
 			int randomIndex = ((int)(Math.random()*songList.getSize()));
 			currentSong = songList.getListOfSongs().get(randomIndex);
 		}
@@ -96,6 +99,7 @@ public class MediaController
 			theSong = songFile;
 			songFinished = false;
 			paused = false;
+			threadStarted = true;
 		}
 		@Override
 		public void run()
@@ -171,7 +175,7 @@ public class MediaController
 	                try
 	                {
 	                    din.close();
-
+	                    threadStarted = false;
 	                }
 	                catch (IOException e)
 	                {
@@ -222,7 +226,7 @@ public class MediaController
 	{
 		if(threadStarted)
 		{
-			wrapperThread.start();
+			//wrapperThread.start();
 			playSongControls.playSong();
 		}
 		else
@@ -253,10 +257,28 @@ public class MediaController
 		playSongControls.stopSong();
 	}
 	
-	public void toggleShuffle(){
+	public void toggleShuffle()
+	{
 		this.shuffle = !shuffle;
+		System.out.println("Shuffle has been toggled to: "+ shuffle);
 	}
 	public void toggleRepeat(){
 		this.repeat = !repeat;
+		System.out.println("Repeat has been toggled to: "+ repeat);
+	}
+	public void changeState(PlayState state)
+	{
+		this.playState = state;
+		stateHandler();
+	}
+	private void stateHandler(){
+		if(playState == PlayState.SHUFFLE_ON)
+		{
+			this.toggleShuffle();
+		}
+		else if(playState == PlayState.REPEAT_ON)
+		{
+			this.toggleRepeat();
+		}
 	}
 }

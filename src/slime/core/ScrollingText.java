@@ -127,7 +127,7 @@ public class ScrollingText extends JLabel
 	{
 		if (!pauseScrolling)
 		{
-			setText("");
+			
 			this.timer = new Timer(20, new Handler());
 			this.timer.start();
 		}
@@ -135,6 +135,14 @@ public class ScrollingText extends JLabel
 		{
 			pauseScrolling = false;
 		}
+	}
+	
+	public void resetAnimation(){
+		setText("");
+		this.current_pos = this.defaultPoint;
+	}
+	public void resetTimer(){
+		this.timer.stop();
 	}
 
 	public boolean pauseAnimation()
