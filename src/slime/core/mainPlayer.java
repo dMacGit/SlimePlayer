@@ -191,13 +191,14 @@ public class mainPlayer extends JPanel implements ActionListener, MediaSubject, 
                     System.out.println("Starting up Player!!");
                     readADirectory.setJLabelBounds(songName.getX(), songName.getWidth());
                     currentSongTag = readADirectory.getTheCurrentSong();
+                    animator.startTimer();
                 }
             }
             else
             {
                 if (readADirectory.getLabel() != null) {
                     songName.setIcon(readADirectory.getLabel().getIcon());
-                    songTime.setText(readADirectory.getSongTime());
+                    songTime.setText(animator.getSongTime());
                     revalidate();
                 }
                 if (source == playPause && readADirectory.getPausedState()) {
@@ -323,7 +324,7 @@ public class mainPlayer extends JPanel implements ActionListener, MediaSubject, 
             if(readADirectory.getLabel() != null)
             {
                 songName.setIcon(readADirectory.getLabel().getIcon());
-                songTime.setText(readADirectory.getSongTime());
+                songTime.setText(animator.getSongTime());
                 revalidate();
             }
         }

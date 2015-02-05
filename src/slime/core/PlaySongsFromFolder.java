@@ -322,74 +322,7 @@ public class PlaySongsFromFolder implements MediaObserver
         String fifth = fourth.substring(fourth.indexOf('\t')+1);
         Year = fifth.substring(0,fifth.indexOf('\t'));
     }
-    public class secondsUpdating extends TimerTask
-    {
 
-        public void run()
-        {
-            if(!isPaused)
-            {
-                boolean updated = false;
-                if(songMinutes < 10 && songSeconds < 10)
-                {
-                    songTime = ("0"+songMinutes+":0"+songSeconds);
-                }
-                else if(songMinutes >= 10 && songSeconds >= 10)
-                {
-                    songTime = (songMinutes+":"+songSeconds);
-                }
-                else if(songMinutes < 10 && songSeconds >= 10)
-                {
-                    songTime = ("0"+songMinutes+":"+songSeconds);
-                }
-               
-                if(songSeconds < 59)
-                {
-                    songSeconds++;
-                }
-                else
-                {
-                    songSeconds = 0;
-                    songMinutes++;
-                }
-            }
-        }
-    }
-    
-    public void resetTime()
-    {
-    	songMinutes = 0;
-        songSeconds = 0;
-        pausedSeconds = 0;
-        pausedMinutes = 0;
-        songTime = "00:00";
-    }
-    public void pauseTime(){
-    	pausedSeconds = songSeconds;
-        pausedMinutes = songMinutes;
-        isPaused = true;
-    }
-    public void unpauseTime()
-    {
-    	songSeconds = pausedSeconds;
-        songMinutes = pausedMinutes;
-        pausedSeconds = 0;
-        pausedMinutes = 0;
-        isPaused = false;
-    }
-    
-    public String getSongTime()
-    {
-        return songTime;
-    }
-    public String getCurrentSongInfo()
-    {
-        if(Album.compareTo("") == 0)
-        {
-            Album = Title;
-        }
-        return new String(Artist+"   :   "+Title+"     "+Album+"     "+Year);
-    }
     public class playRandomSong extends Thread
     {
         private int[] shuffledList = new int[getTheNum()];
@@ -438,9 +371,9 @@ public class PlaySongsFromFolder implements MediaObserver
                     label = new ScrollingText( currentPlayingSongTag ,labelWidth);
                     
                     //songThread = new Thread(playSong);
-                    secondsUpdating = new secondsUpdating();
-                    seconds = new Timer();
-                    seconds.scheduleAtFixedRate(secondsUpdating, 100, 1000);
+                    //secondsUpdating = new secondsUpdating();
+                    //seconds = new Timer();
+                    //seconds.scheduleAtFixedRate(secondsUpdating, 100, 1000);
                     //songThread.start();
                     mediaController.play();
                     currentlyPlaying = true;
@@ -466,12 +399,12 @@ public class PlaySongsFromFolder implements MediaObserver
     {
         label.pauseAnimation();
         mediaController.pause();
-        pauseTime();
+        //pauseTime();
     }
     public void playTheSong()
     {
         label.startAnimation();
-        unpauseTime();
+        //unpauseTime();
         mediaController.play();
     }
     public void skipTheSong()
@@ -481,7 +414,7 @@ public class PlaySongsFromFolder implements MediaObserver
             playTheSong();
         }
         else{
-        	resetTime();
+        	//resetTime();
             mediaController.skip();
             currentPlayingSongTag = mediaController.getCurrentSong().getMetaTag();
         	System.out.println("Skipped song to -> "+currentPlayingSongTag.getSongTitle());
@@ -516,7 +449,7 @@ public class PlaySongsFromFolder implements MediaObserver
     public void stopPlayer()
     {
         playSong.stopPlaying();
-        resetTime();
+        //resetTime();
         seconds.cancel();
         songThread.stop();
     }

@@ -71,15 +71,18 @@ public class MediaController
 	private void findNextSong()
 	{
 		System.out.println("Choosing Next song!!");
+		int index;
 		if(shuffle)
 		{
 			System.out.println("Shuffle is activated!");
-			int randomIndex = ((int)(Math.random()*songList.getSize()));
-			currentSong = songList.getListOfSongs().get(randomIndex);
+			index = ((int)(Math.random()*songList.getSize()));
+			currentSong = songList.getListOfSongs().get(index);
+			startOrder = ++index;
 		}
 		else
 		{
-			currentSong = songList.getListOfSongs().get(startOrder++);
+			currentSong = songList.getListOfSongs().get(startOrder);
+			index = ++startOrder;
 		}
 	}
 	

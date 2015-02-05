@@ -3,7 +3,6 @@ package slime.controller;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import slime.core.PlaySongsFromFolder.secondsUpdating;
 import slime.media.PlayState;
 import slime.media.SongTag;
 import slime.observe.AnimatorObserver;
@@ -20,6 +19,7 @@ public class AnimationController implements AnimatorObserver
 	private TimerTask secondsUpdating;
 	private byte songMinutes, songSeconds, pausedSeconds, pausedMinutes;
 	private String songTime;
+	private boolean isPaused = true;
 	
 	public AnimationController(SongTag tagToAnimate) 
 	{
@@ -27,14 +27,23 @@ public class AnimationController implements AnimatorObserver
 		internalAnimatorThread = new AnimatorThread();
 		runnableThread = new Thread(internalAnimatorThread);
 		runnableThread.start();
-		//secondsUpdating = new secondsUpdating();
-        //seconds = new Timer();
-		//seconds.scheduleAtFixedRate(secondsUpdating, 100, 1000);
+		secondsUpdating = new secondsUpdating();
+        seconds = new Timer();
+		seconds.scheduleAtFixedRate(secondsUpdating, 100, 1000);
         
 	}
 	public AnimationController() 
 	{
 		this(null);
+	}
+	public void startTimer(){
+		secondsUpdating.run();
+	}
+	public void stopTimer(){
+		secondsUpdating.cancel();
+	}
+	public void pauseTimer(){
+		
 	}
 	
 	private class AnimatorThread implements Runnable
@@ -75,7 +84,7 @@ public class AnimationController implements AnimatorObserver
     {
         public void run()
         {
-            if(playerState != PlayState.PAUSED)
+            if(!isPaused)
             {
                 boolean updated = false;
                 if(songMinutes < 10 && songSeconds < 10)
@@ -101,6 +110,7 @@ public class AnimationController implements AnimatorObserver
                     songMinutes++;
                 }
             }
+            
         }
     }
 	public String getSongTime()
@@ -118,10 +128,68 @@ public class AnimationController implements AnimatorObserver
 	public void updateAnimatorObserver(PlayState playState, SongTag tagData) 
 	{
 		this.currentAnimatedTag = tagData;
-		this.playerState = playState;
+		this.stateHandler(playState, tagData);
 		//System.out.println("<<<< Now animating tag for: "+tagData.getArtist()+">>>>>");
 		
 	}
-
+	
+	private void stateHandler(PlayState newState, SongTag tagData)
+	{
+		if(tagData != this.currentAnimatedTag)
+		{
+			this.currentAnimatedTag = tagData;
+		}
+		
+		if(newState == PlayState.REPEAT_TOGGLED || newState == PlayState.SHUFFLE_TOGGLED)
+		{
+			//Do nothing!
+		}
+		else if(newState == PlayState.PAUSED || newState == PlayState.PLAYING || newState == PlayState.STOPPED)
+		{ 
+			if(newState == PlayState.PAUSED && !this.isPaused)
+			{
+				isPaused = true;
+				pausedSeconds = songSeconds;
+		        pausedMinutes = songMinutes;
+		        
+			}
+			else if(newState == PlayState.PLAYING && this.isPaused)
+			{
+				songSeconds = pausedSeconds;
+		        songMinutes = pausedMinutes;
+		        pausedSeconds = 0;
+		        pausedMinutes = 0;
+		        isPaused = false;
+			}
+			playerState = newState; 
+		}
+		
+		if(newState == PlayState.SKIPPED_FORWARDS || newState == PlayState.SKIPPED_BACK)
+        {
+			if(this.isPaused)
+			{
+				songMinutes = 0;
+	            songSeconds = 0;
+	            pausedSeconds = 0;
+	            pausedMinutes = 0;
+	            songTime = "00:00";
+				isPaused = false;
+				
+			}
+			else
+			{
+				//Reset the time!
+	        	songMinutes = 0;
+	            songSeconds = 0;
+	            pausedSeconds = 0;
+	            pausedMinutes = 0;
+	            songTime = "00:00";
+			}
+        	
+            //playerState = newState;
+        }
+		
+		
+	}
 	
 }
