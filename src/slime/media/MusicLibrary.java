@@ -4,10 +4,64 @@ public class MusicLibrary implements Playable
 {
 	private SongList libraryList;
 	
-	public MusicLibrary(SongList songList) 
+	private final static String DEFAULT_MUSIC_DIRECTORY = "%USERPROFILE%\\My Documents\\My Music";
+	
+    private String defaultUserMusicDirectory = DEFAULT_MUSIC_DIRECTORY;
+    private final String FILE_DIR = "Data_Files";
+    
+    private final String LIBRARY_FILE_NAME = "Lib_MP3player.txt", SONG_PATHS_FILE_NAME = "SongPaths.txt";
+    
+    private String HOLDINGS_FILE_PATH, SONG_PATHS_FILE_PATH, Durration, theCurrentSongTitle = null;
+	
+	public MusicLibrary(String homeUserMusicDir) 
 	{
-		libraryList = songList;
+		this.defaultUserMusicDirectory = homeUserMusicDir;
 	}
+	
+	public MusicLibrary(){
+		
+	}
+	
+	private void generateMusicLibrary()
+	{
+		/*
+		 * This will take a long time so make sure to use some sort of proxy-notification
+		 * as well as making sure to use a separate runnable thread in order to not lock 
+		 * the main thread.
+		 */
+		
+		//This will populate a SongList (libraryList) object
+	}
+	
+	/*
+	 * Generic updateMusicLibrary method
+	 * 
+	 * Is called when there is song(s) added or removed from the library
+	 * 
+	 */
+	private void updateMusicLibrary()
+	{
+		//Not sure what will happen in this method exactly yet!
+	}
+	
+	/*
+	 * AddMusicToLibrary Method specifically for when there is 
+	 * a song or group of songs added to the library.
+	 */
+	private void addMusicToLibrary()
+	{
+		//Skeleton code...
+	}
+	
+	/*
+	 * RemoveMusicFromLibrary Method for when there is songs
+	 * or group of songs to remove from the library.
+	 */
+	private void removeMusicFromLibray()
+	{
+		//Skeleton code..
+	}
+	
 
 	@Override
 	public String getTotalTime() {
