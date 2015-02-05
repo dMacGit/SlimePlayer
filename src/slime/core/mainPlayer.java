@@ -150,13 +150,13 @@ public class mainPlayer extends JPanel implements ActionListener, MediaSubject, 
             {
                 if(shuffle_Select)
                 {
-                	currentStateOfPlayer = PlayState.SUFFLE_OFF;
+                	currentStateOfPlayer = PlayState.SHUFFLE_TOGGLED;
                     shuffle.setIcon(SHUFFLE_ICON_DE_SELECT);
                     shuffle_Select = false;
                 }
                 else
                 {
-                	currentStateOfPlayer = PlayState.SHUFFLE_ON;
+                	currentStateOfPlayer = PlayState.SHUFFLE_TOGGLED;
                     shuffle.setIcon(SHUFFLE_ICON_SELECTED);
                     shuffle_Select = true;
                 }
@@ -167,13 +167,13 @@ public class mainPlayer extends JPanel implements ActionListener, MediaSubject, 
                 if(repeat_Select)
                 {
                     repeat.setIcon(REPEAT_ICON_DE_SELECT);
-                    currentStateOfPlayer = PlayState.REPEAT_OFF;
+                    currentStateOfPlayer = PlayState.REPEAT_TOGGLED;
                     repeat_Select = false;
                 }
                 else
                 {
                     repeat.setIcon(REPEAT_ICON_SELECTED);
-                    currentStateOfPlayer = PlayState.REPEAT_ON;
+                    currentStateOfPlayer = PlayState.REPEAT_TOGGLED;
                     repeat_Select = true;
                 }
                 revalidate();

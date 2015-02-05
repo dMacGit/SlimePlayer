@@ -272,11 +272,11 @@ public class MediaController
 		stateHandler();
 	}
 	private void stateHandler(){
-		if(playState == PlayState.SHUFFLE_ON)
+		if(playState == PlayState.SHUFFLE_TOGGLED)
 		{
 			this.toggleShuffle();
 		}
-		else if(playState == PlayState.REPEAT_ON)
+		else if(playState == PlayState.REPEAT_TOGGLED)
 		{
 			this.toggleRepeat();
 		}

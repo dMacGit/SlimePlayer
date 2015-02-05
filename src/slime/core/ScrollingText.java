@@ -101,6 +101,12 @@ public class ScrollingText extends JLabel
 	{
 		pauseAnimation();
 		this.text = craetedPrintedSongString(tag);
+		BufferedImage tp = new BufferedImage(1, 1, BufferedImage.TYPE_INT_ARGB);
+		font = tp.getGraphics().getFont();
+		defaultPosImage = new BufferedImage(225, 15, BufferedImage.TYPE_INT_RGB);
+		defaultPosImage.getGraphics().setFont(font);
+		defaultPosImage.getGraphics().setColor(Color.BLACK);
+		defaultPosImage.getGraphics().drawString(text, current_pos.x,current_pos.y);
 		startAnimation();
 	}
 	

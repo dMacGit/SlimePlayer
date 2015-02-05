@@ -483,7 +483,7 @@ public class PlaySongsFromFolder implements MediaObserver
         else{
         	resetTime();
             mediaController.skip();
-            this.currentPlayingSongTag = mediaController.getCurrentSong().getMetaTag();
+            currentPlayingSongTag = mediaController.getCurrentSong().getMetaTag();
         	System.out.println("Skipped song to -> "+currentPlayingSongTag.getSongTitle());
         	label.resetAnimation();
         	label.resetTimer();
