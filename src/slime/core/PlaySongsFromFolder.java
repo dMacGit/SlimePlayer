@@ -135,16 +135,16 @@ public class PlaySongsFromFolder implements MediaObserver
                     int checkTime = (currentPlayingSongTag.getDurration())/2;
                     int realTime = (checkTime%60);
                     System.out.println(currentPlayingSongTag.getSongTitle()+" <=["+Durration+"]=> "+checkTime+" ---> "+(int)(checkTime/60)+":"+realTime);
-                    label = new ScrollingText( currentPlayingSongTag ,labelWidth);
+                    //label = new ScrollingText( currentPlayingSongTag ,labelWidth);
                     
                     mediaController.play();
                     currentlyPlaying = true;
                 }
 
-                if(label.getImage() != null)
+                /*if(label.getImage() != null)
                 {
                     scrollingTitleLabel.setIcon(new ImageIcon(label.getImage()));
-                }
+                }*/
                 try
                 {
                     Thread.sleep(45);
@@ -158,13 +158,13 @@ public class PlaySongsFromFolder implements MediaObserver
     }
     public void pauseTheSong()
     {
-        label.pauseAnimation();
+        //label.pauseAnimation();
         mediaController.pause();
         //pauseTime();
     }
     public void playTheSong()
     {
-        label.startAnimation();
+        //label.startAnimation();
         //unpauseTime();
         mediaController.play();
     }
@@ -179,14 +179,15 @@ public class PlaySongsFromFolder implements MediaObserver
             mediaController.skip();
             currentPlayingSongTag = mediaController.getCurrentSong().getMetaTag();
         	System.out.println("Skipped song to -> "+currentPlayingSongTag.getSongTitle());
-        	label.resetAnimation();
+        	/*label.resetAnimation();
         	label.resetTimer();
         	label.changeTag(this.currentPlayingSongTag);
-        	label.startAnimation();
+        	label.startAnimation();*/
         	
         	
         }
     }
+    /*
     public void setJLabelBounds(int xPosition, int width)
     {
         labelWidth = width;
@@ -194,7 +195,7 @@ public class PlaySongsFromFolder implements MediaObserver
     public JLabel getLabel()
     {
         return scrollingTitleLabel;
-    }
+    }*/
     public String getTheSongName()
     {
         return theCurrentSongTitle;

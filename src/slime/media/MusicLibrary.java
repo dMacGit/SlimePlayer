@@ -1,6 +1,6 @@
 package slime.media;
 
-public class MusicLibrary implements Playable
+public class MusicLibrary
 {
 	private SongList libraryList;
 	
@@ -18,7 +18,19 @@ public class MusicLibrary implements Playable
 		this.defaultUserMusicDirectory = homeUserMusicDir;
 	}
 	
-	public MusicLibrary(){
+	public MusicLibrary()
+	{
+		/* ---- Operations to perform ----
+		 * load library from files (Maybe in future try and optimize loading! )
+		 * Library held in SongList
+		 * 
+		 * +++++++++++++++++++++++++++++++++++
+		 * 
+		 * Allow adding / Removing of files
+		 * Allow creating and deleting PlayList objects
+		 * Allow selecting / un-selecting of PlayList objects
+		 * Allow stating / stopping PlayList objects. 
+		 */
 		
 	}
 	
@@ -60,19 +72,6 @@ public class MusicLibrary implements Playable
 	private void removeMusicFromLibray()
 	{
 		//Skeleton code..
-	}
-	
-
-	@Override
-	public String getTotalTime() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public SongList getSongList() {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 }

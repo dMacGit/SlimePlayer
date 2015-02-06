@@ -1,8 +1,14 @@
 package slime.controller;
 
+import java.awt.Color;
+import java.awt.Dimension;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
+import slime.core.ScrollingText;
 import slime.media.PlayState;
 import slime.media.SongTag;
 import slime.observe.AnimatorObserver;
@@ -20,11 +26,20 @@ public class AnimationController implements AnimatorObserver
 	private byte songMinutes, songSeconds, pausedSeconds, pausedMinutes;
 	private String songTime;
 	private boolean isPaused = true;
+    private ScrollingText label;
+    private JLabel scrollingTitleLabel;
+    private int labelWidth;
 	
 	public AnimationController(SongTag tagToAnimate) 
 	{
+		scrollingTitleLabel = new JLabel("");
+        scrollingTitleLabel.setPreferredSize(new Dimension(225,25));
+        scrollingTitleLabel.setMinimumSize(new Dimension(225,25));
+        scrollingTitleLabel.setMaximumSize(new Dimension(225,25));
+        scrollingTitleLabel.setForeground(Color.WHITE);
+		
 		currentAnimatedTag = tagToAnimate;
-		internalAnimatorThread = new AnimatorThread();
+		internalAnimatorThread = new AnimatorThread(currentAnimatedTag);
 		runnableThread = new Thread(internalAnimatorThread);
 		runnableThread.start();
 		secondsUpdating = new secondsUpdating();
@@ -48,6 +63,18 @@ public class AnimationController implements AnimatorObserver
 	
 	private class AnimatorThread implements Runnable
 	{
+		public AnimatorThread(SongTag songTag)
+		{
+			if(songTag != null)
+			{
+				label = new ScrollingText( songTag ,labelWidth);
+				if(label.getImage() != null)
+	            {
+	                scrollingTitleLabel.setIcon(new ImageIcon(label.getImage()));
+	            }
+			}
+		}
+		
 		@Override
 		public void run()
 		{
@@ -57,23 +84,32 @@ public class AnimationController implements AnimatorObserver
                 
 				if(currentAnimatedTag != null)
 				{
-					if(playerState == PlayState.STOPPED || playerState == PlayState.PAUSED)
+					if(playerState == PlayState.PLAYING)
+					{
+						scrollingTitleLabel.setIcon(new ImageIcon(label.getImage()));
+					}
+					
+					
+					/*if(playerState == PlayState.STOPPED || playerState == PlayState.PAUSED)
 					{
 						//Keep text left aligned, and stationary
-						if(playerState == PlayState.PAUSED){
-							//Pause the timer
+						//scrollingTitleLabel.setIcon(new ImageIcon(label.getImage()));
+						if(playerState == PlayState.PAUSED)
+						{
+
 						}
 						else
 						{
-							//Reset the timer
+
 						}
 							
 					}
 					else
 					{
+						scrollingTitleLabel.setIcon(new ImageIcon(label.getImage()));
 						//Animate the scrolling text!
 						//Animate or increment the timer!
-					}
+					}*/
 				}
 				
 			}
@@ -113,6 +149,17 @@ public class AnimationController implements AnimatorObserver
             
         }
     }
+	
+	
+	public void setJLabelBounds(int xPosition, int width)
+    {
+        labelWidth = width;
+    }
+    public JLabel getLabel()
+    {
+        return scrollingTitleLabel;
+    }
+    
 	public String getSongTime()
     {
         return songTime;
@@ -127,7 +174,6 @@ public class AnimationController implements AnimatorObserver
 	@Override
 	public void updateAnimatorObserver(PlayState playState, SongTag tagData) 
 	{
-		this.currentAnimatedTag = tagData;
 		this.stateHandler(playState, tagData);
 		//System.out.println("<<<< Now animating tag for: "+tagData.getArtist()+">>>>>");
 		
@@ -138,6 +184,29 @@ public class AnimationController implements AnimatorObserver
 		if(tagData != this.currentAnimatedTag)
 		{
 			this.currentAnimatedTag = tagData;
+			
+			System.out.println("==========> Songtag changed to -> "+tagData.getSongTitle());
+			
+			if(label == null)
+			{
+				label = new ScrollingText( this.currentAnimatedTag ,labelWidth);
+				System.out.println("Label has been initialized!");
+				if(label.getImage() != null)
+	            {
+	                scrollingTitleLabel.setIcon(new ImageIcon(label.getImage()));
+	                System.out.println("Icon has also been set for the first time!");
+	            }
+			}
+			else
+			{
+				label.changeTag(currentAnimatedTag);
+				if(label.getImage() != null)
+	            {
+	                scrollingTitleLabel.setIcon(new ImageIcon(label.getImage()));
+	                System.out.println("The icon has been reset!");
+	            }
+			}
+			//Reload the JLabel with the updated SongInfo
 		}
 		
 		if(newState == PlayState.REPEAT_TOGGLED || newState == PlayState.SHUFFLE_TOGGLED)
@@ -151,6 +220,12 @@ public class AnimationController implements AnimatorObserver
 				isPaused = true;
 				pausedSeconds = songSeconds;
 		        pausedMinutes = songMinutes;
+		        label.pauseAnimation();
+		        while(!label.pauseAnimation())
+		        {
+		        	
+		        }
+		        scrollingTitleLabel.setIcon(new ImageIcon(label.getImage()));
 		        
 			}
 			else if(newState == PlayState.PLAYING && this.isPaused)
@@ -160,6 +235,7 @@ public class AnimationController implements AnimatorObserver
 		        pausedSeconds = 0;
 		        pausedMinutes = 0;
 		        isPaused = false;
+		        label.startAnimation();
 			}
 			playerState = newState; 
 		}
@@ -184,6 +260,10 @@ public class AnimationController implements AnimatorObserver
 	            pausedSeconds = 0;
 	            pausedMinutes = 0;
 	            songTime = "00:00";
+	            label.resetAnimation();
+	        	label.resetTimer();
+	        	label.changeTag(this.currentAnimatedTag);
+	        	label.startAnimation();
 			}
         	
             //playerState = newState;

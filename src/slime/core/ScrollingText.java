@@ -20,6 +20,7 @@ public class ScrollingText extends JLabel
 	private Font font;
 	private BufferedImage defaultPosImage;
 	private SongTag currentScrollingTag;
+	private boolean pauseAnimationReady = false;
 
 	public ScrollingText(String text, int startX, int componentWidth) 
 	{
@@ -71,6 +72,7 @@ public class ScrollingText extends JLabel
 		{
 			if (!pauseScrolling) 
 			{
+				pauseAnimationReady = false;
 				current_pos = new Point(current_pos.x - 1, current_pos.y);
 				image = new BufferedImage(225, 15, BufferedImage.TYPE_INT_RGB);
 				image.getGraphics().setFont(font);
@@ -89,10 +91,12 @@ public class ScrollingText extends JLabel
 			} 
 			else 
 			{
+				pauseAnimationReady = false;
 				current_pos = defaultPoint;
 				setIcon(new ImageIcon(defaultPosImage));
 				setImage(defaultPosImage);
 				image = defaultPosImage;
+				pauseAnimationReady = true;
 			}
 		}
 	}
@@ -108,6 +112,10 @@ public class ScrollingText extends JLabel
 		defaultPosImage.getGraphics().setColor(Color.BLACK);
 		defaultPosImage.getGraphics().drawString(text, current_pos.x,current_pos.y);
 		startAnimation();
+	}
+	
+	public boolean getPauseAnimationReady(){
+		return this.pauseAnimationReady;
 	}
 	
 	public void setImage(BufferedImage theLabel) 
