@@ -1,16 +1,19 @@
-package slime.core;
+package slime.managers;
 
 import java.awt.Color;
 import java.awt.Dimension;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.HashMap;
+
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
 import org.farng.mp3.TagException;
 
 import slime.controller.MediaController;
+import slime.controller.ScrollingTextController;
+import slime.core.PlaySongControls;
 import slime.media.PlayState;
 import slime.media.Song;
 import slime.media.SongList;
@@ -19,13 +22,13 @@ import slime.media.WrongFileTypeException;
 import slime.observe.MediaObserver;
 import slime.utills.FileIO;
 
-public class PlaySongsFromFolder implements MediaObserver
+public class MusicLibraryManager implements MediaObserver
 {
     private HashMap<Integer,String> listOfMP3, songTags;
     private boolean currentlyPlaying = false, stop = false, isPaused;
-    public PlaySongControls playSong;
+    //public PlaySongControls playSong;
     private Thread songThread;
-    private ScrollingText label;
+    private ScrollingTextController label;
     private JLabel scrollingTitleLabel;
     private int labelWidth;
     private final String HOLDINGS_FILE_NAME = "Lib_MP3player.txt", SONG_PATHS_FILE_NAME = "SongPaths.txt";
@@ -37,7 +40,7 @@ public class PlaySongsFromFolder implements MediaObserver
     private SongList listOfSongs;
     private Song currentSong;
 
-    public PlaySongsFromFolder(String dir)
+    public MusicLibraryManager(String dir)
     {
         FILE_DIR = dir+"/";
         HOLDINGS_FILE_PATH = FILE_DIR+HOLDINGS_FILE_NAME;
@@ -49,6 +52,32 @@ public class PlaySongsFromFolder implements MediaObserver
         songTags = new HashMap<Integer,String>();
         
         listOfSongs = new SongList();
+        
+        scrollingTitleLabel = new JLabel("");
+        scrollingTitleLabel.setPreferredSize(new Dimension(225,25));
+        scrollingTitleLabel.setMinimumSize(new Dimension(225,25));
+        scrollingTitleLabel.setMaximumSize(new Dimension(225,25));
+        scrollingTitleLabel.setForeground(Color.WHITE);
+
+        populateLibrary();
+        
+        playRandomSong play = new playRandomSong();
+        play.start();
+        
+        System.out.println("Player has been Started!");
+    }
+    
+    public MusicLibraryManager(SongList playList)
+    {
+        HOLDINGS_FILE_PATH = FILE_DIR+HOLDINGS_FILE_NAME;
+        SONG_PATHS_FILE_PATH = FILE_DIR+SONG_PATHS_FILE_NAME;
+        
+        mediaController = new MediaController();
+        
+        listOfMP3 = new HashMap<Integer,String>();
+        songTags = new HashMap<Integer,String>();
+        
+        listOfSongs = playList;
         
         scrollingTitleLabel = new JLabel("");
         scrollingTitleLabel.setPreferredSize(new Dimension(225,25));
@@ -206,7 +235,7 @@ public class PlaySongsFromFolder implements MediaObserver
     }
     public void stopPlayer()
     {
-        playSong.stopPlaying();
+        //playSong.stopPlaying();
         songThread.stop();
     }
     public int getTheNum()

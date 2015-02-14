@@ -1,4 +1,4 @@
-package slime.core;
+package slime.controller;
 
 import javax.swing.*;
 
@@ -8,7 +8,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.*;
 
-public class ScrollingText extends JLabel 
+public class ScrollingTextController extends JLabel 
 {
 	private String text;
 	private Point current_pos, defaultPoint = new Point(0, 12);
@@ -22,7 +22,7 @@ public class ScrollingText extends JLabel
 	private SongTag currentScrollingTag;
 	private boolean pauseAnimationReady = false;
 
-	public ScrollingText(String text, int startX, int componentWidth) 
+	public ScrollingTextController(String text, int startX, int componentWidth) 
 	{
 		super(text);
 		this.startAnimation();
@@ -38,7 +38,7 @@ public class ScrollingText extends JLabel
 		setDoubleBuffered(true);
 
 	}
-	public ScrollingText(SongTag song,int componentWidth) 
+	public ScrollingTextController(SongTag song,int componentWidth) 
 	{
 		super(craetedPrintedSongString(song));
 		this.text = craetedPrintedSongString(song);

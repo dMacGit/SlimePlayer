@@ -8,7 +8,6 @@ import java.util.TimerTask;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
-import slime.core.ScrollingText;
 import slime.media.PlayState;
 import slime.media.SongTag;
 import slime.observe.AnimatorObserver;
@@ -26,7 +25,7 @@ public class AnimationController implements AnimatorObserver
 	private byte songMinutes, songSeconds, pausedSeconds, pausedMinutes;
 	private String songTime;
 	private boolean isPaused = true;
-    private ScrollingText label;
+    private ScrollingTextController label;
     private JLabel scrollingTitleLabel;
     private int labelWidth;
 	
@@ -67,7 +66,7 @@ public class AnimationController implements AnimatorObserver
 		{
 			if(songTag != null)
 			{
-				label = new ScrollingText( songTag ,labelWidth);
+				label = new ScrollingTextController( songTag ,labelWidth);
 				if(label.getImage() != null)
 	            {
 	                scrollingTitleLabel.setIcon(new ImageIcon(label.getImage()));
@@ -189,7 +188,7 @@ public class AnimationController implements AnimatorObserver
 			
 			if(label == null)
 			{
-				label = new ScrollingText( this.currentAnimatedTag ,labelWidth);
+				label = new ScrollingTextController( this.currentAnimatedTag ,labelWidth);
 				System.out.println("Label has been initialized!");
 				if(label.getImage() != null)
 	            {

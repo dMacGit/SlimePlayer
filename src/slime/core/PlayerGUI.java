@@ -23,12 +23,14 @@ import javax.swing.Timer;
 
 import slime.controller.AnimationController;
 import slime.controller.MediaController;
+import slime.managers.MusicLibraryManager;
 import slime.media.PlayState;
 import slime.media.SongTag;
 import slime.observe.AnimatorObserver;
 import slime.observe.AnimatorSubject;
 import slime.observe.MediaObserver;
 import slime.observe.MediaSubject;
+import slime.utills.ComponentMover;
 import slime.utills.ImageLoader;
 import slime.utills.ShrinkImageToSize;
 
@@ -37,19 +39,19 @@ import slime.utills.ShrinkImageToSize;
 // Set up the player gui as well as library checking
 // as well as the player controls.
 
-public class mainPlayer extends JPanel implements ActionListener, MediaSubject, AnimatorSubject
+public class PlayerGUI extends JPanel implements ActionListener, MediaSubject, AnimatorSubject
 {
     /**
 	 * 
 	 */
 	private static final long serialVersionUID = -4125262661558412319L;
 	private static TrayIcon trayIcon;
-    private PlayList playListWindow;
-    private static mainPlayer gui;
+    private PlaylistGUI playListWindow;
+    private static PlayerGUI gui;
     private JLabel defaultStringLabel,songName,songTime,playPause,skip,menu,playList,exit,shuffle,repeat;
     private final short H_Size = 20, SONG_TIME_W = 38, SONG_NAME_W = 225, DEFAULT_STRING_LABEL_W = 47, DEFAULT_STRING_LABEL_H = 22;
     private JPanel panelBar;
-    public PlaySongsFromFolder readADirectory;
+    public MusicLibraryManager readADirectory;
     private boolean notStarted = true;
     private final String defaultString = "Playing: ", FILE_DIR = "Data_Files";
     private final String defaultUserMusicDirectory = "%USERPROFILE%\\My Documents\\My Music";
@@ -80,7 +82,7 @@ public class mainPlayer extends JPanel implements ActionListener, MediaSubject, 
     private boolean shuffle_Select = false, repeat_Select = false;
     private Timer infoUpdater_Scroller;
 
-    public mainPlayer()
+    public PlayerGUI()
     {   
     	//readADirectory = new PlaySongsFromFolder(FILE_DIR);
         this.setLayout(new FlowLayout(FlowLayout.CENTER,0,0));
@@ -186,7 +188,7 @@ public class mainPlayer extends JPanel implements ActionListener, MediaSubject, 
                     notStarted = false;
                     playPause.setIcon(PAUSE_ICON);
                     revalidate();
-                    readADirectory = new PlaySongsFromFolder(FILE_DIR);
+                    readADirectory = new MusicLibraryManager(FILE_DIR);
                     registerMediaObserver(readADirectory);
                     System.out.println("Starting up Player!!");
                     animator.setJLabelBounds(songName.getX(), songName.getWidth());
@@ -228,7 +230,7 @@ public class mainPlayer extends JPanel implements ActionListener, MediaSubject, 
             {
                 if(playListWindow == null)
                 {
-                    playListWindow = new PlayList(readADirectory);
+                    playListWindow = new PlaylistGUI(readADirectory);
                     playListWindow.setVisible(true);
                 }
                 else
@@ -276,7 +278,7 @@ public class mainPlayer extends JPanel implements ActionListener, MediaSubject, 
             Dimension dimension = tools.getScreenSize();
             int width = (int)dimension.getWidth() / 2;
             int height = (int)dimension.getHeight() / 2;
-            gui = new mainPlayer();
+            gui = new PlayerGUI();
             //gui.setBackground(Color.BLACK);
             JFrame frame = new JFrame("My MP3 Player");
             //gui.setPreferredSize(new Dimension(500,32));
@@ -307,6 +309,7 @@ public class mainPlayer extends JPanel implements ActionListener, MediaSubject, 
             frame.setLocation(width / 2, height / 2);
             frame.setVisible(true);
             frame.pack();
+            System.out.println("Dimensions are: "+frame.getWidth()+" W "+frame.getHeight()+" H");
             
     	} else {
     		System.out.println("There was an error finding the icon directory folder [ "+location+""+fileName+" ]");

@@ -1,4 +1,4 @@
-package slime.core;
+package slime.utills;
 
 import java.awt.*;
 import java.awt.event.*;

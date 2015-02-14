@@ -23,11 +23,13 @@ import javax.swing.JTable;
 import javax.swing.SwingConstants;
 import javax.swing.Timer;
 
+import slime.managers.MusicLibraryManager;
+import slime.utills.ComponentMover;
 import slime.utills.ShrinkImageToSize;
 
-public class PlayList extends JPanel implements MouseListener, ActionListener
+public class PlaylistGUI extends JPanel implements MouseListener, ActionListener
 {
-    private PlaySongsFromFolder player;
+    private MusicLibraryManager player;
     private HashMap<Integer,String> mapOfSongs;
     private final int MAJOR_WIDTH = 500;
     private JTable list;
@@ -51,7 +53,7 @@ public class PlayList extends JPanel implements MouseListener, ActionListener
     private Dimension Ext_Dimension = new Dimension(506,0);
     private Timer sliderTimer;
 
-    public PlayList(PlaySongsFromFolder songPlayer)
+    public PlaylistGUI(MusicLibraryManager songPlayer)
     {
     	System.out.println("Entered into the Playlist class!");
         this.setLayout(new BoxLayout(this,BoxLayout.Y_AXIS));

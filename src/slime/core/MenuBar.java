@@ -9,9 +9,9 @@ import javax.swing.JMenuBar;
 
 public class MenuBar  extends JMenuBar
 {
-    private final mainPlayer playerGui;
+    private final PlayerGUI playerGui;
 
-   public MenuBar(mainPlayer gui)
+   public MenuBar(PlayerGUI gui)
    {
       super();
       playerGui = gui;
