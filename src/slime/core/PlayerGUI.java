@@ -30,6 +30,7 @@ import slime.observe.AnimatorObserver;
 import slime.observe.AnimatorSubject;
 import slime.observe.MediaObserver;
 import slime.observe.MediaSubject;
+import slime.utills.ActionTimer;
 import slime.utills.ComponentMover;
 import slime.utills.ImageLoader;
 import slime.utills.ShrinkImageToSize;
@@ -51,7 +52,7 @@ public class PlayerGUI extends JPanel implements ActionListener, MediaSubject, A
     private JLabel defaultStringLabel,songName,songTime,playPause,skip,menu,playList,exit,shuffle,repeat;
     private final short H_Size = 20, SONG_TIME_W = 38, SONG_NAME_W = 225, DEFAULT_STRING_LABEL_W = 47, DEFAULT_STRING_LABEL_H = 22;
     private JPanel panelBar;
-    public MusicLibraryManager readADirectory;
+    public MusicLibraryManager musicLibraryManager;
     private boolean notStarted = true;
     private final String defaultString = "Playing: ", FILE_DIR = "Data_Files";
     private final String defaultUserMusicDirectory = "%USERPROFILE%\\My Documents\\My Music";
@@ -59,7 +60,8 @@ public class PlayerGUI extends JPanel implements ActionListener, MediaSubject, A
     private List<AnimatorObserver> animatorObserverList = new ArrayList<AnimatorObserver>();
     private PlayState currentStateOfPlayer = PlayState.STOPPED;
     private SongTag currentSongTag = null;
-    
+    private final long TimeStarted;
+    private long timeOfLastAction;
     private AnimationController animator;
     
     //This is the dir path to the images folder		---> Change if necessary!
@@ -84,6 +86,7 @@ public class PlayerGUI extends JPanel implements ActionListener, MediaSubject, A
 
     public PlayerGUI()
     {   
+    	TimeStarted = System.currentTimeMillis();
     	//readADirectory = new PlaySongsFromFolder(FILE_DIR);
         this.setLayout(new FlowLayout(FlowLayout.CENTER,0,0));
         playPause = new JLabel(PLAY_ICON);
@@ -142,6 +145,25 @@ public class PlayerGUI extends JPanel implements ActionListener, MediaSubject, A
         
         
     }
+    
+    /*
+    private long measurePreviouseActionTime(long currentTimeInMilliseconds)
+    {
+    	return (currentTimeInMilliseconds - timeOfLastAction);
+    }
+    
+
+    public void triggerTimedActionStart()
+    {
+    	timeOfLastAction = System.currentTimeMillis();
+    }
+    
+
+    public String formatLastTimedAction(String actionNameText)
+    {
+    	return new String("Action =={ "+actionNameText + " }== has taken: "+(measurePreviouseActionTime(System.currentTimeMillis())/1000+" Seconds!"));
+    }*/
+        
     private class mouseListener implements MouseListener
     {
         public void mouseClicked(MouseEvent e){}
@@ -182,19 +204,28 @@ public class PlayerGUI extends JPanel implements ActionListener, MediaSubject, A
             }
             if (notStarted)
             {
-            		
+            	
                 if (source == playPause) {
+                		
                 	currentStateOfPlayer = PlayState.PLAYING;
                     notStarted = false;
                     playPause.setIcon(PAUSE_ICON);
                     revalidate();
-                    readADirectory = new MusicLibraryManager(FILE_DIR);
-                    registerMediaObserver(readADirectory);
+                    
+                    ActionTimer timerQuery = new ActionTimer();
+                    timerQuery.triggerTimedActionStart();
+                    musicLibraryManager = new MusicLibraryManager(FILE_DIR);
+                    System.out.println(timerQuery.formatLastTimedAction("Created MusicLibraryManager"));
+                    
+                    registerMediaObserver(musicLibraryManager);
+                    
                     System.out.println("Starting up Player!!");
                     animator.setJLabelBounds(songName.getX(), songName.getWidth());
-                    currentSongTag = readADirectory.getTheCurrentSong();
+                    currentSongTag = musicLibraryManager.getTheCurrentSong();
                     animator.startTimer();
+                    
                 }
+                
             }
             else
             {
@@ -203,26 +234,26 @@ public class PlayerGUI extends JPanel implements ActionListener, MediaSubject, A
                     songTime.setText(animator.getSongTime());
                     revalidate();
                 }
-                if (source == playPause && readADirectory.getPausedState()) {
+                if (source == playPause && musicLibraryManager.getPausedState()) {
                 	currentStateOfPlayer = PlayState.PLAYING;
-                	currentSongTag = readADirectory.getTheCurrentSong();
-                    readADirectory.playTheSong();
+                	currentSongTag = musicLibraryManager.getTheCurrentSong();
+                    musicLibraryManager.playTheSong();
                     playPause.setIcon(PAUSE_ICON);
                     revalidate();
-                } else if (source == playPause && !readADirectory.getPausedState()) {
+                } else if (source == playPause && !musicLibraryManager.getPausedState()) {
                 	currentStateOfPlayer = PlayState.PAUSED;
-                	currentSongTag = readADirectory.getTheCurrentSong();
+                	currentSongTag = musicLibraryManager.getTheCurrentSong();
                     playPause.setIcon(PLAY_ICON);
                     revalidate();
-                    readADirectory.pauseTheSong();
+                    musicLibraryManager.pauseTheSong();
                     
 
                 }
                 if (source == skip) {
                 	
                 	currentStateOfPlayer = PlayState.SKIPPED_FORWARDS;
-                    readADirectory.skipTheSong();
-                    currentSongTag = readADirectory.getTheCurrentSong();
+                    musicLibraryManager.skipTheSong();
+                    currentSongTag = musicLibraryManager.getTheCurrentSong();
                     
                 }
             }
@@ -230,7 +261,7 @@ public class PlayerGUI extends JPanel implements ActionListener, MediaSubject, A
             {
                 if(playListWindow == null)
                 {
-                    playListWindow = new PlaylistGUI(readADirectory);
+                    playListWindow = new PlaylistGUI(musicLibraryManager);
                     playListWindow.setVisible(true);
                 }
                 else
@@ -247,7 +278,7 @@ public class PlayerGUI extends JPanel implements ActionListener, MediaSubject, A
             {
             	currentStateOfPlayer = PlayState.STOPPED;
             	notifyAllMediaObservers();
-            	deregisterMediaObserver(readADirectory);
+            	deregisterMediaObserver(musicLibraryManager);
             	deregisterAnimatorObserver(animator);
                 gui.setVisible( false );
                 System.exit(0);
