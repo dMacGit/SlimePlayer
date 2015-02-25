@@ -10,8 +10,17 @@ import javax.sound.sampled.UnsupportedAudioFileException;
 
 import org.farng.mp3.MP3File;
 import org.farng.mp3.TagException;
+import org.jaudiotagger.audio.AudioFile;
+import org.jaudiotagger.audio.AudioFileIO;
+import org.jaudiotagger.audio.AudioHeader;
+import org.jaudiotagger.audio.exceptions.CannotReadException;
+import org.jaudiotagger.audio.exceptions.InvalidAudioFrameException;
+import org.jaudiotagger.audio.exceptions.ReadOnlyFileException;
+import org.jaudiotagger.tag.FieldKey;
+import org.jaudiotagger.tag.Tag;
 import org.tritonus.share.sampled.file.TAudioFileFormat;
 
+import slime.utills.ActionTimer;
 import slime.utills.LibraryHelper;
 import slime.utills.MusicFileFilter;
 
@@ -54,6 +63,38 @@ public class SongTag
 				this.extractMetaTagInfo(new MP3File(songFile));
 		}
 		else throw new WrongFileTypeException();
+	}
+	
+	//Alternative Constructor for faster loading
+	public SongTag(File songFile, boolean useJAudioTagger)throws WrongFileTypeException, IOException, TagException
+	{
+		audioFile = songFile;
+		if(useJAudioTagger)
+		{
+			//MP3File newFile = new MP3File(songFile);
+			
+
+			try 
+			{
+				this.extractMetaTagInfo_JAudioTagger(AudioFileIO.read(songFile));
+			} 
+			catch (CannotReadException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			catch (org.jaudiotagger.tag.TagException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} 
+			catch (ReadOnlyFileException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			catch (InvalidAudioFrameException e) 
+			{
+				System.out.println("InvalidAudioFrameException! "+e.getMessage());
+			}
+		}
 	}
 	
 	private void extractMetaTagInfo(MP3File songFile)
@@ -137,6 +178,35 @@ public class SongTag
             this.Durration = val;
 			
 		}
+	}
+	
+	/*
+	 * Alternative method to find time spent per operation.
+	 * - Only used for JUnit tests/Debug purposes.
+	 */
+	private void extractMetaTagInfo_JAudioTagger(AudioFile songFile)
+	{
+		long timeStart = ActionTimer.triggerTimedActionStart();
+		Tag tagObject = songFile.getTag();
+		
+		
+		this.SongTitle = ValidateData(tagObject.getFirst(FieldKey.TITLE));
+        this.Artist = ValidateData(tagObject.getFirst(FieldKey.ARTIST));
+        this.RecordingTitle = ValidateData(tagObject.getFirst(FieldKey.ALBUM));
+        try
+        {
+        	this.Year = ValidateNumberData(Integer.parseInt(tagObject.getFirst(FieldKey.YEAR)));
+        }
+        catch(NumberFormatException e)
+        {
+        	this.Year = 0000;
+        }
+        tagObject.getFirst(FieldKey.TRACK_TOTAL);
+        AudioHeader audioHeader = songFile.getAudioHeader();
+        this.Durration = audioHeader.getTrackLength();
+			
+		
+		System.out.println(ActionTimer.formatLastTimedAction("Extracting the meta data", ActionTimer.measurePreviouseActionTime(timeStart, System.currentTimeMillis())));
 	}
 	
 	/*

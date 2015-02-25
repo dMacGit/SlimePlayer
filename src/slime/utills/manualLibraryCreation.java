@@ -85,7 +85,7 @@ public class manualLibraryCreation extends JPanel implements ActionListener
     
     private int popularity = 100;
     
-    private String datAdded = null;
+    private String dateAdded = null;
     
     private JPanel libraryPanel, displayPanel, adjustPanel;
     private JTextField currentDirectoryToSearch;
@@ -274,13 +274,16 @@ public class manualLibraryCreation extends JPanel implements ActionListener
                     String monthDate = findRest.substring(0, findRest.indexOf("/"));
                     String restDate = findRest.substring(findRest.indexOf("/")+1);
                     String dayDate = restDate.substring(restDate.indexOf("/")+1, restDate.indexOf(" "));
-                    datAdded = dayDate+"/"+monthDate+"/"+yearDate;
+                    dateAdded = dayDate+"/"+monthDate+"/"+yearDate;
                     
-                    String librarySongLine = Integer.toString(identificationNumberStart)+tab+title+tab+artist+tab+recordingTitle+tab+durration+tab+year+tab+popularity+tab+datAdded;
+                    String path = listOfFiles[i].getAbsolutePath();
+                    String pathLine = Integer.toString(identificationNumberStart)+" "+path;
+                    
+                    String librarySongLine = LineDataInitializer(title,artist,recordingTitle,durration,year,popularity,dateAdded,'|',path,"[,]");
                     
                     librarySongLines.put(identificationNumberStart, librarySongLine);
                     
-                    String pathLine = Integer.toString(identificationNumberStart)+" "+listOfFiles[i].getAbsolutePath();
+                    
                     filePaths.put(identificationNumberStart, pathLine);
                     
                     identificationNumberStart++;
@@ -311,6 +314,11 @@ public class manualLibraryCreation extends JPanel implements ActionListener
                 	countSongs--;
                 	System.out.println("<< Tag Exception!! >> "+e);
 				}
+                catch (Exception e) 
+                {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
                 
 
                 
@@ -331,41 +339,37 @@ public class manualLibraryCreation extends JPanel implements ActionListener
         catch (IOException e) 
         {
 			e.printStackTrace();
-		}
-        //writeLibraryFile();
-       
+		}       
     }
-    /*
-    public void writeLibraryFile()
-    {
-        PrintWriter libraryPrintWriter = null;
-        PrintWriter songPathPrintWriter = null;
-        try
-        {
-            libraryPrintWriter = new PrintWriter(new FileWriter(LIBRARY_FILE));
-            songPathPrintWriter = new PrintWriter(new FileWriter(SONG_PATHS_FILE));
-        }
-        catch (IOException ex)
-        {
-            Logger.getLogger(manualLibraryCreation.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        int index = 1;
-        while(index < totalSongs)
-        {
-            libraryPrintWriter.println(librarySongLines.get(index));
-            //songPathPrintWriter.println(Integer.toString(index)+" "+filePaths.get(index).getAbsolutePath());
-            index++;
-        }
-        libraryPrintWriter.flush();
-        songPathPrintWriter.flush();
-        libraryPrintWriter.close();
-        songPathPrintWriter.close();
-    }*/
     
-    /*
-     * Unused old class.
-     * TODO May Reuse loadLibraryFile name.				 
-     */
+    private String LineDataInitializer_OldMethod(String title, String artist, String recordingTitle, int durration, int year, int popularity, String dateAdded, Character spacer)
+    {
+    	//Here is where the data format of the lines are set and saved to the String	
+    	return new String(spacer+title+spacer+artist+spacer+recordingTitle+spacer+durration+spacer+year+spacer+popularity+spacer+dateAdded);
+    }
+    
+    private String LineDataInitializer(String title, String artist, String recordingTitle, int durration, int year, int popularity, String dateAdded, Character spacer, String path, String delimiter) throws Exception
+    {
+    	//Here is where the data format of the lines are set and saved to the String
+    	String startDelimiter;
+    	String endDelimiter;
+    	String midDelimiter;
+    	if(delimiter.length() > 1)
+    	{
+    		//Use first character as start of delimiter
+    		startDelimiter = "'"+delimiter.charAt(0)+"'";
+    		endDelimiter = "'"+delimiter.charAt(delimiter.length()-1)+"'";
+    		if(delimiter.length() == 3)
+    		{
+    			midDelimiter = "'"+delimiter.charAt(1)+"'";
+    			return new String(startDelimiter+title+spacer+artist+spacer+recordingTitle+spacer+durration+spacer+year+spacer+popularity+spacer+dateAdded+endDelimiter+midDelimiter+startDelimiter+path+endDelimiter);
+    		}
+    		else return new String(startDelimiter+title+spacer+artist+spacer+recordingTitle+spacer+durration+spacer+year+spacer+popularity+spacer+dateAdded+endDelimiter+startDelimiter+path+endDelimiter);
+    	}
+    	else throw new Exception("Invalid number of delimiters!"); 
+    	
+    }
+    
     private void loadLibraryFile()
     {
         BufferedReader libraryReader = null;
@@ -379,19 +383,6 @@ public class manualLibraryCreation extends JPanel implements ActionListener
         {
             System.out.println("LIBRARY_FILE not found");
         }
-        /*int index = 1;
-        while(index < totalSongs)
-        {
-
-            holdingsPrintWriter.println(holdingSongLines.get(index));
-            songPathPrintWriter.println(Integer.toString(index)+" "+filePaths.get(index).getAbsolutePath());
-            //System.out.println(Integer.toString(index)+" "+filePaths.get(index).getAbsolutePath());
-            index++;
-        }
-        holdingsPrintWriter.flush();
-        songPathPrintWriter.flush();
-        holdingsPrintWriter.close();
-        songPathPrintWriter.close();*/
     }
     
     public static void main(String[] args)

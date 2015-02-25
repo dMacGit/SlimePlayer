@@ -7,13 +7,13 @@ import java.util.List;
 public class SongList
 {
 	private int size = 0;
-	private List<Song> listOfSongs;
+	private ArrayList<Song> listOfSongs;
 	private int totalPlayTime = 0;
 	
 	public SongList(Song[] songTagsArray) 
 	{
 		listOfSongs = new ArrayList<Song>();
-		listOfSongs = Arrays.asList(songTagsArray);
+		listOfSongs = (ArrayList<Song>) Arrays.asList(songTagsArray);
 		
 		size = listOfSongs.size();
 		
@@ -24,6 +24,14 @@ public class SongList
 	public SongList()
 	{
 		listOfSongs = new ArrayList<Song>();
+	}
+	
+	public void setCappacity(int size)
+	{
+		if(isEmpty())
+		{
+			this.size = size;
+		}
 	}
 	
 	public boolean isEmpty(){

@@ -212,10 +212,10 @@ public class PlayerGUI extends JPanel implements ActionListener, MediaSubject, A
                     playPause.setIcon(PAUSE_ICON);
                     revalidate();
                     
-                    ActionTimer timerQuery = new ActionTimer();
-                    timerQuery.triggerTimedActionStart();
+                    //ActionTimer timerQuery = new ActionTimer();
+                    //timerQuery.triggerTimedActionStart();
                     musicLibraryManager = new MusicLibraryManager(FILE_DIR);
-                    System.out.println(timerQuery.formatLastTimedAction("Created MusicLibraryManager"));
+                    //System.out.println(timerQuery.formatLastTimedAction("Created MusicLibraryManager"));
                     
                     registerMediaObserver(musicLibraryManager);
                     

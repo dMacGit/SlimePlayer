@@ -11,6 +11,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.HashMap;
+import java.util.LinkedList;
 
 import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
@@ -30,7 +31,7 @@ import slime.utills.ShrinkImageToSize;
 public class PlaylistGUI extends JPanel implements MouseListener, ActionListener
 {
     private MusicLibraryManager player;
-    private HashMap<Integer,String> mapOfSongs;
+    private LinkedList<String> mapOfSongs;
     private final int MAJOR_WIDTH = 500;
     private JTable list;
     private Object[][] rowData;
@@ -71,7 +72,7 @@ public class PlaylistGUI extends JPanel implements MouseListener, ActionListener
         
         
         this.player = songPlayer;
-        mapOfSongs = new HashMap<Integer,String>();
+        mapOfSongs = new LinkedList<String>();
         //Set up the jfram and add to this class.
 
         Toolkit tools = Toolkit.getDefaultToolkit();
@@ -307,7 +308,7 @@ public class PlaylistGUI extends JPanel implements MouseListener, ActionListener
     }
     private void generateList()
     {
-        mapOfSongs.putAll(player.getMapOfSong());
+        mapOfSongs.addAll(player.getMapOfSong());
         rowData = new Object[mapOfSongs.size()][6];
         makeObjectArray(mapOfSongs.size());
     }

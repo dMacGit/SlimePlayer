@@ -11,6 +11,7 @@ import org.junit.Test;
 
 import slime.media.SongTag;
 import slime.media.WrongFileTypeException;
+import slime.utills.ActionTimer;
 import slime.utills.LibraryHelper;
 import slime.utills.MusicFileFilter;
 import slime.utills.RecursiveSearch;
@@ -47,13 +48,19 @@ public class JUnit_LibrarySearchTest
 		
 		//First Validate the first music file!
 		try{
-			SongTag testTag = new SongTag(musicFileOne);	//<--- Incomplete music tag (Has NULL fields!)
+			long startTime = 0;
+			startTime = ActionTimer.triggerTimedActionStart();
+			
+			//SongTag testTag = new SongTag(musicFileOne);	//<--- Incomplete music tag (Has NULL fields!)
+			/*System.out.println(ActionTimer.formatLastTimedAction("Loaded SongTag", ActionTimer.measurePreviouseActionTime(startTime, System.currentTimeMillis())));
 			assertEquals(testTag.getSongTitle(),"Dragonballz Theme Song");
 			assertEquals(testTag.getArtist(),"Unknown");
-			assertEquals(testTag.getRecordingTitle(),"Unknown");
+			assertEquals(testTag.getRecordingTitle(),"Unknown");*/
 			//System.out.println(testTag.toString());
 			
-			SongTag testTagTwo = new SongTag(musicFileTwo);
+			
+			SongTag testTagTwo = new SongTag(musicFileTwo,true);
+			System.out.println(ActionTimer.formatLastTimedAction("Loaded SongTag", ActionTimer.measurePreviouseActionTime(startTime, System.currentTimeMillis())));
 			assertEquals(testTagTwo.getSongTitle(),"Transformers Theme Song");
 			assertEquals(testTagTwo.getArtist(),"White Lion");
 			assertEquals(testTagTwo.getRecordingTitle(),"soundtrack");
