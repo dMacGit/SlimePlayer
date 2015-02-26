@@ -42,6 +42,8 @@ public class MusicLibraryManager implements MediaObserver
     private MediaController mediaController;
     private SongList listOfSongs;
     private Song currentSong;
+    private String startDataDelimitor = "'['", midDataDelimitor = "','", endDataDelimitor = "']'";
+    private String characterSeperator = "&&";
 
     public MusicLibraryManager(String dir)
     {
@@ -131,26 +133,27 @@ public class MusicLibraryManager implements MediaObserver
     	    		//listOfMP3.addLast(pathsDataArray[index].toString());
     				
     				//File structure: [ data | data | data | data ],[ data ]
-    				String[] mainDataArray = libraryDataArray[index].toString().split("','");
-    			
-    				
+    				String[] mainDataArray = libraryDataArray[index].toString().split(midDataDelimitor);
+    				String filePath = mainDataArray[1].substring(mainDataArray[1].indexOf(startDataDelimitor)+startDataDelimitor.length(),mainDataArray[1].indexOf(endDataDelimitor));
+    				    				
     				final String wholeTagString = mainDataArray[0];
     				
-    				String tempSubstring = wholeTagString.substring(wholeTagString.indexOf("'['")+1,wholeTagString.indexOf("']'"));
-    				String[] tagDataArray = tempSubstring.split("'|'");
-    				    				
-    	    		String someRandomData = (pathsDataArray[index].toString()).substring((pathsDataArray[index].toString()).indexOf(" ")+1, (pathsDataArray[index].toString()).length());
+    				String tempSubstring = wholeTagString.substring(wholeTagString.indexOf(startDataDelimitor)+startDataDelimitor.length(),wholeTagString.indexOf(endDataDelimitor));
+    				String[] tagDataArray = null;
+    				tagDataArray = tempSubstring.split(characterSeperator);
+    				
+    	    		//String someRandomData = (pathsDataArray[index].toString()).substring((pathsDataArray[index].toString()).indexOf(" ")+1, (pathsDataArray[index].toString()).length());
         			try 
         			{
         				long timeTaken = 0;
         				addTimeStart = ActionTimer.triggerTimedActionStart();
-    					listOfSongs.addSong(new Song(someRandomData));
+    					listOfSongs.addSong(new Song(filePath,tagDataArray,true));
     					timeTaken = ActionTimer.measurePreviouseActionTime(addTimeStart, System.currentTimeMillis());
     					totalTimeForListCreation += timeTaken;
     				} 
         			catch (WrongFileTypeException | TagException e)
         			{
-    					System.out.println("Error trying to build the Tag! ~> "+someRandomData);
+    					System.out.println("Error trying to build the Tag!");
     				}
     	    	}
     			//System.out.println(ActionTimer.formatLastTimedAction("Populating Media Library",ActionTimer.measurePreviouseActionTime(startTime, System.currentTimeMillis())));
@@ -198,7 +201,7 @@ public class MusicLibraryManager implements MediaObserver
 		for(int stringIndex = 0; stringIndex < arrayOfData.length; stringIndex++)
 		{
 			//print out the array of data for debug purposes!
-			System.out.print(arrayOfData[stringIndex].toString()+",");
+			System.out.println("Index: [ "+stringIndex+" ] "+arrayOfData[stringIndex].toString()+",");
 		}
     }
 

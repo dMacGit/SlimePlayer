@@ -279,7 +279,7 @@ public class manualLibraryCreation extends JPanel implements ActionListener
                     String path = listOfFiles[i].getAbsolutePath();
                     String pathLine = Integer.toString(identificationNumberStart)+" "+path;
                     
-                    String librarySongLine = LineDataInitializer(title,artist,recordingTitle,durration,year,popularity,dateAdded,'|',path,"[,]");
+                    String librarySongLine = LineDataInitializer(title,artist,recordingTitle,durration,year,popularity,dateAdded,"&&",path,"[,]");
                     
                     librarySongLines.put(identificationNumberStart, librarySongLine);
                     
@@ -348,7 +348,7 @@ public class manualLibraryCreation extends JPanel implements ActionListener
     	return new String(spacer+title+spacer+artist+spacer+recordingTitle+spacer+durration+spacer+year+spacer+popularity+spacer+dateAdded);
     }
     
-    private String LineDataInitializer(String title, String artist, String recordingTitle, int durration, int year, int popularity, String dateAdded, Character spacer, String path, String delimiter) throws Exception
+    private String LineDataInitializer(String title, String artist, String recordingTitle, int durration, int year, int popularity, String dateAdded, String spacer, String path, String delimiter) throws Exception
     {
     	//Here is where the data format of the lines are set and saved to the String
     	String startDelimiter;

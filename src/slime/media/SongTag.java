@@ -34,9 +34,11 @@ public class SongTag
 {
 	private TagVersion tagVersion = null;						//Important if expanded or replaced in future 
 	private String SongTitle, Artist, RecordingTitle  = null;	//Critical to set to null
-	private int Year, Durration = -1;
+	private int Year, Durration = 0;
 	
 	private File audioFile = null;								//Audiofile variable only used in generation of song length
+	private final String filePath;
+	private final boolean Use_Alternative_Reader;
 	
 	/*
 	 * Main constructor of the class.
@@ -58,6 +60,8 @@ public class SongTag
 	public SongTag(File songFile, MusicFileFilter filter, File fileDirectory)throws WrongFileTypeException, IOException, TagException
 	{
 		audioFile = songFile;
+		filePath = songFile.getAbsolutePath();
+		Use_Alternative_Reader = false;
 		if(LibraryHelper.MP3FileChecker(songFile, fileDirectory, filter))
 		{
 				this.extractMetaTagInfo(new MP3File(songFile));
@@ -65,11 +69,25 @@ public class SongTag
 		else throw new WrongFileTypeException();
 	}
 	
+	/*
+	 * Alternative constructor used in the quick load process during application start
+	 * 
+	 * Takes as argument the String array of tag data, as well as the alternative tag reader library flag
+	 */
+	public SongTag(String[] tagDataArray, String path, boolean useJAudioTagger)throws WrongFileTypeException, IOException, TagException
+	{
+		filePath = path;
+		Use_Alternative_Reader = useJAudioTagger;
+		quickLoadTag(tagDataArray);
+	}
+	
 	//Alternative Constructor for faster loading
 	public SongTag(File songFile, boolean useJAudioTagger)throws WrongFileTypeException, IOException, TagException
 	{
 		audioFile = songFile;
-		if(useJAudioTagger)
+		filePath = songFile.getAbsolutePath();
+		Use_Alternative_Reader = useJAudioTagger;
+		if(Use_Alternative_Reader)
 		{
 			//MP3File newFile = new MP3File(songFile);
 			
@@ -95,6 +113,77 @@ public class SongTag
 				System.out.println("InvalidAudioFrameException! "+e.getMessage());
 			}
 		}
+	}
+	
+	/*
+	 * This method is used when Tag is created without first opening the
+	 * music file: which is done in order to speed up application loading.
+	 * 
+	 * For more reliable tag data, the music file can be accessed if required.
+	 */
+	public void validateTagData()
+	{
+		//
+		if(Use_Alternative_Reader)
+		{
+			//MP3File newFile = new MP3File(songFile);
+			
+
+			try 
+			{
+				this.extractMetaTagInfo_JAudioTagger(AudioFileIO.read(new File(this.filePath)));
+			} 
+			catch (CannotReadException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			catch (org.jaudiotagger.tag.TagException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} 
+			catch (ReadOnlyFileException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			catch (InvalidAudioFrameException e) 
+			{
+				System.out.println("InvalidAudioFrameException! "+e.getMessage());
+			}
+			catch (IOException e) 
+			{
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	private void quickLoadTag(String[] tagData)
+	{
+		//Load the data taken from the tag array.
+		
+		// Song title | Artist | Album | Duration | Year | Popularity | Date added
+		
+		this.SongTitle = ValidateData(tagData[0]);
+        this.Artist = ValidateData(tagData[1]);
+        this.RecordingTitle = ValidateData(tagData[2]);
+        try
+        {
+        	this.Year = ValidateNumberData(Integer.parseInt(tagData[4]));
+        }
+        catch(NumberFormatException e)
+        {
+        	this.Year = 0000;
+        }
+        try
+        {
+        	this.Durration += ValidateNumberData(Integer.parseInt(tagData[3]));
+        }
+        catch(NumberFormatException e)
+        {
+        	this.Durration = 0;
+        }
+        
+        
 	}
 	
 	private void extractMetaTagInfo(MP3File songFile)
