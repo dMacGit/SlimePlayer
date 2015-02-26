@@ -316,8 +316,7 @@ public class manualLibraryCreation extends JPanel implements ActionListener
 				}
                 catch (Exception e) 
                 {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+                	System.out.println("<< Exception!! >> "+e);
 				}
                 
 

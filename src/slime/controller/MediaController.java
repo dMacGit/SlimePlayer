@@ -168,7 +168,7 @@ public class MediaController
 	        catch (Exception e)
 	        {
 	            //e.printStackTrace();
-	            System.out.println("There has been an error! "+e);
+	            System.out.println("Exception in Player Thread "+e.getMessage());
 	        }
 	        finally
 	        {
@@ -182,7 +182,7 @@ public class MediaController
 	                }
 	                catch (IOException e)
 	                {
-	                    System.out.println("This stream is closed! "+e);
+	                	System.out.println("IOException in Player Thread "+e.getMessage());
 	                }
 	            }
 	        }
@@ -217,12 +217,13 @@ public class MediaController
 	        }
 	        catch (IOException | NullPointerException ex)
 	        {
-	            System.out.println("Error closing [din] "+ex);
+	            System.out.println("Exception closing streams "+ex.getMessage());
 	        }
 	        songFinished = true;
 	    }
 	}
-	public Song getCurrentSong(){
+	public Song getCurrentSong()
+	{
 		return this.currentSong;
 	}
 	public void play()
@@ -265,7 +266,8 @@ public class MediaController
 		this.shuffle = !shuffle;
 		System.out.println("Shuffle has been toggled to: "+ shuffle);
 	}
-	public void toggleRepeat(){
+	public void toggleRepeat()
+	{
 		this.repeat = !repeat;
 		System.out.println("Repeat has been toggled to: "+ repeat);
 	}

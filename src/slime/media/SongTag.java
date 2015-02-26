@@ -89,28 +89,25 @@ public class SongTag
 		Use_Alternative_Reader = useJAudioTagger;
 		if(Use_Alternative_Reader)
 		{
-			//MP3File newFile = new MP3File(songFile);
-			
-
 			try 
 			{
 				this.extractMetaTagInfo_JAudioTagger(AudioFileIO.read(songFile));
 			} 
-			catch (CannotReadException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+			catch (CannotReadException e)
+			{
+				System.out.println("CannotReadException in SongTag "+e.getMessage());
 			}
-			catch (org.jaudiotagger.tag.TagException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+			catch (org.jaudiotagger.tag.TagException e) 
+			{
+				System.out.println("TagException in SongTag "+e.getMessage());
 			} 
-			catch (ReadOnlyFileException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+			catch (ReadOnlyFileException e) 
+			{
+				System.out.println("ReadOnlyFileException in SongTag "+e.getMessage());
 			}
 			catch (InvalidAudioFrameException e) 
 			{
-				System.out.println("InvalidAudioFrameException! "+e.getMessage());
+				System.out.println("InvalidAudioFrameException in SongTag "+e.getMessage());
 			}
 		}
 	}
@@ -126,33 +123,29 @@ public class SongTag
 		//
 		if(Use_Alternative_Reader)
 		{
-			//MP3File newFile = new MP3File(songFile);
-			
-
 			try 
 			{
 				this.extractMetaTagInfo_JAudioTagger(AudioFileIO.read(new File(this.filePath)));
 			} 
-			catch (CannotReadException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+			catch (CannotReadException e)
+			{
+				System.out.println("CannotReadException in SongTag "+e.getMessage());
 			}
-			catch (org.jaudiotagger.tag.TagException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+			catch (org.jaudiotagger.tag.TagException e) 
+			{
+				System.out.println("TagException in SongTag "+e.getMessage());
 			} 
-			catch (ReadOnlyFileException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+			catch (ReadOnlyFileException e) 
+			{
+				System.out.println("ReadOnlyFileException in SongTag "+e.getMessage());
 			}
 			catch (InvalidAudioFrameException e) 
 			{
-				System.out.println("InvalidAudioFrameException! "+e.getMessage());
+				System.out.println("InvalidAudioFrameException in SongTag "+e.getMessage());
 			}
 			catch (IOException e) 
 			{
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				System.out.println("IOException in SongTag "+e.getMessage());
 			}
 		}
 	}
@@ -182,8 +175,6 @@ public class SongTag
         {
         	this.Durration = 0;
         }
-        
-        
 	}
 	
 	private void extractMetaTagInfo(MP3File songFile)

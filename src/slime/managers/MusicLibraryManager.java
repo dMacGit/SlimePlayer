@@ -27,9 +27,8 @@ import slime.utills.FileIO;
 
 public class MusicLibraryManager implements MediaObserver
 {
-    private LinkedList<String> listOfMP3, songTags;
+    private LinkedList<String> songTags;
     private boolean currentlyPlaying = false, stop = false, isPaused;
-    //public PlaySongControls playSong;
     private Thread songThread;
     private ScrollingTextController label;
     private JLabel scrollingTitleLabel;
@@ -50,30 +49,17 @@ public class MusicLibraryManager implements MediaObserver
         FILE_DIR = dir+"/";
         HOLDINGS_FILE_PATH = FILE_DIR+HOLDINGS_FILE_NAME;
         SONG_PATHS_FILE_PATH = FILE_DIR+SONG_PATHS_FILE_NAME;
-        
-        
-        
         mediaController = new MediaController();
-        
-        
-        listOfMP3 = new LinkedList<String>();
         songTags = new LinkedList<String>();
-        
         listOfSongs = new SongList();
-        
         scrollingTitleLabel = new JLabel("");
         scrollingTitleLabel.setPreferredSize(new Dimension(225,25));
         scrollingTitleLabel.setMinimumSize(new Dimension(225,25));
         scrollingTitleLabel.setMaximumSize(new Dimension(225,25));
         scrollingTitleLabel.setForeground(Color.WHITE);
-
-        
         populateLibrary();
-        
-        
         playRandomSong play = new playRandomSong();
         play.start();
-        
         System.out.println("Player has been Started!");
     }
     
@@ -81,25 +67,17 @@ public class MusicLibraryManager implements MediaObserver
     {
         HOLDINGS_FILE_PATH = FILE_DIR+HOLDINGS_FILE_NAME;
         SONG_PATHS_FILE_PATH = FILE_DIR+SONG_PATHS_FILE_NAME;
-        
         mediaController = new MediaController();
-        
-        listOfMP3 = new LinkedList<String>();
         songTags = new LinkedList<String>();
-        
         listOfSongs = playList;
-        
         scrollingTitleLabel = new JLabel("");
         scrollingTitleLabel.setPreferredSize(new Dimension(225,25));
         scrollingTitleLabel.setMinimumSize(new Dimension(225,25));
         scrollingTitleLabel.setMaximumSize(new Dimension(225,25));
         scrollingTitleLabel.setForeground(Color.WHITE);
-
         populateLibrary();
-        
         playRandomSong play = new playRandomSong();
         play.start();
-        
         System.out.println("Player has been Started!");
     }
     public LinkedList<String> getMapOfSong()
@@ -111,85 +89,52 @@ public class MusicLibraryManager implements MediaObserver
     {
     	long startTime = 0;
     	long addTimeStart = 0;
-    	Object[] libraryDataArray = null, pathsDataArray = null;
+    	Object[] libraryDataArray = null;
     	try 
     	{
     		long startReadingFiles = ActionTimer.triggerTimedActionStart();
     		libraryDataArray = FileIO.ReadData(this.HOLDINGS_FILE_PATH);
-    		pathsDataArray = FileIO.ReadData(this.SONG_PATHS_FILE_PATH);
     		System.out.println(ActionTimer.formatLastTimedAction("Read Files",ActionTimer.measurePreviouseActionTime(startReadingFiles, System.currentTimeMillis())));
     		
     		//To reduce initialization time set map size.
     		
     		long totalTimeForListCreation = 0;
-    		if(libraryDataArray.length == pathsDataArray.length)
-    		{
-    			System.out.println("----- Lengths are equal -----");
-    			//startTime = ActionTimer.triggerTimedActionStart();
-    			listOfSongs.setCappacity(libraryDataArray.length);
-    			for(int index = 0; index < pathsDataArray.length; index++)
-    	    	{
-    				songTags.addLast(libraryDataArray[index].toString());
-    	    		//listOfMP3.addLast(pathsDataArray[index].toString());
-    				
-    				//File structure: [ data | data | data | data ],[ data ]
-    				String[] mainDataArray = libraryDataArray[index].toString().split(midDataDelimitor);
-    				String filePath = mainDataArray[1].substring(mainDataArray[1].indexOf(startDataDelimitor)+startDataDelimitor.length(),mainDataArray[1].indexOf(endDataDelimitor));
-    				    				
-    				final String wholeTagString = mainDataArray[0];
-    				
-    				String tempSubstring = wholeTagString.substring(wholeTagString.indexOf(startDataDelimitor)+startDataDelimitor.length(),wholeTagString.indexOf(endDataDelimitor));
-    				String[] tagDataArray = null;
-    				tagDataArray = tempSubstring.split(characterSeperator);
-    				
-    	    		//String someRandomData = (pathsDataArray[index].toString()).substring((pathsDataArray[index].toString()).indexOf(" ")+1, (pathsDataArray[index].toString()).length());
-        			try 
-        			{
-        				long timeTaken = 0;
-        				addTimeStart = ActionTimer.triggerTimedActionStart();
-    					listOfSongs.addSong(new Song(filePath,tagDataArray,true));
-    					timeTaken = ActionTimer.measurePreviouseActionTime(addTimeStart, System.currentTimeMillis());
-    					totalTimeForListCreation += timeTaken;
-    				} 
-        			catch (WrongFileTypeException | TagException e)
-        			{
-    					System.out.println("Error trying to build the Tag!");
-    				}
-    	    	}
-    			//System.out.println(ActionTimer.formatLastTimedAction("Populating Media Library",ActionTimer.measurePreviouseActionTime(startTime, System.currentTimeMillis())));
-    		}
-    		System.out.println(ActionTimer.formatLastTimedAction("Total time to add ",totalTimeForListCreation));
-    		/*else
-    		{
-	    		for(int index = 0; index < libraryDataArray.length; index++)
-		    	{
-		    		songTags.put(index,libraryDataArray[index].toString());
-		    	}
-		    	for(int index = 0; index < pathsDataArray.length; index++)
-		    	{
-		    		listOfMP3.put(index,pathsDataArray[index].toString());
-		    		String someRandomData = (pathsDataArray[index].toString()).substring((pathsDataArray[index].toString()).indexOf(" ")+1, (pathsDataArray[index].toString()).length());
-	    			try 
-	    			{
-						listOfSongs.addSong(new Song(someRandomData));
-					} 
-	    			catch (WrongFileTypeException | TagException e)
-	    			{
-						System.out.println("Error trying to build the Tag! ~> "+someRandomData);
-					}
-		    	}			
-    		}*/
-    		
+			listOfSongs.setCappacity(libraryDataArray.length);
+			for(int index = 0; index < libraryDataArray.length; index++)
+	    	{
+				songTags.addLast(libraryDataArray[index].toString());
+				
+				//File structure: [ data | data | data | data ],[ data ]
+				String[] mainDataArray = libraryDataArray[index].toString().split(midDataDelimitor);
+				String filePath = mainDataArray[1].substring(mainDataArray[1].indexOf(startDataDelimitor)+startDataDelimitor.length(),mainDataArray[1].indexOf(endDataDelimitor));
+				    				
+				final String wholeTagString = mainDataArray[0];
+				
+				String tempSubstring = wholeTagString.substring(wholeTagString.indexOf(startDataDelimitor)+startDataDelimitor.length(),wholeTagString.indexOf(endDataDelimitor));
+				String[] tagDataArray = null;
+				tagDataArray = tempSubstring.split(characterSeperator);
+				try 
+    			{
+    				long timeTaken = 0;
+    				addTimeStart = ActionTimer.triggerTimedActionStart();
+					listOfSongs.addSong(new Song(filePath,tagDataArray,true));
+					timeTaken = ActionTimer.measurePreviouseActionTime(addTimeStart, System.currentTimeMillis());
+					totalTimeForListCreation += timeTaken;
+				} 
+    			catch (WrongFileTypeException | TagException e)
+    			{
+					System.out.println("Error trying to build the Tag!");
+				}
+	    	}
+    		System.out.println(ActionTimer.formatLastTimedAction("Total time to add ",totalTimeForListCreation));    		
 		}
     	catch (FileNotFoundException e) 
     	{
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+    		System.out.println("FileNotFoundException Populating Library! "+e.getMessage());
 		}
     	catch (IOException e) 
     	{
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+    		System.out.println("IOException Populating Library! "+e.getMessage());
 		}
     	
     }
@@ -231,16 +176,11 @@ public class MusicLibraryManager implements MediaObserver
                     int checkTime = (currentPlayingSongTag.getDurration())/2;
                     int realTime = (checkTime%60);
                     System.out.println(currentPlayingSongTag.getSongTitle()+" <=["+Durration+"]=> "+checkTime+" ---> "+(int)(checkTime/60)+":"+realTime);
-                    //label = new ScrollingText( currentPlayingSongTag ,labelWidth);
                     
                     mediaController.play();
                     currentlyPlaying = true;
                 }
 
-                /*if(label.getImage() != null)
-                {
-                    scrollingTitleLabel.setIcon(new ImageIcon(label.getImage()));
-                }*/
                 try
                 {
                     Thread.sleep(45);
@@ -254,14 +194,10 @@ public class MusicLibraryManager implements MediaObserver
     }
     public void pauseTheSong()
     {
-        //label.pauseAnimation();
         mediaController.pause();
-        //pauseTime();
     }
     public void playTheSong()
     {
-        //label.startAnimation();
-        //unpauseTime();
         mediaController.play();
     }
     public void skipTheSong()
@@ -275,23 +211,9 @@ public class MusicLibraryManager implements MediaObserver
             mediaController.skip();
             currentPlayingSongTag = mediaController.getCurrentSong().getMetaTag();
         	System.out.println("Skipped song to -> "+currentPlayingSongTag.getSongTitle());
-        	/*label.resetAnimation();
-        	label.resetTimer();
-        	label.changeTag(this.currentPlayingSongTag);
-        	label.startAnimation();*/
-        	
         	
         }
     }
-    /*
-    public void setJLabelBounds(int xPosition, int width)
-    {
-        labelWidth = width;
-    }
-    public JLabel getLabel()
-    {
-        return scrollingTitleLabel;
-    }*/
     public String getTheSongName()
     {
         return theCurrentSongTitle;
@@ -302,18 +224,8 @@ public class MusicLibraryManager implements MediaObserver
     }
     public void stopPlayer()
     {
-        //playSong.stopPlaying();
-        songThread.stop();
+    	this.stop = true;
     }
-    /*public int getTheNum()
-    {
-        return listOfMP3.size();
-    }
-    public String getTheSong(int index)
-    {
-        return listOfMP3.get(index);
-    }*/
-
 	@Override
 	public String getMediaObserverName() 
 	{
@@ -328,7 +240,6 @@ public class MusicLibraryManager implements MediaObserver
 		{
 			mediaController.changeState(stateOfPlayer);
 		}
-		
 	}
 	public SongTag getTheCurrentSong()
 	{

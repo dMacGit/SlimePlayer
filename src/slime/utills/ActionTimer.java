@@ -2,6 +2,11 @@ package slime.utills;
 
 public class ActionTimer 
 {	
+	
+	/*
+	 * DO: Must modify this utility class so that formatLastTimedAction calls measurePreviousActionTime itself. This saves a needless extra call and adds to decoupling.	
+	 */
+	
 	/*
      * This method simply measures the time between the current time and the time
      * of the last action or event that was captured!

@@ -163,10 +163,10 @@ public class PlaylistGUI extends JPanel implements MouseListener, ActionListener
     }
     public void createList()
     {
-        generateList();
+        generatePlaylist();
         for(int index = 0; index < rowData.length; index++)
         {
-            jPanelTemplate createRowPanel = new jPanelTemplate();
+            jPanelPlaylistTemplate createRowPanel = new jPanelPlaylistTemplate();
             entireGUI.add(createRowPanel.setNewPanel(rowData[index]));
             
         }
@@ -218,7 +218,7 @@ public class PlaylistGUI extends JPanel implements MouseListener, ActionListener
             }
             else
                 fullyOpened = true;
-            //then do stuff
+
         }
         if(!fullyClosed)
         {
@@ -238,17 +238,13 @@ public class PlaylistGUI extends JPanel implements MouseListener, ActionListener
 
         }
     }
-    private class jPanelTemplate
+    private class jPanelPlaylistTemplate
     {
         private JPanel rowEnrty,idPanel,titlePanel,artistPanel,albumPanel,durationPanel,yearPanel;
         private JLabel id,title,artist,album,duration,year;
         private final Font textFont = new Font("Dialog", Font.BOLD, 9);
         private JPanel rowEntry;
 
-        /*public jPanelTemplate()
-        {
-            //lol doesn't do anything
-        }*/
         public JPanel setNewPanel(Object[] songDetails)
         {
             id = new JLabel(songDetails[0].toString());
@@ -306,12 +302,21 @@ public class PlaylistGUI extends JPanel implements MouseListener, ActionListener
             return rowEnrty;
         }
     }
-    private void generateList()
+    
+    /*
+     * This method is used in order to initialize the playlist data structures
+     * used for displaying the playlist in the player GUI.
+     */
+    private void generatePlaylist()
     {
         mapOfSongs.addAll(player.getMapOfSong());
         rowData = new Object[mapOfSongs.size()][6];
         makeObjectArray(mapOfSongs.size());
     }
+    
+    /*
+     * Old code. Needs removal or replacing!
+     */
     public void makeObjectArray(int number)
     {
         String ID = "";

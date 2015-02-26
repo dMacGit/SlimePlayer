@@ -14,7 +14,7 @@ public class PlayList
 	
 	public PlayList(SongList songs)
 	{
-		// TODO Auto-generated constructor stub
+		// DO Write out skeleton of PlayList object class
 	}
 
 }
