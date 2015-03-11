@@ -99,7 +99,6 @@ public class MusicLibraryManager implements MediaObserver
     		//To reduce initialization time set map size.
     		
     		long totalTimeForListCreation = 0;
-			listOfSongs.setCappacity(libraryDataArray.length);
 			for(int index = 0; index < libraryDataArray.length; index++)
 	    	{
 				songTags.addLast(libraryDataArray[index].toString());

@@ -54,6 +54,7 @@ public class MediaController
 	
 	public void setSongList(SongList newListOfSongs){
 		this.songList = newListOfSongs;
+		System.out.println(":: Created Song list of "+newListOfSongs.getSize()+" Songs ::");
 		this.findNextSong();
 	}
 	
@@ -76,8 +77,13 @@ public class MediaController
 		{
 			System.out.println("Shuffle is activated!");
 			index = ((int)(Math.random()*songList.getSize()));
+			System.out.println(":: Choosing "+index+" of "+songList.getSize()+" Songs ::");
 			currentSong = songList.getListOfSongs().get(index);
-			startOrder = ++index;
+			if(index < songList.getSize())
+			{
+				startOrder = ++index;
+			}
+			else startOrder = 0;
 		}
 		else
 		{
