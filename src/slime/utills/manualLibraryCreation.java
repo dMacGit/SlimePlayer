@@ -9,6 +9,7 @@ import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -21,6 +22,7 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -125,7 +127,15 @@ public class manualLibraryCreation extends JPanel implements ActionListener
         //Null check
         if(theCurrentDirPath != null)
         {
-        	currentDirectoryToSearch.setColumns(currentDirectoryToSearch.getText().length());
+        	final String dirCheck = System.getProperty("user.home") + System.getProperty("file.separator")+"Music";
+        	if(dirCheck.compareToIgnoreCase(theCurrentDirPath) == 0)
+        	{
+        		currentDirectoryToSearch.setColumns(currentDirectoryToSearch.getText().length());
+        		
+        	}
+        	else
+        		System.out.println("missmatch: "+dirCheck+" <> "+theCurrentDirPath);
+        	
         }
         else{
         	theCurrentDirPath = DEFAULT_HOME_MUSIC_DIR;
@@ -155,7 +165,7 @@ public class manualLibraryCreation extends JPanel implements ActionListener
     
     /*
      *	SelectSingleFolder Method is called to open up a new JFileChooser
-     *	in order to manually select the directory. This then initiate the
+     *	in order to manually select the directory. This then initiates the
      *	validation, searching and the file writing process.  
      */
     public void selectSingleFolder()
@@ -386,12 +396,30 @@ public class manualLibraryCreation extends JPanel implements ActionListener
     
     public static void main(String[] args)
     {
+    	Properties config = new Properties();
+    	String dirValue = null;
+    	try
+    	{
+			config.load(new FileInputStream("player.properties"));
+			dirValue = config.getProperty("DIR");
+			System.out.println("Found the dir location @ "+dirValue);
+		}
+    	catch (FileNotFoundException e1) 
+    	{
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+    	catch (IOException e1) 
+    	{
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch (Exception e) {
             System.out.println("Error setting native LAF: " + e);
         }
-        manualLibraryCreation newFile = new manualLibraryCreation();
+        manualLibraryCreation newFile = new manualLibraryCreation(dirValue);
         Toolkit tools = Toolkit.getDefaultToolkit();
         Dimension dimension = tools.getScreenSize();
         int width = (int)dimension.getWidth() / 2;

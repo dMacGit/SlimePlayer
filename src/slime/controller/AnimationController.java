@@ -9,14 +9,20 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
 import slime.media.PlayState;
+import slime.media.Song;
 import slime.media.SongTag;
 import slime.observe.AnimatorObserver;
+import slime.observe.AnimatorSubject;
+import slime.observe.StateObserver;
+import slime.observe.StateSubject;
 
-public class AnimationController implements AnimatorObserver
+public class AnimationController implements StateObserver
 {
+	private StateSubject subject;
+	
 	private AnimatorThread internalAnimatorThread;
 	private boolean notClossed = true;
-	private PlayState playerState = PlayState.STOPPED;
+	private PlayState playerState = PlayState.INITIALIZED;
 	private String OBSERVER_NAME = "AnimationController";
 	private SongTag currentAnimatedTag = null;
 	private Thread runnableThread = null;
@@ -44,11 +50,13 @@ public class AnimationController implements AnimatorObserver
 		secondsUpdating = new secondsUpdating();
         seconds = new Timer();
 		seconds.scheduleAtFixedRate(secondsUpdating, 100, 1000);
+		//subject.stateSubjectCallback(getStateObserverName(), playerState);
         
 	}
 	public AnimationController() 
 	{
-		this(null);
+		this(new SongTag());
+		
 	}
 	public void startTimer(){
 		secondsUpdating.run();
@@ -165,48 +173,81 @@ public class AnimationController implements AnimatorObserver
     }
 
 	@Override
-	public String getAnimatorObserverName()
+	public String getStateObserverName()
 	{
-		return this.OBSERVER_NAME;
+		return this.getClass().getName();
 	}
 
 	@Override
-	public void updateAnimatorObserver(PlayState playState, SongTag tagData) 
+	public void updateStateObserver(Song song, PlayState playState) 
 	{
-		this.stateHandler(playState, tagData);
+		System.out.println("["+this.getStateObserverName()+"] Observer has recieved state: "+playState.toString());
+		if(song == null)
+		{
+			this.stateHandler(playState, null);
+		}
+		else
+			this.stateHandler(playState, song.getMetaTag());
+		
+		
 		//System.out.println("<<<< Now animating tag for: "+tagData.getArtist()+">>>>>");
 		
 	}
 	
 	private void stateHandler(PlayState newState, SongTag tagData)
 	{
-		if(tagData != this.currentAnimatedTag)
+		if(tagData != null && newState == PlayState.READY)
 		{
-			this.currentAnimatedTag = tagData;
-			
-			System.out.println("==========> Songtag changed to -> "+tagData.getSongTitle());
-			
-			if(label == null)
+			if(tagData != this.currentAnimatedTag)
 			{
-				label = new ScrollingTextController( this.currentAnimatedTag ,labelWidth);
-				System.out.println("Label has been initialized!");
-				if(label.getImage() != null)
-	            {
-	                scrollingTitleLabel.setIcon(new ImageIcon(label.getImage()));
-	                System.out.println("Icon has also been set for the first time!");
-	            }
+				this.currentAnimatedTag = tagData;
+				
+				System.out.println("==========> Songtag changed to -> "+tagData.getSongTitle());
+				
+				if(label == null)
+				{
+					label = new ScrollingTextController( this.currentAnimatedTag ,labelWidth);
+					System.out.println("Label has been initialized!");
+					if(label.getImage() != null)
+		            {
+		                scrollingTitleLabel.setIcon(new ImageIcon(label.getImage()));
+		                System.out.println("Icon has also been set for the first time!");
+		            }
+				}
+				else
+				{
+					label.changeTag(currentAnimatedTag);
+					if(label.getImage() != null)
+		            {
+		                scrollingTitleLabel.setIcon(new ImageIcon(label.getImage()));
+		                System.out.println("The icon has been reset!");
+		            }
+				}
+				//Reload the JLabel with the updated SongInfo
 			}
-			else
-			{
-				label.changeTag(currentAnimatedTag);
-				if(label.getImage() != null)
-	            {
-	                scrollingTitleLabel.setIcon(new ImageIcon(label.getImage()));
-	                System.out.println("The icon has been reset!");
-	            }
-			}
-			//Reload the JLabel with the updated SongInfo
+			this.playerState = newState;
+			this.subject.stateSubjectCallback(this.getStateObserverName(), this.getCurrentPlayState());
 		}
+		
+		if(newState == PlayState.STOPPED)
+		{
+			
+			if(runnableThread != null)
+			{
+				if(runnableThread.isAlive())
+				{
+					notClossed = false;
+					internalAnimatorThread = null;
+					stopTimer();
+					secondsUpdating.cancel();
+				}
+				
+			}
+			playerState = newState;
+			System.out.println("["+this.getStateObserverName()+"] Is Now STOPPED: "+playerState.toString());
+			subject.stateSubjectCallback(getStateObserverName(), playerState);
+		}
+		
 		
 		if(newState == PlayState.REPEAT_TOGGLED || newState == PlayState.SHUFFLE_TOGGLED)
 		{
@@ -234,6 +275,18 @@ public class AnimationController implements AnimatorObserver
 		        pausedSeconds = 0;
 		        pausedMinutes = 0;
 		        isPaused = false;
+		        if(label == null)
+		        {
+		        	try
+		        	{
+						Thread.sleep(100);
+						//Force update SongTag!
+					}
+		        	catch (InterruptedException e) 
+		        	{
+		        		System.out.println("InterruptedException Sleeping Thread! "+e.getMessage());
+					}
+		        }
 		        label.startAnimation();
 			}
 			playerState = newState; 
@@ -261,14 +314,26 @@ public class AnimationController implements AnimatorObserver
 	            songTime = "00:00";
 	            label.resetAnimation();
 	        	label.resetTimer();
-	        	label.changeTag(this.currentAnimatedTag);
-	        	label.startAnimation();
+	        	
+	        	/*label.changeTag(this.currentAnimatedTag);
+	        	label.startAnimation();*/
 			}
-        	
+			playerState = PlayState.FINISHED;
+			subject.stateSubjectCallback(getStateObserverName(), playerState);
             //playerState = newState;
         }
 		
-		
+		System.out.println("["+this.getStateObserverName()+"] --> State has changed state to: "+playerState.toString());
+	}
+	@Override
+	public void setParentSubject(StateSubject subject) 
+	{
+		this.subject = subject;
+	}
+	@Override
+	public PlayState getCurrentPlayState() 
+	{
+		return this.playerState;
 	}
 	
 }

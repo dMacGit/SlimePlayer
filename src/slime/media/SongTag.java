@@ -70,6 +70,22 @@ public class SongTag
 	}
 	
 	/*
+	 * This is just here so the AnimatorController can be DUMB loaded with
+	 * a song tag in order to function before the MediaController has chosen
+	 * a song to update.
+	 */
+	public SongTag()
+	{
+		filePath = null;
+		audioFile = null;
+		Use_Alternative_Reader = false;
+		this.SongTitle = "Initializing... ";
+		this.Artist = " .. ";
+		this.RecordingTitle = " . ";
+		this.Durration = 0;
+	}
+	
+	/*
 	 * Alternative constructor used in the quick load process during application start
 	 * 
 	 * Takes as argument the String array of tag data, as well as the alternative tag reader library flag

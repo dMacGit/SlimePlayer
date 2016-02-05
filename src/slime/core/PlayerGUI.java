@@ -28,23 +28,30 @@ import slime.media.PlayState;
 import slime.media.SongTag;
 import slime.observe.AnimatorObserver;
 import slime.observe.AnimatorSubject;
-import slime.observe.MediaObserver;
-import slime.observe.MediaSubject;
+import slime.observe.GuiObserver;
+import slime.observe.GuiSubject;
+import slime.observe.StateObserver;
+import slime.observe.StateSubject;
 import slime.utills.ActionTimer;
 import slime.utills.ComponentMover;
 import slime.utills.ImageLoader;
 import slime.utills.ShrinkImageToSize;
 
-//Main entry point into the player program!
-//
-// Set up the player gui as well as library checking
-// as well as the player controls.
-
-public class PlayerGUI extends JPanel implements ActionListener, MediaSubject, AnimatorSubject
+/*
+ * Main player class.
+ * 
+ * Sets up main GUI, Icon file directories, as well as user Media location.
+ * Handles all button events and manages all Observers to the media player and 
+ * animation events.
+ */
+public class PlayerGUI extends JPanel implements ActionListener, GuiSubject
 {
     /**
 	 * 
 	 */
+	
+	private MusicLibraryManager musicLibraryManager;
+	
 	private static final long serialVersionUID = -4125262661558412319L;
 	private static TrayIcon trayIcon;
     private PlaylistGUI playListWindow;
@@ -52,17 +59,20 @@ public class PlayerGUI extends JPanel implements ActionListener, MediaSubject, A
     private JLabel defaultStringLabel,songName,songTime,playPause,skip,menu,playList,exit,shuffle,repeat;
     private final short H_Size = 20, SONG_TIME_W = 38, SONG_NAME_W = 225, DEFAULT_STRING_LABEL_W = 47, DEFAULT_STRING_LABEL_H = 22;
     private JPanel panelBar;
-    public MusicLibraryManager musicLibraryManager;
+    //public MusicLibraryManager musicLibraryManager;
     private boolean notStarted = true;
     private final String defaultString = "Playing: ", FILE_DIR = "Data_Files";
     private final String defaultUserMusicDirectory = "%USERPROFILE%\\My Documents\\My Music";
-    private List<MediaObserver> mediaObserverList = new ArrayList<MediaObserver>();
-    private List<AnimatorObserver> animatorObserverList = new ArrayList<AnimatorObserver>();
+    private List<GuiObserver> guiObserverList = new ArrayList<GuiObserver>();
+    //private List<AnimatorObserver> animatorObserverList = new ArrayList<AnimatorObserver>();
+    
     private PlayState currentStateOfPlayer = PlayState.STOPPED;
+    private boolean observersStopped = false;
+    
     private SongTag currentSongTag = null;
     private final long TimeStarted;
     private long timeOfLastAction;
-    private AnimationController animator;
+    //private AnimationController animator;
     
     //This is the dir path to the images folder		---> Change if necessary!
     
@@ -131,39 +141,27 @@ public class PlayerGUI extends JPanel implements ActionListener, MediaSubject, A
         shuffle.addMouseListener(listenerOne);
         repeat.addMouseListener(listenerOne);
 
-        animator = new AnimationController();
+        //animator = new AnimationController();
+        musicLibraryManager = new MusicLibraryManager(FILE_DIR);
         
+        registerGuiObserver(musicLibraryManager);
+        musicLibraryManager.setParentSubject(this);
         //MediaController
         //LibraryManager
         //PlaylistManager
         
-        registerAnimatorObserver(animator);
+        //registerAnimatorObserver(animator);
         
         infoUpdater_Scroller = new Timer(50,this);
         infoUpdater_Scroller.start();
         
-        
-        
     }
     
     /*
-    private long measurePreviouseActionTime(long currentTimeInMilliseconds)
-    {
-    	return (currentTimeInMilliseconds - timeOfLastAction);
-    }
-    
-
-    public void triggerTimedActionStart()
-    {
-    	timeOfLastAction = System.currentTimeMillis();
-    }
-    
-
-    public String formatLastTimedAction(String actionNameText)
-    {
-    	return new String("Action =={ "+actionNameText + " }== has taken: "+(measurePreviouseActionTime(System.currentTimeMillis())/1000+" Seconds!"));
-    }*/
-        
+     * These listeners handle the buttons that make up the playerGUI.
+     * 
+     * Shuffle, Repeat, Skip, Pause/Play, Exit.
+     */
     private class mouseListener implements MouseListener
     {
         public void mouseClicked(MouseEvent e){}
@@ -184,6 +182,7 @@ public class PlayerGUI extends JPanel implements ActionListener, MediaSubject, A
                     shuffle.setIcon(SHUFFLE_ICON_SELECTED);
                     shuffle_Select = true;
                 }
+                notifyAllObservers();
                 revalidate();
             }
             if(source == repeat)
@@ -200,6 +199,7 @@ public class PlayerGUI extends JPanel implements ActionListener, MediaSubject, A
                     currentStateOfPlayer = PlayState.REPEAT_TOGGLED;
                     repeat_Select = true;
                 }
+                notifyAllObservers();
                 revalidate();
             }
             if (notStarted)
@@ -211,49 +211,48 @@ public class PlayerGUI extends JPanel implements ActionListener, MediaSubject, A
                     notStarted = false;
                     playPause.setIcon(PAUSE_ICON);
                     revalidate();
+                    notifyAllObservers();
+                    //musicLibraryManager = new MusicLibraryManager(FILE_DIR);
                     
-                    //ActionTimer timerQuery = new ActionTimer();
-                    //timerQuery.triggerTimedActionStart();
-                    musicLibraryManager = new MusicLibraryManager(FILE_DIR);
-                    //System.out.println(timerQuery.formatLastTimedAction("Created MusicLibraryManager"));
-                    
-                    registerMediaObserver(musicLibraryManager);
+                    //registerMediaObserver(musicLibraryManager);
                     
                     System.out.println("Starting up Player!!");
-                    animator.setJLabelBounds(songName.getX(), songName.getWidth());
+                    /*animator.setJLabelBounds(songName.getX(), songName.getWidth());
                     currentSongTag = musicLibraryManager.getTheCurrentSong();
-                    animator.startTimer();
+                    animator.startTimer();*/
                     
                 }
                 
             }
             else
             {
-                if (animator.getLabel() != null) {
+                /*if (animator.getLabel() != null) {
                     songName.setIcon(animator.getLabel().getIcon());
                     songTime.setText(animator.getSongTime());
                     revalidate();
-                }
-                if (source == playPause && musicLibraryManager.getPausedState()) {
+                }*/
+                if (source == playPause && currentStateOfPlayer == PlayState.PAUSED) {
                 	currentStateOfPlayer = PlayState.PLAYING;
-                	currentSongTag = musicLibraryManager.getTheCurrentSong();
-                    musicLibraryManager.playTheSong();
+                	//currentSongTag = musicLibraryManager.getTheCurrentSong();
+                    //musicLibraryManager.playTheSong();
                     playPause.setIcon(PAUSE_ICON);
                     revalidate();
-                } else if (source == playPause && !musicLibraryManager.getPausedState()) {
+                    notifyAllObservers();
+                } else if (source == playPause && currentStateOfPlayer == PlayState.PLAYING) {
                 	currentStateOfPlayer = PlayState.PAUSED;
-                	currentSongTag = musicLibraryManager.getTheCurrentSong();
+                	//currentSongTag = musicLibraryManager.getTheCurrentSong();
                     playPause.setIcon(PLAY_ICON);
                     revalidate();
-                    musicLibraryManager.pauseTheSong();
-                    
-
+                    notifyAllObservers();
+                    //musicLibraryManager.pauseTheSong();
                 }
                 if (source == skip) {
                 	
                 	currentStateOfPlayer = PlayState.SKIPPED_FORWARDS;
-                    musicLibraryManager.skipTheSong();
-                    currentSongTag = musicLibraryManager.getTheCurrentSong();
+                	notifyAllObservers();
+                	
+                    //musicLibraryManager.skipTheSong();
+                    //currentSongTag = musicLibraryManager.getTheCurrentSong();
                     
                 }
             }
@@ -261,8 +260,8 @@ public class PlayerGUI extends JPanel implements ActionListener, MediaSubject, A
             {
                 if(playListWindow == null)
                 {
-                    playListWindow = new PlaylistGUI(musicLibraryManager);
-                    playListWindow.setVisible(true);
+                    //playListWindow = new PlaylistGUI(musicLibraryManager);
+                    //playListWindow.setVisible(true);
                 }
                 else
                 {
@@ -277,148 +276,74 @@ public class PlayerGUI extends JPanel implements ActionListener, MediaSubject, A
             if(source == exit)
             {
             	currentStateOfPlayer = PlayState.STOPPED;
-            	notifyAllMediaObservers();
-            	deregisterMediaObserver(musicLibraryManager);
-            	deregisterAnimatorObserver(animator);
-                gui.setVisible( false );
-                System.exit(0);
-                System.gc();
+            	notifyAllObservers();
+            	
             }
-            notifyAllMediaObservers();
+            if(currentStateOfPlayer == PlayState.STOPPED && observersStopped)
+            {
+            	//deregisterGuiObserver(musicLibraryManager);
+                
+            }
+            //notifyAllAnimatorObservers();
+            //notifyAllMediaObservers();
             //currentSongTag = readADirectory.getTheCurrentSong();
-            notifyAllAnimatorObservers();
+            
         }
         public void mouseReleased(MouseEvent e){}
         public void mouseEntered(MouseEvent e){}
         public void mouseExited(MouseEvent e){}
 
     }
-    public static void main(String[] args)
-    {
-    	ImageIcon smallIcon = null;
-    	String location = THE_FOLDER_DIR;
-    	String fileName = "PlayerIcon.png";
-    	
-    	if (ImageLoader.imageValidator(location, fileName))
-    	{
-    		Image image = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource(THE_FOLDER_DIR+"PlayerIcon.png"));
-            Image sourceImage = image;
-            smallIcon = new ImageIcon(sourceImage.getScaledInstance(60,60,Image.SCALE_SMOOTH));
-            
-            Toolkit tools = Toolkit.getDefaultToolkit();
-            Dimension dimension = tools.getScreenSize();
-            int width = (int)dimension.getWidth() / 2;
-            int height = (int)dimension.getHeight() / 2;
-            gui = new PlayerGUI();
-            //gui.setBackground(Color.BLACK);
-            JFrame frame = new JFrame("My MP3 Player");
-            //gui.setPreferredSize(new Dimension(500,32));
-            if (SystemTray.isSupported())
-            {
-                SystemTray tray = SystemTray.getSystemTray();
-                trayIcon = new TrayIcon(smallIcon.getImage(), "MyPlayer",null);
-                trayIcon.setImageAutoSize(true);
-                try
-                {
-                    tray.add(trayIcon);
-                }
-                catch (AWTException e)
-                {
-                    System.err.println("TrayIcon could not be added.");
-                }
-            }
-            else
-            {
-                System.out.println("System tray icon not supported!!");
-            }
-            frame.setIconImage(smallIcon.getImage());
-            frame.setUndecorated( true );
-            ComponentMover cm = new ComponentMover();
-            cm.registerComponent(frame);
-            frame.getContentPane().add(gui);
-            frame.setSize(width, height);
-            frame.setLocation(width / 2, height / 2);
-            frame.setVisible(true);
-            frame.pack();
-            System.out.println("Dimensions are: "+frame.getWidth()+" W "+frame.getHeight()+" H");
-            
-    	} else {
-    		System.out.println("There was an error finding the icon directory folder [ "+location+""+fileName+" ]");
-    	}
-    	
-       
-
-        
-    }
 
     public void actionPerformed(ActionEvent e)
     {
+    	if(observersStopped)
+    	{
+    		deregisterGuiObserver(musicLibraryManager);
+    		this.setVisible( false );
+            System.exit(0);
+            System.gc();
+    	}
         if(!notStarted)
         {
-            if(animator.getLabel() != null)
+            /*if(animator.getLabel() != null)
             {
                 songName.setIcon(animator.getLabel().getIcon());
                 songTime.setText(animator.getSongTime());
                 revalidate();
-            }
+            }*/
         }
     }
 
 	@Override
-	public void registerMediaObserver(MediaObserver observer) 
+	public void registerGuiObserver(GuiObserver guiObserver)
 	{
-		mediaObserverList.add(observer);
-		System.out.println("<<<< "+observer.getMediaObserverName()+" Added! >>>>");
+		guiObserverList.add(guiObserver);
+		System.out.println("<<<< "+guiObserver.getGuiObserverName()+" Added! >>>>");
+		
 	}
 
 	@Override
-	public void deregisterMediaObserver(MediaObserver observer) 
-	{
-		if(!mediaObserverList.isEmpty())
-		{
-			mediaObserverList.remove(mediaObserverList.indexOf(observer));
-			System.out.println("<<<< "+observer.getMediaObserverName()+" Removed! >>>>");
+	public void deregisterGuiObserver(GuiObserver guiObserver) {
+		guiObserverList.remove(guiObserver);
+		System.out.println("<<<< "+guiObserver.getGuiObserverName()+" Removed! >>>>");
+		
+	}
+
+	@Override
+	public void notifyAllObservers() {
+		for(GuiObserver observer : guiObserverList){
+			observer.updateGuiObserver(currentStateOfPlayer);
 		}
 		
 	}
 
 	@Override
-	public void notifyAllMediaObservers()
+	public void guiCallback(PlayState state, SongTag tagInfo) 
 	{
-		System.out.println("<<<< State Has Changed >>>>");
-		for(MediaObserver observer : mediaObserverList){
-			System.out.println("-- "+observer.getMediaObserverName()+" Notified --");
-			observer.updateMediaObserver(currentStateOfPlayer);
+		if(state == PlayState.STOPPED){
+			observersStopped = true;
 		}
-		
-	}
-
-	@Override
-	public void registerAnimatorObserver(AnimatorObserver observer) 
-	{
-		animatorObserverList.add(observer);
-		System.out.println("<<<< "+observer.getAnimatorObserverName()+" Added! >>>>");
-		
-	}
-
-	@Override
-	public void deregisterAnimatorObserver(AnimatorObserver observer) 
-	{
-		if(!animatorObserverList.isEmpty())
-		{
-			animatorObserverList.remove(animatorObserverList.indexOf(observer));
-			System.out.println("<<<< "+observer.getAnimatorObserverName()+" Removed! >>>>");
-		}
-		
-	}
-
-	@Override
-	public void notifyAllAnimatorObservers()
-	{
-		for(AnimatorObserver observer : animatorObserverList){
-			observer.updateAnimatorObserver(currentStateOfPlayer,currentSongTag);
-		}
-		
 	}
 
 }

@@ -2,6 +2,8 @@ package slime.controller;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.sound.sampled.AudioFormat;
 import javax.sound.sampled.AudioInputStream;
@@ -13,63 +15,47 @@ import slime.media.PlayState;
 import slime.media.Song;
 import slime.media.SongList;
 import slime.media.SongTag;
+import slime.observe.StateObserver;
+import slime.observe.StateSubject;
 
-public class MediaController 
-{
+public class MediaController implements StateObserver
+{	
+	private StateSubject subject;
 	private boolean shuffle;
 	private boolean repeat;
-	private SongList songList;
 	private Song currentSong;
-	private int[] finishedSongs;
-	
-	// ----- separation of file variables
 	
 	private final Object lock;
 	private PlayerThread playSongControls;
 	private Thread wrapperThread;
-	private int startOrder = 0;
 	private boolean threadStarted = false;
-	private PlayState playState = PlayState.STOPPED;
+	private PlayState playState = PlayState.INITIALIZED;
 	
-	public MediaController(SongList listOfSongs, boolean shuffle, boolean repeat, boolean initialized) 
+	public MediaController(boolean shuffle, boolean repeat, boolean initialized) 
 	{
-		songList = listOfSongs;
-		
 		this.repeat = repeat;
 		this.shuffle = shuffle;
 		
 		lock = new Object();
 		if(initialized)
 		{
-			findNextSong();
-			//finishedSongs = new int[listOfSongs.getSize()];
-			playSongControls = new PlayerThread(new File(currentSong.getSongPath()));
-			wrapperThread = new Thread(playSongControls);
+			playState = PlayState.INITIALIZED;
+			
 		}
 	}
 	public MediaController() 
 	{
-		this(null, false,false,false);
+		this(false,false,true);
 	}
 	
-	public void setSongList(SongList newListOfSongs){
+	/*public void setSongList(SongList newListOfSongs){
 		this.songList = newListOfSongs;
 		System.out.println(":: Created Song list of "+newListOfSongs.getSize()+" Songs ::");
 		this.findNextSong();
-	}
+	}*/
 	
-	public boolean hasPlaylist()
-	{
-		if(this.songList != null && !this.songList.isEmpty())
-		{
-			return true;
-		} 
-		else return false;
-			
-		
-	}
-	
-	private void findNextSong()
+	//Remove this method! Breaks Architecture.
+	/*private void findNextSong()
 	{
 		System.out.println("Choosing Next song!!");
 		int index;
@@ -90,7 +76,7 @@ public class MediaController
 			currentSong = songList.getListOfSongs().get(startOrder);
 			index = ++startOrder;
 		}
-	}
+	}*/
 	
 	private class PlayerThread implements Runnable
 	{
@@ -195,7 +181,7 @@ public class MediaController
 	        songFinished = true;
 	    }
 		
-		public void playSong()
+		private void playSong()
 	    {
 	        synchronized (lock)
 	        {
@@ -204,16 +190,16 @@ public class MediaController
 	        }
 	    }
 		
-		public void pauseSong(){
+		private void pauseSong(){
 	        paused = true;
 		}
 		
-		public boolean isSongPaused()
+		private boolean isSongPaused()
 	    {
 	        return paused;
 	    }
 		
-		public void stopSong()
+		private void stopSong()
 	    {
 	        try
 	        {
@@ -236,13 +222,11 @@ public class MediaController
 	{
 		if(threadStarted)
 		{
-			//wrapperThread.start();
 			playSongControls.playSong();
 		}
 		else
 		{
-			findNextSong();
-			playSongControls = new PlayerThread(new File(currentSong.getSongPath()));
+			playSongControls = new PlayerThread(new File(getCurrentSong().getSongPath()));
 			wrapperThread = new Thread(playSongControls);
 			wrapperThread.start();
 		}
@@ -253,7 +237,7 @@ public class MediaController
 	public void pause(){
 		playSongControls.pauseSong();
 	}
-	public void skip()
+	/*public void skip()
 	{
 		this.stop();
 		findNextSong();
@@ -261,13 +245,13 @@ public class MediaController
 		wrapperThread = new Thread(playSongControls);
 		wrapperThread.start();
 		
-	}
+	}*/
 	public void stop(){
 		
 		playSongControls.stopSong();
 	}
 	
-	public void toggleShuffle()
+	/*public void toggleShuffle()
 	{
 		this.shuffle = !shuffle;
 		System.out.println("Shuffle has been toggled to: "+ shuffle);
@@ -276,8 +260,8 @@ public class MediaController
 	{
 		this.repeat = !repeat;
 		System.out.println("Repeat has been toggled to: "+ repeat);
-	}
-	public void changeState(PlayState state)
+	}*/
+	/*public void changeState(PlayState state)
 	{
 		this.playState = state;
 		stateHandler();
@@ -291,5 +275,105 @@ public class MediaController
 		{
 			this.toggleRepeat();
 		}
+	}*/
+	@Override
+	public String getStateObserverName() 
+	{
+		return this.getClass().getName();
+	}
+	@Override
+	public void setParentSubject(StateSubject subject) {
+		this.subject = subject;
+	}
+	@Override
+	public void updateStateObserver(Song song, PlayState newState) 
+	{
+		System.out.println("["+this.getStateObserverName()+"] Observer has recieved state: "+newState.toString());
+		if(newState == PlayState.IDLE)
+		{
+			//IDLE STATE: DO NOTHING
+		}
+		else if(newState == PlayState.READY)
+		{
+			currentSong = song;
+			playSongControls = new PlayerThread(new File(currentSong.getSongPath()));
+			wrapperThread = new Thread(playSongControls);
+			playState = PlayState.READY;
+			System.out.println("["+this.getStateObserverName()+"] Song to play: "+currentSong.getMetaTag().toString());
+			System.out.println("["+this.getStateObserverName()+"] State has changed to: "+newState.toString());
+			
+			subject.stateSubjectCallback(getStateObserverName(), playState);
+			
+		}
+		else if(newState == PlayState.PLAYING)
+		{
+			if(playState == PlayState.PAUSED)
+			{
+				if(wrapperThread != null && wrapperThread.isAlive() && playSongControls.isSongPaused())
+				{
+					play();
+					playState = PlayState.PLAYING;
+					subject.stateSubjectCallback(getStateObserverName(), playState);
+				}
+			}
+			else if(playState == PlayState.READY && playSongControls != null && wrapperThread != null && currentSong != null)
+			{
+				wrapperThread.start();
+				playState = PlayState.PLAYING;
+				subject.stateSubjectCallback(getStateObserverName(), playState);
+			}
+			else{
+				System.out.println("Exception: Play requested when no PlaySongControls Thread! ");
+			}
+			
+		}
+		else if(newState == PlayState.SKIPPED_FORWARDS)
+		{
+			if(wrapperThread != null && wrapperThread.isAlive())
+			{
+				stop();
+				playState = PlayState.FINISHED;
+				subject.stateSubjectCallback(getStateObserverName(), playState);
+			}
+			else{
+				System.out.println("Exception: Play requested when no PlaySongControls Thread! ");
+			}
+		}
+		else if(newState == PlayState.PAUSED)
+		{
+			if(wrapperThread != null && wrapperThread.isAlive())
+			{
+				pause();
+				playState = PlayState.PAUSED;
+				subject.stateSubjectCallback(getStateObserverName(), playState);
+			}
+			else{
+				System.out.println("Exception: Play requested when no PlaySongControls Thread! ");
+			}
+		}
+		else if(newState == PlayState.STOPPED)
+		{
+			
+			if(wrapperThread != null)
+			{
+				if(wrapperThread.isAlive())
+				{
+					stop();
+					playSongControls = null;
+					wrapperThread = null;
+				}
+				
+			}
+			wrapperThread = null;
+			playState = newState;
+			System.out.println("["+this.getStateObserverName()+"] Is Now STOPPED: "+playState.toString());
+			subject.stateSubjectCallback(getStateObserverName(), playState);
+		}
+		System.out.println("["+this.getStateObserverName()+"] --> State has changed state to: "+playState.toString());
+	}
+	@Override
+	public PlayState getCurrentPlayState() 
+	{
+		return this.playState;
 	}
 }
