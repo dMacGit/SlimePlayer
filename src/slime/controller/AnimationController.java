@@ -248,6 +248,25 @@ public class AnimationController implements StateObserver
 			subject.stateSubjectCallback(getStateObserverName(), playerState);
 		}
 		
+		if(newState == PlayState.SHUTDOWN)
+		{
+			
+			if(runnableThread != null)
+			{
+				if(runnableThread.isAlive())
+				{
+					notClossed = false;
+					internalAnimatorThread = null;
+					stopTimer();
+					secondsUpdating.cancel();
+				}
+				
+			}
+			playerState = newState;
+			System.out.println("["+this.getStateObserverName()+"] Is Now in shutdown: "+playerState.toString());
+			subject.stateSubjectCallback(getStateObserverName(), playerState);
+		}
+		
 		
 		if(newState == PlayState.REPEAT_TOGGLED || newState == PlayState.SHUFFLE_TOGGLED)
 		{
@@ -318,7 +337,7 @@ public class AnimationController implements StateObserver
 	        	/*label.changeTag(this.currentAnimatedTag);
 	        	label.startAnimation();*/
 			}
-			playerState = PlayState.FINISHED;
+			playerState = PlayState.READY;
 			subject.stateSubjectCallback(getStateObserverName(), playerState);
             //playerState = newState;
         }

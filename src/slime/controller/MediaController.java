@@ -212,6 +212,24 @@ public class MediaController implements StateObserver
 	            System.out.println("Exception closing streams "+ex.getMessage());
 	        }
 	        songFinished = true;
+	        playState = PlayState.FINISHED;
+			subject.stateSubjectCallback(getStateObserverName(), playState);
+	    }
+		private void close()
+	    {
+	        try
+	        {
+	            line.stop();
+	            line.close();
+	            din.close();
+	        }
+	        catch (IOException | NullPointerException ex)
+	        {
+	            System.out.println("Exception closing streams "+ex.getMessage());
+	        }
+	        songFinished = true;
+	        playState = PlayState.SHUTDOWN;
+			subject.stateSubjectCallback(getStateObserverName(), playState);
 	    }
 	}
 	public Song getCurrentSong()
@@ -249,6 +267,10 @@ public class MediaController implements StateObserver
 	public void stop(){
 		
 		playSongControls.stopSong();
+	}
+	public void close(){
+		
+		playSongControls.close();
 	}
 	
 	/*public void toggleShuffle()
@@ -332,7 +354,7 @@ public class MediaController implements StateObserver
 			if(wrapperThread != null && wrapperThread.isAlive())
 			{
 				stop();
-				playState = PlayState.FINISHED;
+				playState = PlayState.READY;
 				subject.stateSubjectCallback(getStateObserverName(), playState);
 			}
 			else{
@@ -350,6 +372,24 @@ public class MediaController implements StateObserver
 			else{
 				System.out.println("Exception: Play requested when no PlaySongControls Thread! ");
 			}
+		}
+		else if(newState == PlayState.SHUTDOWN)
+		{
+			
+			if(wrapperThread != null)
+			{
+				if(wrapperThread.isAlive())
+				{
+					close();
+					playSongControls = null;
+					wrapperThread = null;
+				}
+				
+			}
+			wrapperThread = null;
+			playState = newState;
+			System.out.println("["+this.getStateObserverName()+"] Is Now STOPPED: "+playState.toString());
+			subject.stateSubjectCallback(getStateObserverName(), playState);
 		}
 		else if(newState == PlayState.STOPPED)
 		{

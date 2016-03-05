@@ -67,7 +67,7 @@ public class PlayerGUI extends JPanel implements ActionListener, GuiSubject
     //private List<AnimatorObserver> animatorObserverList = new ArrayList<AnimatorObserver>();
     
     private PlayState currentStateOfPlayer = PlayState.STOPPED;
-    private boolean observersStopped = false;
+    private boolean observersStopped, observersShutdown = false;
     
     private SongTag currentSongTag = null;
     private final long TimeStarted;
@@ -275,13 +275,13 @@ public class PlayerGUI extends JPanel implements ActionListener, GuiSubject
             }
             if(source == exit)
             {
-            	currentStateOfPlayer = PlayState.STOPPED;
+            	currentStateOfPlayer = PlayState.SHUTDOWN;
             	notifyAllObservers();
             	
             }
             if(currentStateOfPlayer == PlayState.STOPPED && observersStopped)
             {
-            	//deregisterGuiObserver(musicLibraryManager);
+            	deregisterGuiObserver(musicLibraryManager);
                 
             }
             //notifyAllAnimatorObservers();
@@ -297,7 +297,8 @@ public class PlayerGUI extends JPanel implements ActionListener, GuiSubject
 
     public void actionPerformed(ActionEvent e)
     {
-    	if(observersStopped)
+    	
+    	if(observersStopped || observersShutdown)
     	{
     		deregisterGuiObserver(musicLibraryManager);
     		this.setVisible( false );
@@ -343,6 +344,9 @@ public class PlayerGUI extends JPanel implements ActionListener, GuiSubject
 	{
 		if(state == PlayState.STOPPED){
 			observersStopped = true;
+		}
+		if(state == PlayState.SHUTDOWN){
+			observersShutdown = true;
 		}
 	}
 

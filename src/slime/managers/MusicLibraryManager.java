@@ -52,6 +52,7 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
     private boolean observersSyncPlay = false;
     private boolean observersSyncStop = false;
     private boolean observersSyncFin = false;
+    private boolean observersSyncClose = false;
     
     //These are values changed by the guiObserver: User Pressed a button
     private boolean userPressedButton = false;
@@ -66,6 +67,7 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
     private boolean userToggledRepeat = false;
     private boolean userSkippedForwards = false;
     private boolean userSkippedBack = false;
+    private boolean userPressedClose = false;
     
     private Thread songThread;
     private playlistManagerThread playListThread;
@@ -409,7 +411,7 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
                     }
             		else if( (currentPlayState == PlayState.PAUSED || currentPlayState == PlayState.PLAYING) && userSkippedForwards)
                     {
-            			currentPlayState = PlayState.FINISHED;
+            			currentPlayState = PlayState.READY;
             			PLAY_STATE_CHANGED = !PLAY_STATE_CHANGED;
             			notifyAllStateObservers(null, PlayState.SKIPPED_FORWARDS);
 						
@@ -420,9 +422,34 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
             			currentPlayState = PlayState.STOPPED;
             			SYNC_CHANGED = false;
             			System.out.println("[ Manager ] Is Now "+currentPlayState.toString());
-            			notifyAllStateObservers(null, currentPlayState);
             			PLAY_STATE_CHANGED = false;
+            			notifyAllStateObservers(null, currentPlayState);
             			resetUserButtons();
+            		}
+            		else if(userPressedClose)
+            		{
+            			currentPlayState = PlayState.SHUTDOWN;
+            			SYNC_CHANGED = false;
+            			System.out.println("[ Manager ] Is Now in "+currentPlayState.toString());
+            			PLAY_STATE_CHANGED = false;
+            			notifyAllStateObservers(null, currentPlayState);
+            			resetUserButtons();
+            		}
+            		else if(currentPlayState == PlayState.SHUTDOWN)
+            		{
+            			if(observersSyncClose)
+            			{
+            				//Fully shut down the program!
+            				System.out.println("[ Manager ] Observers Have Stopped! Deregistering...");
+            				deregisterStateObserver(animationController);
+            				deregisterStateObserver(mediaController);
+            				System.out.println("[ Manager ] Observers Deregistered");
+            				animationController = null;
+            				mediaController = null;
+            				System.out.println("[ Manager ] Closing Manager Thread!");
+            				STOP_MANAGER = true;
+            				parentSubject.guiCallback(currentPlayState, null);
+            			}
             		}
             		else if(currentPlayState == PlayState.STOPPED)
             		{
@@ -470,6 +497,7 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
         userToggledRepeat = false;
         userSkippedForwards = false;
         userSkippedBack = false;
+        userPressedClose = false;
     }
     /*public void pauseTheSong()
     {
@@ -576,6 +604,7 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
     			observersSyncStop = true;
     			PLAY_STATE_CHANGED = true;
     			SYNC_CHANGED = true;
+    			System.out.println("--> Should now have sync stop");
     		}
     	}
     	else if(state == PlayState.FINISHED)
@@ -591,6 +620,22 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
     		if(totalObserversFin == stateObserverList.size())
     		{
     			observersSyncFin = true;
+    			PLAY_STATE_CHANGED = true;
+    			SYNC_CHANGED = true;
+    		}
+    	}
+    	else if(state == PlayState.SHUTDOWN)
+    	{
+    		int totalObserversClosed = 0;
+    		for(StateObserver observer :stateObserverList)
+    		{
+    			if(observer.getCurrentPlayState() == PlayState.SHUTDOWN){
+    				totalObserversClosed++;
+    			}
+    		}
+    		if(totalObserversClosed == stateObserverList.size())
+    		{
+    			observersSyncClose = true;
     			PLAY_STATE_CHANGED = true;
     			SYNC_CHANGED = true;
     		}
@@ -644,7 +689,10 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
 		{
 			checkObserverSync(observerName,PlayState.STOPPED);
 		}
-		
+		else if(state == PlayState.SHUTDOWN)
+		{
+			checkObserverSync(observerName,PlayState.SHUTDOWN);
+		}
 	}
 
 	@Override
@@ -701,6 +749,10 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
 		else if(newState == PlayState.STOPPED)
 		{
 			userPressedStop = true;
+		}
+		else if(newState == PlayState.SHUTDOWN)
+		{
+			userPressedClose = true;
 		}
 		else if(newState == PlayState.SHUFFLE_TOGGLED)
 		{
