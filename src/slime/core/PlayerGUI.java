@@ -238,19 +238,22 @@ public class PlayerGUI extends JPanel implements ActionListener, GuiSubject
                     playPause.setIcon(PAUSE_ICON);
                     revalidate();
                     notifyAllObservers();
-                } else if (source == playPause && currentStateOfPlayer == PlayState.PLAYING) {
+                    System.out.println("User pressed Play!!");
+                }
+                else if (source == playPause && currentStateOfPlayer == PlayState.PLAYING) {
                 	currentStateOfPlayer = PlayState.PAUSED;
                 	//currentSongTag = musicLibraryManager.getTheCurrentSong();
                     playPause.setIcon(PLAY_ICON);
                     revalidate();
                     notifyAllObservers();
+                    System.out.println("User pressed Pause!!");
                     //musicLibraryManager.pauseTheSong();
                 }
                 if (source == skip) {
-                	
                 	currentStateOfPlayer = PlayState.SKIPPED_FORWARDS;
                 	notifyAllObservers();
-                	
+                	System.out.println("User pressed skip!!");
+                	currentStateOfPlayer = PlayState.PLAYING;
                     //musicLibraryManager.skipTheSong();
                     //currentSongTag = musicLibraryManager.getTheCurrentSong();
                     
