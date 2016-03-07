@@ -179,6 +179,11 @@ public class MediaController implements StateObserver
 	            }
 	        }
 	        songFinished = true;
+	        if(playState != PlayState.SHUTDOWN){
+	        	playState = PlayState.FINISHED;
+				subject.stateSubjectCallback(getStateObserverName(), playState);
+	        }
+	        
 	    }
 		
 		private void playSong()

@@ -351,6 +351,9 @@ public class PlayerGUI extends JPanel implements ActionListener, GuiSubject
 		if(state == PlayState.SHUTDOWN){
 			observersShutdown = true;
 		}
+		if(state == PlayState.PLAYING){
+			//observersShutdown = true;
+		}
 	}
 
 }

@@ -633,6 +633,7 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
     				totalObserversClosed++;
     			}
     		}
+    		System.out.println("Sync: "+totalObserversClosed+" of "+stateObserverList.size());
     		if(totalObserversClosed == stateObserverList.size())
     		{
     			observersSyncClose = true;
