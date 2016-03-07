@@ -48,36 +48,6 @@ public class MediaController implements StateObserver
 		this(false,false,true);
 	}
 	
-	/*public void setSongList(SongList newListOfSongs){
-		this.songList = newListOfSongs;
-		System.out.println(":: Created Song list of "+newListOfSongs.getSize()+" Songs ::");
-		this.findNextSong();
-	}*/
-	
-	//Remove this method! Breaks Architecture.
-	/*private void findNextSong()
-	{
-		System.out.println("Choosing Next song!!");
-		int index;
-		if(shuffle)
-		{
-			System.out.println("Shuffle is activated!");
-			index = ((int)(Math.random()*songList.getSize()));
-			System.out.println(":: Choosing "+index+" of "+songList.getSize()+" Songs ::");
-			currentSong = songList.getListOfSongs().get(index);
-			if(index < songList.getSize())
-			{
-				startOrder = ++index;
-			}
-			else startOrder = 0;
-		}
-		else
-		{
-			currentSong = songList.getListOfSongs().get(startOrder);
-			index = ++startOrder;
-		}
-	}*/
-	
 	private class PlayerThread implements Runnable
 	{
 		private AudioInputStream in,din;
@@ -260,15 +230,7 @@ public class MediaController implements StateObserver
 	public void pause(){
 		playSongControls.pauseSong();
 	}
-	/*public void skip()
-	{
-		this.stop();
-		findNextSong();
-		playSongControls = new PlayerThread(new File(currentSong.getSongPath()));
-		wrapperThread = new Thread(playSongControls);
-		wrapperThread.start();
-		
-	}*/
+	
 	public void stop(){
 		
 		playSongControls.stopSong();
@@ -278,31 +240,6 @@ public class MediaController implements StateObserver
 		playSongControls.close();
 	}
 	
-	/*public void toggleShuffle()
-	{
-		this.shuffle = !shuffle;
-		System.out.println("Shuffle has been toggled to: "+ shuffle);
-	}
-	public void toggleRepeat()
-	{
-		this.repeat = !repeat;
-		System.out.println("Repeat has been toggled to: "+ repeat);
-	}*/
-	/*public void changeState(PlayState state)
-	{
-		this.playState = state;
-		stateHandler();
-	}
-	private void stateHandler(){
-		if(playState == PlayState.SHUFFLE_TOGGLED)
-		{
-			this.toggleShuffle();
-		}
-		else if(playState == PlayState.REPEAT_TOGGLED)
-		{
-			this.toggleRepeat();
-		}
-	}*/
 	@Override
 	public String getStateObserverName() 
 	{

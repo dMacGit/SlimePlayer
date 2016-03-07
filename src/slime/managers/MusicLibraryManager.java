@@ -253,12 +253,9 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
                 { 
         			System.out.println("The Manager thread is initialized!");
         			PLAY_STATE_CHANGED = !PLAY_STATE_CHANGED;
-        			//if(observersSyncInit)
-        			//
-        				currentPlayState = PlayState.IDLE;
-        				notifyAllStateObservers(null,currentPlayState);
-        				
-        			//}
+        			currentPlayState = PlayState.IDLE;
+        			notifyAllStateObservers(null,currentPlayState);
+
                 }
             	
             	if( userToggledShuffle )
@@ -364,23 +361,13 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
                         		notifyAllStateObservers(currentSong,currentPlayState);
                         	}
                         	
-                        	//Need to change so mediaController has no playlist, and Manager has Playlist
-                        	/*if(!mediaController.hasPlaylist())
-                        	{
-                        		mediaController.setSongList(listOfSongs);
-                        	}
-                        	                    
-                            currentSong = mediaController.getCurrentSong();
-        					currentPlayingSongTag = currentSong.getMetaTag();*/
                 			currentPlayingSongTag = currentSong.getMetaTag();
         					System.out.println("Current Song / Next Song to play: "+currentPlayingSongTag.getSongTitle());
 
                             int checkTime = (currentPlayingSongTag.getDurration())/2;
                             int realTime = (checkTime%60);
                             System.out.println(currentPlayingSongTag.getSongTitle()+" <=["+Durration+"]=> "+checkTime+" ---> "+(int)(checkTime/60)+":"+realTime);
-                            
-                            //mediaController.play();
-                            //currentlyPlaying = true;
+
                         }
                 		else
                 		{
@@ -479,9 +466,6 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
                         System.out.println("InterruptedException sleeping song player! "+ex);;
                     }
             	}
-                
-                
-                
             }
         }
     }
@@ -499,41 +483,6 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
         userSkippedBack = false;
         userPressedClose = false;
     }
-    /*public void pauseTheSong()
-    {
-        mediaController.pause();
-    }
-    public void playTheSong()
-    {
-        mediaController.play();
-        this.getPartentSubject().notifyAllMediaObservers();
-    }
-    public void skipTheSong()
-    {
-        if(isPaused)
-        {
-            playTheSong();
-        }
-        else
-        {
-            mediaController.skip();
-            currentPlayingSongTag = mediaController.getCurrentSong().getMetaTag();
-        	System.out.println("Skipped song to -> "+currentPlayingSongTag.getSongTitle());
-        	
-        }
-    }
-    public String getTheSongName()
-    {
-        return theCurrentSongTitle;
-    }
-    public boolean getPausedState()
-    {
-        return mediaController.isPaused();
-    }
-    public void stopPlayer()
-    {
-    	this.stop = true;
-    }*/
 
     private void checkObserverSync(String observerName, PlayState state)
     {
@@ -644,32 +593,11 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
     	
     	
     }
-	/*@Override
-	public void updateMediaObserver(MediaSubject mediaSubject, PlayState stateOfPlayer) 
-	{
-		if(stateOfPlayer == PlayState.INITIATION)
-		{
-			//Assigns parentSubject at Initialization
-			parentSubject = mediaSubject;
-		}
-		this.playerCurrentState = stateOfPlayer;
-		System.out.println("Player is currently: "+playerCurrentState);
-		if(mediaController != null)
-		{
-			mediaController.changeState(stateOfPlayer);
-		}
-		//
-	}*/
+    
 	public SongTag getTheCurrentSongTag()
 	{
 		return this.currentSong.getMetaTag();
 	}
-
-	/*@Override
-	public MediaSubject getPartentSubject() 
-	{
-		return parentSubject;
-	}*/
 
 	@Override
 	public void stateSubjectCallback(String observerName, PlayState state) 
@@ -772,29 +700,4 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
 			userSkippedBack = true;
 		}
 	}
-
-	/*@Override
-	public void registerAnimatorObserver(AnimatorObserver observer) 
-	{
-		animatorObserverList.add(observer);
-		System.out.println("<<<< "+observer.getAnimatorObserverName()+" Added! >>>>");
-		
-	}
-
-	@Override
-	public void deregisterAnimatorObserver(AnimatorObserver observer) 
-	{
-		animatorObserverList.remove(observer);
-		System.out.println("<<<< "+observer.getAnimatorObserverName()+" Removed! >>>>");
-		
-	}
-
-	@Override
-	public void notifyAllAnimatorObservers() 
-	{
-		for(AnimatorObserver observer : animatorObserverList){
-			observer.updateAnimatorObserver(currentPlayState, getTheCurrentSongTag());
-		}
-		
-	}*/
 }
