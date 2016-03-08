@@ -149,9 +149,10 @@ public class MediaController implements StateObserver
 	            }
 	        }
 	        songFinished = true;
-	        if(playState != PlayState.SHUTDOWN){
+	        if(playState != PlayState.SHUTDOWN)
+	        {
 	        	playState = PlayState.FINISHED;
-				subject.stateSubjectCallback(getStateObserverName(), playState);
+				subject.stateSubjectCallback(getStateObserverName(), playState, null);
 	        }
 	        
 	    }
@@ -188,7 +189,7 @@ public class MediaController implements StateObserver
 	        }
 	        songFinished = true;
 	        playState = PlayState.FINISHED;
-			subject.stateSubjectCallback(getStateObserverName(), playState);
+			subject.stateSubjectCallback(getStateObserverName(), playState, null);
 	    }
 		private void close()
 	    {
@@ -203,8 +204,8 @@ public class MediaController implements StateObserver
 	            System.out.println("Exception closing streams "+ex.getMessage());
 	        }
 	        songFinished = true;
-	        playState = PlayState.SHUTDOWN;
-			subject.stateSubjectCallback(getStateObserverName(), playState);
+	        //playState = PlayState.SHUTDOWN;
+			//subject.stateSubjectCallback(getStateObserverName(), playState, null);
 	    }
 	}
 	public Song getCurrentSong()
@@ -266,7 +267,7 @@ public class MediaController implements StateObserver
 			System.out.println("["+this.getStateObserverName()+"] Song to play: "+currentSong.getMetaTag().toString());
 			System.out.println("["+this.getStateObserverName()+"] State has changed to: "+newState.toString());
 			
-			subject.stateSubjectCallback(getStateObserverName(), playState);
+			subject.stateSubjectCallback(getStateObserverName(), playState, null);
 			
 		}
 		else if(newState == PlayState.PLAYING)
@@ -277,14 +278,14 @@ public class MediaController implements StateObserver
 				{
 					play();
 					playState = PlayState.PLAYING;
-					subject.stateSubjectCallback(getStateObserverName(), playState);
+					subject.stateSubjectCallback(getStateObserverName(), playState, null);
 				}
 			}
 			else if(playState == PlayState.READY && playSongControls != null && wrapperThread != null && currentSong != null)
 			{
 				wrapperThread.start();
 				playState = PlayState.PLAYING;
-				subject.stateSubjectCallback(getStateObserverName(), playState);
+				subject.stateSubjectCallback(getStateObserverName(), playState, null);
 			}
 			else{
 				System.out.println("Exception: Play requested when no PlaySongControls Thread! ");
@@ -297,7 +298,7 @@ public class MediaController implements StateObserver
 			{
 				stop();
 				playState = PlayState.READY;
-				subject.stateSubjectCallback(getStateObserverName(), playState);
+				subject.stateSubjectCallback(getStateObserverName(), playState, null);
 			}
 			else{
 				System.out.println("Exception: Play requested when no PlaySongControls Thread! ");
@@ -309,7 +310,7 @@ public class MediaController implements StateObserver
 			{
 				pause();
 				playState = PlayState.PAUSED;
-				subject.stateSubjectCallback(getStateObserverName(), playState);
+				subject.stateSubjectCallback(getStateObserverName(), playState, null);
 			}
 			else{
 				System.out.println("Exception: Play requested when no PlaySongControls Thread! ");
@@ -320,6 +321,7 @@ public class MediaController implements StateObserver
 			
 			if(wrapperThread != null)
 			{
+				playState = newState;
 				if(wrapperThread.isAlive())
 				{
 					close();
@@ -329,9 +331,9 @@ public class MediaController implements StateObserver
 				
 			}
 			wrapperThread = null;
-			playState = newState;
+			
 			System.out.println("["+this.getStateObserverName()+"] Is Now STOPPED: "+playState.toString());
-			subject.stateSubjectCallback(getStateObserverName(), playState);
+			subject.stateSubjectCallback(getStateObserverName(), playState, null);
 		}
 		else if(newState == PlayState.STOPPED)
 		{
@@ -349,7 +351,7 @@ public class MediaController implements StateObserver
 			wrapperThread = null;
 			playState = newState;
 			System.out.println("["+this.getStateObserverName()+"] Is Now STOPPED: "+playState.toString());
-			subject.stateSubjectCallback(getStateObserverName(), playState);
+			subject.stateSubjectCallback(getStateObserverName(), playState, null);
 		}
 		System.out.println("["+this.getStateObserverName()+"] --> State has changed state to: "+playState.toString());
 	}

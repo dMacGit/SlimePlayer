@@ -74,6 +74,8 @@ public class PlayerGUI extends JPanel implements ActionListener, GuiSubject
     private long timeOfLastAction;
     //private AnimationController animator;
     
+    private JLabel scrollingTitleLabel;
+    
     //This is the dir path to the images folder		---> Change if necessary!
     
     public static String THE_FOLDER_DIR = "images/";
@@ -149,6 +151,12 @@ public class PlayerGUI extends JPanel implements ActionListener, GuiSubject
         //MediaController
         //LibraryManager
         //PlaylistManager
+        
+        scrollingTitleLabel = new JLabel("");
+        scrollingTitleLabel.setPreferredSize(new Dimension(225,25));
+        scrollingTitleLabel.setMinimumSize(new Dimension(225,25));
+        scrollingTitleLabel.setMaximumSize(new Dimension(225,25));
+        scrollingTitleLabel.setForeground(Color.WHITE);
         
         //registerAnimatorObserver(animator);
         
@@ -343,7 +351,7 @@ public class PlayerGUI extends JPanel implements ActionListener, GuiSubject
 	}
 
 	@Override
-	public void guiCallback(PlayState state, SongTag tagInfo) 
+	public void guiCallback(PlayState state, JLabel animatedLabel) 
 	{
 		if(state == PlayState.STOPPED){
 			observersStopped = true;
@@ -351,7 +359,10 @@ public class PlayerGUI extends JPanel implements ActionListener, GuiSubject
 		if(state == PlayState.SHUTDOWN){
 			observersShutdown = true;
 		}
-		if(state == PlayState.PLAYING){
+		if(state == PlayState.PLAYING)
+		{
+			songName = animatedLabel;
+			this.panelBar.revalidate();
 			//observersShutdown = true;
 		}
 	}

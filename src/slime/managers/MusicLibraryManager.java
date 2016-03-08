@@ -3,6 +3,8 @@ package slime.managers;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -38,6 +40,19 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
     private ArrayList<String> songTags;
     private ArrayList<Song> defaultPlaylist;
     private LinkedList<Integer> playListHistory;
+    
+    /*
+     * Needed to carry the names of the observers classes in order to keep track of what observer
+     * has called-back to the parent subject. 
+     * Was using a count variable but this wouldn't account for observers that unintentionally callback
+     * twice or more.
+     */
+    
+    //Using an array of observer names as string
+    
+    //ArrayList is overkill for just two observers names but is quick to implement
+    private ArrayList<String> observerNamesList = new ArrayList<String>();				//Maybe do not need this!!??!!
+    private HashMap<String,Boolean> observersCalledback = new HashMap<String, Boolean>();
     
     private boolean currentlyPlaying = false, STOP_MANAGER = false, isPaused;
     private boolean shuffle_Is_On = false, repeat_Is_On = false;
@@ -94,6 +109,14 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
         
         mediaController = new MediaController();
         animationController = new AnimationController();
+        System.out.println(MediaController.class.getName()+" created!");
+        System.out.println(AnimationController.class.getName()+"  created!");
+        
+        observerNamesList.add(MediaController.class.getName());
+        observerNamesList.add(AnimationController.class.getName());
+        observersCalledback.put(MediaController.class.getName(),false);
+        observersCalledback.put(AnimationController.class.getName(),false);
+        
         
         songTags = new ArrayList<String>();
         listOfSongs = new SongList();
@@ -130,11 +153,7 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
         animationController = new AnimationController();
         songTags = new ArrayList<String>();
         listOfSongs = playList;
-        /*scrollingTitleLabel = new JLabel("");
-        scrollingTitleLabel.setPreferredSize(new Dimension(225,25));
-        scrollingTitleLabel.setMinimumSize(new Dimension(225,25));
-        scrollingTitleLabel.setMaximumSize(new Dimension(225,25));
-        scrollingTitleLabel.setForeground(Color.WHITE);*/
+        
         populateLibrary();
         
         
@@ -484,58 +503,62 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
         userPressedClose = false;
     }
 
+    
     private void checkObserverSync(String observerName, PlayState state)
     {
     	System.out.println("Checking observer sync for state: "+state.toString());
     	if(state == PlayState.READY)
     	{
-    		int totalObserverReady = 0;
-    		for(StateObserver observer :stateObserverList)
-    		{
-    			if(observer.getCurrentPlayState() == PlayState.READY){
-    				totalObserverReady++;
-    			}
+    		System.out.println(observerName+" trying to sync!");
+    		if(observersCalledback.containsKey(observerName) && !observersCalledback.get(observerName)){
+    			System.out.println(observerName+" has Synced!");
+    			observersCalledback.replace(observerName, true);
     		}
-    		System.out.println("Sync: "+totalObserverReady+" of "+stateObserverList.size());
-    		
-    		if(totalObserverReady == stateObserverList.size())
+
+    		if( observersCalledback.get(observerNamesList.get(0)) && observersCalledback.get(observerNamesList.get(1)))
     		{
     			observersSyncReady = true;
     			PLAY_STATE_CHANGED = true;
     			SYNC_CHANGED = true;
-    			System.out.println(observerName+" Synced! ");
+    			System.out.println("Both Observer have Synced! ");
+    			observersCalledback.replace(observerNamesList.get(0),false);
+    			observersCalledback.replace(observerNamesList.get(1),false);
     		}
     	}
     	else if(state == PlayState.PLAYING)
     	{
-    		int totalObserversPlay = 0;
-    		for(StateObserver observer :stateObserverList)
-    		{
-    			if(observer.getCurrentPlayState() == PlayState.FINISHED){
-    				totalObserversPlay++;
-    			}
+    		System.out.println(observerName+" trying to sync!");
+    		if(observersCalledback.containsKey(observerName) && !observersCalledback.get(observerName)){
+    			System.out.println(observerName+" has Synced!");
+    			observersCalledback.replace(observerName, true);
     		}
-    		if(totalObserversPlay == stateObserverList.size())
+
+    		if( observersCalledback.get(observerNamesList.get(0)) && observersCalledback.get(observerNamesList.get(1)))
     		{
     			observersSyncPlay = true;
     			PLAY_STATE_CHANGED = true;
     			SYNC_CHANGED = true;
+    			System.out.println("Both Observer have Synced! ");
+    			observersCalledback.replace(observerNamesList.get(0),false);
+    			observersCalledback.replace(observerNamesList.get(1),false);
     		}
     	}
     	else if(state == PlayState.INITIALIZED)
     	{
-    		int totalObserversInit = 0;
-    		for(StateObserver observer :stateObserverList)
-    		{
-    			if(observer.getCurrentPlayState() == PlayState.FINISHED){
-    				totalObserversInit++;
-    			}
+    		System.out.println(observerName+" trying to sync!");
+    		if(observersCalledback.containsKey(observerName) && !observersCalledback.get(observerName)){
+    			System.out.println(observerName+" has Synced!");
+    			observersCalledback.replace(observerName, true);
     		}
-    		if(totalObserversInit == stateObserverList.size())
+
+    		if( observersCalledback.get(observerNamesList.get(0)) && observersCalledback.get(observerNamesList.get(1)))
     		{
     			observersSyncInit = true;
     			PLAY_STATE_CHANGED = true;
     			SYNC_CHANGED = true;
+    			System.out.println("Both Observer have Synced! ");
+    			observersCalledback.replace(observerNamesList.get(0),false);
+    			observersCalledback.replace(observerNamesList.get(1),false);
     		}
     	}
     	else if(state == PlayState.STOPPED)
@@ -575,19 +598,20 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
     	}
     	else if(state == PlayState.SHUTDOWN)
     	{
-    		int totalObserversClosed = 0;
-    		for(StateObserver observer :stateObserverList)
-    		{
-    			if(observer.getCurrentPlayState() == PlayState.SHUTDOWN){
-    				totalObserversClosed++;
-    			}
+    		System.out.println(observerName+" trying to sync!");
+    		if(observersCalledback.containsKey(observerName) && !observersCalledback.get(observerName)){
+    			System.out.println(observerName+" has Synced!");
+    			observersCalledback.replace(observerName, true);
     		}
-    		System.out.println("Sync: "+totalObserversClosed+" of "+stateObserverList.size());
-    		if(totalObserversClosed == stateObserverList.size())
+
+    		if( observersCalledback.get(observerNamesList.get(0)) && observersCalledback.get(observerNamesList.get(1)))
     		{
     			observersSyncClose = true;
     			PLAY_STATE_CHANGED = true;
     			SYNC_CHANGED = true;
+    			System.out.println("Both Observer have Synced! ");
+    			observersCalledback.replace(observerNamesList.get(0),false);
+    			observersCalledback.replace(observerNamesList.get(1),false);
     		}
     	}
     	
@@ -600,7 +624,7 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
 	}
 
 	@Override
-	public void stateSubjectCallback(String observerName, PlayState state) 
+	public void stateSubjectCallback(String observerName, PlayState state, JLabel label) 
 	{
 		
 		//Called by the MediaController when the song file has reached the end of play.
@@ -622,6 +646,13 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
 		{
 			checkObserverSync(observerName,PlayState.SHUTDOWN);
 		}
+		/*else if(state == PlayState.PLAYING)
+		{
+			if(label != null && label.getText().compareTo("")==0){
+				this.parentSubject.guiCallback(state, label);
+			}
+			//checkObserverSync(observerName,PlayState.SHUTDOWN);
+		}*/
 	}
 
 	@Override
