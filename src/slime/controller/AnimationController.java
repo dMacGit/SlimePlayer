@@ -34,10 +34,11 @@ public class AnimationController implements StateObserver
     private ScrollingTextController scrollingLabel;
     private JLabel jLabel;
     private int labelWidth;
-	
+	private boolean firstPlay = true;
+    
 	public AnimationController(SongTag tagToAnimate) 
 	{
-		jLabel = new JLabel("");
+		jLabel = new JLabel("Starting up...");
         jLabel.setPreferredSize(new Dimension(225,25));
         jLabel.setMinimumSize(new Dimension(225,25));
         jLabel.setMaximumSize(new Dimension(225,25));
@@ -93,7 +94,26 @@ public class AnimationController implements StateObserver
 				{
 					if(playerState == PlayState.PLAYING)
 					{
-						jLabel.setIcon(new ImageIcon(scrollingLabel.getImage()));
+						try{
+							jLabel.setIcon(new ImageIcon(scrollingLabel.getImage()));
+						}
+						catch(NullPointerException ex)
+						{
+							if(scrollingLabel == null)
+							{
+								System.out.println("ScrollingLabel is NULL!");
+							}
+							else if(jLabel == null)
+							{
+								System.out.println("JLabel is NULL!");
+							}
+							else if(scrollingLabel.getImage() == null)
+							{
+								System.out.println("scrollingLabel.getImage() returns NULL!");
+							}
+							//System.out.println(ex.getMessage());
+						}
+						
 					}
 					
 					
@@ -204,7 +224,7 @@ public class AnimationController implements StateObserver
 				
 				System.out.println("==========> Songtag changed to -> "+tagData.getSongTitle());
 				
-				if(scrollingLabel == null)
+				if(scrollingLabel == null || firstPlay)
 				{
 					scrollingLabel = new ScrollingTextController( this.currentAnimatedTag ,labelWidth);
 					System.out.println("Label has been initialized!");
@@ -213,6 +233,36 @@ public class AnimationController implements StateObserver
 		                jLabel.setIcon(new ImageIcon(scrollingLabel.getImage()));
 		                System.out.println("Icon has also been set for the first time!");
 		            }
+					else
+					{
+						boolean imageNull = true;
+						int timeout = 3000;
+						int time = 0;
+						while(imageNull && time <= timeout)
+						{
+							if(scrollingLabel.getImage()!=null)
+							{
+								imageNull = false;
+								try{
+									Thread.sleep(100);
+									time = time + 100;
+								}
+								catch(Exception ex)
+								{
+									System.out.println("There was an error trying to sleep main Animator thread!");
+								}
+							}
+						}
+						if(time >= timeout)
+						{
+							System.out.println("Wait was timed out! Took longer than "+timeout+" milliseconds!");
+						}
+						else{
+							System.out.println(scrollingLabel.getImage().toString());
+						}
+					}
+					
+					firstPlay = false;
 				}
 				else
 				{
@@ -226,7 +276,7 @@ public class AnimationController implements StateObserver
 				//Reload the JLabel with the updated SongInfo
 			}
 			this.playerState = newState;
-			this.subject.stateSubjectCallback(this.getStateObserverName(), this.getCurrentPlayState(), this.jLabel);
+			this.subject.stateSubjectCallback(this.getStateObserverName(), this.getCurrentPlayState(), null);
 		}
 		
 		if(newState == PlayState.STOPPED)
@@ -308,6 +358,9 @@ public class AnimationController implements StateObserver
 		        }
 		        scrollingLabel.startAnimation();
 			}
+			else if(newState == PlayState.PLAYING){
+				scrollingLabel.startAnimation();
+			}
 			playerState = newState; 
 		}
 		
@@ -338,7 +391,7 @@ public class AnimationController implements StateObserver
 	        	label.startAnimation();*/
 			}
 			playerState = PlayState.READY;
-			subject.stateSubjectCallback(getStateObserverName(), playerState, jLabel);
+			subject.stateSubjectCallback(getStateObserverName(), playerState, null);
             //playerState = newState;
         }
 		

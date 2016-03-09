@@ -15,7 +15,7 @@ public class ScrollingTextController extends JLabel
 	private Timer timer;
 	private int componentWidth;
 	private BufferedImage image = null;
-	private BufferedImage copyImage = null;
+	//private BufferedImage copyImage = null;
 	private volatile boolean pauseScrolling = false;
 	private Font font;
 	private BufferedImage defaultPosImage;
@@ -120,12 +120,12 @@ public class ScrollingTextController extends JLabel
 	
 	public void setImage(BufferedImage theLabel) 
 	{
-		copyImage = image;
+		image = theLabel;
 	}
 
 	public boolean checkImage() 
 	{
-		if (copyImage == null) 
+		if (image == null) 
 		{
 			return false;
 		}
@@ -134,7 +134,7 @@ public class ScrollingTextController extends JLabel
 
 	public BufferedImage getImage() 
 	{
-		return copyImage;
+		return image;
 	}
 
 	public void startAnimation() 

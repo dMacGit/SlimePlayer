@@ -8,23 +8,29 @@ import java.awt.Image;
 import java.awt.SystemTray;
 import java.awt.Toolkit;
 import java.awt.TrayIcon;
+//import java.util.Timer;
+//import java.util.TimerTask;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.ArrayList;
 import java.util.List;
+//import java.util.TimerTask;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+//import javax.swing.Timer;
 import javax.swing.Timer;
 
 import slime.controller.AnimationController;
 import slime.controller.MediaController;
+import slime.controller.ScrollingTextController;
 import slime.managers.MusicLibraryManager;
 import slime.media.PlayState;
+import slime.media.Song;
 import slime.media.SongTag;
 import slime.observe.AnimatorObserver;
 import slime.observe.AnimatorSubject;
@@ -44,7 +50,7 @@ import slime.utills.ShrinkImageToSize;
  * Handles all button events and manages all Observers to the media player and 
  * animation events.
  */
-public class PlayerGUI extends JPanel implements ActionListener, GuiSubject
+public class PlayerGUI extends JPanel implements GuiSubject
 {
     /**
 	 * 
@@ -72,7 +78,7 @@ public class PlayerGUI extends JPanel implements ActionListener, GuiSubject
     private SongTag currentSongTag = null;
     private final long TimeStarted;
     private long timeOfLastAction;
-    //private AnimationController animator;
+    private ScrollingTextLabel scrollingLabel;
     
     private JLabel scrollingTitleLabel;
     
@@ -94,7 +100,7 @@ public class PlayerGUI extends JPanel implements ActionListener, GuiSubject
             SHUFFLE_ICON_SELECTED = ShrinkImageToSize.shrinkImageToSize(new ImageIcon(Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource(THE_FOLDER_DIR+"shuffleButtonSelected.png"))),H_Size,H_Size);
     
     private boolean shuffle_Select = false, repeat_Select = false;
-    private Timer infoUpdater_Scroller;
+    //private Timer infoUpdater_Scroller;
 
     public PlayerGUI()
     {   
@@ -112,20 +118,22 @@ public class PlayerGUI extends JPanel implements ActionListener, GuiSubject
         defaultStringLabel = new JLabel(defaultString);
         defaultStringLabel.setForeground(Color.WHITE);
         defaultStringLabel.setPreferredSize(new Dimension(DEFAULT_STRING_LABEL_W,DEFAULT_STRING_LABEL_H));
-        songName = new JLabel("");
+        scrollingLabel = new ScrollingTextLabel("Starting up... ", 25);
+        
         songTime = new JLabel("00:00");
         songTime.setPreferredSize(new Dimension(SONG_TIME_W,DEFAULT_STRING_LABEL_H));
         songTime.setForeground(Color.WHITE);
-        songName.setPreferredSize(new Dimension(SONG_NAME_W,DEFAULT_STRING_LABEL_H));
-        songName.setMinimumSize(new Dimension(SONG_NAME_W,DEFAULT_STRING_LABEL_H));
-        songName.setMaximumSize(new Dimension(SONG_NAME_W,DEFAULT_STRING_LABEL_H));
-        songName.setForeground(Color.WHITE);        
+        scrollingLabel.setPreferredSize(new Dimension(SONG_NAME_W,DEFAULT_STRING_LABEL_H));
+        scrollingLabel.setMinimumSize(new Dimension(SONG_NAME_W,DEFAULT_STRING_LABEL_H));
+        scrollingLabel.setMaximumSize(new Dimension(SONG_NAME_W,DEFAULT_STRING_LABEL_H));
+        scrollingLabel.setForeground(Color.WHITE);
+        scrollingLabel.setBackground(Color.BLACK);
         panelBar = new JPanel();
         panelBar.setBackground(Color.BLACK);       
         panelBar.add(playPause);
         panelBar.add(skip);
         panelBar.add(defaultStringLabel);
-        panelBar.add(songName);
+        panelBar.add(scrollingLabel);
         panelBar.add(songTime);
         panelBar.add(shuffle);
         panelBar.add(repeat);
@@ -145,6 +153,8 @@ public class PlayerGUI extends JPanel implements ActionListener, GuiSubject
 
         //animator = new AnimationController();
         musicLibraryManager = new MusicLibraryManager(FILE_DIR);
+        System.out.println(MusicLibraryManager.class.getName()+"  created!");
+        System.out.println(AnimationController.class.getName()+"  created!");
         
         registerGuiObserver(musicLibraryManager);
         musicLibraryManager.setParentSubject(this);
@@ -152,16 +162,16 @@ public class PlayerGUI extends JPanel implements ActionListener, GuiSubject
         //LibraryManager
         //PlaylistManager
         
-        scrollingTitleLabel = new JLabel("");
+        /*scrollingTitleLabel = new JLabel("");
         scrollingTitleLabel.setPreferredSize(new Dimension(225,25));
         scrollingTitleLabel.setMinimumSize(new Dimension(225,25));
         scrollingTitleLabel.setMaximumSize(new Dimension(225,25));
-        scrollingTitleLabel.setForeground(Color.WHITE);
+        scrollingTitleLabel.setForeground(Color.WHITE);*/
         
         //registerAnimatorObserver(animator);
         
-        infoUpdater_Scroller = new Timer(50,this);
-        infoUpdater_Scroller.start();
+        //infoUpdater_Scroller = new Timer(50,this);
+        //infoUpdater_Scroller.start();
         
     }
     
@@ -306,12 +316,14 @@ public class PlayerGUI extends JPanel implements ActionListener, GuiSubject
 
     }
 
-    public void actionPerformed(ActionEvent e)
+    /*public void actionPerformed(ActionEvent e)
     {
     	
     	if(observersStopped || observersShutdown)
     	{
+    		System.out.println("[GUI] Deregistering MusicLibraryManager...");
     		deregisterGuiObserver(musicLibraryManager);
+    		System.out.println("[GUI] Deregistered MusicLibraryManager...");
     		this.setVisible( false );
             System.exit(0);
             System.gc();
@@ -323,8 +335,18 @@ public class PlayerGUI extends JPanel implements ActionListener, GuiSubject
                 songName.setIcon(animator.getLabel().getIcon());
                 songTime.setText(animator.getSongTime());
                 revalidate();
-            }*/
+            }*//*
         }
+    }*/
+    
+    private void shutdownPlayer()
+    {
+    	System.out.println("[GUI] Deregistering MusicLibraryManager...");
+		deregisterGuiObserver(musicLibraryManager);
+		System.out.println("[GUI] Deregistered MusicLibraryManager...");
+		this.setVisible( false );
+        System.exit(0);
+        System.gc();
     }
 
 	@Override
@@ -351,20 +373,108 @@ public class PlayerGUI extends JPanel implements ActionListener, GuiSubject
 	}
 
 	@Override
-	public void guiCallback(PlayState state, JLabel animatedLabel) 
+	public void guiCallback(PlayState state, Song song) 
 	{
 		if(state == PlayState.STOPPED){
 			observersStopped = true;
 		}
-		if(state == PlayState.SHUTDOWN){
+		else if(state == PlayState.SHUTDOWN){
 			observersShutdown = true;
+			shutdownPlayer();
 		}
-		if(state == PlayState.PLAYING)
+		else if(state == PlayState.READY)
 		{
-			songName = animatedLabel;
-			this.panelBar.revalidate();
+			System.out.println("[GUI] Recieved READY Callback!");
+			final String temp = craetedPrintedSongString(song.getMetaTag());
+			System.out.println("[GUI] New song: "+temp);
+			scrollingLabel.updateText(craetedPrintedSongString(song.getMetaTag()),temp.length());
+			panelBar.revalidate();
+			revalidate();
+			
 			//observersShutdown = true;
 		}
 	}
+	
+	private String craetedPrintedSongString(SongTag song)
+	{
+		String Album = song.getRecordingTitle();
+        if(Album.compareTo("") == 0)
+        {
+            Album = song.getSongTitle();
+        }
+        return new String(song.getArtist()+"   :   "+song.getSongTitle()+"     "+Album+"     "+song.getYear());
+	    
+	}
+	
+	public class ScrollingTextLabel extends JPanel implements ActionListener {
 
+	    private static final int RATE = 12;
+	    private final Timer timer = new Timer(1000 / RATE, this);
+	    private final JLabel label = new JLabel();
+	    private String s;
+	    private int n;
+	    private int index;
+
+	    public ScrollingTextLabel(String s, int n) {
+	        if (s == null || n < 1) {
+	            throw new IllegalArgumentException("Null string or n < 1");
+	        }
+	        StringBuilder sb = new StringBuilder(n);
+	        for (int i = 0; i < n; i++) {
+	            sb.append(' ');
+	        }
+	        this.s = sb + s + sb;
+	        this.n = n;
+	        //label.setFont(new Font("Serif", Font.ITALIC, 36));
+	        label.setText(sb.toString());
+	        label.setForeground(Color.WHITE);
+	        this.add(label);
+	        start();
+	    }
+
+	    public void updateText(String s, int n)
+	    {
+	    	stop();
+	    	reset();
+	    	if (s == null || n < 1) {
+	            throw new IllegalArgumentException("Null string or n < 1");
+	        }
+	        StringBuilder sb = new StringBuilder(n);
+	        for (int i = 0; i < n; i++) {
+	            sb.append(' ');
+	        }
+	        this.s = sb + s + sb;
+	        this.n = n;
+	        //label.setFont(new Font("Serif", Font.ITALIC, 36));
+	        label.setText(sb.toString());
+	        label.setForeground(Color.WHITE);
+	        this.add(label);
+	        start();
+	    }
+	    
+	    public void start() {
+	        timer.start();
+	    }
+
+	    public void stop() {
+	        timer.stop();
+	        
+	    }
+	    
+
+	    
+	    public void reset(){
+	    	index = 0;
+	    }
+
+	    @Override
+	    public void actionPerformed(ActionEvent e) {
+	        index++;
+	        if (index > s.length() - n) {
+	            index = 0;
+	        }
+	        label.setText(s.substring(index, index + n));
+	    }
+	}
 }
+
