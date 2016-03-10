@@ -20,7 +20,7 @@ public class AnimationController implements StateObserver
 {
 	private StateSubject subject;
 	
-	private AnimatorThread internalAnimatorThread;
+	//private AnimatorThread internalAnimatorThread;
 	private boolean notClossed = true;
 	private PlayState playerState = PlayState.INITIALIZED;
 	private String OBSERVER_NAME = "AnimationController";
@@ -45,8 +45,8 @@ public class AnimationController implements StateObserver
         jLabel.setForeground(Color.WHITE);
 		
 		currentAnimatedTag = tagToAnimate;
-		internalAnimatorThread = new AnimatorThread(currentAnimatedTag);
-		runnableThread = new Thread(internalAnimatorThread);
+		//internalAnimatorThread = new AnimatorThread(currentAnimatedTag);
+		//runnableThread = new Thread(internalAnimatorThread);
 		runnableThread.start();
 		secondsUpdating = new secondsUpdating();
         seconds = new Timer();
@@ -69,7 +69,7 @@ public class AnimationController implements StateObserver
 		
 	}
 	
-	private class AnimatorThread implements Runnable
+	/*private class AnimatorThread implements Runnable
 	{
 		public AnimatorThread(SongTag songTag)
 		{
@@ -136,12 +136,12 @@ public class AnimationController implements StateObserver
 						scrollingTitleLabel.setIcon(new ImageIcon(label.getImage()));
 						//Animate the scrolling text!
 						//Animate or increment the timer!
-					}*/
+					}
 				}
 				
 			}
 		}
-	}
+	}*/
 	
 	public class secondsUpdating extends TimerTask
     {
@@ -287,7 +287,7 @@ public class AnimationController implements StateObserver
 				if(runnableThread.isAlive())
 				{
 					notClossed = false;
-					internalAnimatorThread = null;
+					//internalAnimatorThread = null;
 					stopTimer();
 					secondsUpdating.cancel();
 				}
@@ -306,7 +306,7 @@ public class AnimationController implements StateObserver
 				if(runnableThread.isAlive())
 				{
 					notClossed = false;
-					internalAnimatorThread = null;
+					//internalAnimatorThread = null;
 					stopTimer();
 					secondsUpdating.cancel();
 				}

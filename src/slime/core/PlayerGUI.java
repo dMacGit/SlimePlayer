@@ -8,26 +8,23 @@ import java.awt.Image;
 import java.awt.SystemTray;
 import java.awt.Toolkit;
 import java.awt.TrayIcon;
-//import java.util.Timer;
-//import java.util.TimerTask;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.ArrayList;
 import java.util.List;
-//import java.util.TimerTask;
+import java.util.TimerTask;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-//import javax.swing.Timer;
 import javax.swing.Timer;
 
-import slime.controller.AnimationController;
-import slime.controller.MediaController;
-import slime.controller.ScrollingTextController;
+
+
 import slime.managers.MusicLibraryManager;
 import slime.media.PlayState;
 import slime.media.Song;
@@ -79,6 +76,7 @@ public class PlayerGUI extends JPanel implements GuiSubject
     private final long TimeStarted;
     private long timeOfLastAction;
     private ScrollingTextLabel scrollingLabel;
+    private SongTimeUpdater songTimeUpdater;
     
     private JLabel scrollingTitleLabel;
     
@@ -118,11 +116,14 @@ public class PlayerGUI extends JPanel implements GuiSubject
         defaultStringLabel = new JLabel(defaultString);
         defaultStringLabel.setForeground(Color.WHITE);
         defaultStringLabel.setPreferredSize(new Dimension(DEFAULT_STRING_LABEL_W,DEFAULT_STRING_LABEL_H));
+        
         scrollingLabel = new ScrollingTextLabel("Starting up... ", 25);
         
-        songTime = new JLabel("00:00");
-        songTime.setPreferredSize(new Dimension(SONG_TIME_W,DEFAULT_STRING_LABEL_H));
-        songTime.setForeground(Color.WHITE);
+        songTimeUpdater = new SongTimeUpdater(0);
+        
+        
+        /*songTime.setPreferredSize(new Dimension(SONG_TIME_W,DEFAULT_STRING_LABEL_H));
+        songTime.setForeground(Color.WHITE);*/
         scrollingLabel.setPreferredSize(new Dimension(SONG_NAME_W,DEFAULT_STRING_LABEL_H));
         scrollingLabel.setMinimumSize(new Dimension(SONG_NAME_W,DEFAULT_STRING_LABEL_H));
         scrollingLabel.setMaximumSize(new Dimension(SONG_NAME_W,DEFAULT_STRING_LABEL_H));
@@ -134,7 +135,7 @@ public class PlayerGUI extends JPanel implements GuiSubject
         panelBar.add(skip);
         panelBar.add(defaultStringLabel);
         panelBar.add(scrollingLabel);
-        panelBar.add(songTime);
+        panelBar.add(songTimeUpdater);
         panelBar.add(shuffle);
         panelBar.add(repeat);
         panelBar.add(playList);
@@ -154,7 +155,6 @@ public class PlayerGUI extends JPanel implements GuiSubject
         //animator = new AnimationController();
         musicLibraryManager = new MusicLibraryManager(FILE_DIR);
         System.out.println(MusicLibraryManager.class.getName()+"  created!");
-        System.out.println(AnimationController.class.getName()+"  created!");
         
         registerGuiObserver(musicLibraryManager);
         musicLibraryManager.setParentSubject(this);
@@ -254,6 +254,7 @@ public class PlayerGUI extends JPanel implements GuiSubject
                 	//currentSongTag = musicLibraryManager.getTheCurrentSong();
                     //musicLibraryManager.playTheSong();
                     playPause.setIcon(PAUSE_ICON);
+                    songTimeUpdater.startTimer();
                     revalidate();
                     notifyAllObservers();
                     System.out.println("User pressed Play!!");
@@ -262,6 +263,7 @@ public class PlayerGUI extends JPanel implements GuiSubject
                 	currentStateOfPlayer = PlayState.PAUSED;
                 	//currentSongTag = musicLibraryManager.getTheCurrentSong();
                     playPause.setIcon(PLAY_ICON);
+                    songTimeUpdater.stopTimer();
                     revalidate();
                     notifyAllObservers();
                     System.out.println("User pressed Pause!!");
@@ -305,9 +307,6 @@ public class PlayerGUI extends JPanel implements GuiSubject
             	deregisterGuiObserver(musicLibraryManager);
                 
             }
-            //notifyAllAnimatorObservers();
-            //notifyAllMediaObservers();
-            //currentSongTag = readADirectory.getTheCurrentSong();
             
         }
         public void mouseReleased(MouseEvent e){}
@@ -372,6 +371,12 @@ public class PlayerGUI extends JPanel implements GuiSubject
 		
 	}
 
+	/*
+	 * Callback method used by observers for sending updated values
+	 * and objects required for animation on the GUI display.
+	 * 
+	 */
+	
 	@Override
 	public void guiCallback(PlayState state, Song song) 
 	{
@@ -388,33 +393,97 @@ public class PlayerGUI extends JPanel implements GuiSubject
 			final String temp = craetedPrintedSongString(song.getMetaTag());
 			System.out.println("[GUI] New song: "+temp);
 			scrollingLabel.updateText(craetedPrintedSongString(song.getMetaTag()),temp.length());
-			panelBar.revalidate();
-			revalidate();
+			songTimeUpdater.newDuration(song.getMetaTag().getDurration());
+			songTimeUpdater.startTimer();
+			//panelBar.revalidate();
+			//revalidate();
 			
 			//observersShutdown = true;
 		}
 	}
 	
+	/* 
+	 * This method simply takes the SongTag info as argument, and proceeds to format that
+	 * in a more readable way in preparation for animation in the UI display.
+	 */
 	private String craetedPrintedSongString(SongTag song)
 	{
 		String Album = song.getRecordingTitle();
+		String Title = song.getSongTitle();
+		String Artist = song.getArtist();
+		int Year = song.getYear();
+		
+		String preparedYear = "";
+		
+		//Checks if particular fields are not empty.
         if(Album.compareTo("") == 0)
         {
-            Album = song.getSongTitle();
+            Album = "";
         }
-        return new String(song.getArtist()+"   :   "+song.getSongTitle()+"     "+Album+"     "+song.getYear());
+        
+        if(Title.compareTo("") == 0)
+        {
+        	Title = "Unknown Song";
+        }
+        
+        if(Artist.compareTo("") == 0)
+        {
+        	Artist = "";
+        }
+        
+        if(Year <= 1890)
+        {
+        	preparedYear = "";
+        }
+        else
+        	preparedYear = Integer.toString(Year);
+        
+        return new String(Artist+"   :   "+Title+"     "+Album+"     "+preparedYear);
 	    
 	}
 	
-	public class ScrollingTextLabel extends JPanel implements ActionListener {
+	/*
+	 * This is the Inner-class which handles the animation of the scrolling text in the
+	 * GUI Bar.
+	 *  
+	 * It takes a pre-formatted string as argument in its constructor, sets it a text in a JLabel,
+	 * and then sets up a timer object.
+	 * The timer then animates the string, by modifying the character(s) position in the label every
+	 * 'n' milliseconds defined by the variable "RATE" and the calculation (1000 / RATE).
+	 * 
+	 * This seems to meet the requirements of the animation properties that I had in mind.
+	 * 
+	 * NOTE: - 	There seems to be a small UI-Bug when the String / Song Info is under a certain
+	 * 			number of characters in length. Where by the point at which the characters dissapear
+	 * 			off-screen shifts / moves by an unknown number of characters, as the string is animated. 
+	 * 
+	 */
+	
+	public class ScrollingTextLabel extends JPanel implements ActionListener 
+	{
 
-	    private static final int RATE = 12;
+		//Main delay variable in the timer object.
+		private static final int RATE = 16;
+		
+		//The animation rate set for the timer object.
 	    private final Timer timer = new Timer(1000 / RATE, this);
+	    
+	    //The JLabel where the string is animated on.
 	    private final JLabel label = new JLabel();
+	    
+	    //Variables used in the animation.
 	    private String s;
 	    private int n;
 	    private int index;
 
+	    /*
+	     * Initial constructor for the class.
+	     * 
+	     * 'S' argument is the string to be animated.
+	     * 'N' argument is the size of the animation area.
+	     * 
+	     * NOTE: Animation area, has been set as the length of the string
+	     */
 	    public ScrollingTextLabel(String s, int n) {
 	        if (s == null || n < 1) {
 	            throw new IllegalArgumentException("Null string or n < 1");
@@ -460,9 +529,7 @@ public class PlayerGUI extends JPanel implements GuiSubject
 	        timer.stop();
 	        
 	    }
-	    
 
-	    
 	    public void reset(){
 	    	index = 0;
 	    }
@@ -476,5 +543,67 @@ public class PlayerGUI extends JPanel implements GuiSubject
 	        label.setText(s.substring(index, index + n));
 	    }
 	}
+	
+	/*public class SongTimeUpdater
+	{
+		private Timer seconds;
+		private TimerTask secondsUpdating;
+		private byte songMinutes, songSeconds, pausedSeconds, pausedMinutes;
+		private String songTime;
+		private boolean isPaused = true;
+	    
+		public SongTimeUpdater(int songDuration) 
+		{
+			secondsUpdating = new secondsUpdating();
+	        seconds = new Timer();
+			seconds.scheduleAtFixedRate(secondsUpdating, 100, 1000);
+			//subject.stateSubjectCallback(getStateObserverName(), playerState);
+	        
+		}
+		
+		public void startTimer(){
+			secondsUpdating.run();
+		}
+		public void stopTimer(){
+			secondsUpdating.cancel();
+		}
+		public void pauseTimer(){
+			
+		}
+		
+		public class secondsUpdating extends TimerTask
+	    {
+	        public void run()
+	        {
+	            if(!isPaused)
+	            {
+	                if(songMinutes < 10 && songSeconds < 10)
+	                {
+	                    songTime = ("0"+songMinutes+":0"+songSeconds);
+	                }
+	                else if(songMinutes >= 10 && songSeconds >= 10)
+	                {
+	                    songTime = (songMinutes+":"+songSeconds);
+	                }
+	                else if(songMinutes < 10 && songSeconds >= 10)
+	                {
+	                    songTime = ("0"+songMinutes+":"+songSeconds);
+	                }
+	               
+	                if(songSeconds < 59)
+	                {
+	                    songSeconds++;
+	                }
+	                else
+	                {
+	                    songSeconds = 0;
+	                    songMinutes++;
+	                }
+	            }
+	            
+	        }
+	    }
+	}*/
+	
 }
 
