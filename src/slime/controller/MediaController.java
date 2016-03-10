@@ -331,7 +331,7 @@ public class MediaController implements StateObserver
 				
 			}
 			wrapperThread = null;
-			
+			playState = newState;
 			System.out.println("["+this.getStateObserverName()+"] Is Now STOPPED: "+playState.toString());
 			subject.stateSubjectCallback(getStateObserverName(), playState, null);
 		}
