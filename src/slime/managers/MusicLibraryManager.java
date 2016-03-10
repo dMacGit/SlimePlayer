@@ -12,7 +12,6 @@ import javax.swing.JLabel;
 
 import org.farng.mp3.TagException;
 
-import slime.controller.AnimationController;
 import slime.controller.MediaController;
 import slime.controller.ScrollingTextController;
 import slime.media.PlayState;

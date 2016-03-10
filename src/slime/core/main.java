@@ -10,7 +10,6 @@ import java.awt.TrayIcon;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
-import slime.controller.AnimationController;
 import slime.controller.MediaController;
 import slime.managers.MusicLibraryManager;
 import slime.utills.ComponentMover;
@@ -21,7 +20,6 @@ public class main
 	public static PlayerGUI gui;
 	public static MusicLibraryManager musicManagerLibrary;
 	public static MediaController mediaController;
-	public static AnimationController animationController;
 	
 	//This is the dir path to the images folder		---> Change if necessary!
     
