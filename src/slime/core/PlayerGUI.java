@@ -41,6 +41,7 @@ import slime.utills.ImageLoader;
 import slime.utills.ShrinkImageToSize;
 
 /**
+ * 
  * Main player class.
  * 
  * Sets up main GUI, Icon file directories, as well as user Media location.
@@ -50,9 +51,7 @@ import slime.utills.ShrinkImageToSize;
 
 public class PlayerGUI extends JPanel implements GuiSubject
 {
-    /**
-	 * 
-	 */
+    
 	
 	private MusicLibraryManager musicLibraryManager;
 	

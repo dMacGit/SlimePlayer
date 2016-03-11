@@ -8,7 +8,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
-/*
+/**
  * This is the class which handles the animation of the scrolling text in the
  * GUI Bar.
  *  

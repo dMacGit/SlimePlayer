@@ -18,6 +18,21 @@ import slime.media.SongTag;
 import slime.observe.StateObserver;
 import slime.observe.StateSubject;
 
+/**
+ * 
+ * @author dMacGit
+ *
+ * This MediaController Class handles interfacing the user input
+ * with the playing of the Song file.
+ * 
+ * It currently only supports playing .mp3 files.
+ * 
+ * It implements the StateObserver interface so that it can be notified
+ * of player control updates by the user. This observer has as Subject the
+ * MusicLibraryManager Class, and makes use of the Subjects callback method
+ * for sending any state changes for sync purposes, as well as when the song
+ * has finished playing.
+ */
 public class MediaController implements StateObserver
 {	
 	private StateSubject subject;
