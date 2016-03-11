@@ -1,4 +1,4 @@
-package slime.core;
+package slime.controller;
 
 import java.awt.Color;
 import java.awt.event.ActionEvent;
@@ -25,7 +25,7 @@ import javax.swing.Timer;
  * 
  */
 
-public class ScrollingTextLabel extends JPanel implements ActionListener 
+public class SongTagAnimator extends JPanel implements ActionListener 
 {
 
 	//Main delay variable in the timer object.
@@ -50,7 +50,7 @@ public class ScrollingTextLabel extends JPanel implements ActionListener
      * 
      * NOTE: Animation area, has been set as the length of the string
      */
-    public ScrollingTextLabel(String s, int n) {
+    public SongTagAnimator(String s, int n) {
         if (s == null || n < 1) {
             throw new IllegalArgumentException("Null string or n < 1");
         }

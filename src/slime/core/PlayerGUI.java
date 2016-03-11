@@ -23,8 +23,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
-
-
+import slime.controller.SongTagAnimator;
+import slime.controller.SongTimeController;
 import slime.managers.MusicLibraryManager;
 import slime.media.PlayState;
 import slime.media.Song;
@@ -79,8 +79,8 @@ public class PlayerGUI extends JPanel implements GuiSubject
     private SongTag currentSongTag = null;
     private final long TimeStarted;
     private long timeOfLastAction;
-    private ScrollingTextLabel scrollingLabel;
-    private SongTimeUpdater songTimeUpdater;
+    private SongTagAnimator scrollingLabel;
+    private SongTimeController songTimeUpdater;
     
     private JLabel scrollingTitleLabel;
     
@@ -123,9 +123,10 @@ public class PlayerGUI extends JPanel implements GuiSubject
         defaultStringLabel.setForeground(Color.WHITE);
         defaultStringLabel.setPreferredSize(new Dimension(DEFAULT_STRING_LABEL_W,DEFAULT_STRING_LABEL_H));
         
-        scrollingLabel = new ScrollingTextLabel("Starting up... ", 25);
+        final String StartingMessage = "Ready to go! Click Play...";
+        scrollingLabel = new SongTagAnimator(StartingMessage, 90);
         
-        songTimeUpdater = new SongTimeUpdater(0);
+        songTimeUpdater = new SongTimeController(0);
         
         scrollingLabel.setPreferredSize(new Dimension(SONG_NAME_W,DEFAULT_STRING_LABEL_H));
         scrollingLabel.setMinimumSize(new Dimension(SONG_NAME_W,DEFAULT_STRING_LABEL_H));

@@ -1,4 +1,4 @@
-package slime.core;
+package slime.controller;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
@@ -10,7 +10,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
-public class SongTimeUpdater extends JPanel implements ActionListener
+public class SongTimeController extends JPanel implements ActionListener
 {
 	private Timer seconds;
 	private TimerTask secondsUpdating;
@@ -28,7 +28,7 @@ public class SongTimeUpdater extends JPanel implements ActionListener
     
 	private boolean isPaused = false;
     
-	public SongTimeUpdater(int songDuration) 
+	public SongTimeController(int songDuration) 
 	{
 		this.songDuration = songDuration; 
 		
