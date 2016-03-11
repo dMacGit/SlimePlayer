@@ -19,20 +19,26 @@ import slime.observe.StateObserver;
 import slime.observe.StateSubject;
 
 /**
- * 
- * @author dMacGit
- *
+ * <p><b>
  * This MediaController Class handles interfacing the user input
- * with the playing of the Song file.
- * 
- * It currently only supports playing .mp3 files.
- * 
- * It implements the StateObserver interface so that it can be notified
- * of player control updates by the user. This observer has as Subject the
- * MusicLibraryManager Class, and makes use of the Subjects callback method
+ * with the playing of the Song file. It currently only supports playing .mp3 files.</b>
+ * <p>
+ * It implements the {@link StateObserver } interface so that it can be notified
+ * of player control updates by the user. This observer has (as its Subject), the
+ * {@link MusicLibraryManager } Class, and makes use of the Subjects callback method
  * for sending any state changes for sync purposes, as well as when the song
  * has finished playing.
+ * 
+ * <p>
+ * Main constructor is {@link #MediaController(boolean shuffle, boolean repeat, boolean initialized)}<BR>
+ * Default constructor is {@link #MediaController()}
+ * 
+ * @author dMacGit
+ * 
+ * @see StateObserver
+ * @see MusicLibraryManager
  */
+
 public class MediaController implements StateObserver
 {	
 	private StateSubject subject;
@@ -46,6 +52,15 @@ public class MediaController implements StateObserver
 	private boolean threadStarted = false;
 	private PlayState playState = PlayState.INITIALIZED;
 	
+	/**
+	 * 
+	 * This is the main Constructor for the MediaController class.
+	 * 
+	 * @param shuffle (Required) Boolean value that specifies if shuffle is active.
+	 * @param repeat (Required) Boolean value that specifies if repeat is active.
+	 * @param initialized (Required) Used to make sure the Controller starts
+	 * in the initialized play-state.
+	 */
 	public MediaController(boolean shuffle, boolean repeat, boolean initialized) 
 	{
 		this.repeat = repeat;
@@ -58,10 +73,18 @@ public class MediaController implements StateObserver
 			
 		}
 	}
+	
+	/**
+	 * This is the default no parameter constructor.
+	 * 
+	 * @return new MediaController(false, false, true)
+	 * @see {@link #MediaController(Boolean shuffle, Boolean repeat, PlayState initialized) }
+	 */
 	public MediaController() 
 	{
 		this(false,false,true);
 	}
+	
 	
 	private class PlayerThread implements Runnable
 	{

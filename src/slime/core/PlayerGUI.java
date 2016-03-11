@@ -1,52 +1,50 @@
 package slime.core;
 
-import java.awt.AWTException;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
-import java.awt.Image;
-import java.awt.SystemTray;
 import java.awt.Toolkit;
-import java.awt.TrayIcon;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.TimerTask;
+
 
 import javax.swing.ImageIcon;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.Timer;
-
 import slime.controller.SongTagAnimator;
 import slime.controller.SongTimeController;
 import slime.managers.MusicLibraryManager;
 import slime.media.PlayState;
 import slime.media.Song;
 import slime.media.SongTag;
-import slime.observe.AnimatorObserver;
-import slime.observe.AnimatorSubject;
 import slime.observe.GuiObserver;
 import slime.observe.GuiSubject;
-import slime.observe.StateObserver;
-import slime.observe.StateSubject;
-import slime.utills.ActionTimer;
-import slime.utills.ComponentMover;
-import slime.utills.ImageLoader;
 import slime.utills.ShrinkImageToSize;
 
 /**
  * 
- * Main player class.
+ * <b>
+ * The main player GUI class.
+ * </b>
+ * <p>
+ * As this maintains all the user interface functionality, it contains an inner {@link MouseListener}
+ * class for handling GUI button presses as well as implements the {@link GuiSubject} interface as it
+ * is a Subject class for Observers.  
+ * <p>
+ * Sets up the main GUI: Icon file directories, JPanel creation and configuration, Instantiates the
+ * {@link MusicLibraryManager} Object and registers it as an {@link GuiObserver} as well as its parent.
  * 
- * Sets up main GUI, Icon file directories, as well as user Media location.
- * Handles all button events and manages all Observers to the media player and 
- * animation events.
+ * @author dMacGit
+ * 
+ * @see MouseListener
+ * @see MusicLibraryManager
+ * @see GuiSubject
+ * @see GuiObserver
+ * 
  */
 
 public class PlayerGUI extends JPanel implements GuiSubject
@@ -109,7 +107,6 @@ public class PlayerGUI extends JPanel implements GuiSubject
         this.setLayout(new FlowLayout(FlowLayout.CENTER,0,0));
         
         listenerOne = new mouseListener();
-        
         playPause = new JLabel(PLAY_ICON);
         skip = new JLabel(SKIP_ICON);
         exit = new JLabel(EXIT_ICON);
