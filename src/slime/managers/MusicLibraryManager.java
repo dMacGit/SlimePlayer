@@ -13,7 +13,6 @@ import javax.swing.JLabel;
 import org.farng.mp3.TagException;
 
 import slime.controller.MediaController;
-import slime.controller.ScrollingTextController;
 import slime.media.PlayState;
 import slime.media.Song;
 import slime.media.SongList;

@@ -8,7 +8,7 @@ import slime.media.Song;
  * This is the interface for each of the classes requiring
  * updates to and from the {@link MusicLibraryManager} class.</B>
  * <p>
- * It contains useful methods for the Subject class to query each Observer. Such as the Observer's Name
+ * It contains useful methods for the Subject class to query each Observer; <br> Such as the Observer's Name
  * ( {@link #getStateObserverName()} ), its current PlayeSate ( {@link #getCurrentPlayState()} ), assigning
  * itself as the parentSubject of that observer ( {@link #setParentSubject(StateSubject)} ), as well
  * as the main update method used by the Subject class for PlayState changes and songFile changes 

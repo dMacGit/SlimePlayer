@@ -9,24 +9,33 @@ import javax.swing.JPanel;
 import javax.swing.Timer;
 
 /**
+ * <b>
  * This is the class which handles the animation of the scrolling text in the
  * GUI Bar.
- *  
+ * </b>
+ * <p>
  * It takes a pre-formatted string as argument in its constructor, sets it a text in a JLabel,
  * and then sets up a timer object.
  * The timer then animates the string, by modifying the character(s) position in the label every
  * 'n' milliseconds defined by the variable "RATE" and the calculation (1000 / RATE).
- * 
+ * </p>
+ * <p>
  * This seems to meet the requirements of the animation properties that I had in mind.
  * 
  * NOTE: - 	There seems to be a small UI-Bug when the String / Song Info is under a certain
  * 			number of characters in length. Where by the point at which the characters dissapear
- * 			off-screen shifts / moves by an unknown number of characters, as the string is animated. 
- * 
+ * 			off-screen shifts / moves by an unknown number of characters, as the string is animated.
+ * </p>
+ * @author dMacGit
  */
 
 public class SongTagAnimator extends JPanel implements ActionListener 
 {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5885139792333551690L;
 
 	//Main delay variable in the timer object.
 	private static final int RATE = 16;

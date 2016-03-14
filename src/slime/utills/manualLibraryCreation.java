@@ -46,18 +46,25 @@ import org.tritonus.share.sampled.file.TAudioFileFormat;
 import slime.media.SongTag;
 import slime.media.WrongFileTypeException;
 
+/**
+ * <b>
+ * Class for manually adding directories and creating the required text files
+ * for the application to operate.
+ * </b>
+ * 
+ * <p>
+ * Contains GUI elements so user can edit JTextfield to required path of directory, or
+ * press the Add Folder JButton to open up a JFileChooser, and select the desired
+ * directory. Once the user is satisfied, the Accept button can be pressed to start
+ * the validation/Searching and file writing procedures.
+ * </p>
+ * 
+ * @author dMacGit
+ * 
+ */
 public class manualLibraryCreation extends JPanel implements ActionListener
 {
-    /**
-	 * Class for manually adding directories and creating the required text files
-	 * for the application to operate.
-	 * 
-	 * Contains GUI elements so user can edit JTextfield to required path of directory, or
-	 * press the Add Folder JButton to open up a JFileChooser, and select the desired
-	 * directory. Once the user is satisfied, the Accept button can be pressed to start
-	 * the validation/Searching and file writing procedures.
-	 * 
-	 */
+    
 	
 	private static final long serialVersionUID = -1522556823783906998L;
 	private static final boolean DEBUG = false;

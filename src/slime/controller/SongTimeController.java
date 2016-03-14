@@ -12,22 +12,31 @@ import javax.swing.Timer;
 
 /**
  * 
- * @author dMacGit
- *
+ * 
+ * <b>
  * This class handles the updating of the current time passed in the
  * song being played, which is used in the GUI.
- * 
+ * </b>
+ * <p>
  * I am not really worried about the clock ticking over 59 minutes and 59 seconds,
  * and as such the display and code only supports 00-59 of both minutes and seconds.
- * 
+ * </p>
+ * <p>
  * Note:	The songDuration argument in the Constructor and the updater method currently
  * 			are not used for anything. Its simply there for use in the future if there is
  * 			a need for it.
+ * </p>
+ * 
+ * @author dMacGit
  */
 
 public class SongTimeController extends JPanel implements ActionListener
 {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7152956559593217709L;
 	private Timer seconds;
 	private TimerTask secondsUpdating;
 	private byte songMinutes, songSeconds, pausedSeconds, pausedMinutes;
