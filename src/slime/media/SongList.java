@@ -4,6 +4,22 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * <b>
+ * The SongList is a possible future class for holding the list of playlist songs 
+ * </b>
+ * <p>
+ * This needs finishing, as its still work in progress. Also needs to be evaluated if
+ * it is going to be usable with the current state of the SlimePlayer project. The idea
+ * was to create a specific data structure for holding Songs in a list.
+ * </p>
+ * 
+ * @see Song
+ * 
+ * @author dMacGit
+ *
+ */
+
 public class SongList
 {
 	private int size = 0;

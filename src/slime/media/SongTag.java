@@ -24,10 +24,20 @@ import slime.utills.ActionTimer;
 import slime.utills.LibraryHelper;
 import slime.utills.MusicFileFilter;
 
-/*
+/**
+ * <B>
  * The SongTag class maintains access to the Tag information off the
  * piece of music as well as error checking and null checking upon
  * Tag creation.
+ * </B>
+ * <p>
+ * Provides multiple constructors, some of which are being <b>Deprecated</b>. 
+ * Needs a read through and cleanup. 
+ * </p>
+ * 
+ * @see TagVersion
+ * 
+ * @author dMacGit
  */
 
 public class SongTag 
@@ -40,23 +50,51 @@ public class SongTag
 	private final String filePath;
 	private final boolean Use_Alternative_Reader;
 	
-	/*
-	 * Main constructor of the class.
+	/**
+	 * @deprecated 
+	 * <b>Default constructor of the class.</b>
 	 * 
-	 * Once the Inputed .mp3 file has been validated, calls the extractMetaTagInfo method.
-	 * Extract method does Tag version checks, then correctly extracts and individually
-	 * checks the tag data by using the appropriate VadidateData(String) OR ValidateData(Int)
-	 * methods. 
+	 * <p>
+	 * Simply calls the main constructor {@link #SongTag(File, MusicFileFilter, File)}
+	 * </p> 
 	 * 
-	 * [WrongFileTypeInfo] Error Thrown if not of .mp3 file type.
-	 * [IOException] Error Thrown if general Error when reading the file.
-	 * [TagException] Error Thrown if error when reading the getName tag field.
+	 * @throws WrongFileTypeInfo Error Thrown if not of .mp3 file type.
+	 * @throws IOException Error Thrown if general Error when reading the file.
+	 * @throws TagException Error Thrown if error when reading the getName tag field.
+	 * 
+	 * @author dMacGit
 	 * 
 	 */
 	public SongTag(File songFile)throws WrongFileTypeException, IOException, TagException
 	{
 		this(songFile,new MusicFileFilter(),new File(songFile.getParent()));
 	}
+	
+	/**
+	 * @deprecated 
+	 * <b>Main constructor of the class.</b>
+	 * <p>
+	 * Takes as arguments the songFile File object, the filter MusicFileFilter object, as well as
+	 * the fileDirectory file object.
+	 * </p>
+	 * <p>
+	 * Once the Inputed .mp3 file has been validated, calls the extractMetaTagInfo method.
+	 * Extract method does Tag version checks, then correctly extracts and individually
+	 * checks the tag data by using the appropriate VadidateData(String) OR ValidateData(Int)
+	 * methods.
+	 * </p>
+	 * 
+	 * @param songFile The songFile Object, it holds the information required to generate the SongTag
+	 * @param filter The filter is used when checking the music file for validation
+	 * @param fileDirectory This is the directory file object pointing to where the songFile is in storage 
+	 * 
+	 * @throws WrongFileTypeInfo Error Thrown if not of .mp3 file type.
+	 * @throws IOException Error Thrown if general Error when reading the file.
+	 * @throws TagException Error Thrown if error when reading the getName tag field.
+	 * 
+	 * @author dMacGit
+	 * 
+	 */
 	public SongTag(File songFile, MusicFileFilter filter, File fileDirectory)throws WrongFileTypeException, IOException, TagException
 	{
 		audioFile = songFile;

@@ -26,6 +26,25 @@ import slime.observe.StateSubject;
 import slime.utills.ActionTimer;
 import slime.utills.FileIO;
 
+/**
+ * <B>
+ * This class managers the entire music playlist or library derived from music information
+ * saved in the holdings file, which is in the data folder of the root directory.
+ * </B>
+ * <p>
+ * MusicLibraryManager has two constructors. The first {@link #MusicLibraryManager(String dir)}
+ * takes a directory as argument. This is used as the root music directory. The second {@link #MusicLibraryManager(SongList)}
+ * takes as input a {@link slime.media.PlayList }
+ * </p>
+ * 
+ * @see GuiSubject
+ * @see StateSubject
+ * @see MediaController
+ * 
+ * 
+ * @author dMacGit
+ *
+ */
 public class MusicLibraryManager implements StateSubject, GuiObserver
 {
 	private GuiSubject parentSubject;
