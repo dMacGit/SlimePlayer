@@ -1,8 +1,16 @@
 package slime.media;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 public class MusicLibrary
 {
 	private SongList libraryList;
+	
+	//The runnable class to search the library for search terms
+	private LibrarySearch runnableSearcher;
+	
+	//Search results collection
 	
 	private final static String DEFAULT_MUSIC_DIRECTORY = "%USERPROFILE%\\My Documents\\My Music";
 	
@@ -33,6 +41,32 @@ public class MusicLibrary
 		 */
 		
 	}
+	
+	private ArrayList<SongTag> itemSearch(SearchType type, String term) throws IllegalArgumentException
+	{
+		if(type == null || (term == null || term.compareToIgnoreCase("")==0) ){
+			throw new IllegalArgumentException();
+		}
+		
+		if(type == SearchType.Artist && (term != null || term.compareToIgnoreCase("")==0) )
+		{
+			if(runnableSearcher == null)
+			{
+				runnableSearcher = new LibrarySearch(type, term);
+			}
+			else
+			{
+				runnableSearcher.clearSearch();
+				runnableSearcher.newSearch(type, term);
+			}
+				
+			
+		}
+		return new ArrayList<SongTag>();
+	}
+	
+	
+	
 	
 	private void generateMusicLibrary()
 	{

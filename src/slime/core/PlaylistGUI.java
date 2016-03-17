@@ -30,6 +30,9 @@ import slime.utills.ShrinkImageToSize;
 
 public class PlaylistGUI extends JPanel implements MouseListener, ActionListener
 {
+	//This is the dir path to the images folder		---> Change if necessary!
+    public static String THE_FOLDER_DIR = "images/";
+    
     private MusicLibraryManager player;
     private LinkedList<String> mapOfSongs;
     private final int MAJOR_WIDTH = 500;
@@ -45,7 +48,7 @@ public class PlaylistGUI extends JPanel implements MouseListener, ActionListener
     private boolean state = false;
     private JFrame frame;
     private JPanel windowControlls;
-    private ImageIcon CLOSE_BOX = ShrinkImageToSize.shrinkImageToSize(new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Icon_Images/Close_Icon.png"))),23,23);
+    private ImageIcon CLOSE_BOX = ShrinkImageToSize.shrinkImageToSize(new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource(THE_FOLDER_DIR+"Close_Icon.png"))),23,23);
     private JLabel close_Box;
     private JPanel sliderPanel;
     private int MaxExt;

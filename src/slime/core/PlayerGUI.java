@@ -259,9 +259,9 @@ public class PlayerGUI extends JPanel implements GuiSubject
                 {
                     if(playListWindow.isOpen())
                     {
-                        System.out.println("Playlist is invisible!");
-                        playListWindow.open();
-                        System.out.println("Playlist is set to visible!");
+                        //System.out.println("Playlist is invisible!");
+                        //playListWindow.open();
+                        //System.out.println("Playlist is set to visible!");
                     }
                 }
             }

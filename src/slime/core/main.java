@@ -46,8 +46,10 @@ public class main
             int width = (int)dimension.getWidth() / 2;
             int height = (int)dimension.getHeight() / 2;
             gui = new PlayerGUI();
-            //gui.setBackground(Color.BLACK);
+
             JFrame frame = new JFrame("My MP3 Player");
+            /*MenuBar menuBar = new MenuBar(gui);
+            frame.setJMenuBar(menuBar);*/
             //gui.setPreferredSize(new Dimension(500,32));
             if (SystemTray.isSupported())
             {

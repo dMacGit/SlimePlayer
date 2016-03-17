@@ -13,6 +13,7 @@ import javax.swing.JLabel;
 import org.farng.mp3.TagException;
 
 import slime.controller.MediaController;
+import slime.media.PlayList;
 import slime.media.PlayState;
 import slime.media.Song;
 import slime.media.SongList;
@@ -27,13 +28,13 @@ import slime.utills.FileIO;
 
 /**
  * <B>
- * This class managers the entire music playlist or library derived from music information
+ * This class managers the entire music playlist or library, derived from music information
  * saved in the holdings file, which is in the data folder of the root directory.
  * </B>
  * <p>
  * MusicLibraryManager has two constructors. The first {@link #MusicLibraryManager(String dir)}
  * takes a directory as argument. This is used as the root music directory. The second {@link #MusicLibraryManager(SongList)}
- * takes as input a {@link slime.media.PlayList }
+ * takes as input a {@link PlayList }
  * </p>
  * 
  * @see GuiSubject
@@ -54,9 +55,21 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
 	private List<StateObserver> stateObserverList = new ArrayList<StateObserver>();
 	//private List<AnimatorObserver> animatorObserverList = new ArrayList<AnimatorObserver>();
 	
-    private ArrayList<String> songTags;
+    //Object that holds the song meta data or Tags information
+	private ArrayList<String> songTags;
+    
+	//
     private ArrayList<Song> defaultPlaylist;
+    
+    //PlayListHistory keeps track of played or skipped songs
     private LinkedList<Integer> playListHistory;
+    
+    /*
+     * Need to hold a playlist object with SongTags.
+     * 
+     * This acts as the general library playlist.
+     */
+    
     
     /*
      * Needed to carry the names of the observers classes in order to keep track of what observer
@@ -77,7 +90,9 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
     
     /*
      * Observer call-backs will sync up all observers and modify these values
-     * at each stage of the Manager State change
+     * at each stage of the Manager State change.
+     * 
+     * TODO: Needs removing!
      */
     private boolean observersSyncReady = false;
     private boolean observersSyncInit = false;
@@ -104,7 +119,6 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
     private Thread songThread;
     private playlistManagerThread playListThread;
     
-    //private ScrollingTextController label;
     private JLabel scrollingTitleLabel;
     private int labelWidth;
     private final String HOLDINGS_FILE_NAME = "Lib_MP3player.txt", SONG_PATHS_FILE_NAME = "SongPaths.txt";
@@ -125,36 +139,32 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
         SONG_PATHS_FILE_PATH = FILE_DIR+SONG_PATHS_FILE_NAME;
         
         mediaController = new MediaController();
-        //animationController = new AnimationController();
+
         System.out.println(MediaController.class.getName()+" created!");
-        //System.out.println(AnimationController.class.getName()+"  created!");
+
         
         observerNamesList.add(MediaController.class.getName());
-        //observerNamesList.add(AnimationController.class.getName());
+
         observersCalledback.put(MediaController.class.getName(),false);
-        //observersCalledback.put(AnimationController.class.getName(),false);
+
         
         
         songTags = new ArrayList<String>();
         listOfSongs = new SongList();
-        /*
-        scrollingTitleLabel = new JLabel("");
-        scrollingTitleLabel.setPreferredSize(new Dimension(225,25));
-        scrollingTitleLabel.setMinimumSize(new Dimension(225,25));
-        scrollingTitleLabel.setMaximumSize(new Dimension(225,25));
-        scrollingTitleLabel.setForeground(Color.WHITE);*/
+
+        
         populateLibrary();
         
         //Create the default playlist, in order, no shuffle.
         defaultPlaylist = (ArrayList<Song>) listOfSongs.getListOfSongs();
+        
         //Initialize the playlist history stack
         playListHistory = new LinkedList<Integer>();
         System.out.println("The list of songs is this large: "+listOfSongs.getSize()+" Songs!");
         playListThread = new playlistManagerThread(defaultPlaylist,playListHistory);
         playListThread.start();
         
-        //this.registerStateObserver(animationController);
-        //animationController.setParentSubject(this);
+        
         this.registerStateObserver(mediaController);
         mediaController.setParentSubject(this);
         
