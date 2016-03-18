@@ -2,16 +2,19 @@ package slime.media;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
  * <b>
- * The SongList is a possible future class for holding the list of playlist songs 
+ * The SongList class is the Data-structure for holding all of the Song objects in a
+ * list object. 
  * </b>
  * <p>
- * This needs finishing, as its still work in progress. Also needs to be evaluated if
- * it is going to be usable with the current state of the SlimePlayer project. The idea
- * was to create a specific data structure for holding Songs in a list.
+ * This Data-structure is used inside a PlayList object for allowing for adding and removing
+ * of Song objects from the list of playable songs, all while maintaining a total play duration.
  * </p>
  * 
  * @see Song
@@ -20,62 +23,70 @@ import java.util.List;
  *
  */
 
-public class SongList
+public class SongList extends ArrayList<Song>
 {
-	private int size = 0;
-	private ArrayList<Song> listOfSongs;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3826767102563303952L;
+
 	private int totalPlayTime = 0;
 	
-	public SongList(Song[] songTagsArray) 
+	public SongList(Collection<Song> songTagsCollection) 
 	{
-		listOfSongs = new ArrayList<Song>();
-		listOfSongs = (ArrayList<Song>) Arrays.asList(songTagsArray);
+		super();
 		
-		size = listOfSongs.size();
-		
-		for(Song nextSong : listOfSongs){
-			totalPlayTime += nextSong.getMetaTag().getDurration();
+		if(songTagsCollection != null && !songTagsCollection.isEmpty())
+		{
+			super.addAll(songTagsCollection);
+			Iterator<Song> CollectionIterator = songTagsCollection.iterator();
+			while(CollectionIterator.hasNext())
+			{
+				totalPlayTime += CollectionIterator.next().getMetaTag().getDurration();
+			}
 		}
 	}
+	
 	public SongList()
 	{
-		listOfSongs = new ArrayList<Song>();
+		this(null);
 	}
 	
-	public void setCappacity(int size)
+	
+	public void addTrack(Song songToAdd)
 	{
-		if(isEmpty())
-		{
-			this.size = size;
-		}
-	}
-	
-	public boolean isEmpty(){
-		if(this.size > 0){
-			return false;
-		}
-		else return true;
-	}
-	
-	public void addSong(Song songToAdd)
-	{
-		listOfSongs.add(songToAdd);
-		size++;
+		super.add(songToAdd);
 		totalPlayTime += songToAdd.getMetaTag().getDurration();
 	}
-
-	public int getSize() {
-		return size;
+	
+	public void removeTrack(Song songToAdd)
+	{
+		super.remove(songToAdd);
+		totalPlayTime -= songToAdd.getMetaTag().getDurration();
 	}
 
-	public List<Song> getListOfSongs() {
-		return listOfSongs;
+	public int getNumberOfTracks() {
+		return super.size();
 	}
 
 	public int getTotalPlayTime() {
 		return totalPlayTime;
 	}
 	
-	
+	public LinkedList<SongTag> getMapOfTags() throws Exception
+	{
+		final LinkedList<SongTag> tempLinkedList = new LinkedList<SongTag>();
+		if(!super.isEmpty())
+		{
+			Iterator<Song> CollectionIterator = super.iterator();
+			while(CollectionIterator.hasNext())
+			{
+				tempLinkedList.addLast(CollectionIterator.next().getMetaTag());
+			}
+		}
+		else throw new Exception();
+		
+		return tempLinkedList;
+	}
 
 }

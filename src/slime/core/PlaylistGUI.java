@@ -25,6 +25,7 @@ import javax.swing.SwingConstants;
 import javax.swing.Timer;
 
 import slime.managers.MusicLibraryManager;
+import slime.media.SongTag;
 import slime.utills.ComponentMover;
 import slime.utills.ShrinkImageToSize;
 
@@ -166,7 +167,7 @@ public class PlaylistGUI extends JPanel implements MouseListener, ActionListener
     }
     public void createList()
     {
-        generatePlaylist();
+        //generatePlaylist();
         for(int index = 0; index < rowData.length; index++)
         {
             jPanelPlaylistTemplate createRowPanel = new jPanelPlaylistTemplate();
@@ -310,12 +311,12 @@ public class PlaylistGUI extends JPanel implements MouseListener, ActionListener
      * This method is used in order to initialize the playlist data structures
      * used for displaying the playlist in the player GUI.
      */
-    private void generatePlaylist()
+    /*private void generatePlaylist()
     {
-        mapOfSongs.addAll(player.getMapOfSong());
+        mapOfSongs.addAll( (LinkedList<SongTag>)(player.getMapOfSong()));
         rowData = new Object[mapOfSongs.size()][6];
         makeObjectArray(mapOfSongs.size());
-    }
+    }*/
     
     /*
      * Old code. Needs removal or replacing!

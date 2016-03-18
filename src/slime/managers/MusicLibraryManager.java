@@ -13,6 +13,7 @@ import javax.swing.JLabel;
 import org.farng.mp3.TagException;
 
 import slime.controller.MediaController;
+import slime.media.LibraryPlayList;
 import slime.media.PlayList;
 import slime.media.PlayState;
 import slime.media.Song;
@@ -49,20 +50,16 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
 {
 	private GuiSubject parentSubject;
 	
+	private static LibraryPlayList playerLibrary;
+	
 	//private AnimationController animationController;
 	private MediaController mediaController;
 	
 	private List<StateObserver> stateObserverList = new ArrayList<StateObserver>();
 	//private List<AnimatorObserver> animatorObserverList = new ArrayList<AnimatorObserver>();
 	
-    //Object that holds the song meta data or Tags information
-	private ArrayList<String> songTags;
     
-	//
-    private ArrayList<Song> defaultPlaylist;
     
-    //PlayListHistory keeps track of played or skipped songs
-    private LinkedList<Integer> playListHistory;
     
     /*
      * Need to hold a playlist object with SongTags.
@@ -94,12 +91,12 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
      * 
      * TODO: Needs removing!
      */
-    private boolean observersSyncReady = false;
-    private boolean observersSyncInit = false;
-    private boolean observersSyncPlay = false;
-    private boolean observersSyncStop = false;
-    private boolean observersSyncFin = false;
-    private boolean observersSyncClose = false;
+    private boolean observerSyncReady = false;
+    private boolean observerSyncInit = false;
+    private boolean observerSyncPlay = false;
+    private boolean observerSyncStop = false;
+    private boolean observerSyncFin = false;
+    private boolean observerSyncClose = false;
     
     //These are values changed by the guiObserver: User Pressed a button
     private boolean userPressedButton = false;
@@ -123,48 +120,28 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
     private int labelWidth;
     private final String HOLDINGS_FILE_NAME = "Lib_MP3player.txt", SONG_PATHS_FILE_NAME = "SongPaths.txt";
     private String HOLDINGS_FILE_PATH, SONG_PATHS_FILE_PATH, Durration, theCurrentSongTitle = null, FILE_DIR;
-    private String MEDIA_OBSERVER_NAME = "PlaySongsFormFolder";
-    private SongTag currentPlayingSongTag = null;
-    private SongList listOfSongs;
     private PlayState currentPlayState;
     private Song currentSong;
-    private String startDataDelimitor = "'['", midDataDelimitor = "','", endDataDelimitor = "']'";
-    private String characterSeperator = "&&";
 
     public MusicLibraryManager(String dir)
     {
-        FILE_DIR = dir+"/";
-        System.out.println("The library folder dir!"+FILE_DIR);
-        HOLDINGS_FILE_PATH = FILE_DIR+HOLDINGS_FILE_NAME;
-        SONG_PATHS_FILE_PATH = FILE_DIR+SONG_PATHS_FILE_NAME;
+    	playerLibrary = new LibraryPlayList();
+    	
+    	//Maybe populate library here!
+    	playerLibrary.createLibraryPlaylist();
+    	System.out.println("The list of songs is this large: "+playerLibrary.getTotalNumberTracks()+" Songs!");
         
         mediaController = new MediaController();
 
         System.out.println(MediaController.class.getName()+" created!");
-
         
         observerNamesList.add(MediaController.class.getName());
 
         observersCalledback.put(MediaController.class.getName(),false);
-
         
-        
-        songTags = new ArrayList<String>();
-        listOfSongs = new SongList();
-
-        
-        populateLibrary();
-        
-        //Create the default playlist, in order, no shuffle.
-        defaultPlaylist = (ArrayList<Song>) listOfSongs.getListOfSongs();
-        
-        //Initialize the playlist history stack
-        playListHistory = new LinkedList<Integer>();
-        System.out.println("The list of songs is this large: "+listOfSongs.getSize()+" Songs!");
-        playListThread = new playlistManagerThread(defaultPlaylist,playListHistory);
+        playListThread = new playlistManagerThread(playerLibrary);
         playListThread.start();
-        
-        
+             
         this.registerStateObserver(mediaController);
         mediaController.setParentSubject(this);
         
@@ -176,116 +153,38 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
     {
         HOLDINGS_FILE_PATH = FILE_DIR+HOLDINGS_FILE_NAME;
         SONG_PATHS_FILE_PATH = FILE_DIR+SONG_PATHS_FILE_NAME;
-        mediaController = new MediaController();
-        //animationController = new AnimationController();
-        songTags = new ArrayList<String>();
-        listOfSongs = playList;
+        mediaController = new MediaController();        
         
-        populateLibrary();
+        playerLibrary = new LibraryPlayList();
+    	
+    	//Maybe populate library here!
+    	playerLibrary.createLibraryPlaylist();
+    	System.out.println("The list of songs is this large: "+playerLibrary.getTotalNumberTracks()+" Songs!");
         
-        
-        //Create the default playlist, in order, no shuffle.
-        defaultPlaylist = (ArrayList<Song>) listOfSongs.getListOfSongs();
-        System.out.println("The list of songs is this large: "+listOfSongs.getSize()+" Songs!");
-        //Initialize the playlist history stack
-        playListHistory = new LinkedList<Integer>();
-        
-        playListThread = new playlistManagerThread(defaultPlaylist,playListHistory);
+        playListThread = new playlistManagerThread(playerLibrary);
         playListThread.start();
         
-        //this.registerStateObserver(animationController);
-        //animationController.setParentSubject(this);
         this.registerStateObserver(mediaController);
         mediaController.setParentSubject(this);
         
         System.out.println("Player has been Started!");
         
     }
-    public ArrayList<String> getMapOfSong()
+    public List<SongTag> getMapOfSong() throws Exception
     {
-        return songTags;
-    }
-    
-    public void populateLibrary()
-    {
-    	long startTime = 0;
-    	long addTimeStart = 0;
-    	Object[] libraryDataArray = null;
-    	try 
-    	{
-    		long startReadingFiles = ActionTimer.triggerTimedActionStart();
-    		libraryDataArray = FileIO.ReadData(this.HOLDINGS_FILE_PATH);
-    		System.out.println(HOLDINGS_FILE_PATH);
-    		System.out.println(ActionTimer.formatLastTimedAction("Read Files",ActionTimer.measurePreviouseActionTime(startReadingFiles, System.currentTimeMillis())));
-    		
-    		//To reduce initialization time set map size.
-    		
-    		long totalTimeForListCreation = 0;
-			for(int index = 0; index < libraryDataArray.length; index++)
-	    	{
-				songTags.add(libraryDataArray[index].toString());
-				
-				//File structure: [ data | data | data | data ],[ data ]
-				String[] mainDataArray = libraryDataArray[index].toString().split(midDataDelimitor);
-				String filePath = mainDataArray[1].substring(mainDataArray[1].indexOf(startDataDelimitor)+startDataDelimitor.length(),mainDataArray[1].indexOf(endDataDelimitor));
-				    				
-				final String wholeTagString = mainDataArray[0];
-				
-				String tempSubstring = wholeTagString.substring(wholeTagString.indexOf(startDataDelimitor)+startDataDelimitor.length(),wholeTagString.indexOf(endDataDelimitor));
-				String[] tagDataArray = null;
-				tagDataArray = tempSubstring.split(characterSeperator);
-				try 
-    			{
-    				long timeTaken = 0;
-    				addTimeStart = ActionTimer.triggerTimedActionStart();
-					listOfSongs.addSong(new Song(filePath,tagDataArray,true));
-					timeTaken = ActionTimer.measurePreviouseActionTime(addTimeStart, System.currentTimeMillis());
-					totalTimeForListCreation += timeTaken;
-				} 
-    			catch (WrongFileTypeException | TagException e)
-    			{
-					System.out.println("Error trying to build the Tag!");
-				}
-	    	}
-    		System.out.println(ActionTimer.formatLastTimedAction("Total time to add ",totalTimeForListCreation));    		
-		}
-    	catch (FileNotFoundException e) 
-    	{
-    		System.out.println("FileNotFoundException Populating Library! "+e.getMessage());
-		}
-    	catch (IOException e) 
-    	{
-    		System.out.println("IOException Populating Library! "+e.getMessage());
-		}
-    	
-    }
-    
-    private void arrayToString(Object[] arrayOfData){
-    	
-    	System.out.println("Starting To test the array! ");
-		
-		for(int stringIndex = 0; stringIndex < arrayOfData.length; stringIndex++)
-		{
-			//print out the array of data for debug purposes!
-			System.out.println("Index: [ "+stringIndex+" ] "+arrayOfData[stringIndex].toString()+",");
-		}
+        return playerLibrary.getSongTags();
     }
     
     public class playlistManagerThread extends Thread
-    {
-    	public ArrayList<Song> defaultPlaylist;
-    	public LinkedList<Integer> playListHistory;
-    	
+    {   	
     	//public Song currentSong;
     	public int currentIndex = -1, nextSongIndex = 0;
+    	private LibraryPlayList playerLibrary;
     	
-    	
-        public playlistManagerThread(ArrayList<Song> defaultPlaylist, LinkedList<Integer> playListHistory)
+        public playlistManagerThread(LibraryPlayList playerLibrary)
         {
-        	this.defaultPlaylist = defaultPlaylist;
-        	this.playListHistory = playListHistory;
+        	this.playerLibrary = playerLibrary;
         	currentPlayState = PlayState.INITIALIZED;
-        	currentSong = null;
         	System.out.println("The Playlist Manager Thread is created!");
         }
 
@@ -304,20 +203,6 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
 
                 }
             	
-            	if( userToggledShuffle )
-                {
-        			shuffle_Is_On = !shuffle_Is_On;
-					PLAY_STATE_CHANGED = !PLAY_STATE_CHANGED;
-					resetUserButtons();
-                }
-            	
-            	if( userToggledRepeat )
-                {
-        			repeat_Is_On = !repeat_Is_On;
-					PLAY_STATE_CHANGED = !PLAY_STATE_CHANGED;
-					resetUserButtons();
-                }
-            	
             	if(PLAY_STATE_CHANGED || SYNC_CHANGED)
             	{
             		/*	The initial state of the manager and the Animator and MediaController
@@ -332,100 +217,62 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
             			if(shuffle_Is_On)
                     	{
             				System.out.println("[Manager] SHUFFLE Active, Choosing random song");
-                			currentIndex = (int)(Math.random()*defaultPlaylist.size());
-                    		currentSong = defaultPlaylist.get(currentIndex);
-                    		System.out.println("[Manager] Randomly selected Index: "+currentIndex+" which holds: "+currentSong.getMetaTag().getRecordingTitle());
+            				playerLibrary.chooseNextTrack();
+                    		System.out.println("[Manager] Randomly selected Index: "+playerLibrary.getPlayCount()+" which holds: "+playerLibrary.getCurrentTrack_MetaData().getRecordingTitle());
                     	}
                     	else
                     	{
                     		System.out.println("[Manager] SHUFFLE Inactive, Choosing next song");
-                    		currentSong = defaultPlaylist.get(++currentIndex);
+            				playerLibrary.chooseNextTrack();
+            				System.out.println("[Manager] Selected Index: "+playerLibrary.getPlayCount()+" which holds: "+playerLibrary.getCurrentTrack_MetaData().getRecordingTitle());
+                    		//currentSong = defaultPlaylist.get(++currentIndex);
                     		
                     	}
             			currentPlayState = PlayState.READY;
-                		notifyAllStateObservers(currentSong,currentPlayState);
+                		notifyAllStateObservers(playerLibrary.getCurrentTrack(),currentPlayState);
             			PLAY_STATE_CHANGED = false;
             			resetUserButtons();
                     }
             		else if(currentPlayState == PlayState.READY)
                     {
             			System.out.println("[Manager] READY for Observer SYNC-READY");
-            			if(observersSyncReady)
+            			if(observerSyncReady)
                 		{
             				System.out.println("[Manager] Observer SYNC-READY Manager Changing to PLAYING");
                 			currentPlayState = PlayState.PLAYING;
                 			notifyAllStateObservers(null,currentPlayState);
-                			observersSyncReady = false;
+                			observerSyncReady = false;
                 			PLAY_STATE_CHANGED = false;
                 			SYNC_CHANGED = false;
-                		}
-            			
+                		}            			
                     }
             		else if(currentPlayState == PlayState.FINISHED)
                     {
                 		//First Check for end of playlist
-                		if( playListHistory.size()!=defaultPlaylist.size())
+                		if( playerLibrary.chooseNextTrack() )
                 		{
-                			if(shuffle_Is_On)
-                        	{
-                    			//Add last played song to history
-                    			playListHistory.addLast(currentIndex);
-                    			
-                    			//currentIndex = nextSongIndex;
-                    			//Randomly choose next index, and check for already played
-                    			
-                    			boolean randomized = false;
-                    			
-                    			while(!randomized)
-                    			{
-                    				int tempIndex = (int)(Math.random()*defaultPlaylist.size());
-                        			System.out.println("Randomly Choosing number: "+tempIndex);
-                        			
-                    				if(!playListHistory.contains(tempIndex))
-	                    			{
-	                    				currentIndex = tempIndex;
-	                    				randomized = true;
-	                    			}
-                    			}
-                    			
-                        		currentSong = defaultPlaylist.get(currentIndex);
-                        		currentPlayState = PlayState.READY;
-                        		PLAY_STATE_CHANGED = false;
-                        		observersSyncFin = false;
-                        		
-                        		notifyAllStateObservers(currentSong,currentPlayState);              		
-                        	}
-                        	else
-                        	{
-                        		//Add last played song to history
-                        		playListHistory.addLast(currentIndex);
-                        		
-                        		currentIndex++;
-                        		currentSong = defaultPlaylist.get(currentIndex);
-                        		currentPlayState = PlayState.READY;
-                        		PLAY_STATE_CHANGED = false;
-                        		notifyAllStateObservers(currentSong,currentPlayState);
-                        	}
-                        	
-                			currentPlayingSongTag = currentSong.getMetaTag();
-        					System.out.println("Current Song / Next Song to play: "+currentPlayingSongTag.getSongTitle());
-
-                            int checkTime = (currentPlayingSongTag.getDurration())/2;
-                            int realTime = (checkTime%60);
-                            System.out.println(currentPlayingSongTag.getSongTitle()+" <=["+Durration+"]=> "+checkTime+" ---> "+(int)(checkTime/60)+":"+realTime);
-
+							currentPlayState = PlayState.READY;
+							PLAY_STATE_CHANGED = false;
+							observerSyncFin = false;
+							notifyAllStateObservers(playerLibrary.getCurrentTrack(), currentPlayState);          		
                         }
-                		else
-                		{
-                			//Reached end of Playlist
-                		}
-                		//PLAY_STATE_CHANGED = !PLAY_STATE_CHANGED;
+                        else
+                        {
+							currentPlayState = PlayState.READY;
+							PLAY_STATE_CHANGED = false;
+							notifyAllStateObservers(playerLibrary.getCurrentTrack(), currentPlayState);
+                        }                        	
+						System.out.println("Current Song / Next Song to play: "
+								+ playerLibrary.getCurrentTrack_MetaData().getSongTitle());
+						int checkTime = (playerLibrary.getCurrentTrack_MetaData().getDurration()) / 2;
+						int realTime = (checkTime % 60);
+						System.out.println(playerLibrary.getCurrentTrack_MetaData().getSongTitle() + " <=[" + Durration
+								+ "]=> " + checkTime + " ---> " + (int) (checkTime / 60) + ":" + realTime);
                     }
-            		else if(currentPlayState == PlayState.PLAYING && observersSyncPlay)
+            		else if(currentPlayState == PlayState.PLAYING && observerSyncPlay)
                     {
-            			observersSyncPlay = false;
+            			observerSyncPlay = false;
 						PLAY_STATE_CHANGED = !PLAY_STATE_CHANGED;
-						
                     }
             		else if(currentPlayState == PlayState.PLAYING && userPressedPause)
                     {
@@ -433,7 +280,6 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
 						notifyAllStateObservers(null, currentPlayState);
 						PLAY_STATE_CHANGED = !PLAY_STATE_CHANGED;
 						resetUserButtons();
-						
                     }
             		else if(currentPlayState == PlayState.PAUSED && userPressedPlay)
                     {
@@ -447,18 +293,9 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
             			currentPlayState = PlayState.READY;
             			PLAY_STATE_CHANGED = !PLAY_STATE_CHANGED;
             			notifyAllStateObservers(null, PlayState.SKIPPED_FORWARDS);
-						
 						resetUserButtons();
                     }
-            		/*else if(userPressedStop)
-            		{
-            			currentPlayState = PlayState.STOPPED;
-            			SYNC_CHANGED = false;
-            			System.out.println("[ Manager ] Is Now "+currentPlayState.toString());
-            			PLAY_STATE_CHANGED = false;
-            			notifyAllStateObservers(null, currentPlayState);
-            			resetUserButtons();
-            		}*/
+
             		else if(userPressedClose)
             		{
             			currentPlayState = PlayState.SHUTDOWN;
@@ -470,14 +307,12 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
             		}
             		else if(currentPlayState == PlayState.SHUTDOWN)
             		{
-            			if(observersSyncClose)
+            			if(observerSyncClose)
             			{
             				//Fully shut down the program!
             				System.out.println("[ Manager ] Observers Have Stopped! Deregistering...");
-            				//deregisterStateObserver(animationController);
             				deregisterStateObserver(mediaController);
             				System.out.println("[ Manager ] Observers Deregistered");
-            				//animationController = null;
             				mediaController = null;
             				System.out.println("[ Manager ] Closing Manager Thread!");
             				
@@ -486,22 +321,6 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
             				System.out.println("[ Manager ] GUI Callback... ");
             			}
             		}
-            		/*else if(currentPlayState == PlayState.STOPPED)
-            		{
-            			if(observersSyncStop)
-            			{
-            				//Fully shut down the program!
-            				System.out.println("[ Manager ] Observers Have Stopped! Deregistering...");
-            				deregisterStateObserver(animationController);
-            				deregisterStateObserver(mediaController);
-            				System.out.println("[ Manager ] Observers Deregistered");
-            				animationController = null;
-            				mediaController = null;
-            				System.out.println("[ Manager ] Closing Manager Thread!");
-            				STOP_MANAGER = true;
-            				parentSubject.guiCallback(currentPlayState, null);
-            			}
-            		}*/
             	}
             	else
             	{
@@ -531,126 +350,14 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
         userSkippedBack = false;
         userPressedClose = false;
     }
-
     
-    private void checkObserverSync(String observerName, PlayState state)
-    {
-    	System.out.println("Checking observer sync for state: "+state.toString());
-    	if(state == PlayState.READY)
-    	{
-    		System.out.println(observerName+" trying to sync!");
-    		if(observersCalledback.containsKey(observerName) && !observersCalledback.get(observerName)){
-    			System.out.println(observerName+" has Synced!");
-    			observersCalledback.replace(observerName, true);
-    		}
-
-    		if( observersCalledback.get(observerNamesList.get(0)))
-    		{
-    			observersSyncReady = true;
-    			PLAY_STATE_CHANGED = true;
-    			SYNC_CHANGED = true;
-    			System.out.println("Both Observer have Synced! ");
-    			observersCalledback.replace(observerNamesList.get(0),false);
-    			//observersCalledback.replace(observerNamesList.get(1),false);
-    			
-    		}
-    	}
-    	else if(state == PlayState.PLAYING)
-    	{
-    		System.out.println(observerName+" trying to sync!");
-    		if(observersCalledback.containsKey(observerName) && !observersCalledback.get(observerName)){
-    			System.out.println(observerName+" has Synced!");
-    			observersCalledback.replace(observerName, true);
-    		}
-
-    		if( observersCalledback.get(observerNamesList.get(0)) )
-    		{
-    			observersSyncPlay = true;
-    			PLAY_STATE_CHANGED = true;
-    			SYNC_CHANGED = true;
-    			System.out.println("Both Observer have Synced! ");
-    			observersCalledback.replace(observerNamesList.get(0),false);
-    			observersCalledback.replace(observerNamesList.get(1),false);
-    		}
-    	}
-    	else if(state == PlayState.INITIALIZED)
-    	{
-    		System.out.println(observerName+" trying to sync!");
-    		if(observersCalledback.containsKey(observerName) && !observersCalledback.get(observerName)){
-    			System.out.println(observerName+" has Synced!");
-    			observersCalledback.replace(observerName, true);
-    		}
-
-    		if( observersCalledback.get(observerNamesList.get(0)) )
-    		{
-    			observersSyncInit = true;
-    			PLAY_STATE_CHANGED = true;
-    			SYNC_CHANGED = true;
-    			System.out.println("Both Observer have Synced! ");
-    			observersCalledback.replace(observerNamesList.get(0),false);
-    			//observersCalledback.replace(observerNamesList.get(1),false);
-    		}
-    	}
-    	/*else if(state == PlayState.STOPPED)
-    	{
-    		int totalObserversStop = 0;
-    		for(StateObserver observer :stateObserverList)
-    		{
-    			if(observer.getCurrentPlayState() == PlayState.STOPPED){
-    				totalObserversStop++;
-    			}
-    		}
-    		System.out.println("Sync: "+totalObserversStop+" of "+stateObserverList.size());
-    		if(totalObserversStop == stateObserverList.size())
-    		{
-    			observersSyncStop = true;
-    			PLAY_STATE_CHANGED = true;
-    			SYNC_CHANGED = true;
-    			System.out.println("--> Should now have sync stop");
-    		}
-    	}*/
-    	else if(state == PlayState.FINISHED)
-    	{
-    		int totalObserversFin = 0;
-    		for(StateObserver observer :stateObserverList)
-    		{
-    			if(observer.getCurrentPlayState() == PlayState.FINISHED){
-    				totalObserversFin++;
-    			}
-    		}
-    		System.out.println("Sync: "+totalObserversFin+" of "+stateObserverList.size());
-    		if(totalObserversFin == stateObserverList.size())
-    		{
-    			observersSyncFin = true;
-    			PLAY_STATE_CHANGED = true;
-    			SYNC_CHANGED = true;
-    		}
-    	}
-    	else if(state == PlayState.SHUTDOWN)
-    	{
-    		System.out.println(observerName+" trying to sync!");
-    		if(observersCalledback.containsKey(observerName) && !observersCalledback.get(observerName)){
-    			System.out.println(observerName+" has Synced!");
-    			observersCalledback.replace(observerName, true);
-    		}
-
-    		if( observersCalledback.get(observerNamesList.get(0)) )
-    		{
-    			observersSyncClose = true;
-    			PLAY_STATE_CHANGED = true;
-    			SYNC_CHANGED = true;
-    			System.out.println("Both Observer have Synced! ");
-    			observersCalledback.replace(observerNamesList.get(0),false);
-    			//observersCalledback.replace(observerNamesList.get(1),false);
-    		}
-    	}
-    	
-    	
-    }
-    
-	public SongTag getTheCurrentSongTag()
+	public SongTag getTheCurrentSongTag() throws NullPointerException
 	{
-		return this.currentSong.getMetaTag();
+		if(playerLibrary==null)
+		{
+			throw new NullPointerException();
+		}
+		return playerLibrary.getCurrentTrack_MetaData();
 	}
 
 	@Override
@@ -667,28 +374,25 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
 		else if(state == PlayState.READY)
 		{
 			
-			if(currentSong != null && currentSong.getMetaTag()!=null)
+			if(playerLibrary.getCurrentTrack() != null && playerLibrary.getCurrentTrack().getMetaTag()!=null)
 			{
 				System.out.println("[MUSIC-LIBRARY] Recieved READY Callback!");
-				parentSubject.guiCallback(state, this.currentSong);
+				parentSubject.guiCallback(state, playerLibrary.getCurrentTrack());
 			}
-			checkObserverSync(observerName,PlayState.READY);
+			PLAY_STATE_CHANGED = true;
+			SYNC_CHANGED = true;
+			observerSyncReady = true;
+			//checkObserverSync(observerName,PlayState.READY);
 		}
-		/*else if(state == PlayState.STOPPED)
-		{
-			checkObserverSync(observerName,PlayState.STOPPED);
-		}*/
 		else if(state == PlayState.SHUTDOWN)
 		{
-			checkObserverSync(observerName,PlayState.SHUTDOWN);
-		}
-		/*else if(state == PlayState.PLAYING)
-		{
-			if(label != null && label.getText().compareTo("")==0){
-				this.parentSubject.guiCallback(state, label);
-			}
+			System.out.println("[MANAGER] MediaController sent SHUTDOWN Callback!");
+			SYNC_CHANGED = true;
+			this.observerSyncClose = true;
+			System.out.println("[MANAGER] Commencing SHUTDOWN!");
+			
 			//checkObserverSync(observerName,PlayState.SHUTDOWN);
-		}*/
+		}
 	}
 
 	@Override
@@ -753,10 +457,28 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
 		else if(newState == PlayState.SHUFFLE_TOGGLED)
 		{
 			userToggledShuffle = true;
+			if(shuffle_Is_On)
+			{
+				shuffle_Is_On = false;
+			}
+			else
+				shuffle_Is_On = true;
+			
+			if(playerLibrary != null)
+			{
+				playerLibrary.toggleShuffle(shuffle_Is_On);	
+			}
+			resetUserButtons();
 		}
 		else if(newState == PlayState.REPEAT_TOGGLED)
 		{
 			userToggledRepeat = true;
+			repeat_Is_On = !repeat_Is_On;
+			if(playerLibrary != null)
+			{
+				playerLibrary.repeatToggled(repeat_Is_On);	
+			}
+			resetUserButtons();
 		}
 		else if(newState == PlayState.SKIPPED_FORWARDS)
 		{

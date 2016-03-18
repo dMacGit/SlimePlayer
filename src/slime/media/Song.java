@@ -4,6 +4,19 @@ import java.io.IOException;
 
 import org.farng.mp3.TagException;
 
+/**
+ * 
+ * <b>
+ * This Song Object is a simple wrapper class, for holding and allowing access to the Music file {@link #getSongPath()} as a String,
+ * and the Music file meta-data in the {@link SongTag} object through {@link #getMetaTag()}.
+ * </b>
+ * 
+ * @see SongTag
+ * 
+ * @author dMacGit
+ *
+ */
+
 public class Song
 {
 	private String songPath;
