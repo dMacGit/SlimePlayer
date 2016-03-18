@@ -48,6 +48,7 @@ import slime.utills.FileIO;
  */
 public class MusicLibraryManager implements StateSubject, GuiObserver
 {
+	private final static String NAME = "[Manager]";
 	private GuiSubject parentSubject;
 	
 	private static LibraryPlayList playerLibrary;
@@ -129,11 +130,11 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
     	
     	//Maybe populate library here!
     	playerLibrary.createLibraryPlaylist();
-    	System.out.println("The list of songs is this large: "+playerLibrary.getTotalNumberTracks()+" Songs!");
+    	System.out.println(NAME+" The list of songs is this large: "+playerLibrary.getTotalNumberTracks()+" Songs!");
         
         mediaController = new MediaController();
 
-        System.out.println(MediaController.class.getName()+" created!");
+        System.out.println(NAME+" "+MediaController.class.getName()+" created!");
         
         observerNamesList.add(MediaController.class.getName());
 
@@ -145,7 +146,7 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
         this.registerStateObserver(mediaController);
         mediaController.setParentSubject(this);
         
-        System.out.println("Player has been Started!");
+        System.out.println(NAME+" Player has been Started!");
         
     }
     
@@ -159,7 +160,7 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
     	
     	//Maybe populate library here!
     	playerLibrary.createLibraryPlaylist();
-    	System.out.println("The list of songs is this large: "+playerLibrary.getTotalNumberTracks()+" Songs!");
+    	System.out.println(NAME+" The list of songs is this large: "+playerLibrary.getTotalNumberTracks()+" Songs!");
         
         playListThread = new playlistManagerThread(playerLibrary);
         playListThread.start();
@@ -167,7 +168,7 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
         this.registerStateObserver(mediaController);
         mediaController.setParentSubject(this);
         
-        System.out.println("Player has been Started!");
+        System.out.println(NAME+" Player has been Started!");
         
     }
     public List<SongTag> getMapOfSong() throws Exception
@@ -185,7 +186,7 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
         {
         	this.playerLibrary = playerLibrary;
         	currentPlayState = PlayState.INITIALIZED;
-        	System.out.println("The Playlist Manager Thread is created!");
+        	System.out.println(NAME+" The Playlist Manager Thread is created!");
         }
 
         @Override
@@ -196,7 +197,7 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
             	
             	if(currentPlayState == PlayState.INITIALIZED)
                 { 
-        			System.out.println("The Manager thread is initialized!");
+        			System.out.println(NAME+" The Manager thread is initialized!");
         			PLAY_STATE_CHANGED = !PLAY_STATE_CHANGED;
         			currentPlayState = PlayState.IDLE;
         			notifyAllStateObservers(null,currentPlayState);
@@ -213,18 +214,18 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
             		//The Idle state of the Manager. Not worrying about the observer idle states
             		if(currentPlayState == PlayState.IDLE && userPressedPlay)
                     {
-            			System.out.println("[Manager] Changing from IDLE to READY");
+            			System.out.println(NAME+" Changing from IDLE to READY");
             			if(shuffle_Is_On)
                     	{
-            				System.out.println("[Manager] SHUFFLE Active, Choosing random song");
+            				System.out.println(NAME+" SHUFFLE Active, Choosing random song");
             				playerLibrary.chooseNextTrack();
-                    		System.out.println("[Manager] Randomly selected Index: "+playerLibrary.getPlayCount()+" which holds: "+playerLibrary.getCurrentTrack_MetaData().getRecordingTitle());
+                    		System.out.println(NAME+" Randomly selected Index: "+playerLibrary.getPlayCount()+" which holds: "+playerLibrary.getCurrentTrack_MetaData().getRecordingTitle());
                     	}
                     	else
                     	{
-                    		System.out.println("[Manager] SHUFFLE Inactive, Choosing next song");
+                    		System.out.println(NAME+" SHUFFLE Inactive, Choosing next song");
             				playerLibrary.chooseNextTrack();
-            				System.out.println("[Manager] Selected Index: "+playerLibrary.getPlayCount()+" which holds: "+playerLibrary.getCurrentTrack_MetaData().getRecordingTitle());
+            				System.out.println(NAME+" Selected Index: "+playerLibrary.getPlayCount()+" which holds: "+playerLibrary.getCurrentTrack_MetaData().getRecordingTitle());
                     		//currentSong = defaultPlaylist.get(++currentIndex);
                     		
                     	}
@@ -235,10 +236,10 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
                     }
             		else if(currentPlayState == PlayState.READY)
                     {
-            			System.out.println("[Manager] READY for Observer SYNC-READY");
+            			System.out.println(NAME+" READY for Observer SYNC-READY");
             			if(observerSyncReady)
                 		{
-            				System.out.println("[Manager] Observer SYNC-READY Manager Changing to PLAYING");
+            				System.out.println(NAME+" Observer SYNC-READY Manager Changing to PLAYING");
                 			currentPlayState = PlayState.PLAYING;
                 			notifyAllStateObservers(null,currentPlayState);
                 			observerSyncReady = false;
@@ -262,11 +263,11 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
 							PLAY_STATE_CHANGED = false;
 							notifyAllStateObservers(playerLibrary.getCurrentTrack(), currentPlayState);
                         }                        	
-						System.out.println("Current Song / Next Song to play: "
+						System.out.println(NAME+" Current Song / Next Song to play: "
 								+ playerLibrary.getCurrentTrack_MetaData().getSongTitle());
 						int checkTime = (playerLibrary.getCurrentTrack_MetaData().getDurration()) / 2;
 						int realTime = (checkTime % 60);
-						System.out.println(playerLibrary.getCurrentTrack_MetaData().getSongTitle() + " <=[" + Durration
+						System.out.println(NAME+" "+playerLibrary.getCurrentTrack_MetaData().getSongTitle() + " <=[" + Durration
 								+ "]=> " + checkTime + " ---> " + (int) (checkTime / 60) + ":" + realTime);
                     }
             		else if(currentPlayState == PlayState.PLAYING && observerSyncPlay)
@@ -300,7 +301,7 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
             		{
             			currentPlayState = PlayState.SHUTDOWN;
             			SYNC_CHANGED = false;
-            			System.out.println("[ Manager ] Is Now in "+currentPlayState.toString());
+            			System.out.println(NAME+" Is Now in "+currentPlayState.toString());
             			PLAY_STATE_CHANGED = false;
             			notifyAllStateObservers(null, currentPlayState);
             			resetUserButtons();
@@ -310,15 +311,15 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
             			if(observerSyncClose)
             			{
             				//Fully shut down the program!
-            				System.out.println("[ Manager ] Observers Have Stopped! Deregistering...");
+            				System.out.println(NAME+" Observers Have Stopped! Deregistering...");
             				deregisterStateObserver(mediaController);
-            				System.out.println("[ Manager ] Observers Deregistered");
+            				System.out.println(NAME+" Observers Deregistered");
             				mediaController = null;
-            				System.out.println("[ Manager ] Closing Manager Thread!");
+            				System.out.println(NAME+" Closing Manager Thread!");
             				
             				parentSubject.guiCallback(PlayState.SHUTDOWN, null);
             				STOP_MANAGER = true;
-            				System.out.println("[ Manager ] GUI Callback... ");
+            				System.out.println(NAME+" GUI Callback... ");
             			}
             		}
             	}
@@ -330,7 +331,7 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
                     }
                     catch (InterruptedException ex)
                     {
-                        System.out.println("InterruptedException sleeping song player! "+ex);;
+                        System.out.println(NAME+" InterruptedException sleeping song player! "+ex);;
                     }
             	}
             }
@@ -376,7 +377,7 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
 			
 			if(playerLibrary.getCurrentTrack() != null && playerLibrary.getCurrentTrack().getMetaTag()!=null)
 			{
-				System.out.println("[MUSIC-LIBRARY] Recieved READY Callback!");
+				System.out.println(NAME+" Recieved READY Callback!");
 				parentSubject.guiCallback(state, playerLibrary.getCurrentTrack());
 			}
 			PLAY_STATE_CHANGED = true;
@@ -386,10 +387,10 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
 		}
 		else if(state == PlayState.SHUTDOWN)
 		{
-			System.out.println("[MANAGER] MediaController sent SHUTDOWN Callback!");
+			System.out.println(NAME+" MediaController sent SHUTDOWN Callback!");
 			SYNC_CHANGED = true;
 			this.observerSyncClose = true;
-			System.out.println("[MANAGER] Commencing SHUTDOWN!");
+			System.out.println(NAME+" Commencing SHUTDOWN!");
 			
 			//checkObserverSync(observerName,PlayState.SHUTDOWN);
 		}
@@ -399,7 +400,7 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
 	public void registerStateObserver(StateObserver observer) 
 	{
 		stateObserverList.add(observer);
-		System.out.println("<<<< "+observer.getStateObserverName()+" Added! >>>>");
+		System.out.println(NAME+" <<<< "+observer.getStateObserverName()+" Added! >>>>");
 		
 	}
 
@@ -407,7 +408,7 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
 	public void deregisterStateObserver(StateObserver observer) 
 	{
 		stateObserverList.remove(observer);
-		System.out.println("<<<< "+observer.getStateObserverName()+" Removed! >>>>");
+		System.out.println(NAME+" <<<< "+observer.getStateObserverName()+" Removed! >>>>");
 		
 	}
 
@@ -436,7 +437,7 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
 	@Override
 	public void updateGuiObserver(PlayState newState) 
 	{		
-		System.out.println(this.getGuiObserverName()+" [ Gui State Changed! "+newState.toString()+" ]");
+		System.out.println(NAME+" "+this.getGuiObserverName()+" [ Gui State Changed! "+newState.toString()+" ]");
 		PLAY_STATE_CHANGED = true;
 		if(newState == PlayState.PLAYING)
 		{

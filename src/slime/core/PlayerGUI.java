@@ -50,7 +50,7 @@ import slime.utills.ShrinkImageToSize;
 public class PlayerGUI extends JPanel implements GuiSubject
 {
     
-	
+	private final static String NAME = "[GUI] ";
 	private MusicLibraryManager musicLibraryManager;
 	
 	private static final long serialVersionUID = -4125262661558412319L;
@@ -157,7 +157,7 @@ public class PlayerGUI extends JPanel implements GuiSubject
         repeat.addMouseListener(listenerOne);
 
         musicLibraryManager = new MusicLibraryManager(FILE_DIR);
-        System.out.println(MusicLibraryManager.class.getName()+"  created!");
+        System.out.println(NAME+MusicLibraryManager.class.getName()+"  created!");
         
         registerGuiObserver(musicLibraryManager);
         musicLibraryManager.setParentSubject(this);
@@ -218,7 +218,7 @@ public class PlayerGUI extends JPanel implements GuiSubject
                     playPause.setIcon(PAUSE_ICON);
                     revalidate();
                     notifyAllObservers();                    
-                    System.out.println("Starting up Player!!");                   
+                    System.out.println(NAME+"Starting up Player!!");                   
                 }
             }
             else
@@ -230,7 +230,7 @@ public class PlayerGUI extends JPanel implements GuiSubject
                     songTimeUpdater.startTimer();
                     revalidate();
                     notifyAllObservers();
-                    System.out.println("User pressed Play!!");
+                    System.out.println(NAME+"User pressed Play!!");
                 }
                 else if (source == playPause && currentStateOfPlayer == PlayState.PLAYING)
                 {
@@ -239,12 +239,12 @@ public class PlayerGUI extends JPanel implements GuiSubject
                     songTimeUpdater.stopTimer();
                     revalidate();
                     notifyAllObservers();
-                    System.out.println("User pressed Pause!!");
+                    System.out.println(NAME+"User pressed Pause!!");
                 }
                 if (source == skip) {
                 	currentStateOfPlayer = PlayState.SKIPPED_FORWARDS;
                 	notifyAllObservers();
-                	System.out.println("User pressed skip!!");
+                	System.out.println(NAME+"User pressed skip!!");
                 	currentStateOfPlayer = PlayState.PLAYING;
                 }
             }
@@ -285,9 +285,9 @@ public class PlayerGUI extends JPanel implements GuiSubject
     
     private void shutdownPlayer()
     {
-    	System.out.println("[GUI] Deregistering MusicLibraryManager...");
+    	System.out.println(NAME+"Deregistering MusicLibraryManager...");
 		deregisterGuiObserver(musicLibraryManager);
-		System.out.println("[GUI] Deregistered MusicLibraryManager...");
+		System.out.println(NAME+"Deregistered MusicLibraryManager...");
 		this.setVisible( false );
         System.exit(0);
         System.gc();
@@ -297,14 +297,14 @@ public class PlayerGUI extends JPanel implements GuiSubject
 	public void registerGuiObserver(GuiObserver guiObserver)
 	{
 		guiObserverList.add(guiObserver);
-		System.out.println("<<<< "+guiObserver.getGuiObserverName()+" Added! >>>>");
+		System.out.println(NAME+"<<<< "+guiObserver.getGuiObserverName()+" Added! >>>>");
 		
 	}
 
 	@Override
 	public void deregisterGuiObserver(GuiObserver guiObserver) {
 		guiObserverList.remove(guiObserver);
-		System.out.println("<<<< "+guiObserver.getGuiObserverName()+" Removed! >>>>");
+		System.out.println(NAME+"<<<< "+guiObserver.getGuiObserverName()+" Removed! >>>>");
 		
 	}
 
@@ -334,9 +334,9 @@ public class PlayerGUI extends JPanel implements GuiSubject
 		}
 		else if(state == PlayState.READY)
 		{
-			System.out.println("[GUI] Recieved READY Callback!");
+			System.out.println(NAME+"Recieved READY Callback!");
 			final String temp = craetedPrintedSongString(song.getMetaTag());
-			System.out.println("[GUI] New song: "+temp);
+			System.out.println(NAME+"New song: "+temp);
 			scrollingLabel.updateText(craetedPrintedSongString(song.getMetaTag()),temp.length());
 			songTimeUpdater.newDuration(song.getMetaTag().getDurration());
 			songTimeUpdater.startTimer();

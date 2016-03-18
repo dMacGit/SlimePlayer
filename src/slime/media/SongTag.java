@@ -42,6 +42,7 @@ import slime.utills.MusicFileFilter;
 
 public class SongTag 
 {
+	private final static String NAME = "[SONG_TAG] ";
 	private TagVersion tagVersion = null;						//Important if expanded or replaced in future 
 	private String SongTitle, Artist, RecordingTitle  = null;	//Critical to set to null
 	private int Year, Durration = 0;
@@ -149,19 +150,19 @@ public class SongTag
 			} 
 			catch (CannotReadException e)
 			{
-				System.out.println("CannotReadException in SongTag "+e.getMessage());
+				System.out.println(NAME+"CannotReadException in SongTag "+e.getMessage());
 			}
 			catch (org.jaudiotagger.tag.TagException e) 
 			{
-				System.out.println("TagException in SongTag "+e.getMessage());
+				System.out.println(NAME+"TagException in SongTag "+e.getMessage());
 			} 
 			catch (ReadOnlyFileException e) 
 			{
-				System.out.println("ReadOnlyFileException in SongTag "+e.getMessage());
+				System.out.println(NAME+"ReadOnlyFileException in SongTag "+e.getMessage());
 			}
 			catch (InvalidAudioFrameException e) 
 			{
-				System.out.println("InvalidAudioFrameException in SongTag "+e.getMessage());
+				System.out.println(NAME+"InvalidAudioFrameException in SongTag "+e.getMessage());
 			}
 		}
 	}
@@ -183,23 +184,23 @@ public class SongTag
 			} 
 			catch (CannotReadException e)
 			{
-				System.out.println("CannotReadException in SongTag "+e.getMessage());
+				System.out.println(NAME+"CannotReadException in SongTag "+e.getMessage());
 			}
 			catch (org.jaudiotagger.tag.TagException e) 
 			{
-				System.out.println("TagException in SongTag "+e.getMessage());
+				System.out.println(NAME+"TagException in SongTag "+e.getMessage());
 			} 
 			catch (ReadOnlyFileException e) 
 			{
-				System.out.println("ReadOnlyFileException in SongTag "+e.getMessage());
+				System.out.println(NAME+"ReadOnlyFileException in SongTag "+e.getMessage());
 			}
 			catch (InvalidAudioFrameException e) 
 			{
-				System.out.println("InvalidAudioFrameException in SongTag "+e.getMessage());
+				System.out.println(NAME+"InvalidAudioFrameException in SongTag "+e.getMessage());
 			}
 			catch (IOException e) 
 			{
-				System.out.println("IOException in SongTag "+e.getMessage());
+				System.out.println(NAME+"IOException in SongTag "+e.getMessage());
 			}
 		}
 	}
@@ -239,7 +240,7 @@ public class SongTag
 		} else if(songFile.hasID3v2Tag()){
 			tagVersion = TagVersion.ID3v2;
 		} else {
-			System.out.println("Cannot read tag data! Incorrect tag version! ");
+			System.out.println(NAME+"Cannot read tag data! Incorrect tag version! ");
 		}
 		
 		if(tagVersion == TagVersion.ID3v1)
@@ -264,7 +265,7 @@ public class SongTag
             }
             catch (UnsupportedAudioFileException ex)
             {
-                System.out.println("Unsupported Audio File!! "+ex);
+                System.out.println(NAME+"Unsupported Audio File!! "+ex);
             } 
             catch (IOException e) {	e.printStackTrace();	}
 
@@ -299,7 +300,7 @@ public class SongTag
             }
             catch (UnsupportedAudioFileException ex)
             {
-                System.out.println("Unsupported Audio File!! "+ex);
+                System.out.println(NAME+"Unsupported Audio File!! "+ex);
             } 
             catch (IOException e) {	e.printStackTrace();	}
 
@@ -340,7 +341,7 @@ public class SongTag
         this.Durration = audioHeader.getTrackLength();
 			
 		
-		System.out.println(ActionTimer.formatLastTimedAction("Extracting the meta data", ActionTimer.measurePreviouseActionTime(timeStart, System.currentTimeMillis())));
+		System.out.println(NAME+ActionTimer.formatLastTimedAction("Extracting the meta data", ActionTimer.measurePreviouseActionTime(timeStart, System.currentTimeMillis())));
 	}
 	
 	/*

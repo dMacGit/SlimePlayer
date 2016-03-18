@@ -26,6 +26,7 @@ import java.util.List;
 
 public class PlayList
 {
+	private final static String NAME = "[PlayList]";
 	//The Song-list DataStructure
 	private SongList listOfSongs;
 	
@@ -119,7 +120,7 @@ public class PlayList
 	public void shuffleToggled(boolean shuffled)
 	{
 		isShuffled = shuffled;
-		System.out.println("[PlayList] Shuffle has been toggled to: "+Boolean.toString(isShuffled));
+		System.out.println(NAME+" Shuffle has been toggled to: "+Boolean.toString(isShuffled));
 	}
 	
 	public void repeatToggled(boolean isRepeat){
@@ -132,10 +133,10 @@ public class PlayList
 		//Make sure that the previous track has been remembered in the track play history
 		if(currentTrack != null && currentIndex != -1)
 		{
-			System.out.println("Adding last played to the Play-list history! [ "+listOfSongs.get(currentIndex).getMetaTag().getSongTitle()+" || @ "+currentIndex+" ]");
+			System.out.println(NAME+" Adding last played to the Play-list history! [ "+listOfSongs.get(currentIndex).getMetaTag().getSongTitle()+" || @ "+currentIndex+" ]");
 			playListHistory.addLast(currentIndex);
 		}
-		System.out.println("--- Player Track History Updated ---");
+		System.out.println(NAME+" Player Track History Updated");
 		//First Check for end of playlist
 		if(playListHistory.size()== listOfSongs.size())
 		{
@@ -143,19 +144,19 @@ public class PlayList
 			{
 				playListHistory.clear();
 			}
-			System.out.println("--- End of playlist check ---");
+			System.out.println(NAME+" End of playlist check");
 		}
 		else
 		{
-			System.out.println("--- Getting next song! ---");
+			System.out.println(NAME+" Getting next song!");
 			if(isShuffled)
 			{
-				System.out.println("--- In Shuffle Mode ---");
+				System.out.println(NAME+" In Shuffle Mode");
 				boolean validated_Random = false;
 				while(!validated_Random)
 				{
 					int tempIndex = (int)(Math.random()*listOfSongs.size());
-					System.out.println("Randomly Choosing number: "+tempIndex);
+					System.out.println(NAME+" Randomly Choosing number: "+tempIndex);
 		
 					if(!playListHistory.contains(tempIndex))
 					{
@@ -168,13 +169,13 @@ public class PlayList
 			else
 			{
 				currentTrack = listOfSongs.get(++currentIndex);
-				System.out.println("PlayList selected next song: "+this.currentTrack.getMetaTag().getSongTitle());
+				System.out.println(NAME+" PlayList selected next song: "+this.currentTrack.getMetaTag().getSongTitle());
 			}
-			System.out.println("--- Next Track has been choosen ---");
+			System.out.println(NAME+" Next Track has been choosen");
 			
 			currentTrack = listOfSongs.get(currentIndex);
-			System.out.println("<<< Next Track is "+currentIndex+" / "+listOfSongs.size()+" >>>");
-			System.out.println("[ "+currentTrack.getMetaTag().getArtist()+" | "+currentTrack.getMetaTag().getSongTitle()+" | "+currentTrack.getMetaTag().getYear()+" ]");
+			System.out.println(NAME+" <<< Next Track is "+currentIndex+" / "+listOfSongs.size()+" >>>");
+			System.out.println(NAME+" [ "+currentTrack.getMetaTag().getArtist()+" | "+currentTrack.getMetaTag().getSongTitle()+" | "+currentTrack.getMetaTag().getYear()+" ]");
 			playerFoundNext = true;
 		}
 		

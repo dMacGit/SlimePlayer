@@ -17,6 +17,7 @@ import slime.utills.ImageLoader;
 
 public class main
 {
+	private final static String NAME = "[MAIN] ";
 	public static PlayerGUI gui;
 	public static MusicLibraryManager musicManagerLibrary;
 	public static MediaController mediaController;
@@ -62,12 +63,12 @@ public class main
                 }
                 catch (AWTException e)
                 {
-                    System.err.println("TrayIcon could not be added.");
+                    System.err.println(NAME+"TrayIcon could not be added.");
                 }
             }
             else
             {
-                System.out.println("System tray icon not supported!!");
+                System.out.println(NAME+"System tray icon not supported!!");
             }
             frame.setIconImage(smallIcon.getImage());
             frame.setUndecorated( true );
@@ -78,7 +79,7 @@ public class main
             frame.setLocation(width / 2, height / 2);
             frame.setVisible(true);
             frame.pack();
-            System.out.println("Dimensions are: "+frame.getWidth()+" W "+frame.getHeight()+" H");
+            System.out.println(NAME+"Dimensions are: "+frame.getWidth()+" W "+frame.getHeight()+" H");
             
             //Now register all of the observers and subjects.
             
@@ -87,7 +88,7 @@ public class main
     	} 
     	else 
     	{
-    		System.out.println("There was an error finding the icon directory folder [ "+location+""+fileName+" ]");
+    		System.out.println(NAME+"There was an error finding the icon directory folder [ "+location+""+fileName+" ]");
     	}
     	
 	}

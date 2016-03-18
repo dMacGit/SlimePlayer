@@ -12,6 +12,8 @@ import slime.utills.FileIO;
 
 public class LibraryPlayList extends PlayList 
 {
+	private final static String NAME = "[LibraryPlayList]";
+	
 	private static String DEFAULT_HOME_MUSIC_DIR;
 	private static String PLAYER_ROOT;
 	private static String PLAYER_DATA_DIR;
@@ -36,7 +38,7 @@ public class LibraryPlayList extends PlayList
 			PATHS_FILE = removeQuotes(config.getProperty("PATHS_FILE"));
 			LIBRARY_FILE = removeQuotes(config.getProperty("LIBRARY_FILE"));
 			
-			System.out.println("Properties File READ...\nDefault Music Directory set to: "+DEFAULT_HOME_MUSIC_DIR
+			System.out.println(NAME+" Properties File READ...\nDefault Music Directory set to: "+DEFAULT_HOME_MUSIC_DIR
 				+"\nDefault Player path is: "+PLAYER_ROOT+"\nData Directory is: "+PLAYER_DATA_DIR+"\nPaths file name is ["+PATHS_FILE+
 				"]\nLibrary file name is: "+LIBRARY_FILE+"]");
 		}
@@ -101,18 +103,18 @@ public class LibraryPlayList extends PlayList
 				} 
     			catch (WrongFileTypeException | TagException e)
     			{
-					System.out.println("Error trying to build the Tag!");
+					System.out.println(NAME+" Error trying to build the Tag!");
 				}
 	    	}
-    		System.out.println(ActionTimer.formatLastTimedAction("Total time to add ",totalTimeForListCreation));    		
+    		System.out.println(ActionTimer.formatLastTimedAction(NAME+" Total time to add ",totalTimeForListCreation));    		
 		}
     	catch (FileNotFoundException e) 
     	{
-    		System.out.println("FileNotFoundException Populating Library! "+e.getMessage());
+    		System.out.println(NAME+" FileNotFoundException Populating Library! "+e.getMessage());
 		}
     	catch (IOException e) 
     	{
-    		System.out.println("IOException Populating Library! "+e.getMessage());
+    		System.out.println(NAME+" IOException Populating Library! "+e.getMessage());
 		}
 	}	
 
