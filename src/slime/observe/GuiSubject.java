@@ -10,6 +10,6 @@ public interface GuiSubject
 {
 	public void registerGuiObserver(GuiObserver obj);
 	public void deregisterGuiObserver(GuiObserver obj);
-	public void notifyAllObservers();
+	public void notifyAllObservers(PlayState newState);
 	public void guiCallback(PlayState state, Song song);
 }

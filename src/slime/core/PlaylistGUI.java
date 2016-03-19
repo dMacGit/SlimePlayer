@@ -10,7 +10,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.util.HashMap;
 import java.util.LinkedList;
 
 import javax.swing.BoxLayout;
@@ -27,6 +26,7 @@ import javax.swing.Timer;
 import slime.managers.MusicLibraryManager;
 import slime.media.SongTag;
 import slime.utills.ComponentMover;
+import slime.utills.ImageLoader;
 import slime.utills.ShrinkImageToSize;
 
 public class PlaylistGUI extends JPanel implements MouseListener, ActionListener
@@ -35,7 +35,7 @@ public class PlaylistGUI extends JPanel implements MouseListener, ActionListener
     public static String THE_FOLDER_DIR = "images/";
     
     private MusicLibraryManager player;
-    private LinkedList<String> mapOfSongs;
+    private LinkedList<SongTag> mapOfSongs;
     private final int MAJOR_WIDTH = 500;
     private JTable list;
     private Object[][] rowData;
@@ -49,7 +49,8 @@ public class PlaylistGUI extends JPanel implements MouseListener, ActionListener
     private boolean state = false;
     private JFrame frame;
     private JPanel windowControlls;
-    private ImageIcon CLOSE_BOX = ShrinkImageToSize.shrinkImageToSize(new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource(THE_FOLDER_DIR+"Close_Icon.png"))),23,23);
+    							  //ShrinkImageToSize.shrinkImageToSize(new ImageIcon(Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource(THE_FOLDER_DIR+"playButtonGlossy.png"))),H_Size,H_Size)
+    private ImageIcon CLOSE_BOX = ShrinkImageToSize.shrinkImageToSize(new ImageIcon(Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource(THE_FOLDER_DIR+"Close_Icon.png"))),23,23);
     private JLabel close_Box;
     private JPanel sliderPanel;
     private int MaxExt;
@@ -59,7 +60,7 @@ public class PlaylistGUI extends JPanel implements MouseListener, ActionListener
     private Timer sliderTimer;
 
     public PlaylistGUI(MusicLibraryManager songPlayer)
-    {
+    {        
     	System.out.println("Entered into the Playlist class!");
         this.setLayout(new BoxLayout(this,BoxLayout.Y_AXIS));
         sliderPanel = new JPanel();
@@ -76,7 +77,7 @@ public class PlaylistGUI extends JPanel implements MouseListener, ActionListener
         
         
         this.player = songPlayer;
-        mapOfSongs = new LinkedList<String>();
+        mapOfSongs = new LinkedList<SongTag>();
         //Set up the jfram and add to this class.
 
         Toolkit tools = Toolkit.getDefaultToolkit();
@@ -167,7 +168,7 @@ public class PlaylistGUI extends JPanel implements MouseListener, ActionListener
     }
     public void createList()
     {
-        //generatePlaylist();
+        generatePlaylist();
         for(int index = 0; index < rowData.length; index++)
         {
             jPanelPlaylistTemplate createRowPanel = new jPanelPlaylistTemplate();
@@ -179,10 +180,10 @@ public class PlaylistGUI extends JPanel implements MouseListener, ActionListener
         sliderPanel.setPreferredSize(new Dimension(MAJOR_WIDTH+barGap.getWidth(),MaxExt));
         sliderPanel.setLocation(this.getX(),this.getHeight());
         add(sliderPanel);
-        sliderTimer = new Timer(50,this);
+        sliderTimer = new Timer(100,this);
         this.sliderTimer.start();
-        //add(windowControlls);
-        //add(verticalPane);
+        add(windowControlls);
+        add(verticalPane);
         revalidate();
     }
 
@@ -311,19 +312,27 @@ public class PlaylistGUI extends JPanel implements MouseListener, ActionListener
      * This method is used in order to initialize the playlist data structures
      * used for displaying the playlist in the player GUI.
      */
-    /*private void generatePlaylist()
+    private void generatePlaylist()
     {
-        mapOfSongs.addAll( (LinkedList<SongTag>)(player.getMapOfSong()));
+    	
+        try
+        {
+			mapOfSongs.addAll( (LinkedList<SongTag>)(player.getMapOfSong()));
+		}
+        catch (Exception ex) 
+        {
+			ex.getMessage();
+		}
         rowData = new Object[mapOfSongs.size()][6];
         makeObjectArray(mapOfSongs.size());
-    }*/
+    }
     
     /*
      * Old code. Needs removal or replacing!
      */
     public void makeObjectArray(int number)
     {
-        String ID = "";
+        String ID = "0";
         String Title = "";
         String Artist = "";
         String Album = "";
@@ -332,24 +341,24 @@ public class PlaylistGUI extends JPanel implements MouseListener, ActionListener
 
         for(int index = 0; index < number; index++)
         {
-            String holdingInfoForCurrentSong = mapOfSongs.get(index+1);
-            ID = holdingInfoForCurrentSong.substring(0, holdingInfoForCurrentSong.indexOf('\t'));
+            //String holdingInfoForCurrentSong = mapOfSongs.get(index+1);
+            //ID = holdingInfoForCurrentSong.substring(0, holdingInfoForCurrentSong.indexOf('\t'));
             rowData[index][0] = ID;
-            String first = holdingInfoForCurrentSong.substring(holdingInfoForCurrentSong.indexOf('\t')+1);
-            Title = first.substring(0, first.indexOf('\t'));
-            rowData[index][1] = Title;
-            String second = first.substring(first.indexOf('\t')+1);
-            Artist = second.substring(0, second.indexOf('\t'));
-            rowData[index][2] = Artist;
-            String third = second.substring(second.indexOf('\t')+1);
-            Album = third.substring(0, third.indexOf('\t'));
-            rowData[index][3] = Album;
-            String fourth = third.substring(third.indexOf('\t')+1);
-            Durration = fourth.substring(0,fourth.indexOf('\t'));
-            rowData[index][4] = Durration;
-            String fifth = fourth.substring(fourth.indexOf('\t')+1);
-            Year = fifth.substring(0,fifth.indexOf('\t'));
-            rowData[index][5] = Year;
+            //String first = holdingInfoForCurrentSong.substring(holdingInfoForCurrentSong.indexOf('\t')+1);
+            //Title = first.substring(0, first.indexOf('\t'));
+            rowData[index][1] = mapOfSongs.get(index).getSongTitle();
+            //String second = first.substring(first.indexOf('\t')+1);
+            //Artist = second.substring(0, second.indexOf('\t'));
+            rowData[index][2] = mapOfSongs.get(index).getArtist();
+            //String third = second.ssubstring(second.indexOf('\t')+1);
+            //Album = third.substring(0, third.indexOf('\t'));
+            rowData[index][3] = mapOfSongs.get(index).getRecordingTitle();
+            //String fourth = third.substring(third.indexOf('\t')+1);
+            //Durration = fourth.substring(0,fourth.indexOf('\t'));
+            rowData[index][4] = mapOfSongs.get(index).getDurration();
+            //String fifth = fourth.substring(fourth.indexOf('\t')+1);
+            //Year = fifth.substring(0,fifth.indexOf('\t'));
+            rowData[index][5] = mapOfSongs.get(index).getYear();
         }
     }
     public boolean isOpen()
@@ -362,6 +371,6 @@ public class PlaylistGUI extends JPanel implements MouseListener, ActionListener
     }
     public void open()
     {
-        frame.show();
+        frame.setVisible(true);
     }
 }

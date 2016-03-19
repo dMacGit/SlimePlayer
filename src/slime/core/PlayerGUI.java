@@ -108,11 +108,16 @@ public class PlayerGUI extends JPanel implements GuiSubject
         
         listenerOne = new mouseListener();
         playPause = new JLabel(PLAY_ICON);
+        playPause.setName("playPause");
         skip = new JLabel(SKIP_ICON);
+        skip.setName("skip");
         exit = new JLabel(EXIT_ICON);
         shuffle = new JLabel(SHUFFLE_ICON_DE_SELECT);
+        shuffle.setName("shuffle");
         repeat = new JLabel(REPEAT_ICON_DE_SELECT);
+        repeat.setName("repeat");
         playList = new JLabel(LIST_ICON);
+        playList.setName("playList");
         menu = new JLabel(MENU_ICON);
         defaultStringLabel = new JLabel(defaultString);
         
@@ -175,40 +180,44 @@ public class PlayerGUI extends JPanel implements GuiSubject
         public void mousePressed(MouseEvent e)
         {
             Object source = e.getSource();
+            System.out.println(NAME+" {MouseListener} Source is "+((JLabel)source).getName());
             if(source == shuffle)
             {
                 if(shuffle_Select)
                 {
-                	currentStateOfPlayer = PlayState.SHUFFLE_TOGGLED;
                     shuffle.setIcon(SHUFFLE_ICON_DE_SELECT);
                     shuffle_Select = false;
+                    notifyAllObservers(PlayState.SHUFFLE_TOGGLED);
+                    revalidate();
                 }
                 else
                 {
-                	currentStateOfPlayer = PlayState.SHUFFLE_TOGGLED;
                     shuffle.setIcon(SHUFFLE_ICON_SELECTED);
                     shuffle_Select = true;
+                    notifyAllObservers(PlayState.SHUFFLE_TOGGLED);
+                    revalidate();
                 }
-                notifyAllObservers();
-                revalidate();
+                
             }
             if(source == repeat)
             {
                 if(repeat_Select)
                 {
                     repeat.setIcon(REPEAT_ICON_DE_SELECT);
-                    currentStateOfPlayer = PlayState.REPEAT_TOGGLED;
                     repeat_Select = false;
+                    notifyAllObservers(PlayState.REPEAT_TOGGLED);
+                    revalidate();
                 }
                 else
                 {
                     repeat.setIcon(REPEAT_ICON_SELECTED);
-                    currentStateOfPlayer = PlayState.REPEAT_TOGGLED;
                     repeat_Select = true;
+                    notifyAllObservers(PlayState.REPEAT_TOGGLED);
+                    revalidate();
                 }
-                notifyAllObservers();
-                revalidate();
+                
             }
+            
             if (notStarted)
             {
                 if (source == playPause) 
@@ -217,19 +226,20 @@ public class PlayerGUI extends JPanel implements GuiSubject
                     notStarted = false;
                     playPause.setIcon(PAUSE_ICON);
                     revalidate();
-                    notifyAllObservers();                    
+                    notifyAllObservers(currentStateOfPlayer);                    
                     System.out.println(NAME+"Starting up Player!!");                   
                 }
             }
             else
             {
+            	System.out.println(NAME+" User Skipped/Paused/Played: Current State: "+currentStateOfPlayer);
                 if (source == playPause && currentStateOfPlayer == PlayState.PAUSED)
                 {
                 	currentStateOfPlayer = PlayState.PLAYING;
                     playPause.setIcon(PAUSE_ICON);
                     songTimeUpdater.startTimer();
                     revalidate();
-                    notifyAllObservers();
+                    notifyAllObservers(currentStateOfPlayer);
                     System.out.println(NAME+"User pressed Play!!");
                 }
                 else if (source == playPause && currentStateOfPlayer == PlayState.PLAYING)
@@ -238,37 +248,36 @@ public class PlayerGUI extends JPanel implements GuiSubject
                     playPause.setIcon(PLAY_ICON);
                     songTimeUpdater.stopTimer();
                     revalidate();
-                    notifyAllObservers();
+                    notifyAllObservers(currentStateOfPlayer);
                     System.out.println(NAME+"User pressed Pause!!");
                 }
                 if (source == skip) {
                 	currentStateOfPlayer = PlayState.SKIPPED_FORWARDS;
-                	notifyAllObservers();
+                	notifyAllObservers(currentStateOfPlayer);
                 	System.out.println(NAME+"User pressed skip!!");
                 	currentStateOfPlayer = PlayState.PLAYING;
                 }
+                System.out.println(NAME+" New State: "+currentStateOfPlayer);
             }
             if(source == playList)
             {
                 if(playListWindow == null)
                 {
-                    //playListWindow = new PlaylistGUI(musicLibraryManager);
-                    //playListWindow.setVisible(true);
+                    playListWindow = new PlaylistGUI(musicLibraryManager);
+                    playListWindow.setVisible(true);
                 }
                 else
                 {
                     if(playListWindow.isOpen())
                     {
-                        //System.out.println("Playlist is invisible!");
-                        //playListWindow.open();
-                        //System.out.println("Playlist is set to visible!");
+                        playListWindow.open();
                     }
                 }
             }
             if(source == exit)
             {
             	currentStateOfPlayer = PlayState.SHUTDOWN;
-            	notifyAllObservers();
+            	notifyAllObservers(currentStateOfPlayer);
             	
             }
             if(currentStateOfPlayer == PlayState.STOPPED && observersStopped)
@@ -309,9 +318,9 @@ public class PlayerGUI extends JPanel implements GuiSubject
 	}
 
 	@Override
-	public void notifyAllObservers() {
+	public void notifyAllObservers(PlayState newState) {
 		for(GuiObserver observer : guiObserverList){
-			observer.updateGuiObserver(currentStateOfPlayer);
+			observer.updateGuiObserver(newState);
 		}
 		
 	}
