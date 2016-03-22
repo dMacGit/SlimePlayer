@@ -6,29 +6,17 @@ import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
-import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.FilenameFilter;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.Properties;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
-import javax.sound.sampled.AudioFileFormat;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
@@ -37,9 +25,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.UIManager;
-import javax.swing.filechooser.FileFilter;
 
-import org.farng.mp3.MP3File;
+
 import org.farng.mp3.TagException;
 import org.tritonus.share.sampled.file.TAudioFileFormat;
 
@@ -72,10 +59,9 @@ public class manualLibraryCreation extends JPanel implements ActionListener
 	private String[] fileDirectory;
     private int identificationNumberStart;
     private int totalSongs = 1;
-    private final String LIBRARY_FILE = "Data_Files/Lib_MP3player.txt";
-    private final String SONG_PATHS_FILE = "Data_Files/SongPaths.txt";
+    private static String LIBRARY_FILE, SONG_PATHS_FILE, DATA_DIR, ROOT;
     
-    private final static String DEFAULT_HOME_MUSIC_DIR = System.getProperty("user.home") + System.getProperty("file.separator")+"Music";
+    private static String DEFAULT_HOME_MUSIC_DIR;
     
     private File[] listOfFiles;
     
@@ -108,6 +94,29 @@ public class manualLibraryCreation extends JPanel implements ActionListener
      */
     public manualLibraryCreation(String directoryToSrearch)
     {
+    	
+    	try
+    	{
+        	Properties config = new Properties();
+        	config.load(new FileInputStream("player.properties"));
+			DEFAULT_HOME_MUSIC_DIR = LibraryHelper.removeQuotes(config.getProperty("DIR"));
+			ROOT = System.getProperty("user.dir");
+			DATA_DIR = LibraryHelper.removeQuotes(config.getProperty("PLAYER_DATA_DIR"));
+			SONG_PATHS_FILE = LibraryHelper.removeQuotes(config.getProperty("PATHS_FILE"));
+			LIBRARY_FILE = LibraryHelper.removeQuotes(config.getProperty("LIBRARY_FILE"));
+			
+		}
+    	catch (FileNotFoundException ex) 
+    	{
+			
+			ex.getMessage();
+		}
+    	catch (IOException e1) 
+    	{
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+    	
     	fileDirectory = new String[1];
         filePaths = new HashMap<Integer,String>();
         librarySongLines = new HashMap<Integer,String>();
@@ -134,20 +143,57 @@ public class manualLibraryCreation extends JPanel implements ActionListener
         //Null check
         if(theCurrentDirPath != null)
         {
-        	final String dirCheck = System.getProperty("user.home") + System.getProperty("file.separator")+"Music";
-        	if(dirCheck.compareToIgnoreCase(theCurrentDirPath) == 0)
-        	{
+        	//final String dirCheck = System.getProperty("user.home") + System.getProperty("file.separator")+"Music";
+        	//if(dirCheck.compareToIgnoreCase(theCurrentDirPath) == 0)
+        	//{
         		currentDirectoryToSearch.setColumns(currentDirectoryToSearch.getText().length());
         		
-        	}
-        	else
-        		System.out.println("missmatch: "+dirCheck+" <> "+theCurrentDirPath);
+        	//}
+        	//else
+        	//	System.out.println("missmatch: "+dirCheck+" <> "+theCurrentDirPath);
         	
         }
         else{
         	theCurrentDirPath = DEFAULT_HOME_MUSIC_DIR;
         	currentDirectoryToSearch.setText(theCurrentDirPath);
         }
+        
+        String rootDir = System.getProperty("user.dir");
+        File rDir = new File(rootDir);
+        File dataDir = new File(rootDir+"\\"+DATA_DIR);
+        
+        if(rDir.isDirectory() && !dataDir.exists())
+        {
+        	System.out.println("DATA_DIR Doesn't Exist!");
+        	
+        	File dataDirFile = new File(rootDir+"\\"+DATA_DIR);
+        	
+        	
+        	File tempLibFile = new File(rootDir+"\\"+DATA_DIR+"\\"+LIBRARY_FILE);
+        	File tempSongPathsFile = new File(rootDir+"\\"+DATA_DIR+"\\"+SONG_PATHS_FILE);
+        	
+        	try 
+        	{
+        		dataDirFile.mkdir();
+        		System.out.println(dataDirFile.getPath()+"\n"+dataDirFile.getAbsolutePath());
+        		System.out.println(tempLibFile.getPath()+"\n"+tempLibFile.getAbsolutePath());
+				if(tempLibFile.createNewFile())
+				{
+					System.out.println("The Library File was created!");
+				}
+				if(tempSongPathsFile.createNewFile())
+				{
+					System.out.println("The Song Paths File was created!");
+				}
+			}
+        	catch (IOException e)
+        	{
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+        }
+        
+        //------->
 
         displayPanel.setLayout(new FlowLayout());
 
@@ -346,10 +392,10 @@ public class manualLibraryCreation extends JPanel implements ActionListener
         try
         {
         	System.out.println("Writing Library file....");
-			FileIO.WriteData(LIBRARY_FILE,librarySongLines.values().toArray());
+			FileIO.WriteData(DATA_DIR+"\\"+LIBRARY_FILE,librarySongLines.values().toArray());
 			System.out.println("Finished Library file....");
 			System.out.println("Writing Paths file....");
-			FileIO.WriteData(SONG_PATHS_FILE,filePaths.values().toArray());
+			FileIO.WriteData(DATA_DIR+"\\"+SONG_PATHS_FILE,filePaths.values().toArray());
 			System.out.println("Finished Paths file....");
 		} 
         catch (IOException e) 

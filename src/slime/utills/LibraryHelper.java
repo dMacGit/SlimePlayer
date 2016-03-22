@@ -60,4 +60,8 @@ public class LibraryHelper
 	   	}
 	   	return dirs;
    }
+   
+   public static String removeQuotes(String string){
+		return string.substring(1,string.lastIndexOf('"'));
+	}
 }

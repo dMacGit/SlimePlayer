@@ -243,8 +243,6 @@ public class MediaController implements StateObserver
 	            System.out.println(NAME+" Exception closing streams "+ex.getMessage());
 	        }
 	        songFinished = true;
-	        //playState = PlayState.SHUTDOWN;
-			//subject.stateSubjectCallback(getStateObserverName(), playState, null);
 	    }
 	}
 	public Song getCurrentSong()

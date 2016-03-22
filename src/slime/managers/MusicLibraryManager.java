@@ -1,5 +1,6 @@
 package slime.managers;
 
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -7,6 +8,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Properties;
 
 import javax.swing.JLabel;
 
@@ -26,6 +28,7 @@ import slime.observe.StateObserver;
 import slime.observe.StateSubject;
 import slime.utills.ActionTimer;
 import slime.utills.FileIO;
+import slime.utills.LibraryHelper;
 
 /**
  * <B>
@@ -53,21 +56,9 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
 	
 	private static LibraryPlayList playerLibrary;
 	
-	//private AnimationController animationController;
 	private MediaController mediaController;
 	
-	private List<StateObserver> stateObserverList = new ArrayList<StateObserver>();
-	//private List<AnimatorObserver> animatorObserverList = new ArrayList<AnimatorObserver>();
-	
-    
-    
-    
-    /*
-     * Need to hold a playlist object with SongTags.
-     * 
-     * This acts as the general library playlist.
-     */
-    
+	private List<StateObserver> stateObserverList = new ArrayList<StateObserver>();    
     
     /*
      * Needed to carry the names of the observers classes in order to keep track of what observer
@@ -82,9 +73,7 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
     private ArrayList<String> observerNamesList = new ArrayList<String>();				//Maybe do not need this!!??!!
     private HashMap<String,Boolean> observersCalledback = new HashMap<String, Boolean>();
     
-    private boolean currentlyPlaying = false, STOP_MANAGER = false, isPaused;
-    private boolean shuffle_Is_On = false, repeat_Is_On = false;
-    private boolean PLAY_STATE_CHANGED = false, SYNC_CHANGED;
+    private boolean STOP_MANAGER = false, shuffle_Is_On = false, repeat_Is_On = false, PLAY_STATE_CHANGED = false, SYNC_CHANGED;
     
     /*
      * Observer call-backs will sync up all observers and modify these values
@@ -93,14 +82,9 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
      * TODO: Needs removing!
      */
     private boolean observerSyncReady = false;
-    private boolean observerSyncInit = false;
     private boolean observerSyncPlay = false;
-    private boolean observerSyncStop = false;
-    private boolean observerSyncFin = false;
     private boolean observerSyncClose = false;
     
-    //These are values changed by the guiObserver: User Pressed a button
-    private boolean userPressedButton = false;
     
     //What user button was pressed
     private boolean userPressedPlay = false;
@@ -114,18 +98,13 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
     private boolean userSkippedBack = false;
     private boolean userPressedClose = false;
     
-    private Thread songThread;
     private playlistManagerThread playListThread;
     
-    private JLabel scrollingTitleLabel;
-    private int labelWidth;
-    private final String HOLDINGS_FILE_NAME = "Lib_MP3player.txt", SONG_PATHS_FILE_NAME = "SongPaths.txt";
-    private String HOLDINGS_FILE_PATH, SONG_PATHS_FILE_PATH, Durration, theCurrentSongTitle = null, FILE_DIR;
+    private String Durration;
     private PlayState currentPlayState;
-    private Song currentSong;
 
     public MusicLibraryManager(String dir)
-    {
+    {    	
     	playerLibrary = new LibraryPlayList();
     	
     	//Maybe populate library here!
@@ -152,8 +131,6 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
     
     public MusicLibraryManager(SongList playList)
     {
-        HOLDINGS_FILE_PATH = FILE_DIR+HOLDINGS_FILE_NAME;
-        SONG_PATHS_FILE_PATH = FILE_DIR+SONG_PATHS_FILE_NAME;
         mediaController = new MediaController();        
         
         playerLibrary = new LibraryPlayList();
@@ -178,7 +155,6 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
     
     public class playlistManagerThread extends Thread
     {   	
-    	//public Song currentSong;
     	public int currentIndex = -1, nextSongIndex = 0;
     	private LibraryPlayList playerLibrary;
     	
@@ -226,7 +202,6 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
                     		System.out.println(NAME+" SHUFFLE Inactive, Choosing next song");
             				playerLibrary.chooseNextTrack();
             				System.out.println(NAME+" Selected Index: "+playerLibrary.getPlayCount()+" which holds: "+playerLibrary.getCurrentTrack_MetaData().getRecordingTitle());
-                    		//currentSong = defaultPlaylist.get(++currentIndex);
                     		
                     	}
             			currentPlayState = PlayState.READY;
@@ -254,7 +229,6 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
                 		{
 							currentPlayState = PlayState.READY;
 							PLAY_STATE_CHANGED = false;
-							observerSyncFin = false;
 							notifyAllStateObservers(playerLibrary.getCurrentTrack(), currentPlayState);          		
                         }
                         else

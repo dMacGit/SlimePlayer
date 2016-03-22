@@ -8,9 +8,13 @@ import java.awt.Toolkit;
 
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
-
+import java.util.Properties;
 
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
@@ -23,6 +27,7 @@ import slime.media.Song;
 import slime.media.SongTag;
 import slime.observe.GuiObserver;
 import slime.observe.GuiSubject;
+import slime.utills.LibraryHelper;
 import slime.utills.ShrinkImageToSize;
 
 /**
@@ -63,9 +68,9 @@ public class PlayerGUI extends JPanel implements GuiSubject
     
     private boolean notStarted = true;
     
-    private final String defaultString = "Playing: ", FILE_DIR = "Data_Files";
+    private static String defaultString = "Playing: ", DATA_DIR, ROOT;
     
-    private final String defaultUserMusicDirectory = "%USERPROFILE%\\My Documents\\My Music";
+    private static String defaultUserMusicDirectory = "%USERPROFILE%\\My Documents\\My Music";
     
     private List<GuiObserver> guiObserverList = new ArrayList<GuiObserver>();
 
@@ -86,22 +91,54 @@ public class PlayerGUI extends JPanel implements GuiSubject
     public static String THE_FOLDER_DIR = "images/";
     
     private mouseListener listenerOne;
+    private URL PLAY_ICON_URL = ClassLoader.getSystemResource(THE_FOLDER_DIR+"playButtonGlossy.png"),
+    		PAUSE_ICON_URL = ClassLoader.getSystemResource(THE_FOLDER_DIR+"pauseButtonGlossy.png"),
+    		SKIP_ICON_URL = ClassLoader.getSystemResource(THE_FOLDER_DIR+"skipButtonGlossy.png"),
+    		MENU_ICON_URL = ClassLoader.getSystemResource(THE_FOLDER_DIR+"menuButtonGlossy.png"),
+    		LIST_ICON_URL = ClassLoader.getSystemResource(THE_FOLDER_DIR+"playListButtonGlossy.png"),
+    		EXIT_ICON_URL = ClassLoader.getSystemResource(THE_FOLDER_DIR+"smlCloseIcon.png"),
+    		SELECT_REPEAT_ICON_URL = ClassLoader.getSystemResource(THE_FOLDER_DIR+"repeatButton.png"),
+    		SELECT_SHUFFLE_ICON_URL = ClassLoader.getSystemResource(THE_FOLDER_DIR+"shuffleButton.png"),
+    		SELECT_REPEAT_DE_SELECT_ICON_URL = ClassLoader.getSystemResource(THE_FOLDER_DIR+"repeatButtonSelected.png"),
+    		SELECT_SHUFFLE_DE_SELECT_ICON_URL = ClassLoader.getSystemResource(THE_FOLDER_DIR+"shuffleButtonSelected.png");
     
-    private ImageIcon PLAY_ICON = ShrinkImageToSize.shrinkImageToSize(new ImageIcon(Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource(THE_FOLDER_DIR+"playButtonGlossy.png"))),H_Size,H_Size),
-            PAUSE_ICON = ShrinkImageToSize.shrinkImageToSize(new ImageIcon(Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource(THE_FOLDER_DIR+"pauseButtonGlossy.png"))),H_Size,H_Size),
-            SKIP_ICON = ShrinkImageToSize.shrinkImageToSize(new ImageIcon(Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource(THE_FOLDER_DIR+"skipButtonGlossy.png"))),H_Size,H_Size),
-            MENU_ICON = ShrinkImageToSize.shrinkImageToSize(new ImageIcon(Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource(THE_FOLDER_DIR+"menuButtonGlossy.png"))),H_Size,H_Size),
-            LIST_ICON = ShrinkImageToSize.shrinkImageToSize(new ImageIcon(Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource(THE_FOLDER_DIR+"playListButtonGlossy.png"))),H_Size,H_Size),
-            EXIT_ICON = ShrinkImageToSize.shrinkImageToSize(new ImageIcon(Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource(THE_FOLDER_DIR+"smlCloseIcon.png"))),H_Size,H_Size),
-            REPEAT_ICON_DE_SELECT = ShrinkImageToSize.shrinkImageToSize(new ImageIcon(Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource(THE_FOLDER_DIR+"repeatButton.png"))),H_Size,H_Size),
-            SHUFFLE_ICON_DE_SELECT = ShrinkImageToSize.shrinkImageToSize(new ImageIcon(Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource(THE_FOLDER_DIR+"shuffleButton.png"))),H_Size,H_Size),
-            REPEAT_ICON_SELECTED = ShrinkImageToSize.shrinkImageToSize(new ImageIcon(Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource(THE_FOLDER_DIR+"repeatButtonSelected.png"))),H_Size,H_Size),
-            SHUFFLE_ICON_SELECTED = ShrinkImageToSize.shrinkImageToSize(new ImageIcon(Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource(THE_FOLDER_DIR+"shuffleButtonSelected.png"))),H_Size,H_Size);
+    
+    private ImageIcon PLAY_ICON = ShrinkImageToSize.shrinkImageToSize(new ImageIcon(Toolkit.getDefaultToolkit().getImage(PLAY_ICON_URL)),H_Size,H_Size),
+            PAUSE_ICON = ShrinkImageToSize.shrinkImageToSize(new ImageIcon(Toolkit.getDefaultToolkit().getImage(PAUSE_ICON_URL)),H_Size,H_Size),
+            SKIP_ICON = ShrinkImageToSize.shrinkImageToSize(new ImageIcon(Toolkit.getDefaultToolkit().getImage(SKIP_ICON_URL)),H_Size,H_Size),
+            MENU_ICON = ShrinkImageToSize.shrinkImageToSize(new ImageIcon(Toolkit.getDefaultToolkit().getImage(MENU_ICON_URL)),H_Size,H_Size),
+            LIST_ICON = ShrinkImageToSize.shrinkImageToSize(new ImageIcon(Toolkit.getDefaultToolkit().getImage(LIST_ICON_URL)),H_Size,H_Size),
+            EXIT_ICON = ShrinkImageToSize.shrinkImageToSize(new ImageIcon(Toolkit.getDefaultToolkit().getImage(EXIT_ICON_URL)),H_Size,H_Size),
+            REPEAT_ICON_DE_SELECT = ShrinkImageToSize.shrinkImageToSize(new ImageIcon(Toolkit.getDefaultToolkit().getImage(SELECT_REPEAT_ICON_URL)),H_Size,H_Size),
+            SHUFFLE_ICON_DE_SELECT = ShrinkImageToSize.shrinkImageToSize(new ImageIcon(Toolkit.getDefaultToolkit().getImage(SELECT_SHUFFLE_ICON_URL)),H_Size,H_Size),
+            REPEAT_ICON_SELECTED = ShrinkImageToSize.shrinkImageToSize(new ImageIcon(Toolkit.getDefaultToolkit().getImage(SELECT_REPEAT_DE_SELECT_ICON_URL)),H_Size,H_Size),
+            SHUFFLE_ICON_SELECTED = ShrinkImageToSize.shrinkImageToSize(new ImageIcon(Toolkit.getDefaultToolkit().getImage(SELECT_SHUFFLE_DE_SELECT_ICON_URL)),H_Size,H_Size);
     
     private boolean shuffle_Select = false, repeat_Select = false;
 
     public PlayerGUI()
     {   
+    	
+    	Properties config = new Properties();
+    	try
+    	{
+			config.load(new FileInputStream("player.properties"));
+			defaultUserMusicDirectory = LibraryHelper.removeQuotes(config.getProperty("DIR"));
+			ROOT = System.getProperty("user.dir");
+			DATA_DIR = LibraryHelper.removeQuotes(config.getProperty("PLAYER_DATA_DIR"));
+			
+		}
+    	catch (FileNotFoundException ex) 
+    	{
+			
+			ex.getMessage();
+		}
+    	catch (IOException e1) 
+    	{
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+    	
     	TimeStarted = System.currentTimeMillis();
     	
         this.setLayout(new FlowLayout(FlowLayout.CENTER,0,0));
@@ -161,7 +198,7 @@ public class PlayerGUI extends JPanel implements GuiSubject
         shuffle.addMouseListener(listenerOne);
         repeat.addMouseListener(listenerOne);
 
-        musicLibraryManager = new MusicLibraryManager(FILE_DIR);
+        musicLibraryManager = new MusicLibraryManager(DATA_DIR);
         System.out.println(NAME+MusicLibraryManager.class.getName()+"  created!");
         
         registerGuiObserver(musicLibraryManager);
