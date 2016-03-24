@@ -11,6 +11,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.LinkedList;
+import java.util.List;
 
 import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
@@ -34,9 +35,11 @@ public class PlaylistGUI extends JPanel implements MouseListener, ActionListener
 	//This is the dir path to the images folder		---> Change if necessary!
     public static String THE_FOLDER_DIR = "images/";
     
-    private MusicLibraryManager player;
-    private LinkedList<SongTag> mapOfSongs;
+    private LinkedList<SongTag> playList;
+    //private LinkedList<SongTag> mapOfSongs;
     private final int MAJOR_WIDTH = 500;
+    private final int SUB_PANEL_HEIGHT = 35;
+    private final int MAJOR_HEIGHT = 600;
     private JTable list;
     private Object[][] rowData;
     private Object[] colomnNames = {"ID","Title","Artist","Album","Durration","Year"};
@@ -45,7 +48,7 @@ public class PlaylistGUI extends JPanel implements MouseListener, ActionListener
     private JPanel entireGUI;
     private JScrollPane verticalPane;
     private JScrollBar scrollBar;
-    private final int panelHeight = 35;
+    
     private boolean state = false;
     private JFrame frame;
     private JPanel windowControlls;
@@ -59,7 +62,7 @@ public class PlaylistGUI extends JPanel implements MouseListener, ActionListener
     private Dimension Ext_Dimension = new Dimension(506,0);
     private Timer sliderTimer;
 
-    public PlaylistGUI(MusicLibraryManager songPlayer)
+    public PlaylistGUI(List<SongTag> playList)
     {        
     	System.out.println("Entered into the Playlist class!");
         this.setLayout(new BoxLayout(this,BoxLayout.Y_AXIS));
@@ -76,8 +79,8 @@ public class PlaylistGUI extends JPanel implements MouseListener, ActionListener
         
         
         
-        this.player = songPlayer;
-        mapOfSongs = new LinkedList<SongTag>();
+        this.playList = (LinkedList<SongTag>) playList;
+        //mapOfSongs = new LinkedList<SongTag>();
         //Set up the jfram and add to this class.
 
         Toolkit tools = Toolkit.getDefaultToolkit();
@@ -97,7 +100,7 @@ public class PlaylistGUI extends JPanel implements MouseListener, ActionListener
         entireGUI = new JPanel();
         scrollBar = new JScrollBar(Scrollbar.VERTICAL, 0, 8, -100, 100);
         entireGUI.setPreferredSize(new Dimension(MAJOR_WIDTH+barGap.getWidth(),this.getComponentCount()*height));
-        sliderPanel.setPreferredSize(new Dimension(MAJOR_WIDTH+barGap.getWidth(),MaxExt));
+        sliderPanel.setPreferredSize(new Dimension(MAJOR_WIDTH+barGap.getWidth(),this.getComponentCount()*height));
         Font smallFontText = new Font("Dialog", Font.PLAIN, 9);
         entireGUI.setBackground(Color.BLACK);
         templateID = new JLabel("ID");
@@ -149,6 +152,7 @@ public class PlaylistGUI extends JPanel implements MouseListener, ActionListener
         templatePanel.add(panelAlbum);
         templatePanel.add(panelDuration);
         templatePanel.add(panelYear);
+        
         verticalPane = new JScrollPane(entireGUI); // component
         verticalPane.setVerticalScrollBar(scrollBar);
         verticalPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED); // vertical bar
@@ -160,6 +164,9 @@ public class PlaylistGUI extends JPanel implements MouseListener, ActionListener
         entireGUI.add(templatePanel);
         
         createList();
+        
+        
+        
         frame.pack();
         state = true;
         close_Box.addMouseListener(this);
@@ -175,16 +182,19 @@ public class PlaylistGUI extends JPanel implements MouseListener, ActionListener
             entireGUI.add(createRowPanel.setNewPanel(rowData[index]));
             
         }
-        entireGUI.setPreferredSize(new Dimension(MAJOR_WIDTH+barGap.getWidth(),((entireGUI.getComponentCount())*panelHeight)+(this.barGap.HEIGHT*2)));
-        MaxExt = (entireGUI.getComponentCount()*panelHeight)+(this.barGap.HEIGHT*2);
-        sliderPanel.setPreferredSize(new Dimension(MAJOR_WIDTH+barGap.getWidth(),MaxExt));
-        sliderPanel.setLocation(this.getX(),this.getHeight());
-        add(sliderPanel);
-        sliderTimer = new Timer(100,this);
-        this.sliderTimer.start();
+        entireGUI.setPreferredSize(new Dimension(MAJOR_WIDTH+barGap.getWidth(),((entireGUI.getComponentCount())*SUB_PANEL_HEIGHT)+(this.barGap.HEIGHT*2)));
+        MaxExt = (/*entireGUI.getComponentCount()*/13*SUB_PANEL_HEIGHT)+(this.barGap.HEIGHT*2);
+        //sliderPanel.setPreferredSize(new Dimension(MAJOR_WIDTH+barGap.getWidth(),MaxExt));
+        //sliderPanel.setLocation(this.getX(),this.getHeight());
+        //add(sliderPanel);
+        //sliderTimer = new Timer(100,this);
+        //this.sliderTimer.start();
         add(windowControlls);
         add(verticalPane);
         revalidate();
+        
+        
+        
     }
 
     public void mouseClicked(MouseEvent e) {}
@@ -209,7 +219,7 @@ public class PlaylistGUI extends JPanel implements MouseListener, ActionListener
 
         if(!fullyOpened)
         {
-            if(Ext_Dimension.height < 600)
+            if(Ext_Dimension.height <= 600)
             {
 
                 remove(sliderPanel);
@@ -222,7 +232,14 @@ public class PlaylistGUI extends JPanel implements MouseListener, ActionListener
                 revalidate();
             }
             else
+            {
                 fullyOpened = true;
+                System.out.println("<<< The Playlist Panel >>>\nSize: "+this.getWidth()+" X "+this.getHeight());
+                System.out.println("<<< The verticalPane Panel >>>\nSize: "+verticalPane.getWidth()+" X "+verticalPane.getHeight());
+                System.out.println("<<< The windowControlls Panel >>>\nSize: "+windowControlls.getWidth()+" X "+windowControlls.getHeight());
+                System.out.println("<<< The sliderPanel Panel >>>\nSize: "+sliderPanel.getWidth()+" X "+sliderPanel.getHeight());
+                System.out.println("<<< The templatePanel Panel >>>\nSize: "+templatePanel.getWidth()+" X "+templatePanel.getHeight());
+            }
 
         }
         if(!fullyClosed)
@@ -317,14 +334,15 @@ public class PlaylistGUI extends JPanel implements MouseListener, ActionListener
     	
         try
         {
-			mapOfSongs.addAll( (LinkedList<SongTag>)(player.getMapOfSong()));
+        	rowData = new Object[playList.size()][6];
+            makeObjectArray(playList.size());
+			//mapOfSongs.addAll( (LinkedList<SongTag>)(player.getMapOfSong()));
 		}
         catch (Exception ex) 
         {
 			ex.getMessage();
 		}
-        rowData = new Object[mapOfSongs.size()][6];
-        makeObjectArray(mapOfSongs.size());
+        
     }
     
     /*
@@ -346,31 +364,42 @@ public class PlaylistGUI extends JPanel implements MouseListener, ActionListener
             rowData[index][0] = ID;
             //String first = holdingInfoForCurrentSong.substring(holdingInfoForCurrentSong.indexOf('\t')+1);
             //Title = first.substring(0, first.indexOf('\t'));
-            rowData[index][1] = mapOfSongs.get(index).getSongTitle();
+            rowData[index][1] = playList.get(index).getSongTitle();
             //String second = first.substring(first.indexOf('\t')+1);
             //Artist = second.substring(0, second.indexOf('\t'));
-            rowData[index][2] = mapOfSongs.get(index).getArtist();
+            rowData[index][2] = playList.get(index).getArtist();
             //String third = second.ssubstring(second.indexOf('\t')+1);
             //Album = third.substring(0, third.indexOf('\t'));
-            rowData[index][3] = mapOfSongs.get(index).getRecordingTitle();
+            rowData[index][3] = playList.get(index).getRecordingTitle();
             //String fourth = third.substring(third.indexOf('\t')+1);
             //Durration = fourth.substring(0,fourth.indexOf('\t'));
-            rowData[index][4] = mapOfSongs.get(index).getDurration();
+            rowData[index][4] = playList.get(index).getDurration();
             //String fifth = fourth.substring(fourth.indexOf('\t')+1);
             //Year = fifth.substring(0,fifth.indexOf('\t'));
-            rowData[index][5] = mapOfSongs.get(index).getYear();
+            rowData[index][5] = playList.get(index).getYear();
         }
     }
+       
+    
     public boolean isOpen()
     {
-        if(frame.isShowing())
-        {
-            state = true;
-        }
-        return state;
+    	return frame.isEnabled();
+    }
+    
+    public void close()
+    {
+    	this.setVisible(false);
+    	this.setEnabled(false);
+        frame.setVisible(false);
+        frame.setEnabled(false);
+        
     }
     public void open()
     {
-        frame.setVisible(true);
+    	
+        frame.setVisible(true);	
+        frame.setEnabled(true);
+        this.setVisible(true);
+    	this.setEnabled(true);
     }
 }

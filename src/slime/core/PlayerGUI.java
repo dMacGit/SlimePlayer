@@ -229,6 +229,18 @@ public class PlayerGUI extends JPanel implements GuiSubject
         registerGuiObserver(musicLibraryManager);
         musicLibraryManager.setParentSubject(this);
         
+        try 
+        {
+			playListWindow = new PlaylistGUI(musicLibraryManager.getMapOfSong());
+			playListWindow.setEnabled(true);
+			playListWindow.setVisible(true);
+		} 
+        catch (Exception e1)
+        {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+        
     }
     
     /*
@@ -341,17 +353,16 @@ public class PlayerGUI extends JPanel implements GuiSubject
             }
             if(source == playList)
             {
-                if(playListWindow == null)
+                if(playListWindow.isOpen())
                 {
-                    playListWindow = new PlaylistGUI(musicLibraryManager);
-                    playListWindow.setVisible(true);
+                    
+                    //frame.add(playListWindow);
+                	playListWindow.close();
+                    //System.out.println("The size of the PlayListWindow is: "+playListWindow.getHeight());
                 }
                 else
                 {
-                    if(playListWindow.isOpen())
-                    {
-                        playListWindow.open();
-                    }
+                	playListWindow.open();
                 }
             }
             if(source == exit)
