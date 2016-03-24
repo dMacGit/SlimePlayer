@@ -5,6 +5,7 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Image;
+import java.awt.LayoutManager;
 import java.awt.Point;
 import java.awt.SystemTray;
 import java.awt.Toolkit;
@@ -19,6 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
+import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -96,7 +98,12 @@ public class PlayerGUI extends JPanel implements GuiSubject
     private SongTagAnimator scrollingLabel;
     private SongTimeController songTimeUpdater;
     
+    
     private JLabel scrollingTitleLabel;
+    
+    private int MAX_PLAYLIST_HEIGHT;
+    
+    
     
     //This is the dir path to the images folder		---> Change if necessary!
     
@@ -130,6 +137,7 @@ public class PlayerGUI extends JPanel implements GuiSubject
 
     public PlayerGUI()
     {   
+    	super();
     	/*
     	 * Setting the Background & Foreground of the menus
     	 */
@@ -163,9 +171,33 @@ public class PlayerGUI extends JPanel implements GuiSubject
 			e1.printStackTrace();
 		}
     	
+    	musicLibraryManager = new MusicLibraryManager(DATA_DIR);
+        System.out.println(NAME+MusicLibraryManager.class.getName()+"  created!");
+        
+        registerGuiObserver(musicLibraryManager);
+        musicLibraryManager.setParentSubject(this);
+    	
+    	try 
+        {
+			playListWindow = new PlaylistGUI(musicLibraryManager.getMapOfSong());
+			MAX_PLAYLIST_HEIGHT = playListWindow.getHeight();
+			this.add(playListWindow);
+			playListWindow.setVisible(false);
+			
+			
+		} 
+        catch (Exception e1)
+        {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+    	
+    	
+    	
     	TimeStarted = System.currentTimeMillis();
     	
-        this.setLayout(new FlowLayout(FlowLayout.CENTER,0,0));
+    	this.setLayout(new BoxLayout(this,BoxLayout.Y_AXIS));
+        //this.setLayout(new FlowLayout(FlowLayout.CENTER,0,0));
         
         listenerOne = new mouseListener();
         playPause = new JLabel(PLAY_ICON);
@@ -223,25 +255,14 @@ public class PlayerGUI extends JPanel implements GuiSubject
         shuffle.addMouseListener(listenerOne);
         repeat.addMouseListener(listenerOne);
 
-        musicLibraryManager = new MusicLibraryManager(DATA_DIR);
-        System.out.println(NAME+MusicLibraryManager.class.getName()+"  created!");
         
-        registerGuiObserver(musicLibraryManager);
-        musicLibraryManager.setParentSubject(this);
         
-        try 
-        {
-			playListWindow = new PlaylistGUI(musicLibraryManager.getMapOfSong());
-			playListWindow.close();
-			
-		} 
-        catch (Exception e1)
-        {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
+        
         
     }
+    
+
+    
     
     /*
      * These listeners handle the buttons that make up the playerGUI.
@@ -273,7 +294,7 @@ public class PlayerGUI extends JPanel implements GuiSubject
                 }
                 
             }
-            if(source == repeat)
+            else if(source == repeat)
             {
                 if(repeat_Select)
                 {
@@ -333,36 +354,43 @@ public class PlayerGUI extends JPanel implements GuiSubject
                 }
                 System.out.println(NAME+" New State: "+currentStateOfPlayer);
             }
+            
             if(source == menu)
             {
-            	int offset = 3;
+            	int offset = 0;
                 if(menuBar.isVisible())
                 {
                 	//Disable the menubar and adjust the player
-                	frame.setBounds(frame.getX(), frame.getY()+(menu.getHeight()+offset), frame.getWidth(), frame.getHeight()-menu.getHeight());
+                	frame.setBounds(frame.getX(), frame.getY()+(menuBar.getHeight()), frame.getWidth(), frame.getHeight()-menu.getHeight());
                 	menuBar.setVisible(false);
-                	//frame.revalidate();
                 }
                 else
                 {
                 	//Enable the menubar and adjust the player
-                	frame.setBounds(frame.getX(), frame.getY()-(menu.getHeight()+offset), frame.getWidth(), frame.getHeight()+menu.getHeight());
-                	//frame.revalidate();
+                	frame.setBounds(frame.getX(), frame.getY()-(menuBar.getHeight()), frame.getWidth(), frame.getHeight()+menu.getHeight());
                 	menuBar.setVisible(true);
                 }
             }
-            if(source == playList)
+            else if(source == playList)
             {
-                if(playListWindow.isOpen())
+            	//System.out.println("<<< The GUI Panel >>>\nSize: "+getWidth()+" X "+getHeight());
+            	//System.out.println("<<< The playListWindow Panel >>>\nSize: "+playListWindow.getWidth()+" X "+playListWindow.getHeight());
+                if(playListWindow.isVisible())
                 {
-                    
-                    //frame.add(playListWindow);
-                	playListWindow.close();
-                    //System.out.println("The size of the PlayListWindow is: "+playListWindow.getHeight());
+                	frame.setLocation(frame.getX(), frame.getY()+playListWindow.getHeight());
+                	frame.setSize(frame.getWidth(), frame.getHeight()-playListWindow.getHeight());
+                	playListWindow.setVisible(false);
+                	
+                	frame.revalidate();
                 }
                 else
                 {
-                	playListWindow.open();
+                	frame.setLocation(frame.getX(), frame.getY()-playListWindow.getHeight());
+                	frame.setSize(new Dimension(frame.getWidth(), frame.getHeight()+playListWindow.getHeight()));
+                	playListWindow.setVisible(true);               	
+                	
+                	
+                	frame.revalidate();
                 }
             }
             if(source == exit)
@@ -506,6 +534,7 @@ public class PlayerGUI extends JPanel implements GuiSubject
             menuBar = new SlimeMenuBar(null);
             frame.setJMenuBar(menuBar);
             //menuBar.setEnabled(false);
+            //menuBar.setBorderPainted(false);
             menuBar.setVisible(false);
             //gui.setPreferredSize(new Dimension(500,32));
             if (SystemTray.isSupported())

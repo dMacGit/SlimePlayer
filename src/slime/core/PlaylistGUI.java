@@ -39,7 +39,7 @@ public class PlaylistGUI extends JPanel implements MouseListener, ActionListener
     //private LinkedList<SongTag> mapOfSongs;
     private final int MAJOR_WIDTH = 500;
     private final int SUB_PANEL_HEIGHT = 35;
-    private final int MAJOR_HEIGHT = 600;
+    public int MAJOR_HEIGHT = 498;
     private JTable list;
     private Object[][] rowData;
     private Object[] colomnNames = {"ID","Title","Artist","Album","Durration","Year"};
@@ -55,26 +55,25 @@ public class PlaylistGUI extends JPanel implements MouseListener, ActionListener
     							  //ShrinkImageToSize.shrinkImageToSize(new ImageIcon(Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource(THE_FOLDER_DIR+"playButtonGlossy.png"))),H_Size,H_Size)
     private ImageIcon CLOSE_BOX = ShrinkImageToSize.shrinkImageToSize(new ImageIcon(Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource(THE_FOLDER_DIR+"Close_Icon.png"))),23,23);
     private JLabel close_Box;
-    private JPanel sliderPanel;
+    //private JPanel sliderPanel;
     private int MaxExt;
     private boolean fullyOpened = false, fullyClosed = true;
-    private int Slider_Ext_Ammount = 20;
+    //private int Slider_Ext_Ammount = 20;
     private Dimension Ext_Dimension = new Dimension(506,0);
-    private Timer sliderTimer;
+    //private Timer sliderTimer;
 
     public PlaylistGUI(List<SongTag> playList)
     {        
     	System.out.println("Entered into the Playlist class!");
         this.setLayout(new BoxLayout(this,BoxLayout.Y_AXIS));
-        sliderPanel = new JPanel();
-        sliderPanel.setBackground(Color.red);
+
         barGap = new JPanel();
-        windowControlls = new JPanel();
+        /*windowControlls = new JPanel();
         windowControlls.setLayout(new FlowLayout(FlowLayout.RIGHT,0,0));
         windowControlls.setBackground(Color.BLACK);
         windowControlls.setPreferredSize(new Dimension(505,22));
         close_Box = new JLabel(CLOSE_BOX);
-        windowControlls.add(close_Box);
+        windowControlls.add(close_Box);*/
         barGap.setPreferredSize(new Dimension(20,30));
         
         
@@ -87,20 +86,19 @@ public class PlaylistGUI extends JPanel implements MouseListener, ActionListener
         Dimension dimension = tools.getScreenSize();
         int width = (int)dimension.getWidth() / 2;
         int height = (int)dimension.getHeight() / 2;
-        frame = new JFrame("Play List");
+        /*frame = new JFrame("Play List");
         frame.setUndecorated( true );
-        ComponentMover cm = new ComponentMover();
-        cm.registerComponent(frame);
+        
         frame.getContentPane().add(this);
         frame.setSize(width, height);
         frame.setLocation(width / 2, height / 2);
-        frame.setVisible(true);
+        frame.setVisible(true);*/
         
         //setup the jpanels and other display data
         entireGUI = new JPanel();
         scrollBar = new JScrollBar(Scrollbar.VERTICAL, 0, 8, -100, 100);
         entireGUI.setPreferredSize(new Dimension(MAJOR_WIDTH+barGap.getWidth(),this.getComponentCount()*height));
-        sliderPanel.setPreferredSize(new Dimension(MAJOR_WIDTH+barGap.getWidth(),this.getComponentCount()*height));
+        //sliderPanel.setPreferredSize(new Dimension(MAJOR_WIDTH+barGap.getWidth(),this.getComponentCount()*height));
         Font smallFontText = new Font("Dialog", Font.PLAIN, 9);
         entireGUI.setBackground(Color.BLACK);
         templateID = new JLabel("ID");
@@ -159,21 +157,46 @@ public class PlaylistGUI extends JPanel implements MouseListener, ActionListener
         verticalPane.getVerticalScrollBar().setUnitIncrement(35);
         //verticalPane
         verticalPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
-        verticalPane.setPreferredSize(new Dimension(MAJOR_WIDTH+barGap.getWidth(),498));
+        verticalPane.setPreferredSize(new Dimension(MAJOR_WIDTH+barGap.getWidth(),MAJOR_HEIGHT));
+        verticalPane.setSize(new Dimension(MAJOR_WIDTH+barGap.getWidth(),MAJOR_HEIGHT));
         
         entireGUI.add(templatePanel);
         
-        createList();
+        generatePlaylist();
+        for(int index = 0; index < rowData.length; index++)
+        {
+            jPanelPlaylistTemplate createRowPanel = new jPanelPlaylistTemplate();
+            entireGUI.add(createRowPanel.setNewPanel(rowData[index]));
+            
+        }
+        entireGUI.setPreferredSize(new Dimension(MAJOR_WIDTH+barGap.getWidth(),((entireGUI.getComponentCount())*SUB_PANEL_HEIGHT)+(this.barGap.HEIGHT*2)));
+        //MAJOR_HEIGHT = 13*SUB_PANEL_HEIGHT;
+        MaxExt = MAJOR_HEIGHT+(this.barGap.HEIGHT*2);
+        //sliderPanel.setPreferredSize(new Dimension(MAJOR_WIDTH+barGap.getWidth(),MaxExt));
+        //sliderPanel.setLocation(this.getX(),this.getHeight());
+        //add(sliderPanel);
+        //sliderTimer = new Timer(100,this);
+        //this.sliderTimer.start();
+        //add(windowControlls);
+        add(verticalPane);
+        MAJOR_HEIGHT = verticalPane.getHeight();
+        //System.out.println("[PlayList] "+verticalPane.getHeight());
+        revalidate();
         
         
         
-        frame.pack();
-        state = true;
-        close_Box.addMouseListener(this);
+        //frame.pack();
+        //state = true;
+        //close_Box.addMouseListener(this);
         
 
     }
-    public void createList()
+    
+    @Override
+    public int getHeight(){
+    	return this.MAJOR_HEIGHT;
+    }
+    /*public void createList()
     {
         generatePlaylist();
         for(int index = 0; index < rowData.length; index++)
@@ -183,28 +206,23 @@ public class PlaylistGUI extends JPanel implements MouseListener, ActionListener
             
         }
         entireGUI.setPreferredSize(new Dimension(MAJOR_WIDTH+barGap.getWidth(),((entireGUI.getComponentCount())*SUB_PANEL_HEIGHT)+(this.barGap.HEIGHT*2)));
-        MaxExt = (/*entireGUI.getComponentCount()*/13*SUB_PANEL_HEIGHT)+(this.barGap.HEIGHT*2);
-        //sliderPanel.setPreferredSize(new Dimension(MAJOR_WIDTH+barGap.getWidth(),MaxExt));
-        //sliderPanel.setLocation(this.getX(),this.getHeight());
-        //add(sliderPanel);
-        //sliderTimer = new Timer(100,this);
-        //this.sliderTimer.start();
-        add(windowControlls);
+        MaxExt = (13*SUB_PANEL_HEIGHT)+(this.barGap.HEIGHT*2);
+
         add(verticalPane);
         revalidate();
         
+        System.out.println("[PlayList] "+verticalPane.getHeight());
         
         
-    }
+        
+    }*/
+    
 
+    
     public void mouseClicked(MouseEvent e) {}
     public void mousePressed(MouseEvent e) 
     {
-        Object source = e.getSource();
-        if(source == this.close_Box)
-        {
-        	close();
-        }
+
     }
     public void mouseReleased(MouseEvent e) {}
     public void mouseEntered(MouseEvent e) {}
@@ -218,13 +236,13 @@ public class PlaylistGUI extends JPanel implements MouseListener, ActionListener
             if(Ext_Dimension.height <= 600)
             {
 
-                remove(sliderPanel);
+                /*remove(sliderPanel);
                 int oldValue = Ext_Dimension.height;
                 Ext_Dimension.height+=Slider_Ext_Ammount;
                 System.out.println("Sliding out from: "+oldValue+" to: "+Ext_Dimension.height);
                 sliderPanel.setLocation(this.getX(),this.getY()-Slider_Ext_Ammount);
                 add(sliderPanel);
-                sliderPanel.setVisible(true);
+                sliderPanel.setVisible(true);*/
                 revalidate();
             }
             else
@@ -233,7 +251,7 @@ public class PlaylistGUI extends JPanel implements MouseListener, ActionListener
                 System.out.println("<<< The Playlist Panel >>>\nSize: "+this.getWidth()+" X "+this.getHeight());
                 System.out.println("<<< The verticalPane Panel >>>\nSize: "+verticalPane.getWidth()+" X "+verticalPane.getHeight());
                 System.out.println("<<< The windowControlls Panel >>>\nSize: "+windowControlls.getWidth()+" X "+windowControlls.getHeight());
-                System.out.println("<<< The sliderPanel Panel >>>\nSize: "+sliderPanel.getWidth()+" X "+sliderPanel.getHeight());
+                //System.out.println("<<< The sliderPanel Panel >>>\nSize: "+sliderPanel.getWidth()+" X "+sliderPanel.getHeight());
                 System.out.println("<<< The templatePanel Panel >>>\nSize: "+templatePanel.getWidth()+" X "+templatePanel.getHeight());
             }
 
@@ -242,14 +260,14 @@ public class PlaylistGUI extends JPanel implements MouseListener, ActionListener
         {
             if(Ext_Dimension.height > 0)
             {
-                remove(sliderPanel);
+                /*remove(sliderPanel);
                 int oldValue = Ext_Dimension.height;
                 Ext_Dimension.height-=Slider_Ext_Ammount;
                 System.out.println("Sliding out from: "+oldValue+" to: "+Ext_Dimension.height);
                 sliderPanel.setLocation(this.getX(),this.getY()+Slider_Ext_Ammount);
                 add(sliderPanel);
                 sliderPanel.setVisible(true);
-                revalidate();
+                revalidate();*/
             }
             else
                 fullyClosed = true;
@@ -321,6 +339,17 @@ public class PlaylistGUI extends JPanel implements MouseListener, ActionListener
         }
     }
     
+    @Override
+    public void setVisible(boolean state){
+    	super.setVisible(state);
+    	this.verticalPane.setVisible(state);
+    }
+    
+    @Override
+    public boolean isVisible(){
+    	return this.verticalPane.isVisible();
+    }
+    
     /*
      * This method is used in order to initialize the playlist data structures
      * used for displaying the playlist in the player GUI.
@@ -376,26 +405,4 @@ public class PlaylistGUI extends JPanel implements MouseListener, ActionListener
         }
     }
        
-    
-    public boolean isOpen()
-    {
-    	return frame.isEnabled();
-    }
-    
-    public void close()
-    {
-    	this.setVisible(false);
-    	this.setEnabled(false);
-        frame.setVisible(false);
-        frame.setEnabled(false);
-        
-    }
-    public void open()
-    {
-    	
-        frame.setVisible(true);	
-        frame.setEnabled(true);
-        this.setVisible(true);
-    	this.setEnabled(true);
-    }
 }
