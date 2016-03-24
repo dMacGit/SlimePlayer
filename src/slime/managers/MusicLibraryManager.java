@@ -1,34 +1,21 @@
 package slime.managers;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Properties;
-
-import javax.swing.JLabel;
-
-import org.farng.mp3.TagException;
 
 import slime.controller.MediaController;
+
 import slime.media.LibraryPlayList;
 import slime.media.PlayList;
 import slime.media.PlayState;
 import slime.media.Song;
 import slime.media.SongList;
 import slime.media.SongTag;
-import slime.media.WrongFileTypeException;
 import slime.observe.GuiObserver;
 import slime.observe.GuiSubject;
 import slime.observe.StateObserver;
 import slime.observe.StateSubject;
-import slime.utills.ActionTimer;
-import slime.utills.FileIO;
-import slime.utills.LibraryHelper;
 
 /**
  * <B>

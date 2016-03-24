@@ -1,5 +1,9 @@
 package slime.core;
 
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.event.ActionEvent;
 
 import javax.swing.AbstractAction;
@@ -9,26 +13,30 @@ import javax.swing.JMenuBar;
 
 /**
  * 
- * @author David McIndoe
- * 
+ * @author dMacGit
+ * <b>
  * All though not being used or fully coded, I am leaving this
  * MenuBar class in the project.
+ * </b>
+ * <p>
  * This is mainly due to the possibility of being used in the future
  * for an alternative to navigating the player or even to provide 
  * more advanced settings and options to the player, that is normally
  * hidden in the normal view.
+ * </p>
  *  
  *
  */
 
-public class MenuBar  extends JMenuBar
+public class SlimeMenuBar  extends JMenuBar
 {
-    private final PlayerGUI playerGui;
+   
+   private Color BACKGROUND_COLOR = Color.BLACK;
+   private Color FOREGROUND_COLOR = Color.white;
 
-   public MenuBar(PlayerGUI gui)
+   public SlimeMenuBar(PlayerGUI gui)
    {
       super();
-      playerGui = gui;
       Action playList = new AbstractAction("View Playlist")
       {
          public void actionPerformed(ActionEvent e)

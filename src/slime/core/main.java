@@ -48,14 +48,15 @@ public class main
             int height = (int)dimension.getHeight() / 2;
             gui = new PlayerGUI();
 
-            JFrame frame = new JFrame("My MP3 Player");
-            /*MenuBar menuBar = new MenuBar(gui);
-            frame.setJMenuBar(menuBar);*/
+            JFrame frame = new JFrame("SlimePlayer");
+            SlimeMenuBar menuBar = new SlimeMenuBar(gui);
+            frame.setJMenuBar(menuBar);
+            menuBar.setEnabled(false);
             //gui.setPreferredSize(new Dimension(500,32));
             if (SystemTray.isSupported())
             {
                 SystemTray tray = SystemTray.getSystemTray();
-                trayIcon = new TrayIcon(smallIcon.getImage(), "MyPlayer",null);
+                trayIcon = new TrayIcon(smallIcon.getImage(), "SlimePlayer",null);
                 trayIcon.setImageAutoSize(true);
                 try
                 {

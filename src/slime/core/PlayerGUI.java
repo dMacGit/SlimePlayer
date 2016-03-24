@@ -1,11 +1,14 @@
 package slime.core;
 
+import java.awt.AWTException;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
+import java.awt.Image;
+import java.awt.Point;
+import java.awt.SystemTray;
 import java.awt.Toolkit;
-
-
+import java.awt.TrayIcon;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.io.FileInputStream;
@@ -17,8 +20,11 @@ import java.util.List;
 import java.util.Properties;
 
 import javax.swing.ImageIcon;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.UIManager;
+
 import slime.controller.SongTagAnimator;
 import slime.controller.SongTimeController;
 import slime.managers.MusicLibraryManager;
@@ -27,6 +33,8 @@ import slime.media.Song;
 import slime.media.SongTag;
 import slime.observe.GuiObserver;
 import slime.observe.GuiSubject;
+import slime.utills.ComponentMover;
+import slime.utills.ImageLoader;
 import slime.utills.LibraryHelper;
 import slime.utills.ShrinkImageToSize;
 
@@ -54,6 +62,10 @@ import slime.utills.ShrinkImageToSize;
 
 public class PlayerGUI extends JPanel implements GuiSubject
 {
+    private static PlayerGUI gui;
+    private static SlimeMenuBar menuBar;
+    private static TrayIcon trayIcon;
+    private static JFrame frame;
     
 	private final static String NAME = "[GUI] ";
 	private MusicLibraryManager musicLibraryManager;
@@ -118,6 +130,18 @@ public class PlayerGUI extends JPanel implements GuiSubject
 
     public PlayerGUI()
     {   
+    	/*
+    	 * Setting the Background & Foreground of the menus
+    	 */
+    	UIManager.put("MenuBar.background", Color.BLACK);
+    	UIManager.put("MenuBar.foreground", Color.WHITE);
+    	UIManager.put("MenuBar.opaque", true);
+    	UIManager.put("Menu.background", Color.BLACK);
+    	UIManager.put("Menu.foreground", Color.WHITE);
+    	UIManager.put("Menu.opaque", true);
+    	UIManager.put("MenuItem.background", Color.BLACK);
+    	UIManager.put("MenuItem.foreground", Color.WHITE);
+    	UIManager.put("MenuItem.opaque", true);
     	
     	Properties config = new Properties();
     	try
@@ -156,6 +180,7 @@ public class PlayerGUI extends JPanel implements GuiSubject
         playList = new JLabel(LIST_ICON);
         playList.setName("playList");
         menu = new JLabel(MENU_ICON);
+        menu.setName("menu");
         defaultStringLabel = new JLabel(defaultString);
         
         defaultStringLabel.setForeground(Color.WHITE);
@@ -296,6 +321,24 @@ public class PlayerGUI extends JPanel implements GuiSubject
                 }
                 System.out.println(NAME+" New State: "+currentStateOfPlayer);
             }
+            if(source == menu)
+            {
+            	int offset = 3;
+                if(menuBar.isVisible())
+                {
+                	//Disable the menubar and adjust the player
+                	frame.setBounds(frame.getX(), frame.getY()+(menu.getHeight()+offset), frame.getWidth(), frame.getHeight()-menu.getHeight());
+                	menuBar.setVisible(false);
+                	//frame.revalidate();
+                }
+                else
+                {
+                	//Enable the menubar and adjust the player
+                	frame.setBounds(frame.getX(), frame.getY()-(menu.getHeight()+offset), frame.getWidth(), frame.getHeight()+menu.getHeight());
+                	//frame.revalidate();
+                	menuBar.setVisible(true);
+                }
+            }
             if(source == playList)
             {
                 if(playListWindow == null)
@@ -429,7 +472,71 @@ public class PlayerGUI extends JPanel implements GuiSubject
 	    
 	}
 	
-	
+	public static void main(String[] args) 
+	{
+
+    	ImageIcon smallIcon = null;
+    	String location = THE_FOLDER_DIR;
+    	String fileName = "PlayerIcon.png";
+    	
+    	if (ImageLoader.imageValidator(location, fileName))
+    	{
+    		Image image = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource(THE_FOLDER_DIR+"PlayerIcon.png"));
+            Image sourceImage = image;
+            smallIcon = new ImageIcon(sourceImage.getScaledInstance(60,60,Image.SCALE_SMOOTH));
+            
+            Toolkit tools = Toolkit.getDefaultToolkit();
+            Dimension dimension = tools.getScreenSize();
+            int width = (int)dimension.getWidth() / 2;
+            int height = (int)dimension.getHeight() / 2;
+            gui = new PlayerGUI();
+
+            frame = new JFrame("SlimePlayer");
+            menuBar = new SlimeMenuBar(null);
+            frame.setJMenuBar(menuBar);
+            menuBar.setEnabled(true);
+            menuBar.setVisible(false);
+            //gui.setPreferredSize(new Dimension(500,32));
+            if (SystemTray.isSupported())
+            {
+                SystemTray tray = SystemTray.getSystemTray();
+                trayIcon = new TrayIcon(smallIcon.getImage(), "SlimePlayer",null);
+                trayIcon.setImageAutoSize(true);
+                try
+                {
+                    tray.add(trayIcon);
+                }
+                catch (AWTException e)
+                {
+                    System.err.println(NAME+"TrayIcon could not be added.");
+                }
+            }
+            else
+            {
+                System.out.println(NAME+"System tray icon not supported!!");
+            }
+            frame.setIconImage(smallIcon.getImage());
+            frame.setUndecorated( true );
+            ComponentMover cm = new ComponentMover();
+            cm.registerComponent(frame);
+            frame.getContentPane().add(gui);
+            frame.setSize(width, height);
+            frame.setLocation(width / 2, height / 2);
+            frame.setVisible(true);
+            frame.pack();
+            System.out.println(NAME+"Dimensions are: "+frame.getWidth()+" W "+frame.getHeight()+" H");
+            
+            //Now register all of the observers and subjects.
+            
+            
+            
+    	} 
+    	else 
+    	{
+    		System.out.println(NAME+"There was an error finding the icon directory folder [ "+location+""+fileName+" ]");
+    	}
+    	
+	}
 	
 	
 	
