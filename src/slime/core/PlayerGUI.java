@@ -232,8 +232,8 @@ public class PlayerGUI extends JPanel implements GuiSubject
         try 
         {
 			playListWindow = new PlaylistGUI(musicLibraryManager.getMapOfSong());
-			playListWindow.setEnabled(true);
-			playListWindow.setVisible(true);
+			playListWindow.close();
+			
 		} 
         catch (Exception e1)
         {
@@ -505,7 +505,7 @@ public class PlayerGUI extends JPanel implements GuiSubject
             frame = new JFrame("SlimePlayer");
             menuBar = new SlimeMenuBar(null);
             frame.setJMenuBar(menuBar);
-            menuBar.setEnabled(true);
+            //menuBar.setEnabled(false);
             menuBar.setVisible(false);
             //gui.setPreferredSize(new Dimension(500,32));
             if (SystemTray.isSupported())

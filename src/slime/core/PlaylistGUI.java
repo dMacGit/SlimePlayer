@@ -203,11 +203,7 @@ public class PlaylistGUI extends JPanel implements MouseListener, ActionListener
         Object source = e.getSource();
         if(source == this.close_Box)
         {
-            frame.setVisible(false);
-            if(fullyOpened)
-            {
-                this.sliderTimer.start();
-            }
+        	close();
         }
     }
     public void mouseReleased(MouseEvent e) {}
