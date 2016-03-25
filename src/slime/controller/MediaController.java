@@ -372,6 +372,24 @@ public class MediaController implements StateObserver
 			System.out.println(NAME+" ["+this.getStateObserverName()+"] Is Now STOPPED: "+playState.toString());
 			subject.stateSubjectCallback(getStateObserverName(), playState, null);
 		}
+		else if(newState == PlayState.END_OF_PLAYLIST)
+		{
+			
+			if(wrapperThread != null)
+			{
+				if(wrapperThread.isAlive())
+				{
+					stop();
+					playSongControls = null;
+					wrapperThread = null;
+				}
+				
+			}
+			wrapperThread = null;
+			playState = newState;
+			System.out.println(NAME+" ["+this.getStateObserverName()+"] Is Now STOPPED: "+playState.toString());
+			subject.stateSubjectCallback(getStateObserverName(), playState, null);
+		}
 		else if(newState == PlayState.STOPPED)
 		{
 			

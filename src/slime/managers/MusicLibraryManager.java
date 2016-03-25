@@ -85,6 +85,8 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
     private boolean userSkippedBack = false;
     private boolean userPressedClose = false;
     
+    private boolean reachedEndOfPlaylist = false;
+    
     private playlistManagerThread playListThread;
     
     private String Durration;
@@ -167,7 +169,7 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
 
                 }
             	
-            	if(PLAY_STATE_CHANGED || SYNC_CHANGED)
+            	if(PLAY_STATE_CHANGED || SYNC_CHANGED && !reachedEndOfPlaylist)
             	{
             		/*	The initial state of the manager and the Animator and MediaController
             		 * 	It is assumed that the Animator and MediaController classes are Initiated
@@ -178,23 +180,32 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
             		if(currentPlayState == PlayState.IDLE && userPressedPlay)
                     {
             			System.out.println(NAME+" Changing from IDLE to READY");
+            			
             			if(shuffle_Is_On)
                     	{
             				System.out.println(NAME+" SHUFFLE Active, Choosing random song");
-            				playerLibrary.chooseNextTrack();
-                    		System.out.println(NAME+" Randomly selected Index: "+playerLibrary.getPlayCount()+" which holds: "+playerLibrary.getCurrentTrack_MetaData().getRecordingTitle());
                     	}
                     	else
                     	{
                     		System.out.println(NAME+" SHUFFLE Inactive, Choosing next song");
-            				playerLibrary.chooseNextTrack();
-            				System.out.println(NAME+" Selected Index: "+playerLibrary.getPlayCount()+" which holds: "+playerLibrary.getCurrentTrack_MetaData().getRecordingTitle());
-                    		
                     	}
-            			currentPlayState = PlayState.READY;
-                		notifyAllStateObservers(playerLibrary.getCurrentTrack(),currentPlayState);
-            			PLAY_STATE_CHANGED = false;
-            			resetUserButtons();
+            			if(playerLibrary.chooseNextTrack())
+        				{
+        					System.out.println(NAME+" Selected Index: "+playerLibrary.getPlayCount()+" which holds: "+playerLibrary.getCurrentTrack_MetaData().getRecordingTitle());
+        					currentPlayState = PlayState.READY;
+        					notifyAllStateObservers(playerLibrary.getCurrentTrack(),currentPlayState);
+                			PLAY_STATE_CHANGED = false;
+                			resetUserButtons();
+                    		
+        				}
+        				else
+        				{
+        					//Notify end of playlist!
+        					//currentPlayState = PlayState.IDLE;
+        					//endOfPlaylist = true;
+        					reachedEndOfPlaylist = true;
+        				}
+            			
                     }
             		else if(currentPlayState == PlayState.READY)
                     {
@@ -216,20 +227,22 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
                 		{
 							currentPlayState = PlayState.READY;
 							PLAY_STATE_CHANGED = false;
-							notifyAllStateObservers(playerLibrary.getCurrentTrack(), currentPlayState);          		
+							notifyAllStateObservers(playerLibrary.getCurrentTrack(), currentPlayState);
+							System.out.println(NAME+" Current Song / Next Song to play: "
+									+ playerLibrary.getCurrentTrack_MetaData().getSongTitle());
+							int checkTime = (playerLibrary.getCurrentTrack_MetaData().getDurration()) / 2;
+							int realTime = (checkTime % 60);
+							System.out.println(NAME+" "+playerLibrary.getCurrentTrack_MetaData().getSongTitle() + " <=[" + Durration
+									+ "]=> " + checkTime + " ---> " + (int) (checkTime / 60) + ":" + realTime);
                         }
                         else
                         {
-							currentPlayState = PlayState.READY;
+							currentPlayState = PlayState.END_OF_PLAYLIST;
 							PLAY_STATE_CHANGED = false;
+							parentSubject.guiCallback(PlayState.END_OF_PLAYLIST, null);
 							notifyAllStateObservers(playerLibrary.getCurrentTrack(), currentPlayState);
                         }                        	
-						System.out.println(NAME+" Current Song / Next Song to play: "
-								+ playerLibrary.getCurrentTrack_MetaData().getSongTitle());
-						int checkTime = (playerLibrary.getCurrentTrack_MetaData().getDurration()) / 2;
-						int realTime = (checkTime % 60);
-						System.out.println(NAME+" "+playerLibrary.getCurrentTrack_MetaData().getSongTitle() + " <=[" + Durration
-								+ "]=> " + checkTime + " ---> " + (int) (checkTime / 60) + ":" + realTime);
+						
                     }
             		else if(currentPlayState == PlayState.PLAYING && observerSyncPlay)
                     {

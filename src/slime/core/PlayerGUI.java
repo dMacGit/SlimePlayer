@@ -469,6 +469,16 @@ public class PlayerGUI extends JPanel implements GuiSubject
 			songTimeUpdater.newDuration(song.getMetaTag().getDurration());
 			songTimeUpdater.startTimer();
 		}
+		else if(state == PlayState.END_OF_PLAYLIST)
+		{
+			//Stop the Animator class
+			currentStateOfPlayer = PlayState.END_OF_PLAYLIST;
+			songTimeUpdater.stopTimer();
+			songTimeUpdater.reset();
+			String text = "... Reached End Of Playlist!";
+			scrollingLabel.updateText(text,text.length());
+			scrollingLabel.stop();
+		}
 	}
 	
 	/* 
