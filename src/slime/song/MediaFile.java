@@ -1,4 +1,4 @@
-package slime.media;
+package slime.song;
 
 public interface MediaFile 
 {

@@ -1,4 +1,4 @@
-package slime.media;
+package slime.song;
 
 import java.io.File;
 import java.io.IOException;
@@ -20,6 +20,7 @@ import org.jaudiotagger.tag.FieldKey;
 import org.jaudiotagger.tag.Tag;
 import org.tritonus.share.sampled.file.TAudioFileFormat;
 
+import slime.exceptions.WrongFileTypeException;
 import slime.utills.ActionTimer;
 import slime.utills.LibraryHelper;
 import slime.utills.MusicFileFilter;

@@ -1,7 +1,7 @@
 package slime.observe;
 
 import slime.media.PlayState;
-import slime.media.Song;
+import slime.song.Song;
 
 /**
  * <P><B>

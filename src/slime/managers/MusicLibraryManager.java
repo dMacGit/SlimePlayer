@@ -9,13 +9,13 @@ import slime.controller.MediaController;
 import slime.media.LibraryPlayList;
 import slime.media.PlayList;
 import slime.media.PlayState;
-import slime.media.Song;
-import slime.media.SongList;
-import slime.media.SongTag;
 import slime.observe.GuiObserver;
 import slime.observe.GuiSubject;
 import slime.observe.StateObserver;
 import slime.observe.StateSubject;
+import slime.song.Song;
+import slime.song.SongList;
+import slime.song.SongTag;
 
 /**
  * <B>

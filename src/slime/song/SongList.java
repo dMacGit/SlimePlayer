@@ -1,4 +1,4 @@
-package slime.media;
+package slime.song;
 
 import java.util.ArrayList;
 import java.util.Arrays;

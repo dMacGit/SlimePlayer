@@ -10,6 +10,8 @@ import java.util.Properties;
 
 import org.farng.mp3.TagException;
 
+import slime.exceptions.WrongFileTypeException;
+import slime.song.Song;
 import slime.utills.ActionTimer;
 import slime.utills.FileIO;
 

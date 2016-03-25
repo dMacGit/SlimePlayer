@@ -12,11 +12,11 @@ import javax.sound.sampled.DataLine;
 import javax.sound.sampled.SourceDataLine;
 
 import slime.media.PlayState;
-import slime.media.Song;
-import slime.media.SongList;
-import slime.media.SongTag;
 import slime.observe.StateObserver;
 import slime.observe.StateSubject;
+import slime.song.Song;
+import slime.song.SongList;
+import slime.song.SongTag;
 
 /**
  * <p><b>

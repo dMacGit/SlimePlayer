@@ -1,8 +1,10 @@
-package slime.media;
+package slime.song;
 
 import java.io.IOException;
 
 import org.farng.mp3.TagException;
+
+import slime.exceptions.WrongFileTypeException;
 
 /**
  * 

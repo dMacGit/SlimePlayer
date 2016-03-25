@@ -3,7 +3,7 @@ package slime.observe;
 import javax.swing.JLabel;
 
 import slime.media.PlayState;
-import slime.media.Song;
+import slime.song.Song;
 
 /**
  * <P><B>

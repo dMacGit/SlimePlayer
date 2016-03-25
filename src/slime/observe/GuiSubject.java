@@ -3,8 +3,8 @@ package slime.observe;
 import javax.swing.JLabel;
 
 import slime.media.PlayState;
-import slime.media.Song;
-import slime.media.SongTag;
+import slime.song.Song;
+import slime.song.SongTag;
 
 public interface GuiSubject 
 {

@@ -9,8 +9,8 @@ import org.farng.mp3.TagException;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import slime.media.SongTag;
-import slime.media.WrongFileTypeException;
+import slime.exceptions.WrongFileTypeException;
+import slime.song.SongTag;
 import slime.utills.ActionTimer;
 import slime.utills.LibraryHelper;
 import slime.utills.MusicFileFilter;

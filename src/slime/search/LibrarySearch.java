@@ -1,6 +1,8 @@
-package slime.media;
+package slime.search;
 
 import java.util.LinkedList;
+
+import slime.song.SongTag;
 
 
 /**

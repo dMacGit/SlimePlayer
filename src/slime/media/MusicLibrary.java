@@ -3,6 +3,11 @@ package slime.media;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import slime.search.LibrarySearch;
+import slime.search.SearchType;
+import slime.song.SongList;
+import slime.song.SongTag;
+
 public class MusicLibrary
 {
 	private SongList libraryList;

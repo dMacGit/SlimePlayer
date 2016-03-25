@@ -30,8 +30,8 @@ import javax.swing.UIManager;
 import org.farng.mp3.TagException;
 import org.tritonus.share.sampled.file.TAudioFileFormat;
 
-import slime.media.SongTag;
-import slime.media.WrongFileTypeException;
+import slime.exceptions.WrongFileTypeException;
+import slime.song.SongTag;
 
 /**
  * <b>

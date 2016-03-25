@@ -25,7 +25,7 @@ import javax.swing.SwingConstants;
 import javax.swing.Timer;
 
 import slime.managers.MusicLibraryManager;
-import slime.media.SongTag;
+import slime.song.SongTag;
 import slime.utills.ComponentMover;
 import slime.utills.ImageLoader;
 import slime.utills.ShrinkImageToSize;

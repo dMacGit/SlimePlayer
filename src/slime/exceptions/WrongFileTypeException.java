@@ -1,4 +1,4 @@
-package slime.media;
+package slime.exceptions;
 
 public class WrongFileTypeException extends Exception 
 {
