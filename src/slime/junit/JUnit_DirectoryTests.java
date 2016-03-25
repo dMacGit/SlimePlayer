@@ -7,9 +7,9 @@ import java.io.File;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import slime.utills.LibraryHelper;
-import slime.utills.MusicFileFilter;
-import slime.utills.RecursiveSearch;
+import slime.io.LibraryHelper;
+import slime.io.MusicFileFilter;
+import slime.io.RecursiveSearch;
 
 public class JUnit_DirectoryTests
 {

@@ -29,6 +29,8 @@ import javax.swing.UIManager;
 
 import slime.controller.SongTagAnimator;
 import slime.controller.SongTimeController;
+import slime.io.ImageLoader;
+import slime.io.LibraryHelper;
 import slime.managers.MusicLibraryManager;
 import slime.media.PlayState;
 import slime.observe.GuiObserver;
@@ -36,8 +38,6 @@ import slime.observe.GuiSubject;
 import slime.song.Song;
 import slime.song.SongTag;
 import slime.utills.ComponentMover;
-import slime.utills.ImageLoader;
-import slime.utills.LibraryHelper;
 import slime.utills.ShrinkImageToSize;
 
 /**

@@ -11,9 +11,9 @@ import java.util.Properties;
 import org.farng.mp3.TagException;
 
 import slime.exceptions.WrongFileTypeException;
+import slime.io.FileIO;
 import slime.song.Song;
 import slime.utills.ActionTimer;
-import slime.utills.FileIO;
 
 public class LibraryPlayList extends PlayList 
 {
@@ -26,9 +26,9 @@ public class LibraryPlayList extends PlayList
 	private final static String DEFAULT_ROOT = "\\";
 	private final static String DEFAULT_DATA_DIR_NAME = "Data_Files";
 	private final static String DEFAULT_LIBRARY_FILE_NAME = "Library.txt";
-	private final static String DEFAULT_PATHS_FILE_NAME = "Song_Paths.txt";
+	//private final static String DEFAULT_PATHS_FILE_NAME = "Song_Paths.txt";
 	
-	private static String Music_Home, Root, Data_Dir, Library_File, Song_Paths_File, Library_File_Path;
+	private static String Music_Home, Root, Data_Dir, Library_File, /*Song_Paths_File, */Library_File_Path;
 	
 	private static final String START_DATE_DELIMITOR = "'['", MID_DATE_DELIMITOR = "','", END_DATE_DELIMITOR = "']'";
     private static final String CHARACTER_SEPERATOR = "&&";
@@ -50,12 +50,11 @@ public class LibraryPlayList extends PlayList
     		
     		Music_Home = removeQuotes(config.getProperty("DIR"));
     		Data_Dir = removeQuotes(config.getProperty("PLAYER_DATA_DIR"));
-    		Library_File = removeQuotes(config.getProperty("PATHS_FILE"));
-    		Song_Paths_File = removeQuotes(config.getProperty("LIBRARY_FILE"));
+    		Library_File = removeQuotes(config.getProperty("LIBRARY_FILE"));
+    		//Song_Paths_File = removeQuotes(config.getProperty("LIBRARY_FILE"));
     		
     		System.out.println(NAME+" Properties File READ...\nDefault Music Directory set to: "+Music_Home
-    			+"\nDefault Player path is: "+Root+"\nData Directory is: "+Data_Dir+"\nPaths file name is ["+Song_Paths_File+
-    			"]\nLibrary file name is: "+Library_File+"]");
+    			+"\nDefault Player path is: "+Root+"\nData Directory is: "+Data_Dir+"\nLibrary file name is: "+Library_File+"]");
     		fin.close();
 		}
     	catch (FileNotFoundException ex) 

@@ -24,10 +24,10 @@ import javax.swing.JTable;
 import javax.swing.SwingConstants;
 import javax.swing.Timer;
 
+import slime.io.ImageLoader;
 import slime.managers.MusicLibraryManager;
 import slime.song.SongTag;
 import slime.utills.ComponentMover;
-import slime.utills.ImageLoader;
 import slime.utills.ShrinkImageToSize;
 
 public class PlaylistGUI extends JPanel implements MouseListener, ActionListener

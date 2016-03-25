@@ -21,9 +21,9 @@ import org.jaudiotagger.tag.Tag;
 import org.tritonus.share.sampled.file.TAudioFileFormat;
 
 import slime.exceptions.WrongFileTypeException;
+import slime.io.LibraryHelper;
+import slime.io.MusicFileFilter;
 import slime.utills.ActionTimer;
-import slime.utills.LibraryHelper;
-import slime.utills.MusicFileFilter;
 
 /**
  * <B>

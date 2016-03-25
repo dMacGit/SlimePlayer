@@ -1,4 +1,4 @@
-package slime.utills;
+package slime.io;
 
 import java.io.File;
 import java.io.FilenameFilter;

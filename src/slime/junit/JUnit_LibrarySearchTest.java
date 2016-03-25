@@ -10,11 +10,11 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import slime.exceptions.WrongFileTypeException;
+import slime.io.LibraryHelper;
+import slime.io.MusicFileFilter;
+import slime.io.RecursiveSearch;
 import slime.song.SongTag;
 import slime.utills.ActionTimer;
-import slime.utills.LibraryHelper;
-import slime.utills.MusicFileFilter;
-import slime.utills.RecursiveSearch;
 
 public class JUnit_LibrarySearchTest 
 {
