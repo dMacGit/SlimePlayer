@@ -10,20 +10,32 @@ import java.awt.Point;
 import java.awt.SystemTray;
 import java.awt.Toolkit;
 import java.awt.TrayIcon;
+import java.awt.event.ActionEvent;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Properties;
+import java.util.Set;
 
+import javax.swing.AbstractAction;
+import javax.swing.Action;
 import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
 import javax.swing.JPanel;
 import javax.swing.UIManager;
 
@@ -38,6 +50,7 @@ import slime.observe.GuiSubject;
 import slime.song.Song;
 import slime.song.SongTag;
 import slime.utills.ComponentMover;
+import slime.utills.LibraryCreater;
 import slime.utills.ShrinkImageToSize;
 
 /**
@@ -65,12 +78,14 @@ import slime.utills.ShrinkImageToSize;
 public class PlayerGUI extends JPanel implements GuiSubject
 {
     private static PlayerGUI gui;
-    private static SlimeMenuBar menuBar;
+    private static InnerJMenuBar menuBar;
     private static TrayIcon trayIcon;
     private static JFrame frame;
     
 	private final static String NAME = "[GUI] ";
 	private MusicLibraryManager musicLibraryManager;
+	
+	private JPanel mainWindowPanel;
 	
 	private static final long serialVersionUID = -4125262661558412319L;
 	
@@ -98,12 +113,23 @@ public class PlayerGUI extends JPanel implements GuiSubject
     private SongTagAnimator scrollingLabel;
     private SongTimeController songTimeUpdater;
     
+    private final static String PROPERTIES_FILE = "slimeplayer.properties";
+    private final static String DEFAULT_ROOT = "Slimeplayer";
+	private final static String DEFAULT_MUSIC_HOME = "%USERPROFILE%\\My Documents\\My Music";
+	private final static String DEFAULT_DATA_DIR_NAME = "Data_Files";
+	private final static String DEFAULT_LIBRARY_FILE_NAME = "Library.txt";
+	
+	private static String Music_Home, Root, Data_Dir, Library_File;
+	
+	private HashMap<JPanel, Boolean> mapOfPanels = new HashMap<JPanel, Boolean>();  
     
     private JLabel scrollingTitleLabel;
     
     private int MAX_PLAYLIST_HEIGHT;
     
+    private static LibraryCreater libCreater;
     
+    private boolean isLibCreaterOpen = false;
     
     //This is the dir path to the images folder		---> Change if necessary!
     
@@ -134,6 +160,7 @@ public class PlayerGUI extends JPanel implements GuiSubject
             SHUFFLE_ICON_SELECTED = ShrinkImageToSize.shrinkImageToSize(new ImageIcon(Toolkit.getDefaultToolkit().getImage(SELECT_SHUFFLE_DE_SELECT_ICON_URL)),H_Size,H_Size);
     
     private boolean shuffle_Select = false, repeat_Select = false;
+	private boolean isNewLibrary = false, emptyLibrary = false;
 
     public PlayerGUI()
     {   
@@ -141,6 +168,7 @@ public class PlayerGUI extends JPanel implements GuiSubject
     	/*
     	 * Setting the Background & Foreground of the menus
     	 */
+    	//UIManager.put("Frame.background", Color.BLACK);
     	UIManager.put("MenuBar.background", Color.BLACK);
     	UIManager.put("MenuBar.foreground", Color.WHITE);
     	UIManager.put("MenuBar.opaque", true);
@@ -151,52 +179,83 @@ public class PlayerGUI extends JPanel implements GuiSubject
     	UIManager.put("MenuItem.foreground", Color.WHITE);
     	UIManager.put("MenuItem.opaque", true);
     	
-    	Properties config = new Properties();
-    	try
-    	{
-			config.load(new FileInputStream("player.properties"));
-			defaultUserMusicDirectory = LibraryHelper.removeQuotes(config.getProperty("DIR"));
-			ROOT = System.getProperty("user.dir");
-			DATA_DIR = LibraryHelper.removeQuotes(config.getProperty("PLAYER_DATA_DIR"));
-			
-		}
-    	catch (FileNotFoundException ex) 
-    	{
-			
-			ex.getMessage();
-		}
-    	catch (IOException e1) 
-    	{
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
+    	this.setLayout(new BoxLayout(this,BoxLayout.Y_AXIS));
     	
-    	musicLibraryManager = new MusicLibraryManager(DATA_DIR);
-        System.out.println(NAME+MusicLibraryManager.class.getName()+"  created!");
-        
-        registerGuiObserver(musicLibraryManager);
-        musicLibraryManager.setParentSubject(this);
+    	try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (Exception e) {
+            System.out.println("Error setting native LAF: " + e);
+        }
     	
-    	try 
-        {
-			playListWindow = new PlaylistGUI(musicLibraryManager.getMapOfSong());
-			MAX_PLAYLIST_HEIGHT = playListWindow.getHeight();
-			this.add(playListWindow);
-			playListWindow.setVisible(false);
-			
-			
-		} 
-        catch (Exception e1)
-        {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
+    	mainWindowPanel = new JPanel();
+    	mainWindowPanel.setSize(this.getWidth(), 500);
+    	//mainWindowPanel.setBackground(Color.WHITE);
+    	mainWindowPanel.setVisible(true);
+    	
+    	
+    	
+		//this.add(mainWindowPanel);
+    	
+    	mapOfPanels.put(mainWindowPanel, false);
+    	
+    	/*
+    	 * Make sure that the properties file is created.
+    	 * Then proceed to load the properties into the player 
+    	 */
+    	check_PropertiesFile();
+    	
+    	/*
+    	 * Check that there is are the required files and directories
+    	 * before loading the library into the player
+    	 */
+    	if(check_Created_LibraryDirectory())
+    	{
+    		
+    			
+    	}
+    	
+    	if(is_Fresh_LibraryDirectory())
+		{
+				isNewLibrary = true;
+				
 		}
+		emptyLibrary = true;
+    	
+		libCreater = new LibraryCreater();
+		mainWindowPanel.add(libCreater);
+    	
+    	if(isNewLibrary || emptyLibrary)
+    	{
+	    	musicLibraryManager = new MusicLibraryManager(emptyLibrary);
+	        System.out.println(NAME+MusicLibraryManager.class.getName()+"  created!");
+	        
+	        registerGuiObserver(musicLibraryManager);
+	        musicLibraryManager.setParentSubject(this);
+	    	
+	    	try 
+	        {	
+	    		if(musicLibraryManager.getMapOfSong()!=null)
+	    		{
+					playListWindow = new PlaylistGUI(musicLibraryManager.getMapOfSong());
+					MAX_PLAYLIST_HEIGHT = playListWindow.getHeight();
+					//frame.add(playListWindow);
+					playListWindow.setVisible(false);
+					//mapOfPanels.put(playListWindow, false);
+	    		}
+				
+			} 
+	        catch (Exception e1)
+	        {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+    	}
     	
     	
     	
     	TimeStarted = System.currentTimeMillis();
     	
-    	this.setLayout(new BoxLayout(this,BoxLayout.Y_AXIS));
+    	
         //this.setLayout(new FlowLayout(FlowLayout.CENTER,0,0));
         
         listenerOne = new mouseListener();
@@ -244,8 +303,12 @@ public class PlayerGUI extends JPanel implements GuiSubject
         panelBar.add(menu);
         panelBar.add(exit);
         
-        this.setBackground(Color.red);
-        this.add(panelBar);
+        //this.setBackground(Color.red);
+        add(panelBar);
+        
+        
+        
+        mapOfPanels.put(panelBar, true);
         
         playPause.addMouseListener(listenerOne);
         skip.addMouseListener(listenerOne);
@@ -254,14 +317,216 @@ public class PlayerGUI extends JPanel implements GuiSubject
         exit.addMouseListener(listenerOne);
         shuffle.addMouseListener(listenerOne);
         repeat.addMouseListener(listenerOne);
-
-        
-        
-        
-        
+ 
     }
     
+    public JPanel getCreaterPanel(){
+    	return libCreater;
+    }
+    
+    public void closeCreaterPanel()
+    {   	
+    	remove(mainWindowPanel);
+    	isLibCreaterOpen = false;
+    	frame.pack();
+    	if(libCreater.isLibraryUpdated())
+		{
+			//Call the update method!
+    		musicLibraryManager.forceLibraryPlaylistUpdate();
+    		
+    		try 
+	        {	
+	    		if(musicLibraryManager.getMapOfSong()!=null)
+	    		{
+					playListWindow = new PlaylistGUI(musicLibraryManager.getMapOfSong());
+					MAX_PLAYLIST_HEIGHT = playListWindow.getHeight();
+					//frame.add(playListWindow);
+					playListWindow.setVisible(false);
+					//mapOfPanels.put(playListWindow, false);
+	    		}
+				
+			} 
+	        catch (Exception e1)
+	        {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+		}
+    }
+            
+    public void openCreaterPanel()
+    {          	
+		isLibCreaterOpen = true;
+		remove(panelBar);
+		add(mainWindowPanel);
+		add(panelBar);
+		frame.pack();
+		
+		
+		
+    }
+    
+    public boolean isCreaterPanelOpen()
+    {
+    	return isLibCreaterOpen;
+    }
+    
+    
+    private boolean check_Created_LibraryDirectory()
+    {
+    	boolean fresh_Directory = false;
 
+    	File dataDirFile = new File(Root+"\\"+Data_Dir);
+        if(!dataDirFile.exists())
+        {
+        	System.out.println("DATA_DIR Doesn't Exist!");
+        	
+        	File tempLibFile = new File(dataDirFile.getPath()+"\\"+Library_File);
+        	
+        	try 
+        	{
+        		dataDirFile.mkdir();
+        		System.out.println(dataDirFile.getPath()+"\n"+dataDirFile.getAbsolutePath());
+        		System.out.println(tempLibFile.getPath()+"\n"+tempLibFile.getAbsolutePath());
+				if(tempLibFile.createNewFile())
+				{
+					System.out.println("The Library File was created!");
+				}
+				fresh_Directory = true;
+			}
+        	catch (IOException e)
+        	{
+				e.printStackTrace();
+				System.out.println("DATA_DIR Doesn't Exist!");
+				return fresh_Directory;
+			}
+        }
+        else
+        {
+        	System.out.println("DATA_DIR Does Exist!");
+        }
+    
+    	return fresh_Directory;
+    }
+    
+    private boolean is_Fresh_LibraryDirectory()
+    {
+    	boolean fresh_Directory = false;
+
+    	//File dataDirFile = new File(Root+"\\"+Data_Dir);
+    	File tempLibFile = new File(Root+"\\"+Data_Dir+"\\"+Library_File);
+    	long sizeInBytes;
+        if(tempLibFile.exists())
+        {
+        	System.out.println("Library_File Exist!");
+        	
+        	//FileReader fr = new FileReader(tempLibFile);
+        	//BufferedReader br = new BufferedReader(fr);
+        	if(tempLibFile.isFile())
+        	{
+        		if(tempLibFile.length() > 0)
+        		{
+        			System.out.println("Library_File contains data!");
+        			
+        		}
+        		else
+        		{
+        			fresh_Directory = true;
+        			System.out.println("Library_File contains no data! File is Fresh!");
+        		}
+        	}
+
+        }
+        else
+        {
+        	System.out.println("Library_File Doesn't Exist!");
+        }
+    
+    	return fresh_Directory;
+    }
+    
+    private boolean check_PropertiesFile()
+    {
+    	Properties config = new Properties();
+    	String dirValue = null;
+    	FileWriter fw;
+		BufferedWriter bw;
+		
+		boolean created_Properties = false;
+    	try
+    	{
+    		if( !(new File(System.getProperty("user.home")+"\\"+PROPERTIES_FILE).exists()) )
+    		{
+    			created_Properties = true;
+    			//Then create a new properties file!
+    			File newProperties = new File(System.getProperty("user.home"),PROPERTIES_FILE);
+    			System.out.println("Creating the properties file @ "+System.getProperty("user.home"));
+    			fw = new FileWriter(newProperties);
+    			bw = new BufferedWriter(fw);
+    			
+    			Music_Home = DEFAULT_MUSIC_HOME;
+    			Root = System.getProperty("user.home");
+    			Data_Dir = DEFAULT_DATA_DIR_NAME;
+    			Library_File = DEFAULT_LIBRARY_FILE_NAME;
+    			
+    			/*
+				 * DIR:"%USERPROFILE%\\My Documents\\My Music"
+				 * PLAYER_ROOT:"\\"
+				 * PLAYER_DATA_DIR:"Data_Files"
+				 * PATHS_FILE:"SongPaths.txt"
+				 * LIBRARY_FILE:"Lib_MP3player.txt"
+				 */
+    			
+    			bw.write("DIR:"+'"'+DEFAULT_MUSIC_HOME+'"');
+    			bw.newLine();
+    			bw.write("PLAYER_ROOT:"+'"'+"\\"+'"');
+    			bw.newLine();
+    			bw.write("PLAYER_DATA_DIR:"+'"'+DEFAULT_DATA_DIR_NAME+'"');
+    			bw.newLine();
+    			bw.write("LIBRARY_FILE:"+'"'+DEFAULT_LIBRARY_FILE_NAME+'"');
+    			bw.flush();
+    			bw.close();
+    			fw.close();
+    		}
+    		else
+    		{
+    			//Then read from the file
+    			System.out.println("Found the properties file @ "+System.getProperty("user.home"));
+    			
+    			try
+            	{
+            		FileInputStream fin = new FileInputStream(new File(System.getProperty("user.home")+"\\"+PROPERTIES_FILE));
+        			config.load(fin);
+        			
+        			dirValue = config.getProperty("DIR");
+        			System.out.println("Found the users Music Home dir location @ "+dirValue);
+        			Music_Home = LibraryHelper.removeQuotes(config.getProperty("DIR"));
+        			Root = System.getProperty("user.home");
+        			Data_Dir = LibraryHelper.removeQuotes(config.getProperty("PLAYER_DATA_DIR"));
+        			Library_File = LibraryHelper.removeQuotes(config.getProperty("LIBRARY_FILE"));
+        			fin.close();
+        		}
+            	catch (FileNotFoundException e1) 
+            	{
+        			// TODO Auto-generated catch block
+        			e1.printStackTrace();
+        		}
+            	catch (IOException e1) 
+            	{
+        			// TODO Auto-generated catch block
+        			e1.printStackTrace();
+        		}
+    		}
+    		
+    		
+    	}
+    	catch(IOException io_ex)
+    	{
+    		io_ex.printStackTrace();
+    	}
+    	
+    	return created_Properties;
+    }
     
     
     /*
@@ -360,43 +625,79 @@ public class PlayerGUI extends JPanel implements GuiSubject
             	int offset = 0;
                 if(menuBar.isVisible())
                 {
+                	/*if(mainWindowPanel.isVisible())
+                	{
+                		
+                	}
                 	//Disable the menubar and adjust the player
-                	frame.setBounds(frame.getX(), frame.getY()+(menuBar.getHeight()), frame.getWidth(), frame.getHeight()-menu.getHeight());
+                	frame.setBounds(frame.getX(), frame.getY()+(menuBar.getHeight()), frame.getWidth(), frame.getHeight()-menu.getHeight());*/
+                	
                 	menuBar.setVisible(false);
+                	if(mainWindowPanel.isVisible())
+                	{
+                		remove(mainWindowPanel);
+                	}
+                	frame.pack();
+                	//updateAllPanels(menuBar.isVisible());
+                	
                 }
                 else
                 {
                 	//Enable the menubar and adjust the player
-                	frame.setBounds(frame.getX(), frame.getY()-(menuBar.getHeight()), frame.getWidth(), frame.getHeight()+menu.getHeight());
+                	//frame.setBounds(frame.getX(), frame.getY()-(menuBar.getHeight()), frame.getWidth(), frame.getHeight()+menu.getHeight());
                 	menuBar.setVisible(true);
+                	if(isCreaterPanelOpen()){
+                		remove(panelBar);
+                    	add(mainWindowPanel);
+                    	add(panelBar);
+                	}
+                	//updateAllPanels(menuBar.isVisible());
+                	frame.pack();
                 }
             }
             else if(source == playList)
             {
             	//System.out.println("<<< The GUI Panel >>>\nSize: "+getWidth()+" X "+getHeight());
             	//System.out.println("<<< The playListWindow Panel >>>\nSize: "+playListWindow.getWidth()+" X "+playListWindow.getHeight());
-                if(playListWindow.isVisible())
-                {
-                	frame.setLocation(frame.getX(), frame.getY()+playListWindow.getHeight());
-                	frame.setSize(frame.getWidth(), frame.getHeight()-playListWindow.getHeight());
-                	playListWindow.setVisible(false);
-                	
-                	frame.revalidate();
-                }
-                else
-                {
-                	frame.setLocation(frame.getX(), frame.getY()-playListWindow.getHeight());
-                	frame.setSize(new Dimension(frame.getWidth(), frame.getHeight()+playListWindow.getHeight()));
-                	playListWindow.setVisible(true);               	
-                	
-                	
-                	frame.revalidate();
-                }
+                
+            	if(playListWindow != null)
+            	{
+	            	if(playListWindow.isVisible())
+	                {
+	                	//frame.setLocation(frame.getX(), frame.getY()+playListWindow.getHeight());
+	                	//frame.setSize(frame.getWidth(), frame.getHeight()-playListWindow.getHeight());
+	            		
+	                	playListWindow.setVisible(false);
+	                	remove(playListWindow);
+	                	//updateAllPanels(menuBar.isVisible());
+	                	
+	                	frame.revalidate();
+	                }
+	                else
+	                {
+	                	//frame.setLocation(frame.getX(), frame.getY()-playListWindow.getHeight());
+	                	//frame.setSize(new Dimension(frame.getWidth(), frame.getHeight()+playListWindow.getHeight()));
+	                	
+	                	playListWindow.setVisible(true);   
+	                	//updateAllPanels(menuBar.isVisible());
+	                	add(playListWindow);
+	                	frame.revalidate();
+	                	
+	                	//frame.revalidate();
+	                }
+            	}
             }
             if(source == exit)
             {
-            	currentStateOfPlayer = PlayState.SHUTDOWN;
-            	notifyAllObservers(currentStateOfPlayer);
+            	if(!guiObserverList.isEmpty())
+            	{
+            		currentStateOfPlayer = PlayState.SHUTDOWN;
+            		notifyAllObservers(currentStateOfPlayer);
+            	}
+            	else
+            	{
+            		lightShutdown();
+            	}
             	
             }
             if(currentStateOfPlayer == PlayState.STOPPED && observersStopped)
@@ -409,6 +710,13 @@ public class PlayerGUI extends JPanel implements GuiSubject
         public void mouseEntered(MouseEvent e){}
         public void mouseExited(MouseEvent e){}
 
+    }
+    
+    private void lightShutdown()
+    {
+    	this.setVisible( false );
+        System.exit(0);
+        System.gc();
     }
     
     private void shutdownPlayer()
@@ -541,7 +849,7 @@ public class PlayerGUI extends JPanel implements GuiSubject
             gui = new PlayerGUI();
 
             frame = new JFrame("SlimePlayer");
-            menuBar = new SlimeMenuBar(null);
+            menuBar = new InnerJMenuBar(gui);
             frame.setJMenuBar(menuBar);
             //menuBar.setEnabled(false);
             //menuBar.setBorderPainted(false);
@@ -571,7 +879,7 @@ public class PlayerGUI extends JPanel implements GuiSubject
             cm.registerComponent(frame);
             frame.getContentPane().add(gui);
             frame.setSize(width, height);
-            frame.setLocation(width / 2, height / 2);
+            frame.setLocationRelativeTo(null);
             frame.setVisible(true);
             frame.pack();
             System.out.println(NAME+"Dimensions are: "+frame.getWidth()+" W "+frame.getHeight()+" H");
@@ -587,8 +895,74 @@ public class PlayerGUI extends JPanel implements GuiSubject
     	}
     	
 	}
-	
-	
-	
+}
+
+/**
+ * 
+ * @author dMacGit
+ * <b>
+ * All though not being used or fully coded, I am leaving this
+ * MenuBar class in the project.
+ * </b>
+ * <p>
+ * This is mainly due to the possibility of being used in the future
+ * for an alternative to navigating the player or even to provide 
+ * more advanced settings and options to the player, that is normally
+ * hidden in the normal view.
+ * </p>
+ *  
+ *
+ */
+
+class InnerJMenuBar  extends JMenuBar
+{
+   
+   private Color BACKGROUND_COLOR = Color.BLACK;
+   private Color FOREGROUND_COLOR = Color.white;
+   public PlayerGUI gui;
+
+   public InnerJMenuBar(PlayerGUI gui)
+   {
+      super();
+      this.gui = gui;
+      super.setBackground(BACKGROUND_COLOR);
+      Action playList = new AbstractAction("View Playlist")
+      {
+         public void actionPerformed(ActionEvent e)
+         {
+            //PlayList playList = new PlayList(playerGui);
+         }
+      };
+      Action addFolder = new AbstractAction("Add Folder")
+      {
+         public void actionPerformed(ActionEvent e)
+         {
+        	 if(isPanelOpen())
+        	 {
+        		 closePanel();
+        	 }
+        	 else
+        		 openPanel();
+         }
+      };
+      JMenu fileDrop = new JMenu("Menu");
+      fileDrop.add(playList);
+      fileDrop.add(addFolder);
+      add(fileDrop);
+   }
+   
+   
+   
+   private void openPanel(){
+	   gui.openCreaterPanel();
+   }
+   
+   private void closePanel(){
+	   gui.closeCreaterPanel();
+   }
+   
+   private boolean isPanelOpen(){
+	   return gui.isCreaterPanelOpen();
+   }
 }
 

@@ -11,6 +11,8 @@ import javax.swing.Action;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 
+import slime.utills.LibraryCreater;
+
 /**
  * 
  * @author dMacGit
@@ -33,10 +35,12 @@ public class SlimeMenuBar  extends JMenuBar
    
    private Color BACKGROUND_COLOR = Color.BLACK;
    private Color FOREGROUND_COLOR = Color.white;
+   public final PlayerGUI gui;
 
    public SlimeMenuBar(PlayerGUI gui)
    {
       super();
+      this.gui = gui;
       Action playList = new AbstractAction("View Playlist")
       {
          public void actionPerformed(ActionEvent e)
@@ -48,7 +52,7 @@ public class SlimeMenuBar  extends JMenuBar
       {
          public void actionPerformed(ActionEvent e)
          {
-
+        	 //this.gui.openCreaterPanel();
          }
       };
       JMenu fileDrop = new JMenu("Menu");

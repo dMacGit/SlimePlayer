@@ -55,7 +55,7 @@ import slime.exceptions.WrongFileTypeException;
  * @author dMacGit
  * 
  */
-public class manualLibraryCreation extends JPanel implements ActionListener
+public class LibraryCreater extends JPanel implements ActionListener
 {
     
 	
@@ -79,8 +79,7 @@ public class manualLibraryCreation extends JPanel implements ActionListener
     
     private File[] listOfFiles;
     
-    private HashMap<Integer, String> librarySongLines;
-    private HashMap<Integer,String> filePaths;
+    private HashMap<Integer, String> libraryLines;
     
     public boolean startPlayer = false;
     public String theCurrentSongTitle = null;
@@ -101,111 +100,60 @@ public class manualLibraryCreation extends JPanel implements ActionListener
     private JLabel searchDirectoryLabel;
     private JButton addToLibrary, Accept;
 
-    
-    private boolean created_Properties = false;
+    private boolean libraryWasUpdated = false;
     /*
      * The main catch all constructor.
      * 
      * All other constructors make calls to here.
      */
-    public manualLibraryCreation(String directoryToSrearch)
+    public LibraryCreater()
     {
     	
     	//URL propertiesURL = ClassLoader.getSystemResource("player.properties");
     	Properties config = new Properties();
     	String dirValue = null;
-    	FileWriter fw;
-		BufferedWriter bw;
-    	try
-    	{
-    		if( !(new File(System.getProperty("user.home")+"\\"+PROPERTIES_FILE).exists()) )
-    		{
-    			created_Properties = true;
-    			//Then create a new properties file!
-    			File newProperties = new File(System.getProperty("user.home"),PROPERTIES_FILE);
-    			System.out.println("Creating the properties file @ "+System.getProperty("user.home"));
-    			fw = new FileWriter(newProperties);
-    			bw = new BufferedWriter(fw);
-    			
-    			Music_Home = DEFAULT_MUSIC_HOME;
-    			Root = System.getProperty("user.home");
-    			Data_Dir = DEFAULT_DATA_DIR_NAME;
-    			Library_File = DEFAULT_LIBRARY_FILE_NAME;
-    			
-    			/*
-				 * DIR:"%USERPROFILE%\\My Documents\\My Music"
-				 * PLAYER_ROOT:"\\"
-				 * PLAYER_DATA_DIR:"Data_Files"
-				 * PATHS_FILE:"SongPaths.txt"
-				 * LIBRARY_FILE:"Lib_MP3player.txt"
-				 */
-    			
-    			bw.write("DIR:"+'"'+DEFAULT_MUSIC_HOME+'"');
-    			bw.newLine();
-    			bw.write("PLAYER_ROOT:"+'"'+"\\"+'"');
-    			bw.newLine();
-    			bw.write("PLAYER_DATA_DIR:"+'"'+DEFAULT_DATA_DIR_NAME+'"');
-    			bw.newLine();
-    			bw.write("LIBRARY_FILE:"+'"'+DEFAULT_LIBRARY_FILE_NAME+'"');
-    			bw.flush();
-    			bw.close();
-    			fw.close();
-    		}
-    		else
-    		{
-    			//Then read from the file
-    			System.out.println("Found the properties file @ "+System.getProperty("user.home"));
-    		}
-    		
-    		
-    	}
-    	catch(IOException io_ex)
-    	{
-    		io_ex.printStackTrace();
-    	}
-
-    	if(!created_Properties)
-    	{
-    		try
-        	{
-        		FileInputStream fin = new FileInputStream(new File(System.getProperty("user.home")+"\\"+PROPERTIES_FILE));
-    			config.load(fin);
-    			
-    			dirValue = config.getProperty("DIR");
-    			System.out.println("Found the dir location @ "+dirValue);
-    			Music_Home = LibraryHelper.removeQuotes(config.getProperty("DIR"));
-    			Root = System.getProperty("user.home");
-    			Data_Dir = LibraryHelper.removeQuotes(config.getProperty("PLAYER_DATA_DIR"));
-    			Library_File = LibraryHelper.removeQuotes(config.getProperty("LIBRARY_FILE"));
-    			fin.close();
-    		}
-        	catch (FileNotFoundException e1) 
-        	{
-    			// TODO Auto-generated catch block
-    			e1.printStackTrace();
-    		}
-        	catch (IOException e1) 
-        	{
-    			// TODO Auto-generated catch block
-    			e1.printStackTrace();
-    		}
-    	}
     	
-        try {
+
+		try
+    	{
+    		FileInputStream fin = new FileInputStream(new File(System.getProperty("user.home")+"\\"+PROPERTIES_FILE));
+			config.load(fin);
+			
+			dirValue = config.getProperty("DIR");
+			System.out.println("Found the dir location @ "+dirValue);
+			Music_Home = LibraryHelper.removeQuotes(config.getProperty("DIR"));
+			Root = System.getProperty("user.home");
+			Data_Dir = LibraryHelper.removeQuotes(config.getProperty("PLAYER_DATA_DIR"));
+			Library_File = LibraryHelper.removeQuotes(config.getProperty("LIBRARY_FILE"));
+			fin.close();
+		}
+    	catch (FileNotFoundException e1) 
+    	{
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+    	catch (IOException e1) 
+    	{
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+    	
+    	
+        /*try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch (Exception e) {
             System.out.println("Error setting native LAF: " + e);
-        }
+        }*/
     	
     	
     	fileDirectory = new String[1];
-        filePaths = new HashMap<Integer,String>();
-        librarySongLines = new HashMap<Integer,String>();
+        //filePaths = new HashMap<Integer,String>();
+        libraryLines = new HashMap<Integer,String>();
 
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         
         //fileDirectory = directoryToSrearch;
-        theCurrentDirPath = directoryToSrearch;
+        theCurrentDirPath = Music_Home;
         identificationNumberStart = 1;
 
         displayPanel = new JPanel();
@@ -224,66 +172,12 @@ public class manualLibraryCreation extends JPanel implements ActionListener
         //Null check
         if(theCurrentDirPath != null)
         {
-        	//final String dirCheck = System.getProperty("user.home") + System.getProperty("file.separator")+"Music";
-        	//if(dirCheck.compareToIgnoreCase(theCurrentDirPath) == 0)
-        	//{
         		currentDirectoryToSearch.setColumns(currentDirectoryToSearch.getText().length());
-        		
-        	//}
-        	//else
-        	//	System.out.println("missmatch: "+dirCheck+" <> "+theCurrentDirPath);
-        	
         }
         else{
         	theCurrentDirPath = Music_Home;
         	currentDirectoryToSearch.setText(theCurrentDirPath);
         }
-        
-        /*File rootDir = new File(getClass().getProtectionDomain().getCodeSource().getLocation().toString());
-        File realRoot = new File(rootDir.getParent());
-        String validatedPath = new String( realRoot.getPath().substring(realRoot.getPath().indexOf("\\")+1).replace("%20", " "));
-        //File rDir = new File(rootDir);
-        File validatedRoot = new File(validatedPath);
-        File dataDir = new File(validatedRoot.getPath()+"\\"+DATA_DIR);
-        System.out.println("DATA_DIR: "+validatedPath+" + \\ + "+DATA_DIR);
-        DATA_DIR = dataDir.getPath();
-        currentDirectoryToSearch.setText(validatedPath.toString());*/
-        File dataDirFile = new File(Root+"\\"+this.Data_Dir);
-        if(!dataDirFile.exists())
-        {
-        	currentDirectoryToSearch.setText("DATA_DIR Doesn't Exist!");
-        	System.out.println("DATA_DIR Doesn't Exist!");
-        	
-        	//File dataDirFile = new File(validatedRoot+"\\"+DATA_DIR);
-        	
-        	
-        	File tempLibFile = new File(dataDirFile.getPath()+"\\"+Library_File);
-        	//File tempSongPathsFile = new File(dataDirFile.getPath()+"\\"+Song_Paths_File);
-        	
-        	try 
-        	{
-        		dataDirFile.mkdir();
-        		System.out.println(dataDirFile.getPath()+"\n"+dataDirFile.getAbsolutePath());
-        		System.out.println(tempLibFile.getPath()+"\n"+tempLibFile.getAbsolutePath());
-				if(tempLibFile.createNewFile())
-				{
-					System.out.println("The Library File was created!");
-				}
-				/*if(tempSongPathsFile.createNewFile())
-				{
-					System.out.println("The Song Paths File was created!");
-				}*/
-			}
-        	catch (IOException e)
-        	{
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-        }
-        else
-        	System.out.println("DATA_DIR Does Exist!");
-        
-        //------->
 
         displayPanel.setLayout(new FlowLayout());
 
@@ -297,31 +191,7 @@ public class manualLibraryCreation extends JPanel implements ActionListener
 
         addToLibrary.addActionListener(this);
         Accept.addActionListener(this);
-    }
-    
-    //Constructor called when no directory specified: Creation Method
-    public manualLibraryCreation()
-    {
-    	//Call to the main catch-all constructor
-        this(null);
-    }
-    
-    /**
-     *	<b>
-     *	This method is required in order to get the actual path to the
-     *  root directory, once the program is running from a JAR file.
-     *  </b>
-     *  <p>
-     *  In order to read/write to specific created files in folders outside of
-     *  the JAR file, we need to get the parent directory and possibly make new
-     *  files/folders. This method helps with that.
-     *	</p>
-     */
-    private void checkRootDir()
-    {
-    	
-    }
-    
+    }    
     
     /*
      *	SelectSingleFolder Method is called to open up a new JFileChooser
@@ -452,10 +322,7 @@ public class manualLibraryCreation extends JPanel implements ActionListener
                     
                     String librarySongLine = LineDataInitializer(title,artist,recordingTitle,durration,year,popularity,dateAdded,"&&",path,"[,]");
                     
-                    librarySongLines.put(identificationNumberStart, librarySongLine);
-                    
-                    
-                    filePaths.put(identificationNumberStart, pathLine);
+                    libraryLines.put(identificationNumberStart, librarySongLine);
                     
                     identificationNumberStart++;
                     countSongs++;
@@ -501,11 +368,12 @@ public class manualLibraryCreation extends JPanel implements ActionListener
         {
         	String dataDirPath = Root+"\\"+Data_Dir;
         	System.out.println("Writing Library file....");
-			FileIO.WriteData(dataDirPath+"\\"+Library_File,librarySongLines.values().toArray());
+			FileIO.WriteData(dataDirPath+"\\"+Library_File,libraryLines.values().toArray());
 			System.out.println("Finished Library file....");
 			System.out.println("Writing Paths file....");
 			//FileIO.WriteData(dataDirPath+"\\"+Song_Paths_File,filePaths.values().toArray());
 			System.out.println("Finished Paths file....");
+			libraryWasUpdated = true;
 		} 
         catch (IOException e) 
         {
@@ -513,10 +381,8 @@ public class manualLibraryCreation extends JPanel implements ActionListener
 		}       
     }
     
-    private String LineDataInitializer_OldMethod(String title, String artist, String recordingTitle, int durration, int year, int popularity, String dateAdded, Character spacer)
-    {
-    	//Here is where the data format of the lines are set and saved to the String	
-    	return new String(spacer+title+spacer+artist+spacer+recordingTitle+spacer+durration+spacer+year+spacer+popularity+spacer+dateAdded);
+    public boolean isLibraryUpdated(){
+    	return libraryWasUpdated;
     }
     
     private String LineDataInitializer(String title, String artist, String recordingTitle, int durration, int year, int popularity, String dateAdded, String spacer, String path, String delimiter) throws Exception
@@ -541,38 +407,6 @@ public class manualLibraryCreation extends JPanel implements ActionListener
     	
     }
     
-    private void loadLibraryFile()
-    {
-        BufferedReader libraryReader = null;
-        //PrintWriter songPathPrintWriter = null;
-        try
-        {
-            libraryReader = new BufferedReader(new FileReader(Library_File));
-            //songPathPrintWriter = new PrintWriter(new FileWriter(SONG_PATHS_FILE));
-        }
-        catch (IOException ex)
-        {
-            System.out.println("LIBRARY_FILE not found");
-        }
-    }
-    
-    public static void main(String[] args)
-    {
-    	
-        manualLibraryCreation newFile = new manualLibraryCreation(null);
-        Toolkit tools = Toolkit.getDefaultToolkit();
-        Dimension dimension = tools.getScreenSize();
-        int width = (int)dimension.getWidth() / 2;
-        int height = (int)dimension.getHeight() / 2;
-        JFrame frame = new JFrame("Holdings File Writer");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.getContentPane().add(newFile);
-        frame.setSize(width, height);
-        frame.setLocation(width / 2, height / 2);
-        frame.setVisible(true);
-        frame.pack();
-    }
-
     public void actionPerformed(ActionEvent e)
     {
         Object source = e.getSource();

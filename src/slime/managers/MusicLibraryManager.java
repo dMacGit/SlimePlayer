@@ -92,29 +92,34 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
     private String Durration;
     private PlayState currentPlayState;
 
-    public MusicLibraryManager(String dir)
+    public MusicLibraryManager(boolean emptyLibrary)
     {    	
     	playerLibrary = new LibraryPlayList();
-    	
+    	if(!emptyLibrary)
+    	{
+    		playerLibrary.createLibraryPlaylist();
+        	System.out.println(NAME+" The list of songs is this large: "+playerLibrary.getTotalNumberTracks()+" Songs!");
+            
+            mediaController = new MediaController();
+
+            System.out.println(NAME+" "+MediaController.class.getName()+" created!");
+            
+            observerNamesList.add(MediaController.class.getName());
+
+            observersCalledback.put(MediaController.class.getName(),false);
+            
+            playListThread = new playlistManagerThread(playerLibrary);
+            playListThread.start();
+                 
+            this.registerStateObserver(mediaController);
+            mediaController.setParentSubject(this);
+            
+            System.out.println(NAME+" Player has been Started!");
+    	}
+    	else
+    		System.out.println(NAME+" Player is created but has no PlayList and is Not Started!");
     	//Maybe populate library here!
-    	playerLibrary.createLibraryPlaylist();
-    	System.out.println(NAME+" The list of songs is this large: "+playerLibrary.getTotalNumberTracks()+" Songs!");
-        
-        mediaController = new MediaController();
-
-        System.out.println(NAME+" "+MediaController.class.getName()+" created!");
-        
-        observerNamesList.add(MediaController.class.getName());
-
-        observersCalledback.put(MediaController.class.getName(),false);
-        
-        playListThread = new playlistManagerThread(playerLibrary);
-        playListThread.start();
-             
-        this.registerStateObserver(mediaController);
-        mediaController.setParentSubject(this);
-        
-        System.out.println(NAME+" Player has been Started!");
+    	
         
     }
     
@@ -137,9 +142,40 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
         System.out.println(NAME+" Player has been Started!");
         
     }
+    
+    public void startupLibraryManager()
+    {
+    	playerLibrary.createLibraryPlaylist();
+    	System.out.println(NAME+" The list of songs is this large: "+playerLibrary.getTotalNumberTracks()+" Songs!");
+        
+        mediaController = new MediaController();
+
+        System.out.println(NAME+" "+MediaController.class.getName()+" created!");
+        
+        observerNamesList.add(MediaController.class.getName());
+
+        observersCalledback.put(MediaController.class.getName(),false);
+        
+        playListThread = new playlistManagerThread(playerLibrary);
+        playListThread.start();
+             
+        this.registerStateObserver(mediaController);
+        mediaController.setParentSubject(this);
+        
+        System.out.println(NAME+" Player has been Started!");
+    }
+    
+    public boolean forceLibraryPlaylistUpdate()
+    {
+    	playerLibrary.createLibraryPlaylist();
+    	startupLibraryManager();
+    	return true;
+    }
     public List<SongTag> getMapOfSong() throws Exception
     {
-        return playerLibrary.getSongTags();
+    	if(this.playerLibrary != null && playerLibrary.getTotalNumberTracks() > 0)
+    		return playerLibrary.getSongTags();
+        return null;
     }
     
     public class playlistManagerThread extends Thread
