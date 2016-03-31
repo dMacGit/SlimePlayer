@@ -208,30 +208,26 @@ public class PlayerGUI extends JPanel implements GuiSubject
     	 * Check that there is are the required files and directories
     	 * before loading the library into the player
     	 */
-    	if(check_Created_LibraryDirectory())
+    	if(!validate_LibraryDirectory())
     	{
-    		
+    		emptyLibrary = true;
     			
     	}
     	
-    	if(is_Fresh_LibraryDirectory())
+    	/*if(is_Fresh_LibraryDirectory())
 		{
 				isNewLibrary = true;
 				
-		}
-		emptyLibrary = true;
+		}*/
+		
     	
 		libCreater = new LibraryCreater();
 		mainWindowPanel.add(libCreater);
     	
-    	if(isNewLibrary || emptyLibrary)
+    	if(!emptyLibrary)
     	{
-	    	musicLibraryManager = new MusicLibraryManager(emptyLibrary);
-	        System.out.println(NAME+MusicLibraryManager.class.getName()+"  created!");
-	        
-	        registerGuiObserver(musicLibraryManager);
-	        musicLibraryManager.setParentSubject(this);
 	    	
+    		initNewLibraryManager(emptyLibrary);
 	    	try 
 	        {	
 	    		if(musicLibraryManager.getMapOfSong()!=null)
@@ -320,6 +316,16 @@ public class PlayerGUI extends JPanel implements GuiSubject
  
     }
     
+    public boolean initNewLibraryManager(boolean isEmptyLib)
+    {
+    	musicLibraryManager = new MusicLibraryManager(isEmptyLib);
+        System.out.println(NAME+MusicLibraryManager.class.getName()+"  created!");
+        
+        registerGuiObserver(musicLibraryManager);
+        musicLibraryManager.setParentSubject(this);
+        return true;
+    }
+    
     public JPanel getCreaterPanel(){
     	return libCreater;
     }
@@ -329,10 +335,19 @@ public class PlayerGUI extends JPanel implements GuiSubject
     	remove(mainWindowPanel);
     	isLibCreaterOpen = false;
     	frame.pack();
+    	
     	if(libCreater.isLibraryUpdated())
 		{
 			//Call the update method!
-    		musicLibraryManager.forceLibraryPlaylistUpdate();
+    		if(musicLibraryManager != null)
+    		{
+    			musicLibraryManager.forceLibraryPlaylistUpdate();
+    		}
+    		else
+    		{
+    			emptyLibrary = false;
+    			initNewLibraryManager(emptyLibrary);
+    		}
     		
     		try 
 	        {	
@@ -372,41 +387,74 @@ public class PlayerGUI extends JPanel implements GuiSubject
     }
     
     
-    private boolean check_Created_LibraryDirectory()
+    private boolean validate_LibraryDirectory()
     {
-    	boolean fresh_Directory = false;
+    	boolean directory_Validated = false;
 
-    	File dataDirFile = new File(Root+"\\"+Data_Dir);
-        if(!dataDirFile.exists())
+    	File dataDir = new File(Root+"\\"+Data_Dir);
+        if(!dataDir.exists())
         {
         	System.out.println("DATA_DIR Doesn't Exist!");
         	
-        	File tempLibFile = new File(dataDirFile.getPath()+"\\"+Library_File);
+        	File tempLibFile = new File(dataDir.getPath()+"\\"+Library_File);
         	
         	try 
         	{
-        		dataDirFile.mkdir();
-        		System.out.println(dataDirFile.getPath()+"\n"+dataDirFile.getAbsolutePath());
+        		dataDir.mkdir();
+        		System.out.println(dataDir.getPath()+"\n"+dataDir.getAbsolutePath());
         		System.out.println(tempLibFile.getPath()+"\n"+tempLibFile.getAbsolutePath());
 				if(tempLibFile.createNewFile())
 				{
 					System.out.println("The Library File was created!");
 				}
-				fresh_Directory = true;
+				
 			}
         	catch (IOException e)
         	{
 				e.printStackTrace();
 				System.out.println("DATA_DIR Doesn't Exist!");
-				return fresh_Directory;
+				return directory_Validated;
 			}
         }
-        else
+        
+        if(dataDir.exists())
         {
-        	System.out.println("DATA_DIR Does Exist!");
+        	//Now check files exist!
+        	File tempLibFile = new File(Root+"\\"+Data_Dir+"\\"+Library_File);
+        	long sizeInBytes;
+
+			System.out.println("Library_File Exist!");
+
+			// FileReader fr = new FileReader(tempLibFile);
+			// BufferedReader br = new BufferedReader(fr);
+			if(!tempLibFile.exists())
+			{
+				try 
+				{
+					tempLibFile.createNewFile();
+					System.out.println("Library_File.txt was created!");
+				}
+				catch (IOException e) 
+				{
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			
+			if (tempLibFile.isFile())
+			{
+				if (tempLibFile.length() > 0) {
+					System.out.println("Library_File contains data!");
+					directory_Validated = true;
+				} else {
+					directory_Validated = false;
+					System.out.println("Library_File contains no data! File is Fresh!");
+				}
+			}
+
         }
     
-    	return fresh_Directory;
+    	return directory_Validated;
     }
     
     private boolean is_Fresh_LibraryDirectory()
@@ -414,33 +462,7 @@ public class PlayerGUI extends JPanel implements GuiSubject
     	boolean fresh_Directory = false;
 
     	//File dataDirFile = new File(Root+"\\"+Data_Dir);
-    	File tempLibFile = new File(Root+"\\"+Data_Dir+"\\"+Library_File);
-    	long sizeInBytes;
-        if(tempLibFile.exists())
-        {
-        	System.out.println("Library_File Exist!");
-        	
-        	//FileReader fr = new FileReader(tempLibFile);
-        	//BufferedReader br = new BufferedReader(fr);
-        	if(tempLibFile.isFile())
-        	{
-        		if(tempLibFile.length() > 0)
-        		{
-        			System.out.println("Library_File contains data!");
-        			
-        		}
-        		else
-        		{
-        			fresh_Directory = true;
-        			System.out.println("Library_File contains no data! File is Fresh!");
-        		}
-        	}
-
-        }
-        else
-        {
-        	System.out.println("Library_File Doesn't Exist!");
-        }
+    	
     
     	return fresh_Directory;
     }
