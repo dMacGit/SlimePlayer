@@ -316,7 +316,7 @@ public class PlayerGUI extends JPanel implements GuiSubject
  
     }
     
-    public boolean initNewLibraryManager(boolean isEmptyLib)
+    private boolean initNewLibraryManager(boolean isEmptyLib)
     {
     	musicLibraryManager = new MusicLibraryManager(isEmptyLib);
         System.out.println(NAME+MusicLibraryManager.class.getName()+"  created!");
@@ -326,12 +326,48 @@ public class PlayerGUI extends JPanel implements GuiSubject
         return true;
     }
     
-    public JPanel getCreaterPanel(){
-    	return libCreater;
-    }
+    /*
+     * The next few methods need to be accessed by the JMenuBar Inner-class
+     * and as such, cannot have private access modifiers. As a result I will be
+     * giving them the default no-modifier access, restricting access to them to just
+     * this class and this package.
+     */
     
-    public void closeCreaterPanel()
+    /**
+     * <B>
+     * External call to close the Creator JPanel
+     * </B>
+     * <p>
+     * This is needed so the {@link JMenuBar } inner-class {@link InnerJMenuBar}
+     * can notify the panel when the menu-item for the Creator panel is pressed
+     * to close it. 
+     * </p>
+     * <p>
+     * It takes care of checking whether the user added a directory, if so then
+     * calls to update the implemented {@link MusicLibraryManager } with its
+     * {@link MusicLibraryManager#forceLibraryPlaylistUpdate() } method. Also initializing
+     * new {@link MusicLibraryManager } if one doesn't exist, and finally creates a new
+     * {@link PlaylistGUI } Panel, if none exist.
+     * </p>
+     * <p>
+     * <b><i>Need to shrink this method, and remove Manager calls as it breaks my 
+     * observer pattern and also encapsulation</i></b>
+     * </p>
+     * 
+     * @see JMenuBar
+     * @see InnerJMenuBar
+     * @see MusicLibraryManager
+     * @see PlaylistGUI
+     */
+    
+    void closeCreaterPanel()
     {   	
+    	/*
+    	 * TODO: Need to cater for when the Playlist is open
+    	 * 
+    	 * Must make sure that only one panel is open at any time.
+    	 * There can be no panels open, but no more than one.
+    	 */
     	remove(mainWindowPanel);
     	isLibCreaterOpen = false;
     	frame.pack();
@@ -355,9 +391,7 @@ public class PlayerGUI extends JPanel implements GuiSubject
 	    		{
 					playListWindow = new PlaylistGUI(musicLibraryManager.getMapOfSong());
 					MAX_PLAYLIST_HEIGHT = playListWindow.getHeight();
-					//frame.add(playListWindow);
 					playListWindow.setVisible(false);
-					//mapOfPanels.put(playListWindow, false);
 	    		}
 				
 			} 
@@ -368,10 +402,39 @@ public class PlayerGUI extends JPanel implements GuiSubject
 			}
 		}
     }
-            
-    public void openCreaterPanel()
+    
+    /**
+     * <B>
+     * External call to open the Creator JPanel
+     * </B>
+     * <p>
+     * This is needed so the {@link JMenuBar } inner-class {@link InnerJMenuBar}
+     * can notify the panel when the menu-item for the Creator panel is pressed
+     * to open it. 
+     * </p>
+     * 
+     * @see JMenuBar
+     * @see InnerJMenuBar
+     */
+    void openCreaterPanel()
     {          	
 		isLibCreaterOpen = true;
+		/*
+		 * Order of add is important.
+		 * 
+		 * - Need to remove last panel panelBar
+		 *  otherwise mainWindowPanel is added below
+		 * 
+		 * - Adding down Y+ of the screen
+		 *  So add main panelBar last
+		 */
+		
+		/*
+    	 * TODO: Need to cater for when the Playlist is open
+    	 * 
+    	 * Must make sure that only one panel is open at any time.
+    	 * There can be no panels open, but no more than one.
+    	 */
 		remove(panelBar);
 		add(mainWindowPanel);
 		add(panelBar);
@@ -381,7 +444,20 @@ public class PlayerGUI extends JPanel implements GuiSubject
 		
     }
     
-    public boolean isCreaterPanelOpen()
+    /**
+     * <b>
+     * Access method for checking state of
+     * the Creator JPanel. 
+     * </b>
+     * <p>
+     * This is accessed by this class and its inner-class
+     * {@link InnerJMenuBar }.<br>
+     * <i>Maybe need to re-think the use of this method</i>
+     * </p> 
+     * 
+     * @return
+     */
+    boolean isCreaterPanelOpen()
     {
     	return isLibCreaterOpen;
     }
