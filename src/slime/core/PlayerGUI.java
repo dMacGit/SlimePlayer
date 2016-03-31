@@ -689,7 +689,7 @@ public class PlayerGUI extends JPanel implements GuiSubject
             }
             if(source == exit)
             {
-            	if(!guiObserverList.isEmpty())
+            	if(!guiObserverList.isEmpty() || musicLibraryManager != null)
             	{
             		currentStateOfPlayer = PlayState.SHUTDOWN;
             		notifyAllObservers(currentStateOfPlayer);

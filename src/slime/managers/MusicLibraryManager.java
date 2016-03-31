@@ -464,6 +464,11 @@ public class MusicLibraryManager implements StateSubject, GuiObserver
 		else if(newState == PlayState.SHUTDOWN)
 		{
 			userPressedClose = true;
+			if(playListThread == null)
+			{
+				currentPlayState = newState;
+				parentSubject.guiCallback(currentPlayState, null);
+			}
 		}
 		else if(newState == PlayState.SHUFFLE_TOGGLED)
 		{
