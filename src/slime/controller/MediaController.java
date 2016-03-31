@@ -78,7 +78,7 @@ public class MediaController implements StateObserver
 	/**
 	 * This is the default no parameter constructor.
 	 * 
-	 * @return new MediaController(false, false, true)
+	 * @return MediaController(false, false, true)
 	 * @see {@link #MediaController(Boolean shuffle, Boolean repeat, PlayState initialized) }
 	 */
 	public MediaController() 

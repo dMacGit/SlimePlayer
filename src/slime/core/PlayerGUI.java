@@ -316,14 +316,30 @@ public class PlayerGUI extends JPanel implements GuiSubject
  
     }
     
-    private boolean initNewLibraryManager(boolean isEmptyLib)
+    /**
+     * <b>
+     * This makes sure that the libraryManager is created under the correct
+     * conditions. It also adds the class to list of Observers.
+     * </b>
+     * <p>
+     * It handles LibraryManager class creation when there is a new empty library.text file
+     * created, and thus the class cannot load any data from the file and hence not build a
+     * {@link LibraryPlayList } object.
+     * And it handles the normal condition of a validated library.text file, that has data, and
+     * thus can create a {@link LibraryPlayList } object.
+     * </p>
+     * <
+     * 
+     * @param isEmptyLib The boolean state of the library. True if is empty.
+     * 
+     */
+    private void initNewLibraryManager(boolean isEmptyLib)
     {
     	musicLibraryManager = new MusicLibraryManager(isEmptyLib);
         System.out.println(NAME+MusicLibraryManager.class.getName()+"  created!");
         
         registerGuiObserver(musicLibraryManager);
         musicLibraryManager.setParentSubject(this);
-        return true;
     }
     
     /*
@@ -439,9 +455,6 @@ public class PlayerGUI extends JPanel implements GuiSubject
 		add(mainWindowPanel);
 		add(panelBar);
 		frame.pack();
-		
-		
-		
     }
     
     /**
@@ -455,14 +468,23 @@ public class PlayerGUI extends JPanel implements GuiSubject
      * <i>Maybe need to re-think the use of this method</i>
      * </p> 
      * 
-     * @return
+     * @return Boolean, The state of the JPanel. True for open.
      */
     boolean isCreaterPanelOpen()
     {
     	return isLibCreaterOpen;
     }
     
-    
+    /**
+     * <b>
+     * Checks if the Library Directory exists and creates if required, as well as 
+     * validating the needed text files and creates them if they don't exist. 
+     * </b>
+     * <p>
+     * Needed in order to check at player startup for the correct sub files and directories.
+     * </p>
+     * @return <b>True</b> if all files and directories are created, and if Library file contains data.
+     */
     private boolean validate_LibraryDirectory()
     {
     	boolean directory_Validated = false;
@@ -532,17 +554,32 @@ public class PlayerGUI extends JPanel implements GuiSubject
     
     	return directory_Validated;
     }
-    
-    private boolean is_Fresh_LibraryDirectory()
-    {
-    	boolean fresh_Directory = false;
 
-    	//File dataDirFile = new File(Root+"\\"+Data_Dir);
-    	
-    
-    	return fresh_Directory;
-    }
-    
+    /**
+     * <b>
+     * Checks the </b><u><i>slimeplayer.properties</i></u><b> file for validity, and
+     * updates the default values of this class with that of the file.
+     * </b>
+     * <p>
+     * To be considered valid, the Properties file must exist. This should only return invalid result
+     * if there is an error thrown in opening or closing of the file.<br>
+     * If no file exists one is created, and saved with the default values held by this class.
+     * If instead the file exists then the values are read and used in-place of the defaults. 
+     * </p>
+     * <p>
+     * The fields in the file should follow the below guide:<br>
+     * <b>Field : "value"</b>
+     * <ul>
+     * 	<li>DIR:"%USERPROFILE%\\My Documents\\My Music"</li>
+     * 	<li>PLAYER_ROOT:"\\"</li>
+     * 	<li>PLAYER_DATA_DIR:"Data_Files"</li>
+     *  <li><u>PATHS_FILE:"SongPaths.txt"</u>  <b>(Deprecated)</b></li>
+     *  <li>LIBRARY_FILE:"Library.txt"</li>
+     * </ul>
+     * </p>
+     * <p>TODO: Need to handle the Exception correctly.</p>
+     * @return <b>True</b> if <u><i>slimeplayer.properties</i></u> is valid.
+     */
     private boolean check_PropertiesFile()
     {
     	Properties config = new Properties();
@@ -572,7 +609,7 @@ public class PlayerGUI extends JPanel implements GuiSubject
 				 * PLAYER_ROOT:"\\"
 				 * PLAYER_DATA_DIR:"Data_Files"
 				 * PATHS_FILE:"SongPaths.txt"
-				 * LIBRARY_FILE:"Lib_MP3player.txt"
+				 * LIBRARY_FILE:"Library.txt"
 				 */
     			
     			bw.write("DIR:"+'"'+DEFAULT_MUSIC_HOME+'"');
@@ -606,17 +643,15 @@ public class PlayerGUI extends JPanel implements GuiSubject
         		}
             	catch (FileNotFoundException e1) 
             	{
-        			// TODO Auto-generated catch block
+        			// TODO Need to handle this Exception
         			e1.printStackTrace();
         		}
             	catch (IOException e1) 
             	{
-        			// TODO Auto-generated catch block
+            		// TODO Need to handle this Exception
         			e1.printStackTrace();
         		}
     		}
-    		
-    		
     	}
     	catch(IOException io_ex)
     	{
