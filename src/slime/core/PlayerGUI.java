@@ -131,6 +131,10 @@ public class PlayerGUI extends JPanel implements GuiSubject
     
     private boolean isLibCreaterOpen = false;
     
+    private boolean mainPanel_In_Use = false;
+    
+    private JPanel lastPanelStillOpen = null;
+    
     //This is the dir path to the images folder		---> Change if necessary!
     
     public static String THE_FOLDER_DIR = "images/";
@@ -161,6 +165,10 @@ public class PlayerGUI extends JPanel implements GuiSubject
     
     private boolean shuffle_Select = false, repeat_Select = false;
 	private boolean isNewLibrary = false, emptyLibrary = false;
+	
+	private JPanel currentOpenPanel = null;
+	
+	
 
     public PlayerGUI()
     {   
@@ -222,7 +230,8 @@ public class PlayerGUI extends JPanel implements GuiSubject
 		
     	
 		libCreater = new LibraryCreater();
-		mainWindowPanel.add(libCreater);
+		libCreater.setName("libCreater");
+		//mainWindowPanel.add(libCreater);
     	
     	if(!emptyLibrary)
     	{
@@ -233,9 +242,10 @@ public class PlayerGUI extends JPanel implements GuiSubject
 	    		if(musicLibraryManager.getMapOfSong()!=null)
 	    		{
 					playListWindow = new PlaylistGUI(musicLibraryManager.getMapOfSong());
+					playListWindow.setName("playList");
 					MAX_PLAYLIST_HEIGHT = playListWindow.getHeight();
 					//frame.add(playListWindow);
-					playListWindow.setVisible(false);
+					//playListWindow.setVisible(false);
 					//mapOfPanels.put(playListWindow, false);
 	    		}
 				
@@ -384,9 +394,10 @@ public class PlayerGUI extends JPanel implements GuiSubject
     	 * Must make sure that only one panel is open at any time.
     	 * There can be no panels open, but no more than one.
     	 */
-    	remove(mainWindowPanel);
+    	setCurrentOpenPanel(null);
+    	//remove(mainWindowPanel);
     	isLibCreaterOpen = false;
-    	frame.pack();
+    	//frame.pack();
     	
     	if(libCreater.isLibraryUpdated())
 		{
@@ -406,8 +417,9 @@ public class PlayerGUI extends JPanel implements GuiSubject
 	    		if(musicLibraryManager.getMapOfSong()!=null)
 	    		{
 					playListWindow = new PlaylistGUI(musicLibraryManager.getMapOfSong());
+					playListWindow.setName("playList");
 					MAX_PLAYLIST_HEIGHT = playListWindow.getHeight();
-					playListWindow.setVisible(false);
+					//playListWindow.setVisible(false);
 	    		}
 				
 			} 
@@ -417,6 +429,7 @@ public class PlayerGUI extends JPanel implements GuiSubject
 				e1.printStackTrace();
 			}
 		}
+    	
     }
     
     /**
@@ -451,10 +464,82 @@ public class PlayerGUI extends JPanel implements GuiSubject
     	 * Must make sure that only one panel is open at any time.
     	 * There can be no panels open, but no more than one.
     	 */
-		remove(panelBar);
-		add(mainWindowPanel);
-		add(panelBar);
-		frame.pack();
+		//remove(panelBar);
+		setCurrentOpenPanel(libCreater);
+		//add(mainWindowPanel);
+		//add(panelBar);
+		//frame.pack();
+    }
+    
+    private void setCurrentOpenPanel(JPanel currentPanel)
+    {
+    	
+    	
+    	if(currentPanel != null)
+    	{
+    		System.out.println("Trying to change to panel: "+currentPanel.getName());
+	    	if(isMainPanel_InUse())
+	    	{
+	    		lastPanelStillOpen = getCurrentOpenPanel();
+	    		closeCurrentOpenPanel();
+	    	}
+	    	else
+	    	{
+	    		remove(panelBar);
+	    		add(mainWindowPanel);
+	    		add(panelBar);
+	    		
+	    	}
+	    	openNewPanel(currentPanel);
+	    	mainPanel_In_Use = true;
+	    	frame.pack();
+    	}
+    	else
+    	{
+    		System.out.println("Trying to remove current panel as setting to: Null");
+    		if(isMainPanel_InUse())
+	    	{
+    			System.out.println("MainPanel is in use!");
+    			closeCurrentOpenPanel();
+    			openNewPanel(lastPanelStillOpen);
+    			lastPanelStillOpen = null;
+	    		//lastPanelStillOpen = getCurrentOpenPanel();
+    			mainPanel_In_Use = false;
+	    		
+	    	}
+	    	else
+	    	{
+	    		System.out.println("MainPanel is NOT in use!");
+	    		openNewPanel(currentPanel);		//currentPanel should be null here!		<-----
+	    		lastPanelStillOpen = null;
+	    		mainPanel_In_Use = false;
+	    		
+	    	}
+	    	frame.pack();
+    	}
+    }
+    
+    private void closeCurrentOpenPanel()
+    {
+    	mainWindowPanel.remove(getCurrentOpenPanel());
+    }
+    
+    private void openNewPanel(JPanel currentPanel)
+    {
+    	currentOpenPanel = currentPanel;
+    	if(currentPanel != null)
+    	{
+    		currentPanel.setVisible(true);
+    		mainWindowPanel.add(currentPanel);
+    	}
+    	else
+    	{
+    		remove(mainWindowPanel);
+    	}
+    }
+    
+    private JPanel getCurrentOpenPanel(){
+    	return currentOpenPanel;
     }
     
     /**
@@ -662,6 +747,11 @@ public class PlayerGUI extends JPanel implements GuiSubject
     }
     
     
+    private boolean isMainPanel_InUse()
+    {
+    	return mainPanel_In_Use;
+    }
+    
     /*
      * These listeners handle the buttons that make up the playerGUI.
      * 
@@ -766,9 +856,11 @@ public class PlayerGUI extends JPanel implements GuiSubject
                 	frame.setBounds(frame.getX(), frame.getY()+(menuBar.getHeight()), frame.getWidth(), frame.getHeight()-menu.getHeight());*/
                 	
                 	menuBar.setVisible(false);
-                	if(mainWindowPanel.isVisible())
+                	if(isMainPanel_InUse())
                 	{
-                		remove(mainWindowPanel);
+                		setCurrentOpenPanel(null);
+                		//remove(mainWindowPanel);
+                		//mainWindowPanel.setVisible(false);
                 	}
                 	frame.pack();
                 	//updateAllPanels(menuBar.isVisible());
@@ -779,10 +871,13 @@ public class PlayerGUI extends JPanel implements GuiSubject
                 	//Enable the menubar and adjust the player
                 	//frame.setBounds(frame.getX(), frame.getY()-(menuBar.getHeight()), frame.getWidth(), frame.getHeight()+menu.getHeight());
                 	menuBar.setVisible(true);
-                	if(isCreaterPanelOpen()){
-                		remove(panelBar);
-                    	add(mainWindowPanel);
-                    	add(panelBar);
+                	
+                	//if(isCreaterPanelOpen())
+                	{
+                	//	remove(panelBar);
+                		//setCurrentOpenPanel();
+                    //	add(mainWindowPanel);
+                    //	add(panelBar);
                 	}
                 	//updateAllPanels(menuBar.isVisible());
                 	frame.pack();
@@ -795,26 +890,42 @@ public class PlayerGUI extends JPanel implements GuiSubject
                 
             	if(playListWindow != null)
             	{
-	            	if(playListWindow.isVisible())
+            		
+            		if(getCurrentOpenPanel()!=null)
 	                {
-	                	//frame.setLocation(frame.getX(), frame.getY()+playListWindow.getHeight());
-	                	//frame.setSize(frame.getWidth(), frame.getHeight()-playListWindow.getHeight());
-	            		
-	                	playListWindow.setVisible(false);
-	                	remove(playListWindow);
-	                	//updateAllPanels(menuBar.isVisible());
-	                	
-	                	frame.revalidate();
+            			if(getCurrentOpenPanel().getName().compareTo(playListWindow.getName())==0)
+            			{
+	            			System.out.println("The currentOpenPanel is: "+getCurrentOpenPanel().getName()+" | wanting to open : "+playListWindow.getName());
+		            		//remove(mainWindowPanel);
+	            			//mainWindowPanel.setVisible(false);
+		                	//frame.setLocation(frame.getX(), frame.getY()+playListWindow.getHeight());
+		                	//frame.setSize(frame.getWidth(), frame.getHeight()-playListWindow.getHeight());
+		            		setCurrentOpenPanel(null);
+		                	//playListWindow.setVisible(false);
+		                	//remove(playListWindow);
+		                	//updateAllPanels(menuBar.isVisible());
+		                	
+		                	//frame.pack();
+            			}
 	                }
 	                else
 	                {
 	                	//frame.setLocation(frame.getX(), frame.getY()-playListWindow.getHeight());
 	                	//frame.setSize(new Dimension(frame.getWidth(), frame.getHeight()+playListWindow.getHeight()));
 	                	
-	                	playListWindow.setVisible(true);   
-	                	//updateAllPanels(menuBar.isVisible());
-	                	add(playListWindow);
-	                	frame.revalidate();
+	                	if(!isMainPanel_InUse())
+	            		{
+	                		setCurrentOpenPanel(playListWindow);
+	            			//remove(panelBar);
+	            			//add(mainWindowPanel);
+	            			//mainWindowPanel.setVisible(true);
+	            			//add(panelBar);
+	            			//frame.pack();
+	            		}
+	                	else
+	                		setCurrentOpenPanel(playListWindow);
+	                	
+	                	frame.pack();
 	                	
 	                	//frame.revalidate();
 	                }
