@@ -244,9 +244,6 @@ public class PlayerGUI extends JPanel implements GuiSubject
 					playListWindow = new PlaylistGUI(musicLibraryManager.getMapOfSong());
 					playListWindow.setName("playList");
 					MAX_PLAYLIST_HEIGHT = playListWindow.getHeight();
-					//frame.add(playListWindow);
-					//playListWindow.setVisible(false);
-					//mapOfPanels.put(playListWindow, false);
 	    		}
 				
 			} 
@@ -388,16 +385,8 @@ public class PlayerGUI extends JPanel implements GuiSubject
     
     void closeCreaterPanel()
     {   	
-    	/*
-    	 * TODO: Need to cater for when the Playlist is open
-    	 * 
-    	 * Must make sure that only one panel is open at any time.
-    	 * There can be no panels open, but no more than one.
-    	 */
     	setCurrentOpenPanel(null);
-    	//remove(mainWindowPanel);
     	isLibCreaterOpen = false;
-    	//frame.pack();
     	
     	if(libCreater.isLibraryUpdated())
 		{
@@ -419,7 +408,6 @@ public class PlayerGUI extends JPanel implements GuiSubject
 					playListWindow = new PlaylistGUI(musicLibraryManager.getMapOfSong());
 					playListWindow.setName("playList");
 					MAX_PLAYLIST_HEIGHT = playListWindow.getHeight();
-					//playListWindow.setVisible(false);
 	    		}
 				
 			} 
@@ -448,50 +436,75 @@ public class PlayerGUI extends JPanel implements GuiSubject
     void openCreaterPanel()
     {          	
 		isLibCreaterOpen = true;
-		/*
-		 * Order of add is important.
-		 * 
-		 * - Need to remove last panel panelBar
-		 *  otherwise mainWindowPanel is added below
-		 * 
-		 * - Adding down Y+ of the screen
-		 *  So add main panelBar last
-		 */
-		
-		/*
-    	 * TODO: Need to cater for when the Playlist is open
-    	 * 
-    	 * Must make sure that only one panel is open at any time.
-    	 * There can be no panels open, but no more than one.
-    	 */
-		//remove(panelBar);
 		setCurrentOpenPanel(libCreater);
-		//add(mainWindowPanel);
-		//add(panelBar);
-		//frame.pack();
     }
     
+    /**
+     * <b>
+     * This is the main method that handles the swapping or adding/removing of panels
+     * on the player.
+     * </b>
+     * <p>
+     * All the checking required for adding and removing the correct panel also happens here.
+     * </p>
+     * <p>
+     * There are several states or sequences that need to be checked when adding or removing the
+     * {@link currentPanel} from the player, below describes the process for when a call to
+     * {@link #isMainPanel_InUse() } returns TRUE as the wrapper panel is open and in use by another panel.
+     * <br><br><b>Wrapper Panel in use</b><br>
+     * It calls to check if the wrapper panel is open, If so before it removes the correct panel, it sets
+     * the {@link #lastPanelStillOpen } variable by assigning it using {@link #getCurrentOpenPanel() }.
+     * After the <i>lastPanelStillOpen</i> is set, {@link #closeCurrentOpenPanel } is called. 
+     * </p>
+     * 
+     * @param currentPanel (Required) Is the argument for changing to the new JPanel
+     * 
+     * @see #getCurrentOpenPanel
+     * @see #closeCurrentOpenPanel
+     * @see #openNewPanel
+     */
     private void setCurrentOpenPanel(JPanel currentPanel)
     {
-    	
-    	
     	if(currentPanel != null)
     	{
     		System.out.println("Trying to change to panel: "+currentPanel.getName());
 	    	if(isMainPanel_InUse())
 	    	{
 	    		lastPanelStillOpen = getCurrentOpenPanel();
+	    		if(lastPanelStillOpen!=null)
+	    		{
+	    			System.out.println("<setCurrentOpenPanel> Last Panel is Now : "+lastPanelStillOpen.getName());
+	    		}
+	    		else
+	    		{
+	    			System.out.println("<setCurrentOpenPanel> Last Panel is Now : NULL");
+	    		}
 	    		closeCurrentOpenPanel();
 	    	}
 	    	else
 	    	{
+	    		/* Reaches this block if the wrapper panel (mainWindowPanel) is not in use or open.
+	    		 * Then we need to add the wrapper panel and also add the new Panel.
+	    		 * 
+	    		 * Order of add is important.
+	    		 * 
+	    		 * - Need to remove last panel panelBar otherwise mainWindowPanel is added below
+	    		 * 
+	    		 * - Adding down Y+ of the screen so add main panelBar last.
+	    		 */
+	    		System.out.println("<setCurrentOpenPanel> MainPanel is NOT currently in use!");
 	    		remove(panelBar);
 	    		add(mainWindowPanel);
 	    		add(panelBar);
 	    		
 	    	}
+	    	/*
+	    	 * Finally add the Actual argument JPanel to the mainWindowPanel (wrapper Panel)
+	    	 * AND set mainWindowPanel in use to TRUE
+	    	 */
 	    	openNewPanel(currentPanel);
 	    	mainPanel_In_Use = true;
+	    	System.out.println("<setCurrentOpenPanel> MainPanel is NOW in use!");
 	    	frame.pack();
     	}
     	else
@@ -503,6 +516,7 @@ public class PlayerGUI extends JPanel implements GuiSubject
     			closeCurrentOpenPanel();
     			openNewPanel(lastPanelStillOpen);
     			lastPanelStillOpen = null;
+    			System.out.println("<setCurrentOpenPanel> Last Panel is Now NULL!");
 	    		//lastPanelStillOpen = getCurrentOpenPanel();
     			mainPanel_In_Use = false;
 	    		
@@ -519,9 +533,28 @@ public class PlayerGUI extends JPanel implements GuiSubject
     	}
     }
     
+    /**
+     * <b>Method handling specifically closing the current Panel added to the mainWindowPanel</b>
+     * <p>
+     * First checks if current panel is NULL, if not then proceeds to remove the panel returned by the call 
+     * to {@link #getCurrentOpenPanel() }. Before it removes it, it does an additional check for the <u><i>libCreator</i></u> panel
+     * as there is a boolean <u><i>isLibCreatorOpen</i></u> flag needed to be set (Required for the inner class JMenuBar to monitor
+     * its state. 
+     * </p>
+     * 
+     * @see #getCurrentOpenPanel()
+     */
     private void closeCurrentOpenPanel()
     {
-    	mainWindowPanel.remove(getCurrentOpenPanel());
+    	if(getCurrentOpenPanel()!=null)
+    	{
+	    	System.out.println("<closeCurrentOpenPanel> CLOSING Panel : "+getCurrentOpenPanel().getName());
+	    	if(getCurrentOpenPanel().getName().compareToIgnoreCase("libCreator")==0)
+	    	{
+	    		isLibCreaterOpen = false;
+	    	}
+	    	mainWindowPanel.remove(getCurrentOpenPanel());
+    	}
     }
     
     private void openNewPanel(JPanel currentPanel)
@@ -529,15 +562,26 @@ public class PlayerGUI extends JPanel implements GuiSubject
     	currentOpenPanel = currentPanel;
     	if(currentPanel != null)
     	{
-    		currentPanel.setVisible(true);
+    		System.out.println("<openNewPanel> OPENING Panel : "+currentPanel.getName());
+    		if(currentPanel.getName().compareToIgnoreCase("libCreator")==0)
+    		{
+    			isLibCreaterOpen = true;
+    		}
+    		//currentPanel.setVisible(true);
     		mainWindowPanel.add(currentPanel);
     	}
     	else
     	{
+    		System.out.println("<openNewPanel> SETTING Open to NULL! ");
     		remove(mainWindowPanel);
     	}
     }
     
+    /**
+     * <b>Access method for getting the current panel added to the wrapper mainWindowPanel</b>
+     * 
+     * @return JPanel, The currentOpenPanel variable 
+     */
     private JPanel getCurrentOpenPanel(){
     	return currentOpenPanel;
     }
@@ -848,38 +892,20 @@ public class PlayerGUI extends JPanel implements GuiSubject
             	int offset = 0;
                 if(menuBar.isVisible())
                 {
-                	/*if(mainWindowPanel.isVisible())
-                	{
-                		
-                	}
                 	//Disable the menubar and adjust the player
-                	frame.setBounds(frame.getX(), frame.getY()+(menuBar.getHeight()), frame.getWidth(), frame.getHeight()-menu.getHeight());*/
+                	//frame.setBounds(frame.getX(), frame.getY()+(menuBar.getHeight()), frame.getWidth(), frame.getHeight()-menu.getHeight());*/
                 	
                 	menuBar.setVisible(false);
-                	if(isMainPanel_InUse())
+                	if(isMainPanel_InUse() && isCreaterPanelOpen())
                 	{
                 		setCurrentOpenPanel(null);
-                		//remove(mainWindowPanel);
-                		//mainWindowPanel.setVisible(false);
+                		isLibCreaterOpen = false;
                 	}
-                	frame.pack();
-                	//updateAllPanels(menuBar.isVisible());
-                	
+                	frame.pack();                	
                 }
                 else
                 {
-                	//Enable the menubar and adjust the player
-                	//frame.setBounds(frame.getX(), frame.getY()-(menuBar.getHeight()), frame.getWidth(), frame.getHeight()+menu.getHeight());
                 	menuBar.setVisible(true);
-                	
-                	//if(isCreaterPanelOpen())
-                	{
-                	//	remove(panelBar);
-                		//setCurrentOpenPanel();
-                    //	add(mainWindowPanel);
-                    //	add(panelBar);
-                	}
-                	//updateAllPanels(menuBar.isVisible());
                 	frame.pack();
                 }
             }
@@ -901,11 +927,6 @@ public class PlayerGUI extends JPanel implements GuiSubject
 		                	//frame.setLocation(frame.getX(), frame.getY()+playListWindow.getHeight());
 		                	//frame.setSize(frame.getWidth(), frame.getHeight()-playListWindow.getHeight());
 		            		setCurrentOpenPanel(null);
-		                	//playListWindow.setVisible(false);
-		                	//remove(playListWindow);
-		                	//updateAllPanels(menuBar.isVisible());
-		                	
-		                	//frame.pack();
             			}
 	                }
 	                else
@@ -916,19 +937,11 @@ public class PlayerGUI extends JPanel implements GuiSubject
 	                	if(!isMainPanel_InUse())
 	            		{
 	                		setCurrentOpenPanel(playListWindow);
-	            			//remove(panelBar);
-	            			//add(mainWindowPanel);
-	            			//mainWindowPanel.setVisible(true);
-	            			//add(panelBar);
-	            			//frame.pack();
 	            		}
 	                	else
-	                		setCurrentOpenPanel(playListWindow);
-	                	
-	                	frame.pack();
-	                	
-	                	//frame.revalidate();
+	                		setCurrentOpenPanel(playListWindow);               	
 	                }
+            		frame.pack();
             	}
             }
             if(source == exit)
@@ -956,6 +969,13 @@ public class PlayerGUI extends JPanel implements GuiSubject
 
     }
     
+    /**
+     * <b>This is an alternative shutdown method called when it is known that there are no attached observers</b>
+     * <p>
+     * This can be called to simplify the shutdown process as it is already determined that the observers are already
+     * de-registered, or are null. Bypassing the callback and sync processes, for a quicker shutdown.
+     * </p>
+     */
     private void lightShutdown()
     {
     	this.setVisible( false );
@@ -963,6 +983,13 @@ public class PlayerGUI extends JPanel implements GuiSubject
         System.gc();
     }
     
+    /**
+     * <b>This is the normal shutdown method, and is called after sync-ing and shutdown of other observers</b> 
+     * <p>It only differs in comparison to {@link lightShutdown() } as it removes the {@link #musicLibraryManager } observer
+     * from its observer list {@link #deregisterGuiObserver(GuiObserver) }</p>
+     * 
+     * @see #deregisterGuiObserver(GuiObserver)
+     */
     private void shutdownPlayer()
     {
     	System.out.println(NAME+"Deregistering MusicLibraryManager...");
@@ -973,6 +1000,9 @@ public class PlayerGUI extends JPanel implements GuiSubject
         System.gc();
     }
 
+    /**
+     * @inheritDoc registerGuiObserver(GuiObserver)
+     */
 	@Override
 	public void registerGuiObserver(GuiObserver guiObserver)
 	{
@@ -981,6 +1011,9 @@ public class PlayerGUI extends JPanel implements GuiSubject
 		
 	}
 
+	/**
+     * @inheritDoc deregisterGuiObserver(GuiObserver)
+     */
 	@Override
 	public void deregisterGuiObserver(GuiObserver guiObserver) {
 		guiObserverList.remove(guiObserver);
@@ -988,6 +1021,9 @@ public class PlayerGUI extends JPanel implements GuiSubject
 		
 	}
 
+	/**
+     * @inheritDoc notifyAllObservers(PlayState)
+     */
 	@Override
 	public void notifyAllObservers(PlayState newState) {
 		for(GuiObserver observer : guiObserverList){
@@ -1002,6 +1038,9 @@ public class PlayerGUI extends JPanel implements GuiSubject
 	 * 
 	 */
 	
+	/**
+     * @inheritDoc guiCallback(PlayState, Song)
+     */
 	@Override
 	public void guiCallback(PlayState state, Song song) 
 	{

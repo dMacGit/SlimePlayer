@@ -6,7 +6,7 @@ import slime.song.Song;
 /**
  * <P><B>
  * This is the interface for each of the classes requiring
- * updates to and from the {@link MusicLibraryManager} class.</B>
+ * updates to and from the {@link slime.managers.MusicLibraryManager} class.</B>
  * <p>
  * It contains useful methods for the Subject class to query each Observer; <br> Such as the Observer's Name
  * ( {@link #getStateObserverName()} ), its current PlayeSate ( {@link #getCurrentPlayState()} ), assigning
