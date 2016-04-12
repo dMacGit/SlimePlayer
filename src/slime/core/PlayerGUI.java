@@ -140,11 +140,11 @@ public class PlayerGUI extends JPanel implements GuiSubject
     public static String THE_FOLDER_DIR = "images/";
     
     private mouseListener listenerOne;
-    private URL PLAY_ICON_URL = ClassLoader.getSystemResource(THE_FOLDER_DIR+"playButtonGlossy.png"),
-    		PAUSE_ICON_URL = ClassLoader.getSystemResource(THE_FOLDER_DIR+"pauseButtonGlossy.png"),
-    		SKIP_ICON_URL = ClassLoader.getSystemResource(THE_FOLDER_DIR+"skipButtonGlossy.png"),
-    		MENU_ICON_URL = ClassLoader.getSystemResource(THE_FOLDER_DIR+"menuButtonGlossy.png"),
-    		LIST_ICON_URL = ClassLoader.getSystemResource(THE_FOLDER_DIR+"playListButtonGlossy.png"),
+    private URL PLAY_ICON_URL = ClassLoader.getSystemResource(THE_FOLDER_DIR+"playButton.png"),
+    		PAUSE_ICON_URL = ClassLoader.getSystemResource(THE_FOLDER_DIR+"pauseButton.png"),
+    		SKIP_ICON_URL = ClassLoader.getSystemResource(THE_FOLDER_DIR+"skip-F-Button.png"),
+    		MENU_ICON_URL = ClassLoader.getSystemResource(THE_FOLDER_DIR+"settingsButton_Alt.png"),
+    		LIST_ICON_URL = ClassLoader.getSystemResource(THE_FOLDER_DIR+"playlistButton.png"),
     		EXIT_ICON_URL = ClassLoader.getSystemResource(THE_FOLDER_DIR+"smlCloseIcon.png"),
     		SELECT_REPEAT_ICON_URL = ClassLoader.getSystemResource(THE_FOLDER_DIR+"repeatButton.png"),
     		SELECT_SHUFFLE_ICON_URL = ClassLoader.getSystemResource(THE_FOLDER_DIR+"shuffleButton.png"),
