@@ -18,3 +18,7 @@ The included utility method called *__manualLibrarySearch__* can be used to manu
 both of which should be located at the application directory in __../Data_Files__.
 
 *_The properties file can be modified to point to another location if desired._
+
+## Status
+
+- **Not in active Development**
